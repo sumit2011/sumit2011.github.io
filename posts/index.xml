@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - My New Hugo Site</title>
+        <link>http://example.org/posts/</link>
+        <description>All Posts | My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
+            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Wed, 04 Jan 2023 11:54:28 &#43;0530</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>singly linked list</title>
+    <link>http://example.org/first_post/</link>
+    <pubDate>Wed, 04 Jan 2023 11:54:28 &#43;0530</pubDate>
+    <author>sumit</author>
+    <guid>http://example.org/first_post/</guid>
+    <description><![CDATA[introduction: Single linked list is a linear data structure. It’s elements are not stored in contiguous memory location like arrays. it is slightly different from array. it made by the nodes, each nodes consist a data and the address of the next node and each nodes are linked using pointers.
+creation of node To create a new node in C++, you will need to define a structure or class that represents a node, and then create an instance of that structure or class.]]></description>
+</item>
+</channel>
+</rss>

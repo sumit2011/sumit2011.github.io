@@ -1,0 +1,10 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Sumit</title>
+        <link>http://example.org/zh-cn/</link>
+        <description>This is my cool site</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
+            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster>
+            <atom:link href="http://example.org/zh-cn/index.xml" rel="self" type="application/rss+xml" />
+        </channel>
+</rss>
