@@ -14,6 +14,30 @@ I have the following qualities:
 To be honest I’m just a beginner at this stage and interested to learn all about hacking. I’m currently learning hacking from the following platforms.
 
 platform: THM, HTB, Hacker-X.
+<script src="https://tryhackme.com/badge/1184563"></script>
+
+{{< admonition type=success title="THM Certificates" open=false >}}
+
+{{< image src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-SMAKC7MFIS.png" >}}
+{{< image src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-7FHKPDCZCM.png" >}}
+{{< image src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-MUYLHSDVPL.png" >}}
+
+{{< /admonition >}}
+
+{{< admonition type=tip title="THM Badges" open=false >}}
+{{< image src="intro_to_web_hacking.png" >}}
+{{< image src="badge.png" title="https://tryhackme.com/hackerSUMO/badges/terminaled">}}
+{{< image src="project.png" >}}
+{{< /admonition >}}
+
+
+{{< admonition type=note title="THM Writeups" open=false >}}
+
+{{< /admonition >}}
+
+{{< admonition type=success title="Hacker-X Certificates" open=false >}}
+
+{{< /admonition >}}
 ### Programming
 
 I’m also learning Data Structure and Algorithm, C++, C, Python.
