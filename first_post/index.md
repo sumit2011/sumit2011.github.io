@@ -1,6 +1,8 @@
 # singly linked list
 
-
+Navigation system works on the concept of linked list.
+<!--more-->
+{{< figure src="/images/train.jpg" title="Lighthouse (figure)" >}}
 
 ## introduction:
 Single linked list is a linear data structure. It’s elements are not stored in contiguous memory location like arrays. it is slightly different from array. it made by the nodes, each nodes consist a data and the address of the next node and each nodes are linked using pointers.
