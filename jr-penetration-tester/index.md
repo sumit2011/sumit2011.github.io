@@ -15,3 +15,15 @@ Q2. If you were a penetration tester or security consultant, this is an exercise
 
 Q3. Terminate the machine by clicking the red "Terminate" button at the top of the page.
 > No Answer Needed
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PFRLG5MZ6V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PFRLG5MZ6V');
+</script>
+

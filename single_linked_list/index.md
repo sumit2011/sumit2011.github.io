@@ -154,14 +154,7 @@ void deletatPos(int pos)
 ```
 
 ## 5. Sorting of the Single Linked List
-There are several ways to sort a single linked list, depending on the type of data being stored in the list and the desired sort order. Here are a few common approaches:
-
- 1. Bubble sort: This is a simple sorting algorithm that repeatedly iterates through the list, compares adjacent nodes, and swaps their values if they are in the wrong order. It continues this process until the list is sorted.
-
- 2. Merge sort: This is a divide-and-conquer algorithm that recursively splits the list in half, sorts each half, and then merges the two sorted halves back together. It is generally more efficient than bubble sort, but requires additional memory to store the sublists during the recursive splits.
-
- 3. Quick sort: This is another divide-and-conquer algorithm that selects a "pivot" element from the list and reorders the list so that all elements less than the pivot come before it and all elements greater than the pivot come after it. It then repeats this process recursively on the sublists on either side of the pivot until the list is sorted. Quick sort is generally faster than merge sort, but its performance can degrade if the pivot is not well-chosen.
-
+There are several ways to sort a single linked list, depending on the type of data being stored in the list and the desired sort order.
 ```c
 // sorting of linked list
 void sortlist()
@@ -266,4 +259,14 @@ int main()
 }
 ```
 
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PFRLG5MZ6V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PFRLG5MZ6V');
+</script>
 

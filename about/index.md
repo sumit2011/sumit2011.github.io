@@ -71,14 +71,22 @@ I’m also learning Data Structure and Algorithm, C++, C, Python.
 Platform: `codechef`, `coding ninja`.
 
 {{< admonition type=info title="Languages" open=false >}}
-<img src="tools/c-program-icon.svg"  height="70" width="80" /></a>
-<img src="tools/c-plus-plus-programming-language-icon.svg"  height="70" width="80" /></a>
-<img src="tools/html-icon.svg"  height="70" width="80" /></a>
-<img src="tools/javascript-programming-language-icon.svg"  height="70" width="80" /></a>
-<img src="tools/markdown-icon.svg"  height="70" width="80" /></a>
-<img src="tools/python-programming-language-icon.svg"  height="70" width="80" /></a>
+<img src="tools/c-program-icon.svg"  height="60" width="70" /></a>
+<img src="tools/c-plus-plus-programming-language-icon.svg"  height="60" width="70" /></a>
+<img src="tools/html-icon.svg"  height="60" width="70" /></a>
+<img src="tools/javascript-programming-language-icon.svg"  height="60" width="70" /></a>
+<img src="tools/markdown-icon.svg"  height="60" width="70" /></a>
+<img src="tools/python-programming-language-icon.svg"  height="60" width="70" /></a>
 {{< /admonition >}}
 
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PFRLG5MZ6V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-PFRLG5MZ6V');
+</script>
 
