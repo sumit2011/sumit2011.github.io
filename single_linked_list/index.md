@@ -1,4 +1,4 @@
-# singly linked list
+# Single Linked List
 
 Navigation system works on the concept of linked list.
 <!--more-->
