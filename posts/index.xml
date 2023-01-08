@@ -1,17 +1,27 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - Sumit</title>
+        <title>All Posts - Sumit&#39;s Blog</title>
         <link>https://sumit2011.github.io/posts/</link>
-        <description>All Posts | Sumit</description>
+        <description>All Posts | Sumit&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
-            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Mon, 26 Dec 2022 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Thu, 05 Jan 2023 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>THM Jr Penetration Tester Pathway Guide</title>
+    <link>https://sumit2011.github.io/jr-penetration-tester/</link>
+    <pubDate>Thu, 05 Jan 2023 11:54:28 &#43;0530</pubDate>
+    <author>sumit</author>
+    <guid>https://sumit2011.github.io/jr-penetration-tester/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://assets.tryhackme.com/img/paths/jrpenetrationtester.svg" referrerpolicy="no-referrer">
+            </div><p>Here i will help you in your jr penetration tester pathway on THM.</p>]]></description>
+</item>
+<item>
     <title>Single Linked List</title>
     <link>https://sumit2011.github.io/single_linked_list/</link>
     <pubDate>Mon, 26 Dec 2022 11:54:28 &#43;0530</pubDate>
     <author>sumit</author>
     <guid>https://sumit2011.github.io/single_linked_list/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/79731568097599.5b50bca477735.jpg" referrerpolicy="no-referrer">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220829110944/LLdrawio.png" referrerpolicy="no-referrer">
             </div><p>Navigation system works on the concept of linked list.</p>]]></description>
 </item>
 </channel>

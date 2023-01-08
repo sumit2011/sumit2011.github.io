@@ -2,14 +2,16 @@
 
 Navigation system works on the concept of linked list.
 <!--more-->
+{{< admonition type=note title="Note" open=true >}}
+_Use the table of contents to navigate to the portion that you are interested in._
+{{< /admonition >}}
+## 1. Introduction:
+Single linked list is a `linear data structure`. It’s elements are not stored in contiguous memory location like arrays. it is slightly different from array. it made by the nodes, each nodes consist a data and the address of the next node and each nodes are linked using pointers.
 
-## introduction:
-Single linked list is a linear data structure. It’s elements are not stored in contiguous memory location like arrays. it is slightly different from array. it made by the nodes, each nodes consist a data and the address of the next node and each nodes are linked using pointers.
+## 2. Creation of Node
+To create a new node in `C++`, you will need to define a structure or class that represents a node, and then create an instance of that structure or class.
 
-## creation of node
-To create a new node in C++, you will need to define a structure or class that represents a node, and then create an instance of that structure or class.
-
-Here is an example of a node structure in C++:
+Here is an example of a node structure in `C++`:
 ```c
 struct Node 
 {
@@ -17,9 +19,14 @@ struct Node
   Node* next;
 };
 ```
-## insertion
-### insertion at begining
+## 3. Insertion
+An insertion operation in a single linked list involves adding a new node to the list. There are several ways to do this, depending on where you want to insert the new node:
+ 1. At the beginning of the list
+ 2. At the end of the list
+ 3. At a specific position
 
+### 3.1 Insertion at Begining
+To insert a new node at the beginning of the list, you need to create a new node and set its next pointer to point to the current head of the list. Then, you can set the head of the list to the new node.
 ```c
 void insertAtBeg(int value)
 {
@@ -40,8 +47,8 @@ void insertAtBeg(int value)
 }
 ```
 
-### insertion at last
-
+### 3.2 Insertion at Last
+To insert a new node at the end of the list, you need to traverse the list until you reach the last node. Then, you can set the next pointer of the last node to point to the new node.
 ```c
 void insertATend(int value)
 {
@@ -68,7 +75,8 @@ void insertATend(int value)
 }
 ```
 
-### insertion at any position
+### 3.3 Insertion at Any Position
+To insert a new node at a specific position in the list, you need to traverse the list until you reach the node before the position where you want to insert the new node. Then, you can set the next pointer of the new node to point to the node at the desired position, and set the next pointer of the node before the position to point to the new node.
 ```c
 // insertion at any position
 void insertAtPos(int pos, int value)
@@ -89,9 +97,13 @@ void insertAtPos(int pos, int value)
     temp->next = newnode;
 }
 ```
-## Deletion
-
-### deletion from begining
+## 4. Deletion
+A deletion operation in a single linked list involves removing a node from the list. There are several ways to do this, depending on which node you want to delete:
+ 1. Deleting the head node
+ 2. Deleting the last node
+ 3. Deleting a node in the middle of the list
+### 4.1 Deletion from Begining
+To delete the head node, you simply need to set the head of the list to the next node in the list.
 ```c
 // deletion at begining
 void deletatBeg()
@@ -103,7 +115,8 @@ void deletatBeg()
 }
 ```
 
-### deletion from end
+### 4.2 Deletion from End
+To delete the last node, you need to traverse the list until you reach the second-to-last node. Then, you can set the next pointer of the second-to-last node to null, effectively removing the last node from the list.
 ```c 
 // deletion at end
 void deletatEnd()
@@ -120,7 +133,8 @@ void deletatEnd()
 }
 ```
 
-### deletion from any position
+### 4.3 Deletion from Any Position
+To delete a node in the middle of the list, you need to traverse the list until you reach the node before the one you want to delete. Then, you can set the next pointer of the previous node to point to the node after the one you want to delete, effectively skipping over the node to be deleted.
 ```c
 // deletion at any position
 void deletatPos(int pos)
@@ -139,7 +153,15 @@ void deletatPos(int pos)
 }
 ```
 
-## Sorting of the singly linked list
+## 5. Sorting of the Single Linked List
+There are several ways to sort a single linked list, depending on the type of data being stored in the list and the desired sort order. Here are a few common approaches:
+
+ 1. Bubble sort: This is a simple sorting algorithm that repeatedly iterates through the list, compares adjacent nodes, and swaps their values if they are in the wrong order. It continues this process until the list is sorted.
+
+ 2. Merge sort: This is a divide-and-conquer algorithm that recursively splits the list in half, sorts each half, and then merges the two sorted halves back together. It is generally more efficient than bubble sort, but requires additional memory to store the sublists during the recursive splits.
+
+ 3. Quick sort: This is another divide-and-conquer algorithm that selects a "pivot" element from the list and reorders the list so that all elements less than the pivot come before it and all elements greater than the pivot come after it. It then repeats this process recursively on the sublists on either side of the pivot until the list is sorted. Quick sort is generally faster than merge sort, but its performance can degrade if the pivot is not well-chosen.
+
 ```c
 // sorting of linked list
 void sortlist()
@@ -164,7 +186,7 @@ void sortlist()
     }
 }
 ```
-## Print function
+## 6. Print Function
 ```c
 // printing of linked list
 void print()
@@ -179,7 +201,7 @@ void print()
     printf("NULL");
 }
 ```
-## to find length
+## 7. To Find Length
 ```c
 // length of the linked
 int getlength()
@@ -196,7 +218,7 @@ int getlength()
 ```
 
 
-## Main function
+## 8. Main Function
 
 ```c
 // main function
@@ -244,5 +266,4 @@ int main()
 }
 ```
 
-### A Great Heading {#custom-id}
 
