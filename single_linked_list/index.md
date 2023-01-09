@@ -28,13 +28,13 @@ struct Node
 struct Node *head = NULL;
 ```
 ## 3. Insertion
-An insertion operation in a single linked list involves adding a new node to the list. For this first you have to create a `newnode` and then insert this node where you want. There are several ways to do this:
+An insertion operation in a single linked list involves adding a new node to the list. For this first you have to create a `newnode` and then insert this node where you want. There are several ways to insert a node in the list:
  1. At the beginning of the list
  2. At the end of the list
  3. At a specific position of the list
 
 ### 3.1 Insertion at Begining
-To insert a new node at the beginning of the list, you need to create a new node and set it's next pointer to point to the current head of the list. Then, you can set the head of the list to the new node. You also have to check whether the first node is present or not in the list or we can say list is empty or not.
+To insert a new `node` at the beginning of the list, you need to create a `newnode` and set it's next pointer to point to the current `head` of the list. Then, you can set the `head` of the list to the `newnode`. You also have to check whether the first `node` is present or not in the list or we can say list is empty or not.
 ```c
 // insertion at begining
 void insertAtBeg(int value)
@@ -57,7 +57,8 @@ void insertAtBeg(int value)
 ```
 
 ### 3.2 Insertion at Last
-To insert a new node at the end of the list, you need to traverse the list until you reach the last node. Then, you can set the next pointer of the last node to point to the new node. If the list is empty then set the head to the newnode.
+To insert a new `node` at the end of the list, you need to traverse the list until you reach the last `node`. Then, you can set the next pointer of the last `node` to point to the `newnode`. If the list is empty then set the `head` to the `newnode`.
+>_`temp` is just a temporary `node` just like `count` variable, after the operation it does'nt have any importance._
 ```c
 // insertation at end
 void insertATend(int value)
@@ -84,12 +85,13 @@ void insertATend(int value)
     printf("%d is inserted at the end.\n", value);
 }
 ```
-_`temp` is just a temorary node just like count variable after the operation it does'nt have any use._
+
 {{< admonition type=info title="Traversal Technique" open=true >}}
-_Traversal is the process of visiting and processing each node in a data structure, such as a linked list, tree, or graph. There are several techniques for traversing data structures, including depth-first search, breadth-first search, and in-order, pre-order, and post-order tree traversal._
+_Traversal is the process or technique of visiting and processing each `node` in a data structure, such as a `linked list`, `tree`, or `graph`. There are several way to traverse. Here we use the simple traversal technique in which we form a `temp` variable or `node` and traverse the each `node` one by one just pointing to the next pointer to the `temp`._
+_`temp=temp->next;`_
 {{< /admonition >}}
 ### 3.3 Insertion at Any Position
-To insert a `new node` at a desired position in the list, first you need to make a temporary node say `temp` initialise with `head` then  traverse the list until you reach the node before the position where you want to insert the new node. Then, you can set the next pointer of the new node to point to the node at the desired position, and set the next pointer of the node before the position to point to the new node.
+To insert a new `node` at a desired position in the list, first you need to make a temporary `node` say `temp` initialise with `head` then  traverse the list until you reach the `node` before the position where you want to insert the `newnode`. Then, you can set the next pointer of the `newnode` to point to the `node` at the desired position, and set the next pointer of the `node` before the position to point to the `newnode`.
 {{< figure src="/posts/DSA/Linkedlist_insert_middle.png" >}}
 ```c
 // insertion at any position
@@ -112,18 +114,18 @@ void insertAtPos(int pos, int value)
     printf("%d is inserted at the %dth position.\n", value, pos);
 }
 ```
-{{< admonition type=warning title="point to be consider" open=true >}}
-_Here you get a segmentation fault if you enter that position which are not exist in the list. For this first you have to check whether the position is present or not in the list then insert the node at that position._
+{{< admonition type=warning title="Seg Fault" open=true >}}
+_Here you get a ***segmentation fault*** if you enter that position which are not exist in the list. For this first you have to check whether the position is present or not in the list then insert the `node` at that position._
 {{< /admonition >}}
 
 
 ## 4. Deletion
-A deletion operation in a single linked list involves removing a node from the list and free the space. There are several ways to do this, depending on which node you want to delete:
+A deletion operation in a single linked list involves removing a `node` from the list and free the space. First make a `temp` node, traverse to that `node` and do the operation. There are several ways to delete a `node` from the list:
  1. Deleting the head node
  2. Deleting the last node
- 3. Deleting a node in the middle of the list
+ 3. Deleting a node from the specific position of the list
 ### 4.1 Deletion from Begining
-To delete the head node, first you have to make a `temp` node initialise with `head` then set the head of the list to the next node in the list. Now free the `temp`.
+To delete the `head` node or first node, first you have to make a `temp` node initialise with `head` then set the `head` of the list to the next `node` in the list. Now free the `temp`.
 ```c
 // deletion at begining
 void deleteatBeg()
@@ -144,7 +146,7 @@ void deleteatBeg()
 ```
 
 ### 4.2 Deletion from End
-To delete the last node, make a `temp` node traverse the list until you reach the second-to-last node. Then, you can set the next pointer of the second-to-last node to null, effectively removing the last node from the list.
+To delete the last `node`, make a `temp` node traverse the list until you reach the second-to-last node. Set the `temp` to the last `node` of the list.  Then, you can set the next pointer of the second-to-last `node` to `null`. Now free the `temp`.
 ```c 
 // deletion at end
 void deleteatEnd()
@@ -170,7 +172,7 @@ void deleteatEnd()
 ```
 
 ### 4.3 Deletion from Any Position
-To delete a node in the middle of the list, you need to traverse the list until you reach the node before the one you want to delete. Then, you can set the next pointer of the previous node to point to the node after the one you want to delete, effectively skipping over the node to be deleted.
+To delete a `node` in the middle of the list, you need to traverse the list until you reach the `node` before the one you want to delete. Set the `temp` to the node to be deleted in the list. Then, you can set the next pointer of the previous `node` to point to the `node` after the one you want to delete. Free the `temp`.
 {{< figure src="/posts/DSA/Linkedlist_deletion.png" >}}
 ```c
 // deletion at any position
@@ -190,9 +192,11 @@ void deleteatPos(int pos)
     free(nextnode);
 }
 ```
-
+{{< admonition type=warning title="Seg Fault" open=true >}}
+_Here also you get a ***segmentation fault*** if you delete that position which are not exist in the list. For this first you have to check whether the position is present or not in the list then delete the `node` from that position._
+{{< /admonition >}}
 ## 5. Sorting 
-There are several ways to sort a single linked list, depending on the type of data being stored in the list and the desired sort order.
+There are several way to sort the list.
 ```c
 // sorting of linked list
 void sortlist()
@@ -220,7 +224,7 @@ void sortlist()
 ```
 
 ## 6. Reversing
-This approach involves iterating through the linked list, and for each node, changing the next pointer to point to the previous node instead of the next node. This effectively reverses the order of the nodes in the linked list.This approach involves a recursive function that reverses the next pointers of each node as it traverses the linked list. The function returns the reversed linked list by returning the last node in the original linked list as the new head.
+To **reverse** the linked list, You have to iterate the linked list and for each `node`, changing the next pointer to point to the previous `node` instead of the next `node` as it traverses the linked list. This effectively reverses the order of the nodes in the linked list. The function returns the reversed linked list by returning the last `node` in the original linked list as the new `head`.
 ```c
 // to reverse the list
 void reverse()
@@ -259,7 +263,7 @@ void display()
 
 ```
 ## 8. To Find Length
-To find the length of the list, first make a `temp` node initialise with `head` than travarse the list and increment the `count` by `1` on every travarsal until you reach to the last node.
+To find the length of the list, first make a `temp` node initialise with `head` than travarse the list and increment the `count` by `1` on every travarsal until you reach to the last node. At last print the `count` value.
 ```c
 // length of the linked
 int getlength()
@@ -277,7 +281,7 @@ int getlength()
 
 
 ## 9. Main Function
-Here is the main function. Now we check all the function whether they are working or not, call all the functions one by one.
+In the main function. we check all the function whether they are working or not, call all the functions one by one.
 ```c
 // main function
 int main()

@@ -26,7 +26,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/single_linked_list\/"
-        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  1998 ,
+        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  2064 ,
         "url": "https:\/\/sumit2011.github.io\/single_linked_list\/","datePublished": "2022-12-25T11:54:28+05:30","dateModified": "2022-12-25T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -102,7 +102,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Single Linked List</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/dsa/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DSA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-12-25">2022-12-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1998 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-12-25">2022-12-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2064 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;10 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -177,14 +177,14 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="3-insertion">3. Insertion</h2>
-<p>An insertion operation in a single linked list involves adding a new node to the list. For this first you have to create a <code>newnode</code> and then insert this node where you want. There are several ways to do this:</p>
+<p>An insertion operation in a single linked list involves adding a new node to the list. For this first you have to create a <code>newnode</code> and then insert this node where you want. There are several ways to insert a node in the list:</p>
 <ol>
 <li>At the beginning of the list</li>
 <li>At the end of the list</li>
 <li>At a specific position of the list</li>
 </ol>
 <h3 id="31-insertion-at-begining">3.1 Insertion at Begining</h3>
-<p>To insert a new node at the beginning of the list, you need to create a new node and set it&rsquo;s next pointer to point to the current head of the list. Then, you can set the head of the list to the new node. You also have to check whether the first node is present or not in the list or we can say list is empty or not.</p>
+<p>To insert a new <code>node</code> at the beginning of the list, you need to create a <code>newnode</code> and set it&rsquo;s next pointer to point to the current <code>head</code> of the list. Then, you can set the <code>head</code> of the list to the <code>newnode</code>. You also have to check whether the first <code>node</code> is present or not in the list or we can say list is empty or not.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -228,7 +228,10 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="32-insertion-at-last">3.2 Insertion at Last</h3>
-<p>To insert a new node at the end of the list, you need to traverse the list until you reach the last node. Then, you can set the next pointer of the last node to point to the new node. If the list is empty then set the head to the newnode.</p>
+<p>To insert a new <code>node</code> at the end of the list, you need to traverse the list until you reach the last <code>node</code>. Then, you can set the next pointer of the last <code>node</code> to point to the <code>newnode</code>. If the list is empty then set the <code>head</code> to the <code>newnode</code>.</p>
+<blockquote>
+<p><em><code>temp</code> is just a temporary <code>node</code> just like <code>count</code> variable, after the operation it does&rsquo;nt have any importance.</em></p>
+</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -283,17 +286,17 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><em><code>temp</code> is just a temorary node just like count variable after the operation it does&rsquo;nt have any use.</em>
-<div class="details admonition info open">
+</div><div class="details admonition info open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-info-circle fa-fw" aria-hidden="true"></i>Traversal Technique<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content"><em>Traversal is the process of visiting and processing each node in a data structure, such as a linked list, tree, or graph. There are several techniques for traversing data structures, including depth-first search, breadth-first search, and in-order, pre-order, and post-order tree traversal.</em></div>
+            <div class="admonition-content"><em>Traversal is the process or technique of visiting and processing each <code>node</code> in a data structure, such as a <code>linked list</code>, <code>tree</code>, or <code>graph</code>. There are several way to traverse. Here we use the simple traversal technique in which we form a <code>temp</code> variable or <code>node</code> and traverse the each <code>node</code> one by one just pointing to the next pointer to the <code>temp</code>.</em>
+<em><code>temp=temp-&gt;next;</code></em></div>
         </div>
-    </div></p>
+    </div>
 <h3 id="33-insertion-at-any-position">3.3 Insertion at Any Position</h3>
-<p>To insert a <code>new node</code> at a desired position in the list, first you need to make a temporary node say <code>temp</code> initialise with <code>head</code> then  traverse the list until you reach the node before the position where you want to insert the new node. Then, you can set the next pointer of the new node to point to the node at the desired position, and set the next pointer of the node before the position to point to the new node.
+<p>To insert a new <code>node</code> at a desired position in the list, first you need to make a temporary <code>node</code> say <code>temp</code> initialise with <code>head</code> then  traverse the list until you reach the <code>node</code> before the position where you want to insert the <code>newnode</code>. Then, you can set the next pointer of the <code>newnode</code> to point to the <code>node</code> at the desired position, and set the next pointer of the <code>node</code> before the position to point to the <code>newnode</code>.
 <figure><img src="/posts/DSA/Linkedlist_insert_middle.png"/>
 </figure>
 </p>
@@ -343,21 +346,21 @@
 </div>
 </div><div class="details admonition warning open">
         <div class="details-summary admonition-title">
-            <i class="icon fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i>point to be consider<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+            <i class="icon fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i>Seg Fault<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content"><em>Here you get a segmentation fault if you enter that position which are not exist in the list. For this first you have to check whether the position is present or not in the list then insert the node at that position.</em></div>
+            <div class="admonition-content"><em>Here you get a <em><strong>segmentation fault</strong></em> if you enter that position which are not exist in the list. For this first you have to check whether the position is present or not in the list then insert the <code>node</code> at that position.</em></div>
         </div>
     </div>
 <h2 id="4-deletion">4. Deletion</h2>
-<p>A deletion operation in a single linked list involves removing a node from the list and free the space. There are several ways to do this, depending on which node you want to delete:</p>
+<p>A deletion operation in a single linked list involves removing a <code>node</code> from the list and free the space. First make a <code>temp</code> node, traverse to that <code>node</code> and do the operation. There are several ways to delete a <code>node</code> from the list:</p>
 <ol>
 <li>Deleting the head node</li>
 <li>Deleting the last node</li>
-<li>Deleting a node in the middle of the list</li>
+<li>Deleting a node from the specific position of the list</li>
 </ol>
 <h3 id="41-deletion-from-begining">4.1 Deletion from Begining</h3>
-<p>To delete the head node, first you have to make a <code>temp</code> node initialise with <code>head</code> then set the head of the list to the next node in the list. Now free the <code>temp</code>.</p>
+<p>To delete the <code>head</code> node or first node, first you have to make a <code>temp</code> node initialise with <code>head</code> then set the <code>head</code> of the list to the next <code>node</code> in the list. Now free the <code>temp</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -397,7 +400,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="42-deletion-from-end">4.2 Deletion from End</h3>
-<p>To delete the last node, make a <code>temp</code> node traverse the list until you reach the second-to-last node. Then, you can set the next pointer of the second-to-last node to null, effectively removing the last node from the list.</p>
+<p>To delete the last <code>node</code>, make a <code>temp</code> node traverse the list until you reach the second-to-last node. Set the <code>temp</code> to the last <code>node</code> of the list.  Then, you can set the next pointer of the second-to-last <code>node</code> to <code>null</code>. Now free the <code>temp</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -447,7 +450,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="43-deletion-from-any-position">4.3 Deletion from Any Position</h3>
-<p>To delete a node in the middle of the list, you need to traverse the list until you reach the node before the one you want to delete. Then, you can set the next pointer of the previous node to point to the node after the one you want to delete, effectively skipping over the node to be deleted.
+<p>To delete a <code>node</code> in the middle of the list, you need to traverse the list until you reach the <code>node</code> before the one you want to delete. Set the <code>temp</code> to the node to be deleted in the list. Then, you can set the next pointer of the previous <code>node</code> to point to the <code>node</code> after the one you want to delete. Free the <code>temp</code>.
 <figure><img src="/posts/DSA/Linkedlist_deletion.png"/>
 </figure>
 </p>
@@ -489,8 +492,16 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="5-sorting">5. Sorting</h2>
-<p>There are several ways to sort a single linked list, depending on the type of data being stored in the list and the desired sort order.</p>
+</div><div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i>Seg Fault<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><em>Here also you get a <em><strong>segmentation fault</strong></em> if you delete that position which are not exist in the list. For this first you have to check whether the position is present or not in the list then delete the <code>node</code> from that position.</em></div>
+        </div>
+    </div>
+<h2 id="5-sorting">5. Sorting</h2>
+<p>There are several way to sort the list.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -544,7 +555,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="6-reversing">6. Reversing</h2>
-<p>This approach involves iterating through the linked list, and for each node, changing the next pointer to point to the previous node instead of the next node. This effectively reverses the order of the nodes in the linked list.This approach involves a recursive function that reverses the next pointers of each node as it traverses the linked list. The function returns the reversed linked list by returning the last node in the original linked list as the new head.</p>
+<p>To <strong>reverse</strong> the linked list, You have to iterate the linked list and for each <code>node</code>, changing the next pointer to point to the previous <code>node</code> instead of the next <code>node</code> as it traverses the linked list. This effectively reverses the order of the nodes in the linked list. The function returns the reversed linked list by returning the last <code>node</code> in the original linked list as the new <code>head</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -618,7 +629,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="8-to-find-length">8. To Find Length</h2>
-<p>To find the length of the list, first make a <code>temp</code> node initialise with <code>head</code> than travarse the list and increment the <code>count</code> by <code>1</code> on every travarsal until you reach to the last node.</p>
+<p>To find the length of the list, first make a <code>temp</code> node initialise with <code>head</code> than travarse the list and increment the <code>count</code> by <code>1</code> on every travarsal until you reach to the last node. At last print the <code>count</code> value.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -650,7 +661,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="9-main-function">9. Main Function</h2>
-<p>Here is the main function. Now we check all the function whether they are working or not, call all the functions one by one.</p>
+<p>In the main function. we check all the function whether they are working or not, call all the functions one by one.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
