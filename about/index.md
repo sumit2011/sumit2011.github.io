@@ -9,7 +9,7 @@ I have the following qualities:
     I’m extremely loyal to my family and friends.
 
 {{< admonition type=success title="Resume" open=false >}}
-<a target="blank"><img src="resume-sample.svg" /></a>
+<a target="blank"><img src="Resume.svg"  title="resume" /></a>
 {{< /admonition >}}
 
 ## Skills

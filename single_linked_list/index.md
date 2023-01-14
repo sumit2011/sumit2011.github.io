@@ -92,7 +92,7 @@ _`temp=temp->next;`_
 {{< /admonition >}}
 ### 3.3 Insertion at Any Position
 To insert a new `node` at a desired position in the list, first you need to make a temporary `node` say `temp` initialise with `head` then  traverse the list until you reach the `node` before the position where you want to insert the `newnode`. Then, you can set the next pointer of the `newnode` to point to the `node` at the desired position, and set the next pointer of the `node` before the position to point to the `newnode`.
-{{< figure src="/posts/DSA/Linkedlist_insert_middle.png" >}}
+{{< figure src="/posts/DSA/single-linked-list/Linkedlist_insert_middle.png" >}}
 ```c
 // insertion at any position
 void insertAtPos(int pos, int value)
@@ -173,7 +173,7 @@ void deleteatEnd()
 
 ### 4.3 Deletion from Any Position
 To delete a `node` in the middle of the list, you need to traverse the list until you reach the `node` before the one you want to delete. Set the `temp` to the node to be deleted in the list. Then, you can set the next pointer of the previous `node` to point to the `node` after the one you want to delete. Free the `temp`.
-{{< figure src="/posts/DSA/Linkedlist_deletion.png" >}}
+{{< figure src="/posts/DSA/single-linked-list/Linkedlist_deletion.png" >}}
 ```c
 // deletion at any position
 void deleteatPos(int pos)
