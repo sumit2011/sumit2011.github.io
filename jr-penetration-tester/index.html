@@ -26,7 +26,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/jr-penetration-tester\/"
-        },"genre": "posts","keywords": "C","wordcount":  877 ,
+        },"genre": "posts","keywords": "C","wordcount":  1289 ,
         "url": "https:\/\/sumit2011.github.io\/jr-penetration-tester\/","datePublished": "2023-01-05T11:54:28+05:30","dateModified": "2023-01-05T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -102,8 +102,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">THM Jr Penetration Tester Pathway Guide</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/cyber-security/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Cyber Security</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="05-01-2023">05-01-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;877 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="05-01-2023">05-01-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1289 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -135,6 +135,7 @@
       <ul>
         <li><a href="#walking-an-application">Walking An Application</a></li>
         <li><a href="#content-discovery">Content Discovery</a></li>
+        <li><a href="#subdomain-enumeration">Subdomain Enumeration</a></li>
       </ul>
     </li>
   </ul>
@@ -423,10 +424,195 @@
 <h3 id="content-discovery">Content Discovery</h3>
 <div class="details admonition abstract">
         <div class="details-summary admonition-title">
-            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 1: Security Analyst <i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 1: What Is Content Discovery?<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content"></div>
+            <div class="admonition-content"><p>Q1. What is the Content Discovery method that begins with M?</p>
+<p><code>Ans- Manually</code></p>
+<p>Q2. What is the Content Discovery method that begins with A?</p>
+<p><code>Ans- Automated</code></p>
+<p>Q3. What is the Content Discovery method that begins with O?</p>
+<p><code>Ans- OSINT</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 2: Manual Discovery - Robots.txt<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What is the directory in the robots.txt that isn&rsquo;t allowed to be viewed by web crawlers?</p>
+<p><code>Ans- /staff-portal</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 3: Manual Discovery - Favicon<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What framework did the favicon belong to?</p>
+<p><code>Ans- cgiirc</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 4: Manual Discovery - Sitemap.xml <i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>What is the path of the secret area that can be found in the sitemap.xml file?</p>
+<p><code>Ans- /s3cr3t-area</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 5: Manual Discovery - HTTP Headers <i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What is the flag value from the X-FLAG header?</p>
+<p><code>Ans- THM{HEADER_FLAG}</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 6: Manual Discovery - Framework Stack <i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What is the flag from the framework&rsquo;s administration portal?</p>
+<p><code>Ans- THM{CHANGE_DEFAULT_CREDENTIALS}</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 7: OSINT - Google Hacking / Dorking <i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What Google dork operator can be used to only show results from a particular site?</p>
+<p><code>Ans- site:</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 8: OSINT - Wappalyzer<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What online tool can be used to identify what technologies a website is running?</p>
+<p><code>Ans- Wappalyzer</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 9: OSINT - Wayback Machine<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What is the website address for the Wayback Machine?</p>
+<p><code>Ans- https://archive.org/web/</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 10: OSINT - GitHub <i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What is Git?</p>
+<p><code>Ans- version control system</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 11: OSINT - S3 Buckets <i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What URL format do Amazon S3 buckets end in?</p>
+<p><code>Ans- .s3.amazonaws.com</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 12: Automated Discovery <i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What is the name of the directory beginning &ldquo;/mo&hellip;.&rdquo; that was discovered?</p>
+<p><code>Ans- /monthly</code></p>
+<p>Q2. What is the name of the log file that was discovered?</p>
+<p><code>Ans- /development.log</code></p>
+</div>
+        </div>
+    </div>
+<h3 id="subdomain-enumeration">Subdomain Enumeration</h3>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 1:  Brief <i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What is a subdomain enumeration method beginning with B?</p>
+<p><code>Ans- Brute Force</code></p>
+<p>Q2. What is a subdomain enumeration method beginning with O?</p>
+<p><code>Ans- OSINT</code></p>
+<p>Q3. What is a subdomain enumeration method beginning with V?</p>
+<p><code>Ans- Virtual Host</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 2: OSINT - SSL/TLS Certificates <i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What domain was logged on crt.sh at 2020-12-26?</p>
+<p><code>Ans- store.tryhackme.com</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 3: OSINT - Search Engines<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What is the TryHackMe subdomain beginning with B discovered using the above Google search?</p>
+<p><code>Ans- blog.tryhackme.com</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 4: DNS Bruteforce <i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What is the first subdomain found with the dnsrecon tool?</p>
+<p><code>Ans- api.acmeitsupport.thm</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 5: OSINT - Sublist3r <i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What is the first subdomain discovered by sublist3r?</p>
+<p><code>Ans- web55.acmeitsupport.thm</code></p>
+</div>
+        </div>
+    </div>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Task 6:  Virtual Hosts <i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Q1. What is the first subdomain discovered?</p>
+<p><code>Ans- delta</code></p>
+<p>Q2. What is the second subdomain discovered?</p>
+<p><code>Ans- yellow</code></p>
+</div>
         </div>
     </div>
 <!-- Google tag (gtag.js) -->

@@ -239,11 +239,138 @@ Q1. What is the flag shown on the contact-msg network request?
 {{< /admonition >}}
 
 ### Content Discovery
-{{< admonition type=abstract title="Task 1: Security Analyst " open=false >}}
+{{< admonition type=abstract title="Task 1: What Is Content Discovery?" open=false >}}
+Q1. What is the Content Discovery method that begins with M?
 
+`Ans- Manually`
+
+Q2. What is the Content Discovery method that begins with A?
+
+`Ans- Automated`
+
+Q3. What is the Content Discovery method that begins with O?
+
+`Ans- OSINT`
 {{< /admonition >}}
 
+{{< admonition type=abstract title="Task 2: Manual Discovery - Robots.txt" open=false >}}
+Q1. What is the directory in the robots.txt that isn't allowed to be viewed by web crawlers?
 
+`Ans- /staff-portal`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 3: Manual Discovery - Favicon" open=false >}}
+Q1. What framework did the favicon belong to?
+
+`Ans- cgiirc`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 4: Manual Discovery - Sitemap.xml " open=false >}}
+What is the path of the secret area that can be found in the sitemap.xml file?
+
+`Ans- /s3cr3t-area`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 5: Manual Discovery - HTTP Headers " open=false >}}
+Q1. What is the flag value from the X-FLAG header? 
+
+`Ans- THM{HEADER_FLAG}`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 6: Manual Discovery - Framework Stack " open=false >}}
+Q1. What is the flag from the framework's administration portal?
+
+`Ans- THM{CHANGE_DEFAULT_CREDENTIALS}`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 7: OSINT - Google Hacking / Dorking " open=false >}}
+Q1. What Google dork operator can be used to only show results from a particular site?
+
+`Ans- site:`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 8: OSINT - Wappalyzer" open=false >}}
+Q1. What online tool can be used to identify what technologies a website is running? 
+
+`Ans- Wappalyzer`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 9: OSINT - Wayback Machine" open=false >}}
+Q1. What is the website address for the Wayback Machine?
+
+`Ans- https://archive.org/web/`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 10: OSINT - GitHub " open=false >}}
+Q1. What is Git? 
+
+`Ans- version control system`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 11: OSINT - S3 Buckets " open=false >}}
+Q1. What URL format do Amazon S3 buckets end in?
+
+`Ans- .s3.amazonaws.com`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 12: Automated Discovery " open=false >}}
+Q1. What is the name of the directory beginning "/mo...." that was discovered?
+
+`Ans- /monthly`
+
+Q2. What is the name of the log file that was discovered?
+
+`Ans- /development.log`
+{{< /admonition >}}
+
+### Subdomain Enumeration
+{{< admonition type=abstract title="Task 1:  Brief " open=false >}}
+Q1. What is a subdomain enumeration method beginning with B?
+
+`Ans- Brute Force`
+
+Q2. What is a subdomain enumeration method beginning with O?
+
+`Ans- OSINT`
+
+Q3. What is a subdomain enumeration method beginning with V?
+
+`Ans- Virtual Host`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 2: OSINT - SSL/TLS Certificates " open=false >}}
+Q1. What domain was logged on crt.sh at 2020-12-26?
+
+`Ans- store.tryhackme.com`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 3: OSINT - Search Engines" open=false >}}
+Q1. What is the TryHackMe subdomain beginning with B discovered using the above Google search?
+
+`Ans- blog.tryhackme.com`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 4: DNS Bruteforce " open=false >}}
+Q1. What is the first subdomain found with the dnsrecon tool?
+
+`Ans- api.acmeitsupport.thm`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 5: OSINT - Sublist3r " open=false >}}
+Q1. What is the first subdomain discovered by sublist3r?
+
+`Ans- web55.acmeitsupport.thm`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 6:  Virtual Hosts " open=false >}}
+Q1. What is the first subdomain discovered?
+
+`Ans- delta`
+
+Q2. What is the second subdomain discovered?
+
+`Ans- yellow`
+{{< /admonition >}}
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PFRLG5MZ6V"></script>
