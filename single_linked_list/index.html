@@ -10,7 +10,6 @@
 <meta property="og:url" content="https://sumit2011.github.io/single_linked_list/" /><meta property="og:image" content="https://sumit2011.github.io/images/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-12-25T11:54:28+05:30" />
 <meta property="article:modified_time" content="2022-12-25T11:54:28+05:30" /><meta property="og:site_name" content="Sumit&#39;s Blog" />
-
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sumit2011.github.io/images/logo.png"/>
 
@@ -211,7 +210,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">insertAtBeg</span><span class="p">(</span><span class="kt">int</span> <span class="n">value</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">Node</span> <span class="o">*</span><span class="n">newnode</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">newnode</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">Node</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Node</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">newnode</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">Node</span> <span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Node</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="n">newnode</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
@@ -223,7 +222,7 @@
 </span></span><span class="line"><span class="cl">        <span class="n">newnode</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="n">head</span> <span class="o">=</span> <span class="n">newnode</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d is inserted at beginning.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d is inserted at beginning.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -264,7 +263,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">insertATend</span><span class="p">(</span><span class="kt">int</span> <span class="n">value</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">Node</span> <span class="o">*</span><span class="n">newnode</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">newnode</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">Node</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Node</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">newnode</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">Node</span> <span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Node</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="n">newnode</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
@@ -282,7 +281,7 @@
 </span></span><span class="line"><span class="cl">        <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">newnode</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="n">newnode</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d is inserted at the end.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d is inserted at the end.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -327,7 +326,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">insertAtPos</span><span class="p">(</span><span class="kt">int</span> <span class="n">pos</span><span class="p">,</span> <span class="kt">int</span> <span class="n">value</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">Node</span> <span class="o">*</span><span class="n">newnode</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">newnode</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">Node</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Node</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">newnode</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">Node</span> <span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">Node</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="n">newnode</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">Node</span> <span class="o">*</span><span class="n">temp</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
@@ -340,7 +339,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="n">newnode</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">newnode</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d is inserted at the %dth position.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">pos</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d is inserted at the %dth position.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">pos</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -386,15 +385,15 @@
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;The list is empty.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;The list is empty.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">struct</span> <span class="n">Node</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="n">temp</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="n">head</span> <span class="o">=</span> <span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d is deleted from the begining</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d is deleted from the begining</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -431,7 +430,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;The list is empty.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;The list is empty.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
@@ -443,8 +442,8 @@
 </span></span><span class="line"><span class="cl">            <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="n">prev</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d is deleted from the end</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d is deleted from the end</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -487,8 +486,8 @@
 </span></span><span class="line"><span class="cl">        <span class="n">i</span><span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">nextnode</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d is deleted from the %dth position.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">nextnode</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">pos</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">free</span><span class="p">(</span><span class="n">nextnode</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d is deleted from the %dth position.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">nextnode</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">pos</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">free</span><span class="p">(</span><span class="n">nextnode</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -550,7 +549,7 @@
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;The list is sorted successfully.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;The list is sorted successfully.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -590,7 +589,7 @@
 </span></span><span class="line"><span class="cl">        <span class="n">current</span> <span class="o">=</span> <span class="n">next</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="n">head</span> <span class="o">=</span> <span class="n">prev</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;The list is reversed successfully.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;The list is reversed successfully.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -616,15 +615,15 @@
 <pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// printing of linked list
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">display</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;The list is: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;The list is: &#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">Node</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">temp</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">temp</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d &#34;</span><span class="p">,</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d &#34;</span><span class="p">,</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -656,7 +655,7 @@
 </span></span><span class="line"><span class="cl">        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Total nodes present in the list is: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">count</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Total nodes present in the list is: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">count</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -702,32 +701,32 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">insertAtBeg</span><span class="p">(</span><span class="mi">34</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">insertAtBeg</span><span class="p">(</span><span class="mi">45</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">insertAtBeg</span><span class="p">(</span><span class="mi">72</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">insertAtBeg</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">insertAtBeg</span><span class="p">(</span><span class="mi">89</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">insertAtBeg</span><span class="p">(</span><span class="mi">99</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">insertATend</span><span class="p">(</span><span class="mi">23</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">insertATend</span><span class="p">(</span><span class="mi">55</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">insertATend</span><span class="p">(</span><span class="mi">13</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">insertATend</span><span class="p">(</span><span class="mi">41</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">insertAtPos</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8992</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">display</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">deleteatBeg</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">deleteatEnd</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">deleteatPos</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">display</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">sortlist</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">display</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">insertATend</span><span class="p">(</span><span class="mi">58</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">display</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">reverse</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">display</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">insertAtBeg</span><span class="p">(</span><span class="mi">99</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">insertATend</span><span class="p">(</span><span class="mi">23</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">display</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">getlength</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">insertAtBeg</span><span class="p">(</span><span class="mi">34</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">insertAtBeg</span><span class="p">(</span><span class="mi">45</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">insertAtBeg</span><span class="p">(</span><span class="mi">72</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">insertAtBeg</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">insertAtBeg</span><span class="p">(</span><span class="mi">89</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">insertAtBeg</span><span class="p">(</span><span class="mi">99</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">insertATend</span><span class="p">(</span><span class="mi">23</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">insertATend</span><span class="p">(</span><span class="mi">55</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">insertATend</span><span class="p">(</span><span class="mi">13</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">insertATend</span><span class="p">(</span><span class="mi">41</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">insertAtPos</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8992</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">display</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">deleteatBeg</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">deleteatEnd</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">deleteatPos</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">display</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">sortlist</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">display</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">insertATend</span><span class="p">(</span><span class="mi">58</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">display</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">reverse</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">display</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">insertAtBeg</span><span class="p">(</span><span class="mi">99</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">insertATend</span><span class="p">(</span><span class="mi">23</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">display</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">getlength</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -818,64 +817,64 @@ Then the main function will be:</em></p>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">choice</span><span class="p">,</span><span class="n">value</span><span class="p">,</span><span class="n">pos</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;1) Insert at begining</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;2) insert at last</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;3) Insert at any position</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;4) Delete from the begining</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;5) Delete from the end</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;6) Delete from any position</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;7) Sort the list</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;8) Reverse the list</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;9) Fint the length of the list</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;10) Display the list</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;11) Exit</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;1) Insert at begining</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;2) insert at last</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;3) Insert at any position</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;4) Delete from the begining</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;5) Delete from the end</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;6) Delete from any position</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;7) Sort the list</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;8) Reverse the list</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;9) Fint the length of the list</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;10) Display the list</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;11) Exit</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">do</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Enter Choice: &#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">choice</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter Choice: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">choice</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="k">switch</span> <span class="p">(</span><span class="n">choice</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Enter value to be inserted: &#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">value</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="n">insertAtBeg</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter value to be inserted: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">insertAtBeg</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Enter value to be inserted: &#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">value</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="n">insertATend</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter value to be inserted: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">insertATend</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Enter the position and the value to be inserted respectively: &#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">pos</span><span class="p">,</span><span class="o">&amp;</span><span class="n">value</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="n">insertAtPos</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="n">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter the position and the value to be inserted respectively: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">pos</span><span class="p">,</span><span class="o">&amp;</span><span class="n">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">insertAtPos</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="n">value</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">deleteatBeg</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">deleteatBeg</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="mi">5</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">deleteatEnd</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">deleteatEnd</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="mi">6</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Enter the position of the node to be deleted: &#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">pos</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="n">deleteatPos</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter the position of the node to be deleted: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">pos</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">deleteatPos</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="mi">7</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">sortlist</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">sortlist</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="mi">8</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">reverse</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">reverse</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="mi">9</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">getlength</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">getlength</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="mi">10</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">display</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">display</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="mi">11</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Exit&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Exit&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">default</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>

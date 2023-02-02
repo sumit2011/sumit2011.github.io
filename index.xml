@@ -4,7 +4,7 @@
         <link>https://sumit2011.github.io/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
-            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Sun, 15 Jan 2023 11:54:28 &#43;0530</lastBuildDate>
+            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Sun, 22 Jan 2023 11:54:28 &#43;0530</lastBuildDate>
             <atom:link href="https://sumit2011.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Single Linked List</title>
@@ -32,6 +32,14 @@
     <pubDate>Sun, 15 Jan 2023 11:54:28 &#43;0530</pubDate>
     <author>sumit</author>
     <guid>https://sumit2011.github.io/stack/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Oops concept in cpp</title>
+    <link>https://sumit2011.github.io/oops/</link>
+    <pubDate>Sun, 22 Jan 2023 11:54:28 &#43;0530</pubDate>
+    <author>sumit</author>
+    <guid>https://sumit2011.github.io/oops/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
