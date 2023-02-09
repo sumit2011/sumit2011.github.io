@@ -43,12 +43,12 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 
 {{< /admonition >}}
 
-
+<!--
 {{< admonition type=success title="THM Pwned Machines" open=false >}}
 
 {{< /admonition >}}
 
-<!-- hackerx certificates -->
+<!-- hackerx certificates 
 {{< admonition type=success title="Hacker-X Certificates" open=false >}}
 <img src="Hacker-X Certificates/gathering_information.jpg" />
 <img src="Hacker-X Certificates/hack_the_mac.jpg" />
@@ -56,7 +56,7 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 <img src="Hacker-X Certificates/know_the_os.jpg" />
 <img src="Hacker-X Certificates/surfing_anonymously.jpg" />
 {{< /admonition >}}
-
+-->
 {{< admonition type=tip title="Tools" open=false >}}
 <a href="https://www.kali.org/tools/burpsuite"><img src="tools/burpsuite-logo.svg"  height="70" width="80" /></a>
 <a href="https://www.kali.org/tools/nmap"><img src="tools/nmap-logo.svg"  height="70" width="80" /></a>
