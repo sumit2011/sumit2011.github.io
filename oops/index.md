@@ -36,3 +36,5 @@ Example* object2 = new Example;
 ```
 The first line creates a stack-allocated object of the class type, while the second line creates a heap-allocated object, which is pointed by the pointer 'object2'
 
+### class
+in cpp class is a instance
