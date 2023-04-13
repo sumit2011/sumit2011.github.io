@@ -4,7 +4,7 @@
         <link>https://sumit2011.github.io/posts/</link>
         <description>All Posts | Sumit&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
-            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Sun, 22 Jan 2023 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Thu, 05 Jan 2023 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Single Linked List</title>
     <link>https://sumit2011.github.io/single_linked_list/</link>
     <pubDate>Sun, 25 Dec 2022 11:54:28 &#43;0530</pubDate>
@@ -23,14 +23,6 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://assets.tryhackme.com/img/paths/jrpenetrationtester.svg" referrerpolicy="no-referrer">
             </div><p>Here i will help you in your jr penetration tester pathway on THM.</p>]]></description>
-</item>
-<item>
-    <title>Oops concept in cpp</title>
-    <link>https://sumit2011.github.io/oops/</link>
-    <pubDate>Sun, 22 Jan 2023 11:54:28 &#43;0530</pubDate>
-    <author>sumit</author>
-    <guid>https://sumit2011.github.io/oops/</guid>
-    <description><![CDATA[]]></description>
 </item>
 </channel>
 </rss>
