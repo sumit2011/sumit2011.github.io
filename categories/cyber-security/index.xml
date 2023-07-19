@@ -14,5 +14,15 @@
                 <img src="https://assets.tryhackme.com/img/paths/jrpenetrationtester.svg" referrerpolicy="no-referrer">
             </div><p>Here i will help you in your jr penetration tester pathway on THM.</p>]]></description>
 </item>
+<item>
+    <title>Upload Vulnerabilities</title>
+    <link>https://sumit2011.github.io/upload-vulnarabilitiess/</link>
+    <pubDate>Thu, 05 Jan 2023 11:54:28 &#43;0530</pubDate>
+    <author>sumit</author>
+    <guid>https://sumit2011.github.io/upload-vulnarabilitiess/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://i.imgur.com/wVEQ3Fe.png" referrerpolicy="no-referrer">
+            </div><p>This is the write up for the room Upload Vulnerabilities on Tryhackme and it is part of the Web Fundamentals Path</p>]]></description>
+</item>
 </channel>
 </rss>

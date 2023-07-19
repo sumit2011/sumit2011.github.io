@@ -4,29 +4,29 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Stack - Sumit&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="Stack" />
-<meta property="og:description" content="" />
+        <title>Upload Vulnerabilities - Sumit&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="Upload Vulnerabilities" />
+<meta property="og:description" content="This is the write up for the room Upload Vulnerabilities on Tryhackme and it is part of the Web Fundamentals Path" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://sumit2011.github.io/stack/" /><meta property="og:image" content="https://sumit2011.github.io/images/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-01-15T11:54:28+05:30" />
-<meta property="article:modified_time" content="2023-01-15T11:54:28+05:30" /><meta property="og:site_name" content="Sumit&#39;s Blog" />
+<meta property="og:url" content="https://sumit2011.github.io/upload-vulnarabilitiess/" /><meta property="og:image" content="https://sumit2011.github.io/images/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-05T11:54:28+05:30" />
+<meta property="article:modified_time" content="2023-01-05T11:54:28+05:30" /><meta property="og:site_name" content="Sumit&#39;s Blog" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sumit2011.github.io/images/logo.png"/>
 
-<meta name="twitter:title" content="Stack"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Upload Vulnerabilities"/>
+<meta name="twitter:description" content="This is the write up for the room Upload Vulnerabilities on Tryhackme and it is part of the Web Fundamentals Path"/>
 <meta name="application-name" content="Sumit&#39;s Blog">
-<meta name="apple-mobile-web-app-title" content="Sumit&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/logo.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://sumit2011.github.io/stack/" /><link rel="prev" href="https://sumit2011.github.io/upload-vulnarabilitiess/" /><link rel="next" href="https://sumit2011.github.io/jr-penetration-tester/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="Sumit&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/logo.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://sumit2011.github.io/upload-vulnarabilitiess/" /><link rel="next" href="https://sumit2011.github.io/stack/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Stack",
+        "headline": "Upload Vulnerabilities",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/sumit2011.github.io\/stack\/"
-        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  98 ,
-        "url": "https:\/\/sumit2011.github.io\/stack\/","datePublished": "2023-01-15T11:54:28+05:30","dateModified": "2023-01-15T11:54:28+05:30","publisher": {
+            "@id": "https:\/\/sumit2011.github.io\/upload-vulnarabilitiess\/"
+        },"genre": "posts","keywords": "C","wordcount":  65 ,
+        "url": "https:\/\/sumit2011.github.io\/upload-vulnarabilitiess\/","datePublished": "2023-01-05T11:54:28+05:30","dateModified": "2023-01-05T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -97,56 +97,66 @@
     </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
-            <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Stack</h1><div class="post-meta">
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Upload Vulnerabilities</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>sumit</a>
-</span>&nbsp;<span class="post-category">included in <a href="/categories/dsa/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DSA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="15-01-2023">15-01-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;98 words&nbsp;
+</span>&nbsp;<span class="post-category">included in <a href="/categories/cyber-security/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Cyber Security</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="05-01-2023">05-01-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;65 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  data-kept="true">
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.imgur.com/wVEQ3Fe.png"
+        data-srcset="https://i.imgur.com/wVEQ3Fe.png, https://i.imgur.com/wVEQ3Fe.png 1.5x, https://i.imgur.com/wVEQ3Fe.png 2x"
+        data-sizes="auto"
+        alt="https://i.imgur.com/wVEQ3Fe.png"
+        title="https://i.imgur.com/wVEQ3Fe.png" /></div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><blockquote>
-<p>Use the table of contents to navigate to the portion that you are interested in.</p>
-</blockquote>
-<h1 id="introduction">Introduction</h1>
-<p>Stack is a linear data structure that follows a particular order in which several type of operations like push pull are performed. The order can be LIFO or FILO both are same so don&rsquo;t be confused.</p>
-<p>LIFO:(Last in first out) It means which element that can be filled at last that will be removed first.</p>
-<p>FILO:(first in last out) It means that element will be removed at last which is filled at first.</p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#task-1-getting-started">Task 1 Getting Started</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>This is the write up for the room Upload Vulnerabilities on Tryhackme and it is part of the Web Fundamentals Path</p>
+<h1 id="upload-vulnerabilities">Upload Vulnerabilities</h1>
 <blockquote>
-<p>operations that can be performed</p>
-<ol>
-<li>push</li>
-<li>pop</li>
-<li>peek</li>
-<li>isempty</li>
-</ol>
-</blockquote></div><div class="post-footer" id="post-footer">
+<p>Room link: <a href="https://tryhackme.com/room/uploadvulns" target="_blank" rel="noopener noreffer">https://tryhackme.com/room/uploadvulns</a>
+</p>
+</blockquote>
+<h2 id="task-1-getting-started">Task 1 Getting Started</h2>
+<p>Let&rsquo;s deploy the machine to give it a few minutes to boot.
+click on the <code>Start Machine</code> button.
+now you have to configure your own pc.</p>
+<p>open host file</p>
+<ul>
+<li>on linux  /etc/hosts</li>
+<li>on windows C:\Windows\System32\drivers\etc\hosts</li>
+</ul></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 15-01-2023</span>
+                <span>Updated on 05-01-2023</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://sumit2011.github.io/stack/" data-title="Stack" data-via="_su__mit___" data-hashtags="C,C&#43;&#43;"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://sumit2011.github.io/stack/" data-hashtag="C"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://sumit2011.github.io/stack/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://sumit2011.github.io/stack/" data-title="Stack" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://sumit2011.github.io/upload-vulnarabilitiess/" data-title="Upload Vulnerabilities" data-via="_su__mit___" data-hashtags="C"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://sumit2011.github.io/upload-vulnarabilitiess/" data-hashtag="C"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://sumit2011.github.io/upload-vulnarabilitiess/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://sumit2011.github.io/upload-vulnarabilitiess/" data-title="Upload Vulnerabilities" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/c/">C</a>,&nbsp;<a href="/tags/c&#43;&#43;/">C&#43;&#43;</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/c/">C</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/upload-vulnarabilitiess/" class="prev" rel="prev" title="Upload Vulnerabilities"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Upload Vulnerabilities</a>
-            <a href="/jr-penetration-tester/" class="next" rel="next" title="THM Jr Penetration Tester Pathway Guide">THM Jr Penetration Tester Pathway Guide<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav">
+            <a href="/stack/" class="next" rel="next" title="Stack">Stack<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
