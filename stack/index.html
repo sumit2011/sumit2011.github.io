@@ -25,7 +25,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/stack\/"
-        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  98 ,
+        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  1131 ,
         "url": "https:\/\/sumit2011.github.io\/stack\/","datePublished": "2023-01-15T11:54:28+05:30","dateModified": "2023-01-15T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -101,14 +101,30 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Stack</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/dsa/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DSA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="15-01-2023">15-01-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;98 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  data-kept="true">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="15-01-2023">15-01-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1131 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://media.geeksforgeeks.org/wp-content/uploads/20210409185210/HowtoImplementStackinJavaUsingArrayandGenerics.jpg"
+        data-srcset="https://media.geeksforgeeks.org/wp-content/uploads/20210409185210/HowtoImplementStackinJavaUsingArrayandGenerics.jpg, https://media.geeksforgeeks.org/wp-content/uploads/20210409185210/HowtoImplementStackinJavaUsingArrayandGenerics.jpg 1.5x, https://media.geeksforgeeks.org/wp-content/uploads/20210409185210/HowtoImplementStackinJavaUsingArrayandGenerics.jpg 2x"
+        data-sizes="auto"
+        alt="https://media.geeksforgeeks.org/wp-content/uploads/20210409185210/HowtoImplementStackinJavaUsingArrayandGenerics.jpg"
+        title="https://media.geeksforgeeks.org/wp-content/uploads/20210409185210/HowtoImplementStackinJavaUsingArrayandGenerics.jpg" /></div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#creation-of-stack">Creation of stack</a></li>
+    <li><a href="#push-function">Push Function</a></li>
+    <li><a href="#pop-function">Pop Function</a></li>
+    <li><a href="#peek-function">Peek Function</a></li>
+    <li><a href="#isempty-function">IsEmpty function</a></li>
+    <li><a href="#the-main-function">The main function</a></li>
+  </ul>
+</nav></div>
             </div><div class="content" id="content"><blockquote>
 <p>Use the table of contents to navigate to the portion that you are interested in.</p>
 </blockquote>
@@ -124,7 +140,209 @@
 <li>peek</li>
 <li>isempty</li>
 </ol>
-</blockquote></div><div class="post-footer" id="post-footer">
+</blockquote>
+<h2 id="creation-of-stack">Creation of stack</h2>
+<p>This code defines a C++ class named &ldquo;stack,&rdquo; representing a basic stack data structure. The class has three properties: &ldquo;arr&rdquo; (a pointer to an integer array to store the stack elements), &ldquo;top&rdquo; (an integer representing the index of the topmost element in the stack), and &ldquo;size&rdquo; (an integer specifying the maximum capacity of the stack). Additionally, the class has a constructor that takes an integer &ldquo;size&rdquo; as a parameter and initializes the properties accordingly. The constructor allocates memory for the stack using the &ldquo;new&rdquo; keyword, sets the stack size, and initializes &ldquo;top&rdquo; to -1 to indicate that the stack is initially empty. With this class, you can create a stack object with a specific size and use it to implement stack operations like push, pop, peek, and check if the stack is empty or not.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">//array emplementation of stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"> <span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span> <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="k">class</span> <span class="nc">stack</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//properties
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="o">*</span><span class="n">arr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">top</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//behaviour
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">stack</span><span class="p">(</span><span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span> <span class="o">-&gt;</span> <span class="n">size</span> <span class="o">=</span> <span class="n">size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">size</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="n">top</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="push-function">Push Function</h2>
+<p>The &ldquo;push&rdquo; function is part of the &ldquo;stack&rdquo; class and aims to add a new element to the stack. It checks if there is space available by comparing the difference between the maximum size of the stack and the current top index. If space is available, the function increments the top index to make room for the new element, assigns the new element to the top position in the array, effectively adding it to the stack. If the stack is already full, the function prints an error message indicating &ldquo;stack overflow,&rdquo; signifying that the operation cannot be performed.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">//push function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">push</span> <span class="p">(</span><span class="kt">int</span> <span class="n">element</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">       <span class="k">if</span><span class="p">(</span><span class="n">size</span><span class="o">-</span><span class="n">top</span> <span class="o">&gt;</span><span class="mi">1</span> <span class="p">){</span>
+</span></span><span class="line"><span class="cl">           <span class="n">top</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">           <span class="n">arr</span><span class="p">[</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">       <span class="p">}</span>
+</span></span><span class="line"><span class="cl">       <span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">           <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;stack overflow&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">       <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="pop-function">Pop Function</h2>
+<p>The &ldquo;pop&rdquo; function is also part of the &ldquo;stack&rdquo; class and serves to remove the topmost element from the stack, following the Last-In-First-Out (LIFO) principle. It first checks if there are any elements in the stack by examining the value of the top index. If the top index is greater than or equal to 0, it means there is at least one element in the stack. In that case, the function decrements the top index, effectively removing the top element and making the next element (if any) the new top. This simulates the removal of the last added element. However, if the top index is less than 0, it means the stack is empty, and there are no elements to remove. In this situation, the function prints an error message, &ldquo;stack underflow,&rdquo; indicating that the operation cannot be performed as the stack is already empty.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">//pop function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">pop</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">top</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="n">top</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cout</span><span class="o">&lt;&lt;</span> <span class="s">&#34; stack underflow &#34;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="peek-function">Peek Function</h2>
+<p>The &ldquo;peek&rdquo; function is a part of the &ldquo;stack&rdquo; class and is used to look at the topmost element of the stack without removing it. When called, the function first checks if there are any elements in the stack by examining the value of the top index. If the top index is greater than or equal to 0, it means there is at least one element in the stack. In this case, the function returns the value of the element at the top position. However, if the top index is less than 0, it means the stack is empty, and there are no elements to peek at. In this situation, the function prints an error message, &ldquo;stack is empty,&rdquo; and returns -1 to indicate that there&rsquo;s no valid element to return.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">peek</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">top</span> <span class="o">&gt;=</span><span class="mi">0</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">arr</span><span class="p">[</span><span class="n">top</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cout</span> <span class="o">&lt;&lt;</span><span class="s">&#34;stack is empty &#34;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="isempty-function">IsEmpty function</h2>
+<p>The &ldquo;isempty&rdquo; function is a member of the &ldquo;stack&rdquo; class and is used to check whether the stack is empty or not. When called, the function examines the value of the &ldquo;top&rdquo; index, which represents the position of the topmost element in the stack. If the &ldquo;top&rdquo; index is equal to -1, it means there are no elements in the stack, and it is considered empty. In this case, the function returns &ldquo;true&rdquo; to indicate that the stack is empty. However, if the &ldquo;top&rdquo; index is not -1, it means there is at least one element in the stack, and it is not empty. In this situation, the function returns &ldquo;false&rdquo; to indicate that the stack is not empty. In summary, the &ldquo;isempty&rdquo; function provides a convenient way to check the emptiness status of the stack, returning &ldquo;true&rdquo; if it&rsquo;s empty and &ldquo;false&rdquo; if it contains elements.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">isempty</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">top</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>   
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="the-main-function">The main function</h2>
+<p>In this C++ code, the &ldquo;main&rdquo; function demonstrates the usage of a stack data structure implemented through the &ldquo;stack&rdquo; class. Firstly, it creates a stack object &ldquo;st&rdquo; with a size of 5. Then, it uses the &ldquo;push&rdquo; function to add three elements (22, 33, and 44) to the stack. The &ldquo;peek&rdquo; function is called to print the top element (44). Subsequently, the &ldquo;pop&rdquo; function is used to remove the top element from the stack, and &ldquo;peek&rdquo; is called again to print the new top element (33). This process is repeated two more times with the last element (22) being popped, and &ldquo;peek&rdquo; is called again, but the stack is now empty. Finally, the &ldquo;isempty&rdquo; function is called to verify if the stack is empty, and it prints &ldquo;stack is empty&rdquo; as the output, confirming that the stack is empty at this point.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">stack</span> <span class="n">st</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">st</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">22</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">st</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">33</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">st</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">44</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">st</span><span class="p">.</span><span class="n">peek</span><span class="p">()</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">st</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">st</span><span class="p">.</span><span class="n">peek</span><span class="p">()</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">st</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">st</span><span class="p">.</span><span class="n">peek</span><span class="p">()</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">st</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">st</span><span class="p">.</span><span class="n">peek</span><span class="p">()</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">st</span><span class="p">.</span><span class="n">isempty</span><span class="p">()){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span><span class="o">&lt;&lt;</span> <span class="s">&#34;stack is empty&#34;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;stack is not empty&#34;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>output of the following code
+<figure><img src="/posts/DSA/stack/output.png"/>
+</figure>
+</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
