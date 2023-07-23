@@ -23,11 +23,10 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 
 
 {{< admonition type=success title="THM Certificates" open=true >}}
-
 {{< image src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-SMAKC7MFIS.png" >}}
 {{< image src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-7FHKPDCZCM.png" >}}
 {{< image src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-MUYLHSDVPL.png" >}}
-
+<img src="certificates/codered.png" />
 {{< /admonition >}}
 
 <!-- thm badges  -->
@@ -40,6 +39,9 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 <a href="https://tryhackme.com/hackerSUMO/badges/network-fundamentals" target="blank"><img src="THM Badges/networkfundamentals.svg"  height="88" width="98" /></a>
 <a href="https://tryhackme.com/hackerSUMO/badges/adventofcyber4" target="blank"><img src="THM Badges/adventofcyber4.svg"  height="88" width="98" /></a>
 <a href="https://tryhackme.com/hackerSUMO/badges/intro-to-pentesting" target="blank"><img src="THM Badges/introtooffensivesecurity.svg"  height="88" width="98" /></a>
+<a href="https://tryhackme.com/hackerSUMO/badges/intro-to-pentesting" target="blank"><img src="https://tryhackme.com/img/badges/streak30.svg"  height="88" width="98" /></a>
+<a href="https://tryhackme.com/hackerSUMO/badges/intro-to-pentesting" target="blank"><img src="https://tryhackme.com/img/badges/burpsuite.svg"  height="88" width="98" /></a>
+<a href="https://tryhackme.com/hackerSUMO/badges/intro-to-pentesting" target="blank"><img src="https://tryhackme.com/img/badges/owasptop10.svg"  height="88" width="98" /></a>
 
 {{< /admonition >}}
 
@@ -50,11 +52,11 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 
 <!-- hackerx certificates -->
 {{< admonition type=success title="Other Certificates" open=false >}}
-<img src="Hacker-X Certificates/gathering_information.jpg" />
-<img src="Hacker-X Certificates/hack_the_mac.jpg" />
-<img src="Hacker-X Certificates/hiding_messages.jpg" />
-<img src="Hacker-X Certificates/know_the_os.jpg" />
-<img src="Hacker-X Certificates/surfing_anonymously.jpg" />
+<img src="certificates/gathering_information.jpg" />
+<img src="certificates/hack_the_mac.jpg" />
+<img src="certificates/hiding_messages.jpg" />
+<img src="certificates/know_the_os.jpg" />
+<img src="certificates/surfing_anonymously.jpg" />
 {{< /admonition >}}
 
 {{< admonition type=tip title="Tools" open=true >}}
