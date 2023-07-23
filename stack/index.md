@@ -1,20 +1,23 @@
-# Stack
+# Stack (array implementation)
 
 
 <!--more-->
-> Use the table of contents to navigate to the portion that you are interested in.
-# Introduction
-Stack is a linear data structure that follows a particular order in which several type of operations like push pull are performed. The order can be LIFO or FILO both are same so don't be confused.
+{{< admonition type=note title="Note" open=true >}}
+_Use the table of contents to navigate to the portion that you are interested in._
+{{< /admonition >}}
+
+## Introduction
+**Stack** is a **linear data structure** that follows a particular order in which several type of operations like push pull are performed. The order can be `LIFO` or `FILO`, both are same so don't be confused.
 
 LIFO:(Last in first out) It means which element that can be filled at last that will be removed first.
 
 FILO:(first in last out) It means that element will be removed at last which is filled at first.
 
->operations that can be performed
->1. push
->2. pop
->3. peek
->4. isempty
+Operations that can be performed:
+ 1. push
+ 2. pop
+ 3. peek
+ 4. isempty
 
 ## Creation of stack
 This code defines a C++ class named "stack," representing a basic stack data structure. The class has three properties: "arr" (a pointer to an integer array to store the stack elements), "top" (an integer representing the index of the topmost element in the stack), and "size" (an integer specifying the maximum capacity of the stack). Additionally, the class has a constructor that takes an integer "size" as a parameter and initializes the properties accordingly. The constructor allocates memory for the stack using the "new" keyword, sets the stack size, and initializes "top" to -1 to indicate that the stack is initially empty. With this class, you can create a stack object with a specific size and use it to implement stack operations like push, pop, peek, and check if the stack is empty or not.
@@ -123,3 +126,99 @@ st.pop();
 
 output of the following code
 {{< figure src="/posts/DSA/stack/output.png" >}}
+
+>Complete code
+```c++
+//array emplementation of stack
+
+ #include<iostream>
+ 
+ using namespace std;
+
+ class stack {
+    //properties
+    public:
+        int *arr;
+        int top;
+        int size;
+
+    //behaviour
+    stack(int size) {
+        this -> size = size;
+        arr = new int[size];
+        top=-1;
+    }
+
+    void push (int element) {
+        if(size-top >1 ){
+            top++;
+            arr[top] = element;
+        }
+        else{
+            cout << "stack overflow" << endl;
+        }
+    }
+
+    void pop(){
+        if(top >= 0){
+            top--;
+        }
+        else{
+            cout<< " stack underflow "<<endl;
+        }
+
+    }
+
+    int peek() {
+        if(top >=0 )
+            return arr[top];
+        else{
+            cout <<"stack is empty "<<endl;
+            return -1;
+        }
+    }
+
+    bool isempty(){
+        if(top == -1){
+            return true;
+        }
+        else{
+            return false;   
+        }
+    }
+
+ };
+
+ int main(){
+    stack st(5);
+
+    st.push(22);
+    st.push(33);
+    st.push(44);
+    cout << st.peek()<<endl;
+    st.pop();
+    cout << st.peek()<<endl;
+st.pop();
+    cout << st.peek()<<endl;
+    st.pop();
+    cout << st.peek()<<endl;
+
+    if(st.isempty()){
+        cout<< "stack is empty"<<endl;
+    }
+    else
+    cout<<"stack is not empty"<<endl;
+ }
+```
+
+
+
+Questions
+reverse a string using stack
+
+{{< admonition type=question title="Problems" open=false >}}
+{{< link "https://www.codingninjas.com/studio/problems/two-stacks_983634" "**Two stack** (Coding ninjas)">}}
+{{< link "https://www.codingninjas.com/studio/problems/delete-middle-element-from-stack_985246" "**Middle element** (Coding ninjas)">}}
+
+
+{{< /admonition >}}

@@ -318,7 +318,7 @@ int main()
 ```
 {{< admonition type=note title="Note" open=true >}}
 _It will be a better practice if you take the input from the user in the output terminal.
-Then the main function will be:_
+In this case the main function will be:_
 ```c
 // main function
 int main()
