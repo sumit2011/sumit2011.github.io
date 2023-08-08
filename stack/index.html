@@ -25,7 +25,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/stack\/"
-        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  1306 ,
+        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  1272 ,
         "url": "https:\/\/sumit2011.github.io\/stack\/","datePublished": "2023-01-15T11:54:28+05:30","dateModified": "2023-01-15T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -101,8 +101,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Stack (array implementation)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/dsa/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DSA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="15-01-2023">15-01-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1306 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="15-01-2023">15-01-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1272 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -192,7 +192,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="push-function">Push Function</h2>
-<p>The <code>push</code> function is part of the <code>stack</code> class and aims to add a new element to the stack. It checks if there is space available by comparing the difference between the maximum size of the stack and the current top index. If space is available, the function increments the top index to make room for the new element, assigns the new element to the top position in the array, effectively adding it to the stack. If the stack is already full, the function prints an error message indicating &ldquo;stack overflow,&rdquo; signifying that the operation cannot be performed.</p>
+<p>The <code>push</code> function is part of the <code>stack</code> class. It adds a new element to the stack. It checks if there is space available by comparing the difference between the maximum size of the stack and the current top index. If space is available, the function increments the top index to make room for the new element, assigns the new element to the top position in the array, effectively adding it to the stack. If the stack is already full, the function prints an error message indicating &ldquo;stack overflow,&rdquo; signifying that the operation cannot be performed.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -220,7 +220,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="pop-function">Pop Function</h2>
-<p>The <code>pop</code> function is also part of the <code>stack</code> class and serves to remove the topmost element from the stack, following the Last-In-First-Out (LIFO) principle. It first checks if there are any elements in the stack by examining the value of the top index. If the top index is greater than or equal to 0, it means there is at least one element in the stack. In that case, the function decrements the top index, effectively removing the top element and making the next element (if any) the new top. This simulates the removal of the last added element. However, if the top index is less than 0, it means the stack is empty, and there are no elements to remove. In this situation, the function prints an error message, &ldquo;stack underflow,&rdquo; indicating that the operation cannot be performed as the stack is already empty.</p>
+<p>The <code>pop</code> function remove the topmost element from the stack, it follows the (LIFO) principle. It first checks if there are any elements in the stack by examining the value of the top index. If the top index is greater than or equal to 0, it means there is at least one element in the stack. In that case, the function decrements the top index, effectively removing the top element and making the next element (if any) the new top. However, if the top index is less than 0, it means the stack is empty, and there are no elements to remove. In this situation, the function prints an error message, &ldquo;stack underflow,&rdquo;.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1

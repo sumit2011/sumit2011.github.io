@@ -44,7 +44,7 @@ This code represents a basic stack data structure. The class has three propertie
  ```
 
 ## Push Function
-The `push` function is part of the `stack` class and aims to add a new element to the stack. It checks if there is space available by comparing the difference between the maximum size of the stack and the current top index. If space is available, the function increments the top index to make room for the new element, assigns the new element to the top position in the array, effectively adding it to the stack. If the stack is already full, the function prints an error message indicating "stack overflow," signifying that the operation cannot be performed.
+The `push` function is part of the `stack` class. It adds a new element to the stack. It checks if there is space available by comparing the difference between the maximum size of the stack and the current top index. If space is available, the function increments the top index to make room for the new element, assigns the new element to the top position in the array, effectively adding it to the stack. If the stack is already full, the function prints an error message indicating "stack overflow," signifying that the operation cannot be performed.
  ```c++
  //push function
  void push (int element) {
@@ -58,7 +58,7 @@ The `push` function is part of the `stack` class and aims to add a new element t
     }
 ```
 ## Pop Function
-The `pop` function is also part of the `stack` class and serves to remove the topmost element from the stack, following the Last-In-First-Out (LIFO) principle. It first checks if there are any elements in the stack by examining the value of the top index. If the top index is greater than or equal to 0, it means there is at least one element in the stack. In that case, the function decrements the top index, effectively removing the top element and making the next element (if any) the new top. This simulates the removal of the last added element. However, if the top index is less than 0, it means the stack is empty, and there are no elements to remove. In this situation, the function prints an error message, "stack underflow," indicating that the operation cannot be performed as the stack is already empty.
+The `pop` function remove the topmost element from the stack, it follows the (LIFO) principle. It first checks if there are any elements in the stack by examining the value of the top index. If the top index is greater than or equal to 0, it means there is at least one element in the stack. In that case, the function decrements the top index, effectively removing the top element and making the next element (if any) the new top. However, if the top index is less than 0, it means the stack is empty, and there are no elements to remove. In this situation, the function prints an error message, "stack underflow,".
 ```c++
 //pop function
 void pop(){
