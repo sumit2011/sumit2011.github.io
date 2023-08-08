@@ -25,7 +25,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/stack\/"
-        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  1366 ,
+        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  1306 ,
         "url": "https:\/\/sumit2011.github.io\/stack\/","datePublished": "2023-01-15T11:54:28+05:30","dateModified": "2023-01-15T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -101,7 +101,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Stack (array implementation)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/dsa/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DSA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="15-01-2023">15-01-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1366 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="15-01-2023">15-01-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1306 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -146,7 +146,7 @@
 <li>isempty</li>
 </ol>
 <h2 id="creation-of-stack">Creation of stack</h2>
-<p>This code defines a C++ class named &ldquo;stack,&rdquo; representing a basic stack data structure. The class has three properties: &ldquo;arr&rdquo; (a pointer to an integer array to store the stack elements), &ldquo;top&rdquo; (an integer representing the index of the topmost element in the stack), and &ldquo;size&rdquo; (an integer specifying the maximum capacity of the stack). Additionally, the class has a constructor that takes an integer &ldquo;size&rdquo; as a parameter and initializes the properties accordingly. The constructor allocates memory for the stack using the &ldquo;new&rdquo; keyword, sets the stack size, and initializes &ldquo;top&rdquo; to -1 to indicate that the stack is initially empty. With this class, you can create a stack object with a specific size and use it to implement stack operations like push, pop, peek, and check if the stack is empty or not.</p>
+<p>This code represents a basic stack data structure. The class has three properties: <code>arr</code> (a pointer to an integer array to store the stack elements), <code>top</code> (an integer to represent the index of the topmost element in the stack), and <code>size</code> (an integer specifying the maximum capacity of the stack). Also, the class has a constructor that takes an integer <code>size</code> as a parameter and initializes the properties accordingly. The constructor allocates memory for the stack using the <code>new</code> keyword, sets the stack size, and initializes <code>top</code> to -1 to indicate that the stack is initially empty.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -192,7 +192,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="push-function">Push Function</h2>
-<p>The &ldquo;push&rdquo; function is part of the &ldquo;stack&rdquo; class and aims to add a new element to the stack. It checks if there is space available by comparing the difference between the maximum size of the stack and the current top index. If space is available, the function increments the top index to make room for the new element, assigns the new element to the top position in the array, effectively adding it to the stack. If the stack is already full, the function prints an error message indicating &ldquo;stack overflow,&rdquo; signifying that the operation cannot be performed.</p>
+<p>The <code>push</code> function is part of the <code>stack</code> class and aims to add a new element to the stack. It checks if there is space available by comparing the difference between the maximum size of the stack and the current top index. If space is available, the function increments the top index to make room for the new element, assigns the new element to the top position in the array, effectively adding it to the stack. If the stack is already full, the function prints an error message indicating &ldquo;stack overflow,&rdquo; signifying that the operation cannot be performed.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -220,7 +220,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="pop-function">Pop Function</h2>
-<p>The &ldquo;pop&rdquo; function is also part of the &ldquo;stack&rdquo; class and serves to remove the topmost element from the stack, following the Last-In-First-Out (LIFO) principle. It first checks if there are any elements in the stack by examining the value of the top index. If the top index is greater than or equal to 0, it means there is at least one element in the stack. In that case, the function decrements the top index, effectively removing the top element and making the next element (if any) the new top. This simulates the removal of the last added element. However, if the top index is less than 0, it means the stack is empty, and there are no elements to remove. In this situation, the function prints an error message, &ldquo;stack underflow,&rdquo; indicating that the operation cannot be performed as the stack is already empty.</p>
+<p>The <code>pop</code> function is also part of the <code>stack</code> class and serves to remove the topmost element from the stack, following the Last-In-First-Out (LIFO) principle. It first checks if there are any elements in the stack by examining the value of the top index. If the top index is greater than or equal to 0, it means there is at least one element in the stack. In that case, the function decrements the top index, effectively removing the top element and making the next element (if any) the new top. This simulates the removal of the last added element. However, if the top index is less than 0, it means the stack is empty, and there are no elements to remove. In this situation, the function prints an error message, &ldquo;stack underflow,&rdquo; indicating that the operation cannot be performed as the stack is already empty.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -248,7 +248,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="peek-function">Peek Function</h2>
-<p>The &ldquo;peek&rdquo; function is a part of the &ldquo;stack&rdquo; class and is used to look at the topmost element of the stack without removing it. When called, the function first checks if there are any elements in the stack by examining the value of the top index. If the top index is greater than or equal to 0, it means there is at least one element in the stack. In this case, the function returns the value of the element at the top position. However, if the top index is less than 0, it means the stack is empty, and there are no elements to peek at. In this situation, the function prints an error message, &ldquo;stack is empty,&rdquo; and returns -1 to indicate that there&rsquo;s no valid element to return.</p>
+<p>The <code>peek</code> function is used to look at the topmost element of the stack without removing it. When called, the function first checks if there are any elements in the stack by examining the value of the top index. If the top index is greater than or equal to 0, it means there is at least one element in the stack. In this case, the function returns the value of the element at the top position. However, if the top index is less than 0, it means the stack is empty, and there are no elements to peek at. In this situation, the function prints an error message, &ldquo;stack is empty,&rdquo; and returns -1 to indicate that there&rsquo;s no valid element to return.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -272,7 +272,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="isempty-function">IsEmpty function</h2>
-<p>The &ldquo;isempty&rdquo; function is a member of the &ldquo;stack&rdquo; class and is used to check whether the stack is empty or not. When called, the function examines the value of the &ldquo;top&rdquo; index, which represents the position of the topmost element in the stack. If the &ldquo;top&rdquo; index is equal to -1, it means there are no elements in the stack, and it is considered empty. In this case, the function returns &ldquo;true&rdquo; to indicate that the stack is empty. However, if the &ldquo;top&rdquo; index is not -1, it means there is at least one element in the stack, and it is not empty. In this situation, the function returns &ldquo;false&rdquo; to indicate that the stack is not empty. In summary, the &ldquo;isempty&rdquo; function provides a convenient way to check the emptiness status of the stack, returning &ldquo;true&rdquo; if it&rsquo;s empty and &ldquo;false&rdquo; if it contains elements.</p>
+<p>The <code>isempty</code> function is used to check whether the stack is empty or not. When called, the function examines the value of the <code>top</code> index, which represents the position of the topmost element in the stack. If the <code>top</code> index is equal to -1, it means there are no elements in the stack, and it is considered empty. In this case, the function returns <code>true</code> to indicate that the stack is empty. However, if the <code>top</code> index is not -1, it means there is at least one element in the stack, and it is not empty. In this situation, the function returns <code>false</code> to indicate that the stack is not empty. In summary, the <code>isempty</code> function provides a convenient way to check the emptiness status of the stack, returning <code>true</code> if it&rsquo;s empty and <code>false</code> if it contains elements.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -296,7 +296,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="the-main-function">The main function</h2>
-<p>In this C++ code, the &ldquo;main&rdquo; function demonstrates the usage of a stack data structure implemented through the &ldquo;stack&rdquo; class. Firstly, it creates a stack object &ldquo;st&rdquo; with a size of 5. Then, it uses the &ldquo;push&rdquo; function to add three elements (22, 33, and 44) to the stack. The &ldquo;peek&rdquo; function is called to print the top element (44). Subsequently, the &ldquo;pop&rdquo; function is used to remove the top element from the stack, and &ldquo;peek&rdquo; is called again to print the new top element (33). This process is repeated two more times with the last element (22) being popped, and &ldquo;peek&rdquo; is called again, but the stack is now empty. Finally, the &ldquo;isempty&rdquo; function is called to verify if the stack is empty, and it prints &ldquo;stack is empty&rdquo; as the output, confirming that the stack is empty at this point.</p>
+<p>In this C++ code, the <code>main</code> function demonstrates the usage of a stack data structure implemented through the <code>stack</code> class. Firstly, it creates a stack object <code>st</code> with a size of 5. Then, it uses the <code>push</code> function to add three elements (22, 33, and 44) to the stack. The <code>peek</code> function is called to print the top element (44). Subsequently, the <code>pop</code> function is used to remove the top element from the stack, and <code>peek</code> is called again to print the new top element (33). This process is repeated two more times with the last element (22) being popped, and <code>peek</code> is called again, but the stack is now empty. Finally, the <code>isempty</code> function is called to verify if the stack is empty, and it prints <em><strong>stack is empty</strong></em> as the output, confirming that the stack is empty at this point.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -343,14 +343,16 @@
 </span></span><span class="line"><span class="cl"> <span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>output of the following code
+</div><p><em><strong>output of the following code</strong></em>
 <figure><img src="/posts/DSA/stack/output.png"/>
 </figure>
 </p>
-<blockquote>
-<p>Complete code</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
+<div class="details admonition note">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Complete Code<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -516,8 +518,9 @@
 </span></span><span class="line"><span class="cl"> <span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Questions
-reverse a string using stack</p>
+</div></div>
+        </div>
+    </div>
 <div class="details admonition question">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-question-circle fa-fw" aria-hidden="true"></i>Problems<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
