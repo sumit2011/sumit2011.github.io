@@ -99,7 +99,7 @@ bool isempty(){
 ```
 
 ## The main function 
-In this C++ code, the `main` function demonstrates the usage of a stack data structure implemented through the `stack` class. Firstly, it creates a stack object `st` with a size of 5. Then, it uses the `push` function to add three elements (22, 33, and 44) to the stack. The `peek` function is called to print the top element (44). Subsequently, the `pop` function is used to remove the top element from the stack, and `peek` is called again to print the new top element (33). This process is repeated two more times with the last element (22) being popped, and `peek` is called again, but the stack is now empty. Finally, the `isempty` function is called to verify if the stack is empty, and it prints ***stack is empty*** as the output, confirming that the stack is empty at this point.
+In this C++ code, the `main` function demonstrates the usage of a stack. Firstly, it creates a stack object `st` with a size of 5. Then, it uses the `push` function to add three elements (22, 33, and 44) to the stack. The `peek` function is called to print the top element `44`. Subsequently, the `pop` function is used to remove the top element from the stack, and `peek` is called again to print the new top element `33`. This process is repeated two more times with the last element `22` being popped, and `peek` is called again, but the stack is now empty. Finally, the `isempty` function is called to verify if the stack is empty, and it prints ***stack is empty*** as the output, confirming that the stack is empty at this point.
 
 ```c++
 int main(){
