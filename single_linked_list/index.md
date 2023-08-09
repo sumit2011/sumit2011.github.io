@@ -1,6 +1,6 @@
 # Single Linked List
 
-Navigation system works on the concept of linked list.
+***Navigation system works on the concept of linked list.***
 <!--more-->
 
 {{< admonition type=note title="Note" open=true >}}

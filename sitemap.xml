@@ -2,6 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://sumit2011.github.io/binary-search/</loc><lastmod>2022-12-25T11:54:28&#43;05:30</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://sumit2011.github.io/single_linked_list/</loc><lastmod>2022-12-25T11:54:28&#43;05:30</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://sumit2011.github.io/jr-penetration-tester/</loc><lastmod>2023-01-05T11:54:28&#43;05:30</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://sumit2011.github.io/stack/</loc><lastmod>2023-01-15T11:54:28&#43;05:30</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
