@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>Binary Search - Sumit&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="Binary Search" />
-<meta property="og:description" content="Navigation system works on the concept of linked list." />
+<meta property="og:description" content="" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://sumit2011.github.io/binary-search/" /><meta property="og:image" content="https://sumit2011.github.io/images/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-12-25T11:54:28+05:30" />
@@ -14,7 +14,7 @@
 <meta name="twitter:image" content="https://sumit2011.github.io/images/logo.png"/>
 
 <meta name="twitter:title" content="Binary Search"/>
-<meta name="twitter:description" content="Navigation system works on the concept of linked list."/>
+<meta name="twitter:description" content=""/>
 <meta name="application-name" content="Sumit&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="Sumit&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/logo.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://sumit2011.github.io/binary-search/" /><link rel="prev" href="https://sumit2011.github.io/single_linked_list/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -25,7 +25,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/binary-search\/"
-        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  230 ,
+        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  467 ,
         "url": "https:\/\/sumit2011.github.io\/binary-search\/","datePublished": "2022-12-25T11:54:28+05:30","dateModified": "2022-12-25T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -101,8 +101,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Binary Search</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/dsa/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DSA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-12-2022">25-12-2022</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;230 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-12-2022">25-12-2022</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;467 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -118,10 +118,11 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#creation-of-function">Creation of Function</a></li>
+    <li><a href="#the-main-function">The Main Function</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>Navigation system works on the concept of linked list.</p>
-<div class="details admonition note open">
+            </div><div class="content" id="content"><div class="details admonition note open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
@@ -131,7 +132,13 @@
     </div>
 <h2 id="introduction">Introduction</h2>
 <p>We know that there is two type of searching technique <code>1.Linear Search</code> and <code>2.Binary Search</code>. Here we discus only about binary search.
-<em><strong>Binary search</strong></em> is a searching technique, it is used to locate a specific element with in the <em><strong>sorted array</strong></em>. Binary search is applicable only on monotonic function which means values should be in the <strong>increasing</strong> or <strong>decreasing</strong> order.</p>
+<em><strong>Binary search</strong></em> is a searching technique, it is used to locate a specific element with in the <em><strong>sorted array</strong></em>.</p>
+<blockquote>
+<p>It is applicable only on monotonic function which means values should be in the <strong>increasing</strong> or <strong>decreasing</strong> order.</p>
+</blockquote>
+<h2 id="creation-of-function">Creation of Function</h2>
+<p>The given code snippet implements the binary search algorithm for finding a specific integer key within a sorted integer array &lsquo;arr&rsquo;. It initializes &lsquo;start&rsquo; and &rsquo;end&rsquo; indices to the first and last elements of the array, respectively, and calculates the middle index &lsquo;mid&rsquo;. Inside a while loop that continues as long as the &lsquo;start&rsquo; index is less than or equal to the &rsquo;end&rsquo; index, the code compares the value at index &lsquo;mid&rsquo; with the given &lsquo;key&rsquo;. If &lsquo;key&rsquo; matches the element at &lsquo;mid&rsquo;, the function returns &lsquo;mid&rsquo; as the index where &lsquo;key&rsquo; is found. If &lsquo;key&rsquo; is greater than the element at &lsquo;mid&rsquo;, the &lsquo;start&rsquo; index is updated to &lsquo;mid + 1&rsquo;, effectively narrowing the search range to the right half. If &lsquo;key&rsquo; is smaller, the &rsquo;end&rsquo; index is updated to &lsquo;mid - 1&rsquo;, narrowing the search range to the left half. After each update to &lsquo;start&rsquo; or &rsquo;end&rsquo;, &lsquo;mid&rsquo; is recalculated as the average of &lsquo;start&rsquo; and &rsquo;end&rsquo;. If the loop concludes without finding &lsquo;key&rsquo;, the function returns -1 to indicate that the key is not present in the array. This binary search algorithm&rsquo;s efficiency lies in its ability to halve the search range with each iteration, resulting in a time complexity of O(log n), making it efficient for searching in large sorted arrays.</p>
+<p>first initialise <code>start</code> and <code>end</code> indices to the first and last element of the array respectively. then calculate the middle index by <code>(start+end)/2</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -198,7 +205,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div><h2 id="the-main-function">The Main Function</h2>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -232,7 +240,25 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div><div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Fun Dose<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/FMzj9UYHTPQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</div>
+        </div>
+    </div>
+<div class="details admonition question">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-question-circle fa-fw" aria-hidden="true"></i>Problems<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"></div>
+        </div>
+    </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

@@ -47,6 +47,8 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 
 <!---->
 {{< admonition type=success title="THM Pwned Machines" open=false >}}
+* [**Pickle Rick**](https://secblogs.netlify.app/posts/pickle-rick/pickle-rick/)
+* [**The Simple CTF**](https://tryhackme.com/room/picklerick)
 
 {{< /admonition >}}
 
@@ -63,6 +65,8 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 <a href="https://www.kali.org/tools/burpsuite"><img src="tools/burpsuite-logo.svg"  height="70" width="80" /></a>
 <a href="https://www.kali.org/tools/nmap"><img src="tools/nmap-logo.svg"  height="70" width="80" /></a>
 <a href="https://www.kali.org/tools/metasploit-framework"><img src="tools/metasploit-framework-logo.svg"  height="70" width="80" /></a>
+<a href="https://www.kali.org/tools/gobuster/"><img src="https://www.kali.org/tools/gobuster/images/gobuster-logo.svg"  height="70" width="80" /></a>
+<a href="https://www.kali.org/tools/nikto/"><img src="https://www.kali.org/tools/nikto/images/nikto-logo.svg"  height="70" width="80" /></a>
 {{< /admonition >}}
 
 
