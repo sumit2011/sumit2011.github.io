@@ -23,6 +23,7 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 
 
 {{< admonition type=success title="THM Certificates" open=true >}}
+{{< image src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-Y6W3POXHQT.png" >}}
 {{< image src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-SMAKC7MFIS.png" >}}
 {{< image src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-7FHKPDCZCM.png" >}}
 {{< image src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-MUYLHSDVPL.png" >}}
