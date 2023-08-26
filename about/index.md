@@ -6,7 +6,8 @@ Hii, my name is Sumit Kumar, i am currently pursuing B.Tech at NIT Srinagar. I�
 I have the following qualities:
 
     I’m curious to learn new things.
-    I’m extremely loyal to my family and friends.
+    I’m loyal to my family and friends.
+{{< image src= "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/79731568097599.5b50bca477735.jpg" >}}
 
 {{< admonition type=success title="Resume" open=false >}}
 <a target="blank"><img src="Resume.svg"  title="resume" /></a>
@@ -22,7 +23,7 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 <script src="https://tryhackme.com/badge/1184563"></script>
 
 
-{{< admonition type=success title="THM Certificates" open=true >}}
+{{< admonition type=success title="THM Certificates" open=false >}}
 {{< image src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-Y6W3POXHQT.png" >}}
 {{< image src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-SMAKC7MFIS.png" >}}
 {{< image src="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-7FHKPDCZCM.png" >}}
@@ -31,7 +32,7 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 {{< /admonition >}}
 
 <!-- thm badges  -->
-{{< admonition type=success title="THM Badges" open=true >}}
+{{< admonition type=success title="THM Badges" open=false >}}
 <a href="https://tryhackme.com/hackerSUMO/badges/terminaled" target="blank"><img src="THM Badges/linux.svg"  height="88" width="98" /></a>
 <a href="https://tryhackme.com/hackerSUMO/badges/intro-to-web-hacking" target="blank"><img src="THM Badges/introtowebsecurity.svg"  height="88" width="98" /></a>
 <a href="https://tryhackme.com/hackerSUMO/badges/7-day-streak" target="blank"><img src="THM Badges/streak7.svg"  height="88" width="98" /></a>
@@ -62,7 +63,7 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 <img src="certificates/surfing_anonymously.jpg" />
 {{< /admonition >}}
 
-{{< admonition type=tip title="Tools" open=true >}}
+{{< admonition type=tip title="Tools" open=false >}}
 <a href="https://www.kali.org/tools/burpsuite"><img src="tools/burpsuite-logo.svg"  height="70" width="80" /></a>
 <a href="https://www.kali.org/tools/nmap"><img src="tools/nmap-logo.svg"  height="70" width="80" /></a>
 <a href="https://www.kali.org/tools/metasploit-framework"><img src="tools/metasploit-framework-logo.svg"  height="70" width="80" /></a>
@@ -77,7 +78,7 @@ I’m also learning Data Structure and Algorithm, C++, C, Python.
 
 Platform: `codechef`, `coding ninja`.
 
-{{< admonition type=info title="Languages" open=true >}}
+{{< admonition type=info title="Languages" open=false >}}
 <img src="tools/c-program-icon.svg"  height="60" width="70" /></a>
 <img src="tools/c-plus-plus-programming-language-icon.svg"  height="60" width="70" /></a>
 <img src="tools/html-icon.svg"  height="60" width="70" /></a>
