@@ -375,16 +375,107 @@ Q2. What is the second subdomain discovered?
 
 ## Burp Suite
 ### Burp Suite: The Basics
-{{< admonition type=abstract title="Task 1: Introduction Outline  " open=false >}}
+{{< admonition type=abstract title="Task 1: Introduction  " open=false >}}
 `Ans-No answer needed.`
 {{< /admonition >}}
 
-{{< admonition type=abstract title="Task 2: Getting Started What is Burp Suite? " open=false >}}
-Q1. Which edition of Burp Suite will we be using in this module?
+{{< admonition type=abstract title="Task 2: What is Burp Suite? " open=false >}}
+Q1. Which edition of Burp Suite runs on a server and provides constant scanning for target web apps?
 
-`Ans- Burp Suite Community`
+`Ans- Burp Suite Enterprise`
+
+Q2. Burp Suite is frequently used when attacking web applications and ______ applications.
+
+`Ans- Mobile`
 
 {{< /admonition >}}
+
+{{< admonition type=abstract title="Task 3: Features of Burp Community " open=false >}}
+Q1. Which Burp Suite feature allows us to intercept requests between ourselves and the target?
+
+`Ans- Proxy`
+
+Q2. Which Burp tool would we use to brute-force a login form?
+
+`Ans- Intruder`
+
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 4: Installation " open=false >}}
+Q1. If you have chosen not to use the AttackBox, ensure that you have a copy of Burp Suite installed before proceeding.
+
+`Ans- No answer needed`
+
+{{< /admonition >}}
+
+
+{{< admonition type=abstract title="Task 5: The Dashboard " open=false >}}
+Q1. What menu provides information about the actions performed by Burp Suite, such as starting the proxy, and details about connections made through Burp?
+
+
+`Ans- Event log `
+
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 6: Navigation " open=false >}}
+Q1. Which tab Ctrl + Shift + P will switch us to?
+
+`Ans- Proxy tab`
+
+
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 7: Options" open=false >}}
+Q1. In which category can you find a reference to a "Cookie jar"?
+
+`Ans- Sessions`
+
+Q2. In which base category can you find the "Updates" sub-category, which controls the Burp Suite update behaviour?
+
+`Ans- Suite`
+
+Q3. What is the name of the sub-category which allows you to change the keybindings for shortcuts in Burp Suite?
+
+`Ans- Hotkeys`
+
+Q4. If we have uploaded Client-Side TLS certificates, can we override these on a per-project basis (yea/nay)?
+
+`Ans- Yea`
+
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 8: Introduction to the Burp Proxy  " open=false >}}
+Q1. Click me to proceed to the next task. 
+
+`Ans- No answer needed `
+
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 9: Connecting through the Proxy (FoxyProxy)  " open=false >}}
+Q1. Click me to proceed to the next task.
+
+
+`Ans- No answer needed`
+
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 10: Site Map and Issue Definitions  " open=false >}}
+Q1. What is the flag you receive after visiting the unusual endpoint?
+
+`Ans-THM{NmNlZTliNGE1MWU1ZTQzMzgzNmFiNWVk} `
+
+
+{{< /admonition >}}
+
+
+
+
+
+
+
+
+
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PFRLG5MZ6V"></script>
 <script>
