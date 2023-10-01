@@ -372,6 +372,19 @@ Q2. What is the second subdomain discovered?
 `Ans- yellow`
 {{< /admonition >}}
 
+
+## Burp Suite
+### Burp Suite: The Basics
+{{< admonition type=abstract title="Task 1: Introduction Outline  " open=false >}}
+`Ans-No answer needed.`
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Task 2: Getting Started What is Burp Suite? " open=false >}}
+Q1. Which edition of Burp Suite will we be using in this module?
+
+`Ans- Burp Suite Community`
+
+{{< /admonition >}}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PFRLG5MZ6V"></script>
 <script>
@@ -381,5 +394,6 @@ Q2. What is the second subdomain discovered?
 
   gtag('config', 'G-PFRLG5MZ6V');
 </script>
+
 
 
