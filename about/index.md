@@ -71,6 +71,7 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 <a href="https://www.kali.org/tools/nikto/"><img src="https://www.kali.org/tools/nikto/images/nikto-logo.svg"  height="70" width="80" /></a>
 {{< /admonition >}}
 
+> [**Sec-Blogs**](https://secblogs.netlify.app/)
 
 ### Programming
 
@@ -95,6 +96,7 @@ Platform: `codechef`, `coding ninja`.
 
 > [**Binary Calc**][def]
 
+> [**Sec-Blogs**](https://secblogs.netlify.app/)
 
 
 

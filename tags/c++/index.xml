@@ -5,13 +5,23 @@
         <description>C&#43;&#43; - Tag - Sumit&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
             <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Sun, 15 Jan 2023 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
-    <title>Binary Search</title>
-    <link>https://sumit2011.github.io/binary-search/</link>
+    <title>Single Linked List</title>
+    <link>https://sumit2011.github.io/single_linked_list/</link>
     <pubDate>Sun, 25 Dec 2022 11:54:28 &#43;0530</pubDate>
     <author>sumit</author>
-    <guid>https://sumit2011.github.io/binary-search/</guid>
+    <guid>https://sumit2011.github.io/single_linked_list/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/photo.png" referrerpolicy="no-referrer">
+                <img src="/posts/DSA/single-linked-list/LLdraw.png" referrerpolicy="no-referrer">
+            </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
+</item>
+<item>
+    <title>Stack (array implementation)</title>
+    <link>https://sumit2011.github.io/stack/</link>
+    <pubDate>Sun, 15 Jan 2023 11:54:28 &#43;0530</pubDate>
+    <author>sumit</author>
+    <guid>https://sumit2011.github.io/stack/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210409185210/HowtoImplementStackinJavaUsingArrayandGenerics.jpg" referrerpolicy="no-referrer">
             </div>]]></description>
 </item>
 <item>
@@ -25,14 +35,14 @@
             </div>]]></description>
 </item>
 <item>
-    <title>Single Linked List</title>
-    <link>https://sumit2011.github.io/single_linked_list/</link>
+    <title>Binary Search</title>
+    <link>https://sumit2011.github.io/binary-search/</link>
     <pubDate>Sun, 25 Dec 2022 11:54:28 &#43;0530</pubDate>
     <author>sumit</author>
-    <guid>https://sumit2011.github.io/single_linked_list/</guid>
+    <guid>https://sumit2011.github.io/binary-search/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/posts/DSA/single-linked-list/LLdraw.png" referrerpolicy="no-referrer">
-            </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
+                <img src="/photo.png" referrerpolicy="no-referrer">
+            </div>]]></description>
 </item>
 <item>
     <title>Oops(object oriented programming)</title>
@@ -42,16 +52,6 @@
     <guid>https://sumit2011.github.io/oops/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/posts/DSA/oops/oops.png" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
-    <title>Stack (array implementation)</title>
-    <link>https://sumit2011.github.io/stack/</link>
-    <pubDate>Sun, 15 Jan 2023 11:54:28 &#43;0530</pubDate>
-    <author>sumit</author>
-    <guid>https://sumit2011.github.io/stack/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210409185210/HowtoImplementStackinJavaUsingArrayandGenerics.jpg" referrerpolicy="no-referrer">
             </div>]]></description>
 </item>
 </channel>
