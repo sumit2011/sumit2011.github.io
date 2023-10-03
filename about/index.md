@@ -90,9 +90,9 @@ Platform: `codechef`, `coding ninja`.
 
 
 ### Projects
-> [**Deadly Snake**](https://snake-darkcircle.netlify.app/)
+> [**Deadly Snake**](https://sn4ke.netlify.app/)
 
-> [**T1C-T4K-T0E**](https://tictactoe-darkcircle.netlify.app/)
+> [**T1C-T4K-T0E**](https://tict4ctoe.netlify.app/)
 
 > [**Binary Calc**][def]
 
