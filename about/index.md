@@ -90,7 +90,7 @@ Platform: `codechef`, `coding ninja`.
 
 
 ### Projects
-> [**Deadly Snake**](https://sn4ke.netlify.app/)
+> [**Deadly Snake**](https://sn4k3.netlify.app/)
 
 > [**T1C-T4K-T0E**](https://tict4ctoe.netlify.app/)
 
