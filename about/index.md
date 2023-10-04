@@ -51,6 +51,7 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 {{< admonition type=success title="THM Pwned Machines" open=false >}}
 * [**Pickle Rick**](https://secblogs.netlify.app/posts/pickle-rick/pickle-rick/)
 * [**The Simple CTF**](https://tryhackme.com/room/picklerick)
+* [**RootMe**](https://secblogs.netlify.app/posts/rootme/rootme/)
 
 {{< /admonition >}}
 
