@@ -52,7 +52,7 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 * [**Pickle Rick**](https://secblogs.netlify.app/posts/pickle-rick/pickle-rick/)
 * [**The Simple CTF**](https://tryhackme.com/room/picklerick)
 * [**RootMe**](https://secblogs.netlify.app/posts/rootme/rootme/)
-* [**Basic Pentesting**](https://secblogs.netlyfy.app/posts/basic-pentesting)
+* [**Basic Pentesting**](https://secblogs.netlify.app/posts/basic-pentesting/)
 
 {{< /admonition >}}
 
