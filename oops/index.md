@@ -33,4 +33,21 @@ it is an instance of `class` just like variable
  `class test{    };`
 
  
+## Inheritance
+
+* create new class from existing class.
+* new class inherits the features of base or parent class and have additional features of its own.
+
+>Syntax:
+`class child_class: access_modifier parent_class{
+  // body of the child class
+};
+`
+
+access modifier
+
+* public 
+* private
+* protected
+
 

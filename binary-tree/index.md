@@ -212,7 +212,7 @@ int main() {
     preorder(root);
     cout<<endl;
 
-    cout<<"postorder traversa is: ";
+    cout<<"postorder traversal is: ";
     postorder(root);
     return 0;
 
