@@ -17,8 +17,14 @@ We know that there is two type of searching technique `1.Linear Search` and `2.B
 <!-- The given code snippet implements the binary search algorithm for finding a specific integer key within a sorted integer array 'arr'. It initializes 'start' and 'end' indices to the first and last elements of the array, respectively, and calculates the middle index 'mid'. Inside a while loop that continues as long as the 'start' index is less than or equal to the 'end' index, the code compares the value at index 'mid' with the given 'key'. If 'key' matches the element at 'mid', the function returns 'mid' as the index where 'key' is found. If 'key' is greater than the element at 'mid', the 'start' index is updated to 'mid + 1', effectively narrowing the search range to the right half. If 'key' is smaller, the 'end' index is updated to 'mid - 1', narrowing the search range to the left half. After each update to 'start' or 'end', 'mid' is recalculated as the average of 'start' and 'end'. If the loop concludes without finding 'key', the function returns -1 to indicate that the key is not present in the array. This binary search algorithm's efficiency lies in its ability to halve the search range with each iteration, resulting in a time complexity of O(log n), making it efficient for searching in large sorted arrays. -->
 
 
-first initialise `start` and `end` indices to the first and last element of the array respectively. then calculate the middle index by `(start+end)/2`.
-Inside the while loop, compare the value of mid with the key until the start index becomes less than or equal to the end index. if key matches with the mid element it returns the mid element. If if key is greater than the mid element the start index will updated to the mid+1.
+First initialise `start` and `end` indices to the first and last element of the array respectively. then calculate the middle index by `(start+end)/2`.
+Inside the while loop, compare the value of mid with the key until the start index becomes less than or equal to the end index. Here three cases arises.
+
+**Case 1**: If the `key` matches with the mid element it returns the mid element.
+
+**Case 2:** If the `key` is greater than the mid element then we have to check the right part of the array for that we have to initialise the `start` as `mid + 1`.
+
+**Case 3**: If the `key` is less than the mid element than we have to check the left part of the array for that we have to update the `end` as `mid - 1`.
 ```c++
 #include<iostream> 
 using namespace std;
@@ -47,7 +53,7 @@ int binarysearch(int arr[], int size, int key)
 ```
 
 ## The Main Function
-
+Now we check the code for both if the number of elements in the array is even or odd. In the main function we define two arrays 1st is even array and the 2nd one is odd array. After that we call the function and store the result in evenindex for even array and in oddindex for odd array after that we print the indexes. Here we see that our function works properly for both cases. We can see the output.
 ```c++
 int main()
 {
@@ -65,6 +71,7 @@ int main()
 }
 ```
 ### Output
+We got the right output for both cases.
 {{< figure src="output.png" >}}
 
 {{< admonition type=note title="Complete Code" open=false >}}
