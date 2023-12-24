@@ -65,9 +65,9 @@ int main()
 }
 ```
 ### Output
-{{< figure src="/posts/DSA/binary search/output.png" >}}
+{{< figure src="output.png" >}}
 
-{{< admonition type=tip title="Complete Code" open=false >}}
+{{< admonition type=note title="Complete Code" open=false >}}
 
 ```c++
 #include<iostream> 
@@ -116,21 +116,21 @@ int main(){
 ### Space Complexicity
     Space Complexicity: O(1)
 
-## Advantages of Binary Search:
+## Advantages:
 * faster than linear search
 * More efficient
 * Minimal memory requirement
 * Easy to understand and implement
 * More efficient for large dataset
 
-## Drawbacks of Binary Search:
+## Drawbacks:
 * The array should be sorted.
 * Not suitable for unordered lists
 * Inefficient for small dataset
 * Not adaptive for changes
 * Limited to static dataset
 
-## Applications of Binary Search:
+## Applications:
 * Database searching
 * Finding elements in a array
 * Used in file system to search a specific file
