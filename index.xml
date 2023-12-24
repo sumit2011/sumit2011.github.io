@@ -4,7 +4,7 @@
         <link>https://sumit2011.github.io/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
-            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Sat, 05 Aug 2023 11:54:28 &#43;0530</lastBuildDate>
+            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Fri, 22 Dec 2023 11:54:28 &#43;0530</lastBuildDate>
             <atom:link href="https://sumit2011.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Single Linked List</title>
@@ -55,6 +55,16 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://i.imgur.com/wVEQ3Fe.png" referrerpolicy="no-referrer">
             </div><p>This is the write up for the room Upload Vulnerabilities on Tryhackme and it is part of the Web Fundamentals Path</p>]]></description>
+</item>
+<item>
+    <title>Datatypes Variable and Operators</title>
+    <link>https://sumit2011.github.io/basic/</link>
+    <pubDate>Fri, 22 Dec 2023 11:54:28 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/basic/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/photo.png" referrerpolicy="no-referrer">
+            </div>]]></description>
 </item>
 <item>
     <title>Binary Search</title>

@@ -50,4 +50,6 @@ access modifier
 * private
 * protected
 
+{{< figure src="/posts/DSA/oops/photo.png" >}}
+{{< figure src="/posts/DSA/oops/Start.png" >}}
 
