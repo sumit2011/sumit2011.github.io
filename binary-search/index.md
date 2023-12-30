@@ -16,6 +16,18 @@ We know that there is two type of searching technique `1.Linear Search` and `2.B
 It is applicable only on monotonic function which means values should be in the **increasing** or **decreasing** order.
 {{< /admonition >}}
 
+### Time Complexity: 
+| Option | Description |
+| ------ | ----------- |
+|  **Best Case:**  | **O(1)** |
+|  **Average Case:** | **O(log N)** |
+|  **Worst Case:**  | **O(log N)** |
+
+### Space Complexicity
+| Option | Description |
+| ------ | ----------- |
+|  Best Case:  | O(1) |
+
 ## Creation of Function 
 <!-- The given code snippet implements the binary search algorithm for finding a specific integer key within a sorted integer array 'arr'. It initializes 'start' and 'end' indices to the first and last elements of the array, respectively, and calculates the middle index 'mid'. Inside a while loop that continues as long as the 'start' index is less than or equal to the 'end' index, the code compares the value at index 'mid' with the given 'key'. If 'key' matches the element at 'mid', the function returns 'mid' as the index where 'key' is found. If 'key' is greater than the element at 'mid', the 'start' index is updated to 'mid + 1', effectively narrowing the search range to the right half. If 'key' is smaller, the 'end' index is updated to 'mid - 1', narrowing the search range to the left half. After each update to 'start' or 'end', 'mid' is recalculated as the average of 'start' and 'end'. If the loop concludes without finding 'key', the function returns -1 to indicate that the key is not present in the array. This binary search algorithm's efficiency lies in its ability to halve the search range with each iteration, resulting in a time complexity of O(log n), making it efficient for searching in large sorted arrays. -->
 
@@ -123,15 +135,9 @@ int main(){
 {{< /admonition >}}
 
 
-### Time Complexity: 
-    Best Case: O(1)
-    Average Case: O(log N)
-    Worst Case: O(log N)
 
-### Space Complexicity
-    Space Complexicity: O(1)
 
-## Advantages & Disadvantages
+## Advantages & Drawbacks
 
 {{< admonition type=success title="Advantages" open=true >}}
 * faster than linear search

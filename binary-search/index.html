@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/binary-search\/"
-        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  1060 ,
+        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  1064 ,
         "url": "https:\/\/sumit2011.github.io\/binary-search\/","datePublished": "2023-01-30T11:54:28+05:30","dateModified": "2023-01-30T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -103,7 +103,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Binary Search</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/dsa/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DSA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="30-01-2023">30-01-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1060 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="30-01-2023">30-01-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1064 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -119,16 +119,19 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#creation-of-function">Creation of Function</a></li>
-    <li><a href="#the-main-function">The Main Function</a>
+    <li><a href="#introduction">Introduction</a>
       <ul>
-        <li><a href="#output">Output</a></li>
         <li><a href="#time-complexity">Time Complexity:</a></li>
         <li><a href="#space-complexicity">Space Complexicity</a></li>
       </ul>
     </li>
-    <li><a href="#advantages--disadvantages">Advantages &amp; Disadvantages</a></li>
+    <li><a href="#creation-of-function">Creation of Function</a></li>
+    <li><a href="#the-main-function">The Main Function</a>
+      <ul>
+        <li><a href="#output">Output</a></li>
+      </ul>
+    </li>
+    <li><a href="#advantages--drawbacks">Advantages &amp; Drawbacks</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><div class="details admonition note open">
@@ -150,6 +153,44 @@
             <div class="admonition-content">It is applicable only on monotonic function which means values should be in the <strong>increasing</strong> or <strong>decreasing</strong> order.</div>
         </div>
     </div>
+<h3 id="time-complexity">Time Complexity:</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Best Case:</strong></td>
+<td><strong>O(1)</strong></td>
+</tr>
+<tr>
+<td><strong>Average Case:</strong></td>
+<td><strong>O(log N)</strong></td>
+</tr>
+<tr>
+<td><strong>Worst Case:</strong></td>
+<td><strong>O(log N)</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="space-complexicity">Space Complexicity</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Best Case:</td>
+<td>O(1)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="creation-of-function">Creation of Function</h2>
 <!-- The given code snippet implements the binary search algorithm for finding a specific integer key within a sorted integer array 'arr'. It initializes 'start' and 'end' indices to the first and last elements of the array, respectively, and calculates the middle index 'mid'. Inside a while loop that continues as long as the 'start' index is less than or equal to the 'end' index, the code compares the value at index 'mid' with the given 'key'. If 'key' matches the element at 'mid', the function returns 'mid' as the index where 'key' is found. If 'key' is greater than the element at 'mid', the 'start' index is updated to 'mid + 1', effectively narrowing the search range to the right half. If 'key' is smaller, the 'end' index is updated to 'mid - 1', narrowing the search range to the left half. After each update to 'start' or 'end', 'mid' is recalculated as the average of 'start' and 'end'. If the loop concludes without finding 'key', the function returns -1 to indicate that the key is not present in the array. This binary search algorithm's efficiency lies in its ability to halve the search range with each iteration, resulting in a time complexity of O(log n), making it efficient for searching in large sorted arrays. -->
 <p>First initialise <code>start</code> and <code>end</code> indices to the first and last element of the array respectively. then calculate the middle index by <code>(start+end)/2</code>.
@@ -344,15 +385,7 @@ Inside the while loop, compare the value of mid with the key until the start ind
 </div></div>
         </div>
     </div>
-<h3 id="time-complexity">Time Complexity:</h3>
-<pre><code>Best Case: O(1)
-Average Case: O(log N)
-Worst Case: O(log N)
-</code></pre>
-<h3 id="space-complexicity">Space Complexicity</h3>
-<pre><code>Space Complexicity: O(1)
-</code></pre>
-<h2 id="advantages--disadvantages">Advantages &amp; Disadvantages</h2>
+<h2 id="advantages--drawbacks">Advantages &amp; Drawbacks</h2>
 <div class="details admonition success open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-check-circle fa-fw" aria-hidden="true"></i>Advantages<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
