@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/binary-search\/"
-        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  1044 ,
+        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  1060 ,
         "url": "https:\/\/sumit2011.github.io\/binary-search\/","datePublished": "2023-01-30T11:54:28+05:30","dateModified": "2023-01-30T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -103,7 +103,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Binary Search</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/dsa/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DSA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="30-01-2023">30-01-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1044 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="30-01-2023">30-01-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1060 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -128,13 +128,7 @@
         <li><a href="#space-complexicity">Space Complexicity</a></li>
       </ul>
     </li>
-    <li><a href="#advantages">Advantages:</a></li>
-    <li><a href="#drawbacks">Drawbacks:</a></li>
-    <li><a href="#applications">Applications:</a>
-      <ul>
-        <li><a href="#first-and-last-position-of-an-element-in-sorted-array-solution">First and Last position of an element in sorted array solution</a></li>
-      </ul>
-    </li>
+    <li><a href="#advantages--disadvantages">Advantages &amp; Disadvantages</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><div class="details admonition note open">
@@ -148,9 +142,14 @@
 <h2 id="introduction">Introduction</h2>
 <p>We know that there is two type of searching technique <code>1.Linear Search</code> and <code>2.Binary Search</code>. Here we discus only about binary search.
 <em><strong>Binary search</strong></em> is a searching technique, it is used to locate a specific element with in the <em><strong>sorted array</strong></em>.</p>
-<blockquote>
-<p>It is applicable only on monotonic function which means values should be in the <strong>increasing</strong> or <strong>decreasing</strong> order.</p>
-</blockquote>
+<div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i>Warning<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">It is applicable only on monotonic function which means values should be in the <strong>increasing</strong> or <strong>decreasing</strong> order.</div>
+        </div>
+    </div>
 <h2 id="creation-of-function">Creation of Function</h2>
 <!-- The given code snippet implements the binary search algorithm for finding a specific integer key within a sorted integer array 'arr'. It initializes 'start' and 'end' indices to the first and last elements of the array, respectively, and calculates the middle index 'mid'. Inside a while loop that continues as long as the 'start' index is less than or equal to the 'end' index, the code compares the value at index 'mid' with the given 'key'. If 'key' matches the element at 'mid', the function returns 'mid' as the index where 'key' is found. If 'key' is greater than the element at 'mid', the 'start' index is updated to 'mid + 1', effectively narrowing the search range to the right half. If 'key' is smaller, the 'end' index is updated to 'mid - 1', narrowing the search range to the left half. After each update to 'start' or 'end', 'mid' is recalculated as the average of 'start' and 'end'. If the loop concludes without finding 'key', the function returns -1 to indicate that the key is not present in the array. This binary search algorithm's efficiency lies in its ability to halve the search range with each iteration, resulting in a time complexity of O(log n), making it efficient for searching in large sorted arrays. -->
 <p>First initialise <code>start</code> and <code>end</code> indices to the first and last element of the array respectively. then calculate the middle index by <code>(start+end)/2</code>.
@@ -158,6 +157,14 @@ Inside the while loop, compare the value of mid with the key until the start ind
 <p><strong>Case 1</strong>: If the <code>key</code> matches with the mid element it returns the mid element.</p>
 <p><strong>Case 2:</strong> If the <code>key</code> is greater than the mid element then we have to check the right part of the array for that we have to initialise the <code>start</code> as <code>mid + 1</code>.</p>
 <p><strong>Case 3</strong>: If the <code>key</code> is less than the mid element than we have to check the left part of the array for that we have to update the <code>end</code> as <code>mid - 1</code>.</p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">use <code>mid= start + (end-start)/2</code> instead of <code>(start+end)/2</code>.</div>
+        </div>
+    </div>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -345,39 +352,71 @@ Worst Case: O(log N)
 <h3 id="space-complexicity">Space Complexicity</h3>
 <pre><code>Space Complexicity: O(1)
 </code></pre>
-<h2 id="advantages">Advantages:</h2>
-<ul>
+<h2 id="advantages--disadvantages">Advantages &amp; Disadvantages</h2>
+<div class="details admonition success open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-check-circle fa-fw" aria-hidden="true"></i>Advantages<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ul>
 <li>faster than linear search</li>
 <li>More efficient</li>
 <li>Minimal memory requirement</li>
 <li>Easy to understand and implement</li>
 <li>More efficient for large dataset</li>
 </ul>
-<h2 id="drawbacks">Drawbacks:</h2>
-<ul>
+</div>
+        </div>
+    </div>
+<div class="details admonition failure open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-times-circle fa-fw" aria-hidden="true"></i>Drawbacks<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ul>
 <li>The array should be sorted.</li>
 <li>Not suitable for unordered lists</li>
 <li>Inefficient for small dataset</li>
 <li>Not adaptive for changes</li>
 <li>Limited to static dataset</li>
 </ul>
-<h2 id="applications">Applications:</h2>
-<ul>
+</div>
+        </div>
+    </div>
+<div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw" aria-hidden="true"></i>Applications<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ul>
 <li>Database searching</li>
 <li>Finding elements in a array</li>
 <li>Used in file system to search a specific file</li>
 <li>In machine learning</li>
 <li>In Game development</li>
 </ul>
+</div>
+        </div>
+    </div>
 <div class="details admonition question">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-question-circle fa-fw" aria-hidden="true"></i>Problems<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content"><a href="https://www.codingninjas.com/studio/problems/first-and-last-position-of-an-element-in-sorted-array_1082549?interviewProblemRedirection=true" target="_blank" rel="noopener noreffer"><strong>First and Last position of an Element in Sorted Array</strong> (Coding Ninja)</a></div>
+            <div class="admonition-content"><ul>
+<li>
+<p><a href="https://www.codingninjas.com/studio/problems/first-and-last-position-of-an-element-in-sorted-array_1082549?interviewProblemRedirection=true" target="_blank" rel="noopener noreffer"><strong>First and Last position of an Element in Sorted Array</strong> (Coding Ninjas)</a></p>
+</li>
+<li>
+<p><a href="https://www.codingninjas.com/studio/problems/binary-search_972?interviewProblemRedirection=true&amp;leftPanelTabValue=SUBMISSION" target="_blank" rel="noopener noreffer"><strong>Binary Search</strong> (Coding Ninjas)</a></p>
+</li>
+</ul>
+</div>
         </div>
     </div>
-<h3 id="first-and-last-position-of-an-element-in-sorted-array-solution">First and Last position of an element in sorted array solution</h3>
+<blockquote>
+<p>First and Last position of an element in sorted array solution</p>
+</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -454,7 +493,6 @@ Worst Case: O(log N)
 </span><span class="lnt">72
 </span><span class="lnt">73
 </span><span class="lnt">74
-</span><span class="lnt">75
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">
@@ -530,7 +568,6 @@ Worst Case: O(log N)
 </span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; first occurace of 3 is index &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">firstOccurance</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">9</span> <span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; last occurace of 3 is index &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">lastOccurance</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">9</span> <span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">firstAndLastOccurance</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>

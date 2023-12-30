@@ -5,6 +5,18 @@
         <description>Cyber Security - Category - Sumit&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
             <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Sat, 05 Aug 2023 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/categories/cyber-security/" rel="self" type="application/rss+xml" /><item>
+    <title>Google Dorks</title>
+    <link>https://sumit2011.github.io/ohsint/</link>
+    <pubDate>Sat, 05 Aug 2023 11:54:28 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/ohsint/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://assets.tryhackme.com/img/paths/jrpenetrationtester.svg" referrerpolicy="no-referrer">
+            </div>Google hacking Google hacking is using different google operators to refine search results. Use of a search engine, such as google, to locate a security vulnerability on the internet.
+Downloading Movie 1 Movie+name -inurl:(htm|html|php|pls|txt) intitle:index.of &#34;last modified&#34; (mp4|wma| acc|avi) View Android Camera Photos: 1 intitle:&#34;Index of&#34; &#34;DCIM&#34; Google Operators Basic Operators +, -, ., *, &quot;&quot;, |, OR
+Advanced Operators allintext:, allintilte:, allinurl:, cache:, define:, filetype:, info:, intext:, intitle:, inurl:, link:, phonebook:, related:, site:, numrange:]]></description>
+</item>
+<item>
     <title>THM Jr Penetration Tester Pathway Guide</title>
     <link>https://sumit2011.github.io/jr-penetration-tester/</link>
     <pubDate>Sat, 05 Aug 2023 11:54:28 &#43;0530</pubDate>

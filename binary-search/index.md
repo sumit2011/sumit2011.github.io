@@ -11,7 +11,10 @@ _Use the table of contents to navigate to the portion that you are interested in
 ## Introduction
 We know that there is two type of searching technique `1.Linear Search` and `2.Binary Search`. Here we discus only about binary search.
 ***Binary search*** is a searching technique, it is used to locate a specific element with in the ***sorted array***. 
->It is applicable only on monotonic function which means values should be in the **increasing** or **decreasing** order.
+
+{{< admonition type=warning title="Warning" open=true >}}
+It is applicable only on monotonic function which means values should be in the **increasing** or **decreasing** order.
+{{< /admonition >}}
 
 ## Creation of Function 
 <!-- The given code snippet implements the binary search algorithm for finding a specific integer key within a sorted integer array 'arr'. It initializes 'start' and 'end' indices to the first and last elements of the array, respectively, and calculates the middle index 'mid'. Inside a while loop that continues as long as the 'start' index is less than or equal to the 'end' index, the code compares the value at index 'mid' with the given 'key'. If 'key' matches the element at 'mid', the function returns 'mid' as the index where 'key' is found. If 'key' is greater than the element at 'mid', the 'start' index is updated to 'mid + 1', effectively narrowing the search range to the right half. If 'key' is smaller, the 'end' index is updated to 'mid - 1', narrowing the search range to the left half. After each update to 'start' or 'end', 'mid' is recalculated as the average of 'start' and 'end'. If the loop concludes without finding 'key', the function returns -1 to indicate that the key is not present in the array. This binary search algorithm's efficiency lies in its ability to halve the search range with each iteration, resulting in a time complexity of O(log n), making it efficient for searching in large sorted arrays. -->
@@ -25,6 +28,10 @@ Inside the while loop, compare the value of mid with the key until the start ind
 **Case 2:** If the `key` is greater than the mid element then we have to check the right part of the array for that we have to initialise the `start` as `mid + 1`.
 
 **Case 3**: If the `key` is less than the mid element than we have to check the left part of the array for that we have to update the `end` as `mid - 1`.
+
+{{< admonition type=tip title="Tip" open=true >}}
+use `mid= start + (end-start)/2` instead of `(start+end)/2`.
+{{< /admonition >}}
 ```c++
 #include<iostream> 
 using namespace std;
@@ -115,6 +122,7 @@ int main(){
 ```
 {{< /admonition >}}
 
+
 ### Time Complexity: 
     Best Case: O(1)
     Average Case: O(log N)
@@ -123,36 +131,40 @@ int main(){
 ### Space Complexicity
     Space Complexicity: O(1)
 
-## Advantages:
+## Advantages & Disadvantages
+
+{{< admonition type=success title="Advantages" open=true >}}
 * faster than linear search
 * More efficient
 * Minimal memory requirement
 * Easy to understand and implement
 * More efficient for large dataset
+{{< /admonition >}}
 
-## Drawbacks:
+{{< admonition type=failure title="Drawbacks" open=true >}}
 * The array should be sorted.
 * Not suitable for unordered lists
 * Inefficient for small dataset
 * Not adaptive for changes
 * Limited to static dataset
+{{< /admonition >}}
 
-## Applications:
+{{< admonition type=info title="Applications" open=true >}}
 * Database searching
 * Finding elements in a array
 * Used in file system to search a specific file
 * In machine learning
 * In Game development
+{{< /admonition >}}
 
 
 
 {{< admonition type=question title="Problems" open=false >}}
-{{< link "https://www.codingninjas.com/studio/problems/first-and-last-position-of-an-element-in-sorted-array_1082549?interviewProblemRedirection=true" "**First and Last position of an Element in Sorted Array** (Coding Ninja)" >}}
-
+* {{< link "https://www.codingninjas.com/studio/problems/first-and-last-position-of-an-element-in-sorted-array_1082549?interviewProblemRedirection=true" "**First and Last position of an Element in Sorted Array** (Coding Ninjas)" >}}
+* {{< link "https://www.codingninjas.com/studio/problems/binary-search_972?interviewProblemRedirection=true&leftPanelTabValue=SUBMISSION" "**Binary Search** (Coding Ninjas)" >}}
 {{< /admonition >}}
 
-### First and Last position of an element in sorted array solution
-
+> First and Last position of an element in sorted array solution
 ```c++
 
 // pair <int, int> p;
@@ -227,15 +239,8 @@ int main() {
     cout << " first occurace of 3 is index " << firstOccurance(arr, 9 , 3) << endl;
     cout << " last occurace of 3 is index " << lastOccurance(arr, 9 , 3) << endl;
     firstAndLastOccurance(arr, 9, 3);
-
 }
-
 ```
-
-
-
-
-
 
 {{< admonition type=tip title="Fun Dose" open=false >}}
 {{< youtube FMzj9UYHTPQ >}}
