@@ -19,11 +19,11 @@ It is applicable only on monotonic function which means values should be in the 
 ### Time Complexity: 
 | Option | Description |
 | ------ | ----------- |
-|  **Best Case:**  | **O(1)** |
-|  **Average Case:** | **O(log N)** |
-|  **Worst Case:**  | **O(log N)** |
+|  Best Case:  | O(1) |
+|  Average Case: | O(log N) |
+|  Worst Case:  | O(log N) |
 
-### Space Complexicity
+### Space Complexicity:
 | Option | Description |
 | ------ | ----------- |
 |  Best Case:  | O(1) |
