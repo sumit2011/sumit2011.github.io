@@ -20,7 +20,7 @@ Operations that can be performed:
  4. isempty
 
 ## Creation of stack
-This code represents a basic stack data structure. The class has three properties: `arr` (a pointer to an integer array to store the stack elements), `top` (an integer to represent the index of the topmost element in the stack), and `size` (an integer specifying the maximum capacity of the stack). Also, the class has a constructor that takes an integer `size` as a parameter and initializes the properties accordingly. The constructor allocates memory for the stack using the `new` keyword, sets the stack size, and initializes `top` to -1 to indicate that the stack is initially empty.
+The class has three properties: `arr` a pointer array to store the stack elements, `top` to represent the topmost index in the stack, and `size` to specify the maximum capacity of the stack. Also, the class has a constructor that takes an integer `size` as a parameter and initializes the properties accordingly. The constructor allocates memory for the stack using the `new` keyword, sets the stack size, and initializes `top` to -1 to indicate that the stack is initially empty.
 ```c++
 //array emplementation of stack
 
