@@ -8,7 +8,7 @@ _Use the table of contents to navigate to the portion that you are interested in
 {{< /admonition >}}
 
 # Introduction
-Python is a beginner-friendly, interpreted programming language known for its readability and versatility. With a vast standard library and cross-platform compatibility, it's widely used in web development, data science, and automation.
+***Python*** is a beginner-friendly, interpreted programming language known for its readability and versatility. With a vast standard library and cross-platform compatibility, it's widely used in ***web development***, ***data science***, and ***automation***.
 
 ### print function
 ```python
@@ -398,3 +398,4 @@ print(max)
 
 ### 2D lists
 
+***To be continued.....***
