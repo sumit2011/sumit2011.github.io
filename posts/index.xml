@@ -4,7 +4,7 @@
         <link>https://sumit2011.github.io/posts/</link>
         <description>All Posts | Sumit&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
-            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Thu, 30 Nov 2023 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Thu, 25 Jan 2024 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Single Linked List</title>
     <link>https://sumit2011.github.io/single_linked_list/</link>
     <pubDate>Sun, 25 Dec 2022 11:54:28 &#43;0530</pubDate>
@@ -75,6 +75,16 @@ Advanced Operators allintext:, allintilte:, allinurl:, cache:, define:, filetype
     <description><![CDATA[<div class="featured-image">
                 <img src="https://i.imgur.com/wVEQ3Fe.png" referrerpolicy="no-referrer">
             </div><p>This is the write up for the room Upload Vulnerabilities on Tryhackme and it is part of the Web Fundamentals Path</p>]]></description>
+</item>
+<item>
+    <title>Python Basic Syntax</title>
+    <link>https://sumit2011.github.io/python/</link>
+    <pubDate>Thu, 25 Jan 2024 11:54:28 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/python/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/python.png" referrerpolicy="no-referrer">
+            </div><p><em><strong>Python is easy.</strong></em></p>]]></description>
 </item>
 <item>
     <title>Oops(object oriented programming)</title>
