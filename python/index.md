@@ -324,7 +324,7 @@ quit - to quit
 for item in 'python':
     print(item)
 
-for item in ['mosh','john', 'sarah']:
+for item in ['balram','sumit', 'prateek', 'shams']:
     print(item)
 
 for item in [1,2,3,4]:
@@ -375,12 +375,12 @@ for x_count in numbers:
 
 ### lists
 ```python
-names = ['john', 'bob', 'mosh', 'sarah', 'man']
-print(names)       # output-> ['john', 'bob', 'mosh', 'sarah', 'man']
-print(names[2])    # output-> mosh
-print(names[-1])   # output-> man
-print(names[2:])   # output-> ['mosh', 'sarah', 'man']
-print(names[2:4])  # output-> ['mosh', 'sarah']
+names = ['arjun', 'kaishar', 'saif', 'prateek', 'sumit']
+print(names)       # output-> ['arjun', 'kaishar', 'saif', 'prateek', 'sumit']
+print(names[2])    # output-> saif
+print(names[-1])   # output-> sumit
+print(names[2:])   # output-> ['saif', 'prateek', 'sumit']
+print(names[2:4])  # output-> ['saif', 'prateek']
 
 ```
 ### task
