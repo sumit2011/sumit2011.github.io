@@ -102,17 +102,17 @@ print(statement.find('o'))
 
 ### replacing a word in a string
 ```python
-course = 'Python For Beginners'
-print(course.replace('Beginners','Absolute Beginners'))
-# output-> Python For Absolute Beginners
-print(course.replace('P','J'))
-#output-> Jython For Beginners
+statement = 'hii this is sumit.'
+print(statement.replace('sumit','sumit kr'))
+# output-> hii this is sumit kr.
+print(statement.replace('su','a'))
+#output-> hii this is amit.
 ```
 
 ### checking if the string contain a word or not
 ```python
-course = 'Python For Beginners'
-print('Python' in course)
+statement = 'hii this is sumit.'
+print('sumit' in statement)
 
 #output-> True
 ```
