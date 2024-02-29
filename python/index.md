@@ -5,7 +5,7 @@
 
 # Intro
 
-## print function
+### print function
 ```python
 print("its meeeeeeeeeeee")
 print('o----')
@@ -16,7 +16,7 @@ print('*' * 10)
 ```
 
 
-## datatype
+### datatype
 ```python
 price = 10     # integer
 rating = 4.9   # floating
@@ -25,7 +25,7 @@ is_published = True  # boolean
 print(price)
 ```
 
-## input fun
+### input fun
 ```python
 name = input('what is your name? ')  # taking input and store as a 'name' variable
 fav_colour = input('what is your favourite colour? ')
@@ -48,7 +48,7 @@ is_new_patient = True
 ```
 
 
-## string and character
+### string and character
 
 #formatted string 
 ```python
@@ -61,14 +61,14 @@ print(message)
 #  output-> john [smith] is a coder
 
 
-## length of a string
+### length of a string
 ```python
 course = 'python for beginners'
 print(len(course)) #general purpose function
 ```
 # output->  20
 
-## converting lower case to uppercase
+### converting lower case to uppercase
 ```python
 course = 'Python For Beginners'
 print(course.upper())  #method 
@@ -77,7 +77,7 @@ print(course.lower())
 #output-> python for beginners
 ```
 
-## Returning the index of a character in a string
+### Returning the index of a character in a string
 ```python
 course = 'Python For Beginners'
 print(course.find('o'))
@@ -85,7 +85,7 @@ print(course.find('o'))
 # output-> 4
 
 
-## replacing a word in a string
+### replacing a word in a string
 ```python
 course = 'Python For Beginners'
 print(course.replace('Beginners','Absolute Beginners'))
@@ -94,7 +94,7 @@ print(course.replace('P','J'))
 #output-> Jython For Beginners
 ```
 
-## checking if the string contain a word or not
+### checking if the string contain a word or not
 ```python
 course = 'Python For Beginners'
 print('Python' in course)
@@ -104,7 +104,7 @@ print('Python' in course)
 
 
 
-## Arithmatic operations 
+### Arithmatic operations 
 ```python
 print(10+3)    # output-> 13
 print(10/3)    # output-> 3.333333
@@ -113,7 +113,7 @@ print(10%3)    # output-> 1
 print(10 ** 3) # output-> 1000  (ten to the power three)
 ```
 
-## augmanted assignment operator
+### augmanted assignment operator
 ```python
 x= 10
 x = x + 3
@@ -123,7 +123,7 @@ x *= 3
 x /= 3
 ```
 
-## presidence order 
+### presidence order 
 1. parenthesis
 2. exponentiation  2**3
 3. multiplication or division
@@ -133,7 +133,7 @@ x= 10 + 3 * 2 ** 2    #output-> 22
 x= (10 + 3) * 2 ** 2  #output-> 56
 ```
 
-## math function 
+### math function 
 ```python
 x= 2.9
 print(round(x))   #output-> 3
@@ -144,7 +144,7 @@ print(math.ceil(2.9))  # output-> 3
 print(math.floor(2.9)) # output-> 2
 ```
 
-## if and else if statement
+### if and else if statement
 ```python
 is_hot = True
 is_cold = False
@@ -163,7 +163,7 @@ else:
     drink plenty of water
 {{< /admonition >}}
 
-## Task
+### Task
 ```python
 price = 1000000
 has_good_credit = True
@@ -178,8 +178,8 @@ print(f"Down Payment: {down_payment}")
     100000
 {{< /admonition >}}
 
-## Logical opoerators
-# Task
+### Logical opoerators
+### Task
 ```python
 has_high_income = True
 has_good_credit = True
@@ -212,9 +212,9 @@ else:
     Eligible for loan
 {{< /admonition >}} 
 
-## comparision operator
-#    > , < , >= , <= , == , !=
-# Task
+### comparision operator
+   > , < , >= , <= , == , !=
+### Task
 ```python
 temperature = 30
 
@@ -228,7 +228,7 @@ elif temperature < 30:
 {{< /admonition >}} 
 # output-> it's a hot day
     
-# Task
+### Task
 ```python
 name = input("enter name: ")
 if len(name) < 3:
@@ -239,7 +239,7 @@ else:
     print('looks good.')
 ```
 
-## while loops
+### while loops
 ```python  
 i = 1
 while i <= 5:
@@ -258,7 +258,7 @@ print('Done')
 
             
 
-## Task: guess number
+### Task: guess number
 ```python
 secreat_number = 9
 guess_count = 0
@@ -304,7 +304,7 @@ quit - to quit
         print("Sorry, I don't understand that.")
 ```
 
-## For loop
+### For loop
 ```python
 for item in 'python':
     print(item)
@@ -326,7 +326,7 @@ for item in range(5,10,2):
 
 
 ```
-## Task
+### Task
 ```python
 prices = [10,20,30]
 total = 0
@@ -336,7 +336,7 @@ for price in prices:
 print(f"Total: {total}")    # output-> 60
 ```
 
-## Nested loop
+### Nested loop
 adding one loop in the another loop
 ```python
 for x in range(4):
@@ -344,7 +344,7 @@ for x in range(4):
         print(f'({x},{y})')
 ```
 
-## Task
+### Task
 ```python
 numbers = [5,2,5,2,2]
 
@@ -358,7 +358,7 @@ for x_count in numbers:
     print(output)
 ```
 
-## lists
+### lists
 ```python
 names = ['john', 'bob', 'mosh', 'sarah', 'man']
 print(names)       # output-> ['john', 'bob', 'mosh', 'sarah', 'man']
@@ -381,5 +381,5 @@ print(max)
 # output-> 10
 ```
 
-## 2D list
+### 2D list
 
