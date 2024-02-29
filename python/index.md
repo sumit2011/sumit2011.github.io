@@ -1,31 +1,42 @@
 # Python Basic Syntax
 
-***Python is easy.***
+***Python is used in automation of taskes.***
 <!--more-->
 
-# Intro
+{{< admonition type=note title="Note" open=true >}}
+_Use the table of contents to navigate to the portion that you are interested in._
+{{< /admonition >}}
+
+# Introduction
+Python is a beginner-friendly, interpreted programming language known for its readability and versatility. With a vast standard library and cross-platform compatibility, it's widely used in web development, data science, and automation.
 
 ### print function
 ```python
-print("its meeeeeeeeeeee")
+print("it's meeeeeeeeeeee")
 print('o----')
 print(' ||||')
 
 
 print('*' * 10)
 ```
+{{< admonition type=warning title="output" open=false >}}
+    it's meeeeeeeeeeee
+    o----
+    ||||
+    **********
+{{< /admonition >}}
 
 
 ### datatype
 ```python
-price = 10     # integer
-rating = 4.9   # floating
-name = 'sumit'  # string
-is_published = True  # boolean
+price = 10          # integer
+rating = 4.9        # floating
+name = 'sumit'      # string
+is_present = False  # boolean
 print(price)
 ```
 
-### input fun
+### input function
 ```python
 name = input('what is your name? ')  # taking input and store as a 'name' variable
 fav_colour = input('what is your favourite colour? ')
@@ -52,37 +63,41 @@ is_new_patient = True
 
 #formatted string 
 ```python
-first ='john'
-last = 'smith'
-message = first +'[' + last + '] is a coder'
+first ='sumit'
+last = 'kr'
+message = first +'[' + last + '] is a coder.'
 msg = f'{first} [{last}] is a coder'  # <---formated give same output as message
 print(message)
 ```
-#  output-> john [smith] is a coder
-
+{{< admonition type=warning title="output" open=false >}}
+    sumit [kr] is a coder.
+{{< /admonition >}}
 
 ### length of a string
 ```python
-course = 'python for beginners'
-print(len(course)) #general purpose function
+string = 'you are awesome.'
+print(len(string)) #general purpose function
+
+# output->  16
 ```
-# output->  20
+
 
 ### converting lower case to uppercase
 ```python
-course = 'Python For Beginners'
-print(course.upper())  #method 
-# output-> PYTHON FOR BEGINNERS
-print(course.lower())
-#output-> python for beginners
+compliment = 'You are awesome.'
+print(compliment.upper())  #method 
+# output-> YOU ARE AWESOME.
+print(compliment.lower())
+#output-> you are awesome.
 ```
 
 ### Returning the index of a character in a string
 ```python
-course = 'Python For Beginners'
-print(course.find('o'))
+statement = 'you are awesome.'
+print(statement.find('o'))
+# output-> 1
 ```
-# output-> 4
+
 
 
 ### replacing a word in a string
@@ -226,7 +241,7 @@ elif temperature < 30:
 {{< admonition type=warning title="output" open=false >}}
     it's a hot day
 {{< /admonition >}} 
-# output-> it's a hot day
+
     
 ### Task
 ```python
@@ -381,5 +396,5 @@ print(max)
 # output-> 10
 ```
 
-### 2D list
+### 2D lists
 
