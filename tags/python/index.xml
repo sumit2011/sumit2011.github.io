@@ -4,7 +4,7 @@
         <link>https://sumit2011.github.io/tags/python/</link>
         <description>python - Tag - Sumit&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
-            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Thu, 25 Jan 2024 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Thu, 29 Feb 2024 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
     <title>Python Basic Syntax</title>
     <link>https://sumit2011.github.io/python/</link>
     <pubDate>Thu, 25 Jan 2024 11:54:28 &#43;0530</pubDate>
@@ -13,6 +13,16 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/python.png" referrerpolicy="no-referrer">
             </div><p><em><strong>Python is used in automation of taskes.</strong></em></p>]]></description>
+</item>
+<item>
+    <title>git commands</title>
+    <link>https://sumit2011.github.io/git-commands/</link>
+    <pubDate>Thu, 29 Feb 2024 11:54:28 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/git-commands/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/git.png" referrerpolicy="no-referrer">
+            </div><p>Most useful git commands.</p>]]></description>
 </item>
 </channel>
 </rss>
