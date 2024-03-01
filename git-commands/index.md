@@ -2,23 +2,31 @@
 
 Most useful git commands.
 <!--more-->
+# intro
+here i summarises the all git commands which is used frequently.
+
+### Configuration
+To configure the the email id in local git repo.
 ```bash
 git config --global user.email "your_email_id"
 ```
+To configure the username in the local git repo.
 ```bash
 git config --global user.name "your-user-name"
 ```
+To check the user email in git local repo.
 ```bash
 git config --global user.email
 ```
-
+###
 ```bash
 git add .
 ```
-
+to commmit all the changes.
 ```bash
 git commit -m "commit_message"
 ```
+
 ```bash
 git push -u origin main
 ```
@@ -61,6 +69,7 @@ git pull
 ```bash
 git config
 ```
+To show the details of the commits.
 ```bash
 git log
 ```
