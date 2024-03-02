@@ -420,8 +420,44 @@ numbers = [5,2,1,7,4]
 numbers.append(20)
 print(numbers)      # output-> [5,2,1,7,4,20]
 numbers.insert(0, 10)
+print(numbers)      # output-> [10,5,2,1,7,4,20]
+
+numbers.remove(5)
+print(numbers)      # output-> [10,2,1,7,4,20]
+
+numbers.clear()
+print(numbers)      # output-> []
+
+numbers = [5,2,1,7,4]                        
+numbers.pop()               # output-> [5, 2, 1, 7]
+print(numbers)
+
+numbers = [5,2,1,7,4]
+print(numbers.index(5))     # output-> 0
+# print(numbers.index(50))  # output-> 50 is not in the list
+print(50 in numbers)        # output-> False
+
+numbers = [5, 2, 1, 5, 7, 4]
+print(numbers.count(5))     # output-> 2
+
+numbers.sort()
+print(numbers)              # output-> [1, 2, 4, 5, 5, 7]
+numbers.reverse()
+print(numbers)              # output-> [7, 5, 5, 4, 2, 1]
+numbers2 = numbers.copy()
+numbers.append(10)
+print(numbers)              # output-> [7, 5, 5, 4, 2, 1, 10]
+print(numbers2)             # output-> [7, 5, 5, 4, 2, 1]
 ```
 
-
+### Task
+write a program to remove the duplicates in a list.
+```python
+numbers = [2, 2, 4, 6, 3, 4, 6, 1]
+uniques = []
+for number in numbers:
+    if number not in uniques:
+        uniques.append(number)
+```
 
 ***To be continued.....***
