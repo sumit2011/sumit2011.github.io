@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/python\/"
-        },"genre": "posts","keywords": "python","wordcount":  1646 ,
+        },"genre": "posts","keywords": "python","wordcount":  1720 ,
         "url": "https:\/\/sumit2011.github.io\/python\/","datePublished": "2024-01-25T11:54:28+05:30","dateModified": "2024-01-25T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -103,8 +103,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Python Basic Syntax</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/dsa/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DSA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-01-2024">25-01-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1646 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-01-2024">25-01-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1720 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;9 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -157,6 +157,7 @@
         <li><a href="#unpacking">unpacking</a></li>
         <li><a href="#dictionaries">dictionaries</a></li>
         <li><a href="#task-digits-to-word">Task: digits to word</a></li>
+        <li><a href="#emoji-converter-">Emoji Converter :)</a></li>
       </ul>
     </li>
   </ul>
@@ -277,7 +278,7 @@ o----
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">first</span> <span class="o">=</span><span class="s1">&#39;sumit&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="n">last</span> <span class="o">=</span> <span class="s1">&#39;kr&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">message</span> <span class="o">=</span> <span class="n">first</span> <span class="o">+</span><span class="s1">&#39;[&#39;</span> <span class="o">+</span> <span class="n">last</span> <span class="o">+</span> <span class="s1">&#39;] is a coder.&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">message</span> <span class="o">=</span> <span class="n">first</span> <span class="o">+</span><span class="s1">&#39;[&#39;</span> <span class="o">+</span> <span class="n">last</span> <span class="o">+</span> <span class="s1">&#39;] is a programmer.&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">first</span><span class="si">}</span><span class="s1"> [</span><span class="si">{</span><span class="n">last</span><span class="si">}</span><span class="s1">] is a coder&#39;</span>  <span class="c1"># &lt;---formated give same output as message</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
@@ -287,7 +288,7 @@ o----
             <i class="icon fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i>output<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content"><pre><code>sumit [kr] is a coder.
+            <div class="admonition-content"><pre><code>sumit [kr] is a programmer.
 </code></pre>
 </div>
         </div>
@@ -1139,6 +1140,60 @@ we have count, index</p>
 <p>translate digits to words</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">phone</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Phone: &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">digits_mapping</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;1&#34;</span><span class="p">:</span> <span class="s2">&#34;One&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;2&#34;</span><span class="p">:</span> <span class="s2">&#34;Two&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;3&#34;</span><span class="p">:</span> <span class="s2">&#34;Three&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;4&#34;</span><span class="p">:</span> <span class="s2">&#34;Four&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;5&#34;</span><span class="p">:</span> <span class="s2">&#34;Five&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;6&#34;</span><span class="p">:</span> <span class="s2">&#34;Six&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;7&#34;</span><span class="p">:</span> <span class="s2">&#34;Seven&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;8&#34;</span><span class="p">:</span> <span class="s2">&#34;Eight&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;9&#34;</span><span class="p">:</span> <span class="s2">&#34;Nine&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;0&#34;</span><span class="p">:</span> <span class="s2">&#34;Zero&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">output</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">phone</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">output</span> <span class="o">+=</span> <span class="n">digits_mapping</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="s2">&#34;!&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34; &#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition warning">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i>output<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><pre><code>&gt;Phone: 123456
+ One Two Three Four Five Six 
+</code></pre>
+</div>
+        </div>
+    </div>
+<h3 id="emoji-converter-">Emoji Converter :)</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -1148,12 +1203,12 @@ we have count, index</p>
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">phone</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Phone: &#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">digits_mapping</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;1&#34;</span><span class="p">:</span> <span class="s2">&#34;One&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;2&#34;</span><span class="p">:</span> <span class="s2">&#34;Two&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;3&#34;</span><span class="p">:</span> <span class="s2">&#34;Three&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;4&#34;</span><span class="p">:</span> <span class="s2">&#34;Four&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">message</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;&gt;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">words</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">emojis</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;:)&#34;</span><span class="p">:</span> <span class="s2">&#34; &#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;:(&#34;</span><span class="p">:</span> <span class="s2">&#34; &#34;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>

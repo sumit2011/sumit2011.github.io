@@ -65,12 +65,12 @@ is_new_patient = True
 ```python
 first ='sumit'
 last = 'kr'
-message = first +'[' + last + '] is a coder.'
+message = first +'[' + last + '] is a programmer.'
 msg = f'{first} [{last}] is a coder'  # <---formated give same output as message
 print(message)
 ```
 {{< admonition type=warning title="output" open=false >}}
-    sumit [kr] is a coder.
+    sumit [kr] is a programmer.
 {{< /admonition >}}
 
 ### length of a string
@@ -529,9 +529,35 @@ digits_mapping = {
     "1": "One",
     "2": "Two",
     "3": "Three",
-    "4": "Four"
+    "4": "Four",
+    "5": "Five",
+    "6": "Six",
+    "7": "Seven",
+    "8": "Eight",
+    "9": "Nine",
+    "0": "Zero"
 }
 
+output = ""
+for ch in phone:
+    output += digits_mapping.get(ch, "!") + " "
+print(output)
+```
+{{< admonition type=warning title="output" open=false >}}
+    >Phone: 123456
+     One Two Three Four Five Six 
+{{< /admonition >}} 
+
+### Emoji Converter :)
+```python
+message = input(">")
+words = message.split(' ')
+
+emojis = {
+    ":)": " "
+    ":(": " "
+}
 
 ```
+
 ***To be continued.....***
