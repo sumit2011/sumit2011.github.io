@@ -363,15 +363,30 @@ for x in range(4):
 ```python
 numbers = [5,2,5,2,2]
 
+# method 1
 for x_count in numbers:
     print('x' * x_count)
 
+# method 2
 for x_count in numbers:
     output = ''
     for count in range(x_count):
         output += 'x'
     print(output)
 ```
+{{< admonition type=warning title="output" open=false >}}
+    xxxxx
+    xx
+    xxxxx
+    xx
+    xx
+
+    xxxxx
+    xx
+    xxxxx
+    xx
+    xx
+{{< /admonition >}} 
 
 ### lists
 ```python
@@ -383,7 +398,7 @@ print(names[2:])   # output-> ['saif', 'prateek', 'sumit']
 print(names[2:4])  # output-> ['saif', 'prateek']
 
 ```
-### task
+### Task: largest no
 find the largest number in the list
 ```python
 numbers = [2,3,6,7,4,9,10]
@@ -450,7 +465,7 @@ print(numbers)              # output-> [7, 5, 5, 4, 2, 1, 10]
 print(numbers2)             # output-> [7, 5, 5, 4, 2, 1]
 ```
 
-### Task
+### Task: remove duplicates
 write a program to remove the duplicates in a list.
 ```python
 numbers = [2, 2, 4, 6, 3, 4, 6, 1]
@@ -458,6 +473,65 @@ uniques = []
 for number in numbers:
     if number not in uniques:
         uniques.append(number)
+print(uniques)
+
+# output-> [2, 4, 6, 3, 1]
+```
+### tuples
+similar to list.
+we dont have append or insert method here.
+we also dont have remove, clear, pop.
+we have count, index
+```python
+numbers = (1,2,3)   # cant be modified
+print(numbers[0])   # output-> 1
+
+number[0] = 10      # output-> error message
+
 ```
 
+### unpacking
+```python
+coordinates = (1,2,3)
+x = coordinates[0] 
+y = coordinates[1]
+z = coordinates[2]
+
+x, y, z = coordinates
+print(x)        # output-> 1
+print(y)        # output-> 2
+print(z)        # output-> 3
+
+```
+### dictionaries
+
+```python
+customer = {
+    "name": "sumit kr",
+    "age": 30,
+    "is_verified": True
+}
+print(customer["name"])     # output-> sumit kr
+
+customer["name"] = "Sumit"
+print(customer["name"])     # output-> Sumit
+
+customer["birthdate"] = jan 1 2002
+print(customer["birthdate"])   # output-> jan 1 2002
+
+```
+
+### Task: digits to word
+translate digits to words
+```python
+phone = input("Phone: ")
+digits_mapping = {
+    "1": "One",
+    "2": "Two",
+    "3": "Three",
+    "4": "Four"
+}
+
+
+```
 ***To be continued.....***
