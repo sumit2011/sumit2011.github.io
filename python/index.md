@@ -10,7 +10,7 @@ _Use the table of contents to navigate to the portion that you are interested in
 # Introduction
 ***Python*** is a beginner-friendly, interpreted programming language known for its readability and versatility. With a vast standard library and cross-platform compatibility, it's widely used in ***web development***, ***data science***, and ***automation***.
 
-### print function
+### Print function
 ```python
 print("it's meeeeeeeeeeee")
 print('o----')
@@ -27,7 +27,7 @@ print('*' * 10)
 {{< /admonition >}}
 
 
-### datatype
+### Datatype
 ```python
 price = 10          # integer
 rating = 4.9        # floating
@@ -36,7 +36,7 @@ is_present = False  # boolean
 print(price)
 ```
 
-### input function
+### Input function
 ```python
 name = input('what is your name? ')  # taking input and store as a 'name' variable
 fav_colour = input('what is your favourite colour? ')
@@ -59,7 +59,7 @@ is_new_patient = True
 ```
 
 
-### string and character
+### String and character
 
 #formatted string 
 ```python
@@ -73,7 +73,7 @@ print(message)
     sumit [kr] is a programmer.
 {{< /admonition >}}
 
-### length of a string
+### Length of a string
 ```python
 string = 'you are awesome.'
 print(len(string)) #general purpose function
@@ -82,7 +82,7 @@ print(len(string)) #general purpose function
 ```
 
 
-### converting lower case to uppercase
+### Converting lower case to uppercase
 ```python
 compliment = 'You are awesome.'
 print(compliment.upper())  #method 
@@ -100,7 +100,7 @@ print(statement.find('o'))
 
 
 
-### replacing a word in a string
+### Replacing a word in a string
 ```python
 statement = 'hii this is sumit.'
 print(statement.replace('sumit','sumit kr'))
@@ -109,7 +109,7 @@ print(statement.replace('su','a'))
 #output-> hii this is amit.
 ```
 
-### checking if the string contain a word or not
+### Checking if the string contain a word or not
 ```python
 statement = 'hii this is sumit.'
 print('sumit' in statement)
@@ -128,7 +128,7 @@ print(10%3)    # output-> 1
 print(10 ** 3) # output-> 1000  (ten to the power three)
 ```
 
-### augmanted assignment operator
+### Augmanted assignment operator
 ```python
 x= 10
 x = x + 3
@@ -138,7 +138,7 @@ x *= 3
 x /= 3
 ```
 
-### presidence order 
+### Presidence order 
 1. parenthesis
 2. exponentiation  2**3
 3. multiplication or division
@@ -148,7 +148,7 @@ x= 10 + 3 * 2 ** 2    #output-> 22
 x= (10 + 3) * 2 ** 2  #output-> 56
 ```
 
-### math function 
+### Math function 
 ```python
 x= 2.9
 print(round(x))   #output-> 3
@@ -159,7 +159,7 @@ print(math.ceil(2.9))  # output-> 3
 print(math.floor(2.9)) # output-> 2
 ```
 
-### if and else if statement
+### If and else if statement
 ```python
 is_hot = True
 is_cold = False
@@ -227,7 +227,7 @@ else:
     Eligible for loan
 {{< /admonition >}} 
 
-### comparision operator
+### Comparision operator
    > , < , >= , <= , == , !=
 ### Task
 ```python
@@ -254,7 +254,7 @@ else:
     print('looks good.')
 ```
 
-### while loops
+### While loops
 ```python  
 i = 1
 while i <= 5:
@@ -273,7 +273,7 @@ print('Done')
 
             
 
-### Task: guess number
+### Task: Guess number
 ```python
 secreat_number = 9
 guess_count = 0
@@ -289,7 +289,7 @@ else:
     print('sorry you failed')
 ```
 
-### Task: car game
+### Task: Car game
 ```python
 command = " "
 started = False
@@ -388,7 +388,7 @@ for x_count in numbers:
     xx
 {{< /admonition >}} 
 
-### lists
+### Lists
 ```python
 names = ['arjun', 'kaishar', 'saif', 'prateek', 'sumit']
 print(names)       # output-> ['arjun', 'kaishar', 'saif', 'prateek', 'sumit']
@@ -398,7 +398,7 @@ print(names[2:])   # output-> ['saif', 'prateek', 'sumit']
 print(names[2:4])  # output-> ['saif', 'prateek']
 
 ```
-### Task: largest no
+### Task: Largest no
 find the largest number in the list
 ```python
 numbers = [2,3,6,7,4,9,10]
@@ -429,7 +429,7 @@ for row in matrix:
         print(item)  # output-> 1 to 9 in seperate line
 ```
 
-### list methods
+### List methods
 ```python
 numbers = [5,2,1,7,4]
 numbers.append(20)
@@ -465,7 +465,7 @@ print(numbers)              # output-> [7, 5, 5, 4, 2, 1, 10]
 print(numbers2)             # output-> [7, 5, 5, 4, 2, 1]
 ```
 
-### Task: remove duplicates
+### Task: Remove duplicates
 write a program to remove the duplicates in a list.
 ```python
 numbers = [2, 2, 4, 6, 3, 4, 6, 1]
@@ -477,7 +477,7 @@ print(uniques)
 
 # output-> [2, 4, 6, 3, 1]
 ```
-### tuples
+### Tuples
 similar to list.
 we dont have append or insert method here.
 we also dont have remove, clear, pop.
@@ -490,7 +490,7 @@ number[0] = 10      # output-> error message
 
 ```
 
-### unpacking
+### Unpacking
 ```python
 coordinates = (1,2,3)
 x = coordinates[0] 
@@ -503,7 +503,7 @@ print(y)        # output-> 2
 print(z)        # output-> 3
 
 ```
-### dictionaries
+### Dictionaries
 
 ```python
 customer = {
@@ -521,7 +521,7 @@ print(customer["birthdate"])   # output-> jan 1 2002
 
 ```
 
-### Task: digits to word
+### Task: Digits to word
 translate digits to words
 ```python
 phone = input("Phone: ")
