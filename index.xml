@@ -89,6 +89,16 @@ Advanced Operators allintext:, allintilte:, allinurl:, cache:, define:, filetype
             </div><p><em><strong>Python is used in automation of taskes.</strong></em></p>]]></description>
 </item>
 <item>
+    <title>Sorting Algos</title>
+    <link>https://sumit2011.github.io/sorting/</link>
+    <pubDate>Thu, 25 Jan 2024 11:54:28 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/sorting/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/python.jpg" referrerpolicy="no-referrer">
+            </div><p><em><strong>Python is used in automation of taskes.</strong></em></p>]]></description>
+</item>
+<item>
     <title>Oops(object oriented programming)</title>
     <link>https://sumit2011.github.io/oops/</link>
     <pubDate>Wed, 15 Feb 2023 11:54:28 &#43;0530</pubDate>
@@ -97,16 +107,6 @@ Advanced Operators allintext:, allintilte:, allinurl:, cache:, define:, filetype
     <description><![CDATA[<div class="featured-image">
                 <img src="/posts/DSA/oops/oops.png" referrerpolicy="no-referrer">
             </div>]]></description>
-</item>
-<item>
-    <title>git commands</title>
-    <link>https://sumit2011.github.io/git-commands/</link>
-    <pubDate>Thu, 29 Feb 2024 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/git-commands/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/git.png" referrerpolicy="no-referrer">
-            </div><p>Most useful git commands.</p>]]></description>
 </item>
 </channel>
 </rss>
