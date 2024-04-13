@@ -295,3 +295,147 @@ vector<vector<char>> fill(int n, int m, vector<vector<char>> mat)
 
 ```
 
+# error
+
+
+### Detect cycle in directed graph:
+```c
+// detect cycle in directed graph
+
+// gfg: https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1
+
+bool dfs(vector<int> adj[] , int vis[] , int pathvis[] , int node){
+        vis[node] = 1;
+        pathvis[node] = 1;
+        
+        // traverse the adjacent ndoes
+        for(auto it : adj[node]){
+            if(!vis[it]){
+                if(dfs(adj , vis , pathvis , it)){
+                    return true;
+                }
+            }
+            
+            // if the node has been previously visited
+            // but it has to be visited on the same path
+            
+            else if(pathvis[it]){
+                return true;
+            }
+        }
+        
+        pathvis[node] = 0;
+        return false;
+    }
+    bool isCyclic(int V, vector<int> adj[]) {
+        // code here
+        int vis[V]= {0};
+        int pathvis[V] = {0};
+        
+        for(int i =0; i< V; i++){
+            if(!vis[i]){
+                if(dfs(adj , vis , pathvis , i)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+```
+
+### detect cycle in undirected graph
+
+```c
+// detect cycle in undirected graph
+bool detect(int src , vector<int> adj[], int vis[]){
+    vis[src] = 1;
+    queue<pair<int, int> q;
+    q.push({src , -1});
+
+    while(!q.empty()){
+        int node = q.front().first;
+        int parent = q.front().second;
+        q.pop();
+
+        for(auto adjnode : adj[node]){
+            if(!vis[adjnode]){
+                vis[adjnode] = 1;
+                q.push({adjnode , node});
+            }
+            else if(parent != adjnode){
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+
+bool iscysle(int v, vector<int> adj[]){
+    int vis[v] = {0};
+    for(int i=0; i<v; i++){
+        if(!vis[i]){
+            if(detect(i,adj,vis)){
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+```
+
+### Rotten Oranges:
+
+```c++
+int orangesRotting(vector<vector<int>>& grid) {
+        // Code here
+        int n = grid.size();
+        int m = grid[0].size();
+        queue<pair<pair<int , int> , int>> q;
+        
+        int vis[n][m];
+        for(int i =0; i < n ; i++){
+            
+            for(int j =0; j<m ; j++){
+                if(grid[i][j] == 2){
+                    q.push({{i, j} , 0});
+                    vis[i][j] = 2;
+                }
+                else{
+                    vis[i][j] = 0;
+                }
+            }
+        }
+        
+        int tm =0;
+        int drow[] = {-1,0,+1,0};
+        int dcol[] = { 0 , +1 , 0 , -1};
+        while(!q.empty()){
+            int r = q.front().first.first;
+            int c = q.front().first.second;
+            int t = q.front().second;
+            tm = max(tm , t);
+            q.pop();
+            for(int i =0; i < 4 ; i++){
+                int nrow = r+drow[i];
+                int ncol = c + dcol[i];
+                
+                if(nrow >= 0 && nrow < n && ncol >=0 && ncol < m &&vis[nrow][ncol] == 0 && grid[nrow][ncol] == 1){
+                    q.push({{nrow,ncol}, t+1});
+                    vis[nrow][ncol] = 2;
+                }
+            }
+        }
+        
+        for(int i =0; i<n ; i++){
+            for(int j =0 ; j<m ; j++){
+                if(vis[i][j] != 2 && grid[i][j] == 1){
+                    return -1;
+                }
+            }
+        }
+        return tm;
+    }
+```
+
