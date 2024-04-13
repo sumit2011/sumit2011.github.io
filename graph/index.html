@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/graph\/"
-        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  16 ,
+        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  1626 ,
         "url": "https:\/\/sumit2011.github.io\/graph\/","datePublished": "2023-11-30T11:54:28+05:30","dateModified": "2023-11-30T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -103,8 +103,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Graph</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/dsa/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DSA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="30-11-2023">30-11-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;16 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="30-11-2023">30-11-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1626 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -117,7 +117,28 @@
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#bfs">Bfs:</a></li>
+        <li><a href="#dfs">Dfs:</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#detect-cycle-in-directed-graph">Detect cycle in directed graph:</a></li>
+        <li><a href="#detect-cycle-in-undirected-graph">Detect cycle in undirected graph:</a></li>
+        <li><a href="#rotten-oranges">Rotten Oranges:</a></li>
+        <li><a href="#no-of-islands">No of islands:</a></li>
+        <li><a href="#no-of-provinces">No of provinces:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
             </div><div class="content" id="content"><div class="details admonition note open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
@@ -125,7 +146,817 @@
         <div class="details-content">
             <div class="admonition-content"><em>Use the table of contents to navigate to the portion that you are interested in.</em></div>
         </div>
-    </div></div><div class="post-footer" id="post-footer">
+    </div>
+<h1 id="intro">Intro:</h1>
+<h1 id="traversal-in-graph">Traversal in graph:</h1>
+<h3 id="bfs">Bfs:</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">// bfs of graph
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 0 based indexing
+</span></span></span><span class="line"><span class="cl"><span class="c1">// gfg ques
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// vector&lt;int&gt; adj[]  -&gt; adjacency list
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">bfsOfGraph</span><span class="p">(</span><span class="kt">int</span> <span class="n">V</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">adj</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Code here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">vis</span><span class="p">[</span><span class="n">V</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span> <span class="c1">// visited arrray mark all element initially zero
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">vis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>       <span class="c1">// marked visted  for 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">q</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>       <span class="c1">// pushing starting node in the queue
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">bfs</span><span class="p">;</span> <span class="c1">// to store the bfs traversal of the graph
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">node</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">bfs</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">node</span><span class="p">);</span> <span class="c1">// store the node in bfs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// pushing the neighbors of the node in the queue if not visited
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">adj</span><span class="p">[</span><span class="n">node</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// mark visited
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>  <span class="c1">// push the node in the queue
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">bfs</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// space complexicity = O(3N) --&gt; O(N)
+</span></span></span><span class="line"><span class="cl"><span class="c1">// time complexicity = O(N) + O(2E)
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="dfs">Dfs:</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to return a list containing the DFS traversal of the graph.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">node</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">adj</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">vis</span><span class="p">[],</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">ls</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">vis</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>      <span class="c1">// mark node visited
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">ls</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">node</span><span class="p">);</span> <span class="c1">// list to store dfs traversal
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// traverse all its neighbours of the node
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">adj</span><span class="p">[</span><span class="n">node</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// if non visited call dfs again
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// recursive call
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">adj</span><span class="p">,</span> <span class="n">vis</span><span class="p">,</span> <span class="n">ls</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dfsOfGraph</span><span class="p">(</span><span class="kt">int</span> <span class="n">V</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">adj</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Code here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">vis</span><span class="p">[</span><span class="n">V</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span> <span class="c1">// visited array
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ls</span><span class="p">;</span> <span class="c1">// list to store dfs traversal
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">dfs</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">adj</span><span class="p">,</span> <span class="n">vis</span><span class="p">,</span> <span class="n">ls</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ls</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="conversion-from-adjacency-matrix-to-adjancency-list">conversion from adjacency matrix to adjancency list</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">// conversion from adjacency matrix to adjancency list
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">adjList</span><span class="p">[</span><span class="n">V</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">V</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">V</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">adj</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">adjList</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">adjList</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="detect-cycle-in-directed-graph">Detect cycle in directed graph:</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">// detect cycle in directed graph
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// gfg: https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">adj</span><span class="p">[]</span> <span class="p">,</span> <span class="kt">int</span> <span class="n">vis</span><span class="p">[]</span> <span class="p">,</span> <span class="kt">int</span> <span class="n">pathvis</span><span class="p">[]</span> <span class="p">,</span> <span class="kt">int</span> <span class="n">node</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">vis</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pathvis</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">// traverse the adjacent ndoes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">it</span> <span class="p">:</span> <span class="n">adj</span><span class="p">[</span><span class="n">node</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">it</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span><span class="n">dfs</span><span class="p">(</span><span class="n">adj</span> <span class="p">,</span> <span class="n">vis</span> <span class="p">,</span> <span class="n">pathvis</span> <span class="p">,</span> <span class="n">it</span><span class="p">)){</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="c1">// if the node has been previously visited
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">// but it has to be visited on the same path
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            
+</span></span><span class="line"><span class="cl">            <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">pathvis</span><span class="p">[</span><span class="n">it</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">pathvis</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="nf">isCyclic</span><span class="p">(</span><span class="kt">int</span> <span class="n">V</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">adj</span><span class="p">[])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// code here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">int</span> <span class="n">vis</span><span class="p">[</span><span class="n">V</span><span class="p">]</span><span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">pathvis</span><span class="p">[</span><span class="n">V</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="n">V</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span><span class="n">dfs</span><span class="p">(</span><span class="n">adj</span> <span class="p">,</span> <span class="n">vis</span> <span class="p">,</span> <span class="n">pathvis</span> <span class="p">,</span> <span class="n">i</span><span class="p">)){</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="detect-cycle-in-undirected-graph">Detect cycle in undirected graph:</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">// detect cycle in undirected graph
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="nf">detect</span><span class="p">(</span><span class="kt">int</span> <span class="n">src</span> <span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">adj</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">vis</span><span class="p">[]){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vis</span><span class="p">[</span><span class="n">src</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">queue</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">q</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">({</span><span class="n">src</span> <span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">()){</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">node</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">first</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">parent</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">second</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">adjnode</span> <span class="p">:</span> <span class="n">adj</span><span class="p">[</span><span class="n">node</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">adjnode</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">                <span class="n">vis</span><span class="p">[</span><span class="n">adjnode</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">({</span><span class="n">adjnode</span> <span class="p">,</span> <span class="n">node</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">parent</span> <span class="o">!=</span> <span class="n">adjnode</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">iscysle</span><span class="p">(</span><span class="kt">int</span> <span class="n">v</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">adj</span><span class="p">[]){</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">vis</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">v</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">detect</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">adj</span><span class="p">,</span><span class="n">vis</span><span class="p">)){</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// t.c = O(N + 2E) + O(N)
+</span></span></span><span class="line"><span class="cl"><span class="c1">// s.c = O(N)
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="rotten-oranges">Rotten Oranges:</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">orangesRotting</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">grid</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Code here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">grid</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">queue</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span> <span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">q</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">vis</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">m</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">m</span> <span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">({{</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">}</span> <span class="p">,</span> <span class="mi">0</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">tm</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">drow</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">dcol</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">,</span> <span class="o">+</span><span class="mi">1</span> <span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">()){</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">first</span><span class="p">.</span><span class="n">first</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">first</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">second</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">tm</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">tm</span> <span class="p">,</span> <span class="n">t</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">nrow</span> <span class="o">=</span> <span class="n">r</span><span class="o">+</span><span class="n">drow</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">ncol</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="n">dcol</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span><span class="n">nrow</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">nrow</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">&amp;&amp;</span> <span class="n">ncol</span> <span class="o">&gt;=</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">ncol</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="o">&amp;&amp;</span><span class="n">vis</span><span class="p">[</span><span class="n">nrow</span><span class="p">][</span><span class="n">ncol</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">grid</span><span class="p">[</span><span class="n">nrow</span><span class="p">][</span><span class="n">ncol</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">({{</span><span class="n">nrow</span><span class="p">,</span><span class="n">ncol</span><span class="p">},</span> <span class="n">t</span><span class="o">+</span><span class="mi">1</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">vis</span><span class="p">[</span><span class="n">nrow</span><span class="p">][</span><span class="n">ncol</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">m</span> <span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">tm</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="no-of-islands">No of islands:</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">// Function to find the number of islands.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="kt">int</span> <span class="n">j</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;&gt;</span> <span class="o">&amp;</span><span class="n">grid</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&gt;=</span><span class="n">grid</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">||</span> <span class="n">j</span><span class="o">&gt;=</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">()</span> <span class="o">||</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="sc">&#39;0&#39;</span> <span class="o">||</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">0</span> <span class="o">||</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">grid</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">grid</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">grid</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">grid</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">grid</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">grid</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">grid</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">grid</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="nf">numIslands</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;&gt;&amp;</span> <span class="n">grid</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Code here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">grid</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// vector&lt;vector&lt;int&gt;&gt; vis(n , vector&lt;int&gt;(m,0));
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span><span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">row</span><span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span><span class="n">row</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">col</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span> <span class="n">grid</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;1&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">dfs</span><span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="n">col</span><span class="p">,</span> <span class="n">grid</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">cnt</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="no-of-provinces">No of provinces:</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">// dfs function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">node</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">adj</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">vis</span><span class="p">[]</span> <span class="p">){</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">vis</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>        <span class="c1">// mark node visited
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>       
+</span></span><span class="line"><span class="cl">        <span class="c1">// traverse all its neighbours of the node
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">i</span><span class="p">:</span> <span class="n">adj</span><span class="p">[</span><span class="n">node</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// if non visited call dfs again 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// recursive call 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">adj</span> <span class="p">,</span> <span class="n">vis</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="nf">numProvinces</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">adj</span><span class="p">,</span> <span class="kt">int</span> <span class="n">V</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// code here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        
+</span></span><span class="line"><span class="cl">        <span class="c1">// conversion from adjacency matrix to adjancency list
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">adjList</span><span class="p">[</span><span class="n">V</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">V</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span> <span class="n">V</span> <span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span><span class="n">adj</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">adjList</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">adjList</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">vis</span><span class="p">[</span><span class="n">V</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="n">V</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">                <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">adjList</span><span class="p">,</span><span class="n">vis</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="surrounded-regins--replace-os-with-xs-in-a-given-matrix">surrounded regins : Replace O&rsquo;s with X&rsquo;s in a given matrix:</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">// replace O&#39;s with X&#39;s in a given matrix
+</span></span></span><span class="line"><span class="cl"><span class="c1">// gfg: https://www.geeksforgeeks.org/problems/replace-os-with-xs0052/1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="o">&amp;</span><span class="n">vis</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;&gt;</span> <span class="o">&amp;</span><span class="n">mat</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// mark visited
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">vis</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// check for all 4 direction up ,right, down, left
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">delrow</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">delcol</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">mat</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>    <span class="c1">// row size
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">();</span> <span class="c1">// column size
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// traverse in all 4 direction
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// new row and new column
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">int</span> <span class="n">nrow</span> <span class="o">=</span> <span class="n">row</span> <span class="o">+</span> <span class="n">delrow</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">ncol</span> <span class="o">=</span> <span class="n">col</span> <span class="o">+</span> <span class="n">delcol</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">nrow</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">nrow</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">&amp;&amp;</span> <span class="n">ncol</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">ncol</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">nrow</span><span class="p">][</span><span class="n">ncol</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">mat</span><span class="p">[</span><span class="n">nrow</span><span class="p">][</span><span class="n">ncol</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;O&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// recursive call
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">dfs</span><span class="p">(</span><span class="n">nrow</span><span class="p">,</span> <span class="n">ncol</span><span class="p">,</span> <span class="n">vis</span><span class="p">,</span> <span class="n">mat</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;&gt;</span> <span class="n">fill</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;&gt;</span> <span class="n">mat</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// code here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// n-&gt; rows;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// m-&gt; col
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">vis</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// vector&lt;vector&lt;char&gt;&gt; temp = mat;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// check first row and last row
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// first row
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;O&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">vis</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// call dfs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">dfs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">vis</span><span class="p">,</span> <span class="n">mat</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// last row
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;O&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">vis</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// call dfs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">dfs</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">vis</span><span class="p">,</span> <span class="n">mat</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// check first and last column
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// first col
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;O&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// call dfs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">vis</span><span class="p">,</span> <span class="n">mat</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// last col
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;O&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// call dfs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">vis</span><span class="p">,</span> <span class="n">mat</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// after checking boundaries mark all remaining Os with Xs in the matrix
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;O&#39;</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;X&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">mat</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
