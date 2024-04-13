@@ -376,9 +376,8 @@ vector<vector<char>> fill(int n, int m, vector<vector<char>> mat)
 
 ```
 
-### Rotten Oranges:
 
-```c++
+
 int orangesRotting(vector<vector<int>>& grid) {
         // Code here
         int n = grid.size();
@@ -390,7 +389,7 @@ int orangesRotting(vector<vector<int>>& grid) {
             
             for(int j =0; j<m ; j++){
                 if(grid[i][j] == 2){
-                    // q.push({{i, j} , 0});
+                    q.push({{i, j} , 0});
                     vis[i][j] = 2;
                 }
                 else{
@@ -412,7 +411,7 @@ int orangesRotting(vector<vector<int>>& grid) {
                 int nrow = r+drow[i];
                 int ncol = c + dcol[i];
                 if(nrow >= 0 && nrow < n && ncol >=0 && ncol < m &&vis[nrow][ncol] == 0 && grid[nrow][ncol] == 1){
-                    // q.push({{nrow,ncol}, t+1});
+                    q.push({{nrow,ncol}, t+1});
                     vis[nrow][ncol] = 2;
                 }
             }
@@ -427,4 +426,4 @@ int orangesRotting(vector<vector<int>>& grid) {
         }
         return tm;
     }
-```
+
