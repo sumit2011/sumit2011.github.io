@@ -46,10 +46,11 @@ vector<int> bfsOfGraph(int V, vector<int> adj[])
         }
     }
     return bfs;
-}
 
 // space complexicity = O(3N) --> O(N)
 // time complexicity = O(N) + O(2E)
+}
+
 
 ```
 
@@ -188,8 +189,7 @@ bool iscysle(int v, vector<int> adj[]){
     }
     return false;
 }
-// t.c = O(N + 2E) + O(N)
-// s.c = O(N)
+
 ```
 
 ### Rotten Oranges:
@@ -338,7 +338,7 @@ int orangesRotting(vector<vector<int>>& grid) {
 
 
 
-# surrounded regins : Replace O's with X's in a given matrix:
+### surrounded regins : Replace O's with X's in a given matrix:
 
 
 ```c++
