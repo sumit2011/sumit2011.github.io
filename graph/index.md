@@ -151,10 +151,6 @@ bool dfs(vector<int> adj[] , int vis[] , int pathvis[] , int node){
     }
 ```
 
-### Detect cycle in undirected graph:
-
-
-
 ### Rotten Oranges:
 
 ```c++
