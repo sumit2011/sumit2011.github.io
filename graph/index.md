@@ -330,7 +330,7 @@ int orangesRotting(vector<vector<int>>& grid) {
 
 
 
-# Replace O's with X's in a given matrix:
+# surrounded regins : Replace O's with X's in a given matrix:
 ```c++
 // replace O's with X's in a given matrix
 // gfg: https://www.geeksforgeeks.org/problems/replace-os-with-xs0052/1
