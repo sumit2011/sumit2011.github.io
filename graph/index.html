@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/graph\/"
-        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  1557 ,
+        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  1390 ,
         "url": "https:\/\/sumit2011.github.io\/graph\/","datePublished": "2023-11-30T11:54:28+05:30","dateModified": "2023-11-30T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -103,8 +103,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Graph</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/dsa/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DSA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="30-11-2023">30-11-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1557 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="30-11-2023">30-11-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1390 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -833,54 +833,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>int orangesRotting(vector&lt;vector<int>&gt;&amp; grid) {
-// Code here
-int n = grid.size();
-int m = grid[0].size();
-queue&lt;pair&lt;pair&lt;int , int&gt; , int&raquo; q;</p>
-<pre><code>    int vis[n][m];
-    for(int i =0; i &lt; n ; i++){
-        
-        for(int j =0; j&lt;m ; j++){
-            if(grid[i][j] == 2){
-                q.push({{i, j} , 0});
-                vis[i][j] = 2;
-            }
-            else{
-                vis[i][j] = 0;
-            }
-        }
-    }
-    
-    int tm =0;
-    int drow[] = {-1,0,+1,0};
-    int dcol[] = { 0 , +1 , 0 , -1};
-    while(!q.empty()){
-        int r = q.front().first.first;
-        int c = q.front().first.second;
-        int t = q.front().second;
-        tm = max(tm , t);
-        q.pop();
-        for(int i =0; i &lt; 4 ; i++){
-            int nrow = r+drow[i];
-            int ncol = c + dcol[i];
-            if(nrow &gt;= 0 &amp;&amp; nrow &lt; n &amp;&amp; ncol &gt;=0 &amp;&amp; ncol &lt; m &amp;&amp;vis[nrow][ncol] == 0 &amp;&amp; grid[nrow][ncol] == 1){
-                q.push({{nrow,ncol}, t+1});
-                vis[nrow][ncol] = 2;
-            }
-        }
-    }
-    
-    for(int i =0; i&lt;n ; i++){
-        for(int j =0 ; j&lt;m ; j++){
-            if(vis[i][j] != 2 &amp;&amp; grid[i][j] == 1){
-                return -1;
-            }
-        }
-    }
-    return tm;
-}
-</code></pre></div><div class="post-footer" id="post-footer">
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
