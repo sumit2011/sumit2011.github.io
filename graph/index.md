@@ -105,6 +105,45 @@ for (int i = 0; i < V; i++)
 }
 
 ```
+### detect cycle in undirected graph
+
+```c
+// detect cycle in undirected graph
+bool detect(int src , vector<int> adj[], int vis[]){
+    vis[src] = 1;
+    queue<pair<int, int> q;
+    q.push({src , -1});
+
+    while(!q.empty()){
+        int node = q.front().first;
+        int parent = q.front().second;
+        q.pop();
+
+        for(auto adjnode : adj[node]){
+            if(!vis[adjnode]){
+                vis[adjnode] = 1;
+                q.push({adjnode , node});
+            }
+            else if(parent != adjnode){
+                return true;
+            }
+        }
+    }
+    return false;
+}
+bool iscysle(int v, vector<int> adj[]){
+    int vis[v] = {0};
+    for(int i=0; i<v; i++){
+        if(!vis[i]){
+            if(detect(i,adj,vis)){
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+```
 
 ### No of islands:
 
@@ -301,9 +340,7 @@ vector<vector<char>> fill(int n, int m, vector<vector<char>> mat)
 ### Detect cycle in directed graph:
 ```c
 // detect cycle in directed graph
-
 // gfg: https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1
-
 bool dfs(vector<int> adj[] , int vis[] , int pathvis[] , int node){
         vis[node] = 1;
         pathvis[node] = 1;
@@ -343,47 +380,8 @@ bool dfs(vector<int> adj[] , int vis[] , int pathvis[] , int node){
     }
 ```
 
-### detect cycle in undirected graph
-
-```c
-// detect cycle in undirected graph
-bool detect(int src , vector<int> adj[], int vis[]){
-    vis[src] = 1;
-    queue<pair<int, int> q;
-    q.push({src , -1});
-
-    while(!q.empty()){
-        int node = q.front().first;
-        int parent = q.front().second;
-        q.pop();
-
-        for(auto adjnode : adj[node]){
-            if(!vis[adjnode]){
-                vis[adjnode] = 1;
-                q.push({adjnode , node});
-            }
-            else if(parent != adjnode){
-                return true;
-            }
-        }
-    }
-    return false;
-}
 
 
-bool iscysle(int v, vector<int> adj[]){
-    int vis[v] = {0};
-    for(int i=0; i<v; i++){
-        if(!vis[i]){
-            if(detect(i,adj,vis)){
-                return true;
-            }
-        }
-    }
-    return false;
-}
-
-```
 
 ### Rotten Oranges:
 
