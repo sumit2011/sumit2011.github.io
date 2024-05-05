@@ -10,7 +10,7 @@ _Use the table of contents to navigate to the portion that you are interested in
 
 
 
-# Intro:
+## 1. Intro:
 
 # Traversal in graph:
 ### Bfs:
@@ -105,6 +105,7 @@ for (int i = 0; i < V; i++)
 }
 
 ```
+
 ### detect cycle in undirected graph
 
 ```c
@@ -426,8 +427,101 @@ vector<vector<char>> fill(int n, int m, vector<vector<char>> mat)
 }
 
 ```
+## 2. Topological Sort Algo : TOPO Sort
+It is applicable only on `DAG` (directed acyclic graph).
+only linear ordering of vertices such that if there is an edge between u and v , u always appear before v in ther ordering.
 
-# Dijkstra Algorythm
+### DFS
+`using stack and array`
+
+Apporach:
+* Call dfs recursively and reach to the last node.
+* Mark it visited.
+* Return and push the node into the stack after completion of dfs for that node.
+* Pop the stack one by one and store into ans array
+
+
+```c
+void dfs(int node , int vis[] , stack<int>&st , vector<int> adj[]){
+    vis[node] = 1;
+    for(auto i : adj[node]){
+        if(!vis[i]){
+            dfs(i,vis,st, adj);
+        }
+    }
+    st.push(node);
+}
+
+vector<int> toposort(int v, vector<int> adj[]){
+    int vis[v] = {0};
+    stack<int> st;
+    for(int i =0 ; i< v ; i++){
+        if(!vis[i]){
+            dfs(i,vis , st , adj);
+        }
+    }
+
+    vector<int>ans;
+    while(!st.empty()){
+        ans.push_back(st.top());
+        st.pop();
+    }
+    return ans;
+}
+
+```
+### KAHN'S Algo : BFS
+`queue and array`
+
+Approach:
+* insert all nodes with indegree zero in the queue.
+* Take them out of the queue and reduce the indegree of the adjacent nodes.
+
+// BFS
+// TC: O(V+E)
+// V: no of nodes and E: no of edges
+```c
+vector<int> toposort(int v, vector<int> adj[])
+{
+
+    int indegree[v] = {0};
+    for (int i = 0; i < v; i++)
+    {
+        for (auto it : adj[i])
+        {
+            indegree[it]++;
+        }
+    }
+
+    queue<int> q;
+    for (int i = 0; i < v; i++)
+    {
+        if (indegree[i] == 0)
+        {
+            q.push(i);
+        }
+    }
+
+    vector<int> topo;
+    while (!q.empty())
+    {
+        int node = q.front();
+        q.pop();
+        topo.push_back(node);
+        for (auto it : adj[node])
+        {
+            indegree[it]--;
+            if (indegree[it] == 0)
+            {
+                q.push(it);
+            }
+        }
+    }
+    return topo;
+}
+
+```
+## 3. Dijkstra Algo
 shortesrt path algorythm
 it is used for finding the shortest path from one node to another node in the given graph
 it can be implemented by three methods
