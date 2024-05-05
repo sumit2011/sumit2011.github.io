@@ -186,8 +186,6 @@ bool dfs(vector<int> adj[] , int vis[] , int pathvis[] , int node){
         return false;
     }
 ```
-
-
 ### Rotten Oranges:
 
 ```c++
@@ -202,6 +200,7 @@ int orangesRotting(vector<vector<int>>& grid) {
             
             for(int j =0; j<m ; j++){
                 if(grid[i][j] == 2){
+                    q.push({i, j} , 0});
                     vis[i][j] = 2;
                 }
                 else{
@@ -223,6 +222,7 @@ int orangesRotting(vector<vector<int>>& grid) {
                 int nrow = r+drow[i];
                 int ncol = c + dcol[i];
                 if(nrow >= 0 && nrow < n && ncol >=0 && ncol < m &&vis[nrow][ncol] == 0 && grid[nrow][ncol] == 1){
+                    q.push({nrow,ncol}, t+1);
                     vis[nrow][ncol] = 2;
                 }
             }
@@ -427,4 +427,116 @@ vector<vector<char>> fill(int n, int m, vector<vector<char>> mat)
 
 ```
 
+# Dijkstra Algorythm
+shortesrt path algorythm
+it is used for finding the shortest path from one node to another node in the given graph
+it can be implemented by three methods
+1. using queue(bad)
+2. using priority queue(good)
+3. using set(better)
 
+time complexicity : Elog(V)
+
+where E is the no of edges ans V is the no of nodes
+
+we dont use queue because in queue there is unnecessary occurance of distance for the same node due to this it takes a lot of time so it is a bad practice.
+```c
+vector<int> dijkstra(int V, vector<vector<int>> adj[], int S)
+{
+    // Code here
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+
+    vector<int> dist(V);
+    for (int i = 0; i < V; i++)
+    {
+        dist[i] = 1e9;
+    }
+
+    dist[S] = 0;
+    pq.push({0, S});
+    while (!pq.empty())
+    {
+        int dis = pq.top().first;
+        int node = pq.top().second;
+        pq.pop();
+
+        for (auto it : adj[node])
+        {
+            int edgeweight = it[1];
+            int adjnode = it[0];
+
+            if (dis + edgeweight < dist[adjnode])
+            {
+                dist[adjnode] = dis + edgeweight;
+                pq.push({dist[adjnode], adjnode});
+            }
+        }
+    }
+
+    return dist;
+}
+
+```
+
+### Shortes path in undirected weighted graph
+using dijkstras algo
+```c
+vector<int> shortestPath(int n, int m, vector<vector<int>> &edges)
+{
+    // creating adjacency list from the given the edges pair
+    vector<pair<int, int>> adj[n + 1];
+    for (auto it : edges)
+    {
+        adj[it[0]].push_back({it[1], it[2]});
+        adj[it[1]].push_back({it[0], it[2]});
+    }
+
+    // defining the priority queue a min heap concept
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+    //creating a distance array and a parent aray to track the path
+    // parent array will tell us the node is come from where
+    vector<int> dist(n + 1, 1e9), parent(n + 1);
+    for (int i = 1; i <= n; i++)
+    {
+        parent[i] = i;
+    }
+
+    dist[1] = 0;
+    pq.push({0, 1});
+    while (!pq.empty())
+    {
+        auto it = pq.top();
+        int node = it.second;
+        int dis = it.first;
+        pq.pop();
+
+        for (auto it : adj[node])
+        {
+            int adjnode = it.first;
+            int edw = it.second;
+            if (dis + edw < dist[adjnode])
+            {
+                dist[adjnode] = dis + edw;
+                pq.push({dis + edw, adjnode});
+                parent[adjnode] = node;
+            }
+        }
+    }
+    if (dist[n] == 1e9)
+        return {-1};
+    // reconstruct the path
+    vector<int> path;
+    int node = n;
+    while (parent[node] != node)
+    {
+        path.push_back(node);
+        node = parent[node];
+    }
+    path.push_back(1);
+    path.push_back(dist[n]);
+    reverse(path.begin(), path.end());
+
+    return path;
+}
+
+```
