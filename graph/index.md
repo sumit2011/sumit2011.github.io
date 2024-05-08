@@ -13,8 +13,12 @@ _Use the table of contents to navigate to the portion that you are interested in
 ## 1. Intro:
 
 # Traversal in graph:
-### Bfs:
+There are two main type of traversal technique in the graph:
+1. BFS: Breadth First Search
+2. DFS: Depth First Search
 
+### BFS:
+in this traversal technique the traversal will be breadthwise
 ```c++
 // bfs of graph
 // 0 based indexing
@@ -46,7 +50,6 @@ vector<int> bfsOfGraph(int V, vector<int> adj[])
         }
     }
     return bfs;
-
 // space complexicity = O(3N) --> O(N)
 // time complexicity = O(N) + O(2E)
 }
@@ -54,7 +57,8 @@ vector<int> bfsOfGraph(int V, vector<int> adj[])
 
 ```
 
-### Dfs: 
+### DFS: 
+It's a recursive technique here the traversal will be depthwise
 ```c++
 
 // Function to return a list containing the DFS traversal of the graph.
@@ -87,8 +91,6 @@ vector<int> dfsOfGraph(int V, vector<int> adj[])
 }
 ```
 ### conversion from adjacency matrix to adjancency list
-
-
 ```c++
 // conversion from adjacency matrix to adjancency list
 vector<int> adjList[V];
@@ -103,6 +105,18 @@ for (int i = 0; i < V; i++)
         }
     }
 }
+```
+
+### edges are given making the adjacency list
+```c
+// given: vector<vector<int>> &edges
+    // Code here
+    vector<pair<int, int>> adj[n + 1];
+    for (auto it : edges)
+    {
+        adj[it[0]].push_back({it[1], it[2]});
+        adj[it[1]].push_back({it[0], it[2]});
+    }
 
 ```
 

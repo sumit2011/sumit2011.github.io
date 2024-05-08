@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/graph\/"
-        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  2624 ,
+        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  2699 ,
         "url": "https:\/\/sumit2011.github.io\/graph\/","datePublished": "2023-11-30T11:54:28+05:30","dateModified": "2023-11-30T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -103,7 +103,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Graph</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/dsa/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DSA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="30-11-2023">30-11-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2624 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="30-11-2023">30-11-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2699 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;13 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -125,9 +125,10 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#bfs">Bfs:</a></li>
-        <li><a href="#dfs">Dfs:</a></li>
+        <li><a href="#bfs">BFS:</a></li>
+        <li><a href="#dfs">DFS:</a></li>
         <li><a href="#conversion-from-adjacency-matrix-to-adjancency-list">conversion from adjacency matrix to adjancency list</a></li>
+        <li><a href="#edges-are-given-making-the-adjacency-list">edges are given making the adjacency list</a></li>
         <li><a href="#detect-cycle-in-undirected-graph">detect cycle in undirected graph</a></li>
         <li><a href="#detect-cycle-in-directed-graph">Detect cycle in directed graph:</a></li>
         <li><a href="#rotten-oranges">Rotten Oranges:</a></li>
@@ -159,7 +160,13 @@
     </div>
 <h2 id="1-intro">1. Intro:</h2>
 <h1 id="traversal-in-graph">Traversal in graph:</h1>
-<h3 id="bfs">Bfs:</h3>
+<p>There are two main type of traversal technique in the graph:</p>
+<ol>
+<li>BFS: Breadth First Search</li>
+<li>DFS: Depth First Search</li>
+</ol>
+<h3 id="bfs">BFS:</h3>
+<p>in this traversal technique the traversal will be breadthwise</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -195,7 +202,6 @@
 </span><span class="lnt">31
 </span><span class="lnt">32
 </span><span class="lnt">33
-</span><span class="lnt">34
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">// bfs of graph
@@ -228,13 +234,13 @@
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">bfs</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// space complexicity = O(3N) --&gt; O(N)
 </span></span></span><span class="line"><span class="cl"><span class="c1">// time complexicity = O(N) + O(2E)
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="dfs">Dfs:</h3>
+</div><h3 id="dfs">DFS:</h3>
+<p>It&rsquo;s a recursive technique here the traversal will be depthwise</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -330,6 +336,29 @@
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="edges-are-given-making-the-adjacency-list">edges are given making the adjacency list</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// given: vector&lt;vector&lt;int&gt;&gt; &amp;edges
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// Code here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">adj</span><span class="p">[</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">it</span> <span class="p">:</span> <span class="n">edges</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">adj</span><span class="p">[</span><span class="n">it</span><span class="p">[</span><span class="mi">0</span><span class="p">]].</span><span class="nf">push_back</span><span class="p">({</span><span class="n">it</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="mi">2</span><span class="p">]});</span>
+</span></span><span class="line"><span class="cl">        <span class="n">adj</span><span class="p">[</span><span class="n">it</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="nf">push_back</span><span class="p">({</span><span class="n">it</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="mi">2</span><span class="p">]});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="detect-cycle-in-undirected-graph">detect cycle in undirected graph</h3>
