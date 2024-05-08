@@ -531,13 +531,22 @@ it can be implemented by three methods
 
 time complexicity : Elog(V)
 
-where E is the no of edges ans V is the no of nodes
+where E is the no of edges ans V is the number of nodes
 
-we dont use queue because in queue there is unnecessary occurance of distance for the same node due to this it takes a lot of time so it is a bad practice.
+we do not use queue because in queue there is unnecessary occurance of distance for the same node due to this it takes a lot of time so it is a bad practice.
+
+we use priority queue because it stores the minimum value at the top (min heap) and we need the minimum distance so it is better choice to use pq.
+
+we use set because it has the ability to erase the entry from the set
+set stores the unique values and the smallest at the top in ascending order.
+
+Using priority queue:
 ```c
+// dijkstra algo using priority queue
 vector<int> dijkstra(int V, vector<vector<int>> adj[], int S)
 {
     // Code here
+    // using priority queue to sotre the pair of distance and node.
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
     vector<int> dist(V);
@@ -547,11 +556,11 @@ vector<int> dijkstra(int V, vector<vector<int>> adj[], int S)
     }
 
     dist[S] = 0;
-    pq.push({0, S});
+    pq.push({0, S});        // storintg the distance of source node zero from the source node.
     while (!pq.empty())
     {
-        int dis = pq.top().first;
-        int node = pq.top().second;
+        int dis = pq.top().first;   // first one denotes the distance from the source 
+        int node = pq.top().second;     // second denotes the node
         pq.pop();
 
         for (auto it : adj[node])
@@ -566,11 +575,44 @@ vector<int> dijkstra(int V, vector<vector<int>> adj[], int S)
             }
         }
     }
-
     return dist;
 }
 
 ```
+Using set
+```c
+// dijkstra algo using set
+vector<int> dijkstra(int v , vector<vector<int>> adj[] , int s){
+    set<pair<int , int>> st;
+    vector<int> dist(v, 1e9);
+
+    st.insert({0,s});
+    dist[s] = 0;
+    while(!q.empty()){
+        auto it = *(st.begin());
+        int distance = it.first;
+        int node = it.second;
+
+        st.erase(it);
+        for(auto it : adj[node]){
+            int adjnode = it[0];
+            int edgeweight = it[1];
+            if(distance + edgeweight <  dist[adjnode]){
+                // erse if it exist
+                if(dist[adjnode] != 1e9){
+                    st.erase({dist[adjnode] , adj[node]});
+                }
+                // update the distance
+                dist[adjnode] = distance + edgeweight;
+                st.insert({dist[adjnode] , adjnode});
+            }
+        }
+    }
+    return dist;
+}
+
+```
+
 
 ### Shortes path in undirected weighted graph
 using dijkstras algo
@@ -584,7 +626,6 @@ vector<int> shortestPath(int n, int m, vector<vector<int>> &edges)
         adj[it[0]].push_back({it[1], it[2]});
         adj[it[1]].push_back({it[0], it[2]});
     }
-
     // defining the priority queue a min heap concept
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
     //creating a distance array and a parent aray to track the path
