@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/html\/"
-        },"genre": "posts","keywords": "html","wordcount":  2757 ,
+        },"genre": "posts","keywords": "html","wordcount":  3206 ,
         "url": "https:\/\/sumit2011.github.io\/html\/","datePublished": "2024-05-25T11:54:28+05:30","dateModified": "2024-05-25T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -107,8 +107,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">HTML Basics</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/web-dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Web Dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2757 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;13 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3206 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;16 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -195,6 +195,21 @@
         <li><a href="#applying-styles-types">Applying styles-Types</a></li>
         <li><a href="#cascading-and-specificity">Cascading and specificity</a></li>
         <li><a href="#common-css-properties">Common CSS properties</a></li>
+      </ul>
+    </li>
+    <li><a href="#12-aria-labels">12. ARIA Labels</a>
+      <ul>
+        <li><a href="#understanding-aria-labels">Understanding ARIA Labels</a></li>
+        <li><a href="#understanding-aria-roles-and-properties">Understanding ARIA roles and properties</a></li>
+        <li><a href="#common-use-cases-for-aria-labels">Common use cases for ARIA Labels</a></li>
+        <li><a href="#implementing-aria-labels">Implementing ARIA Labels</a></li>
+      </ul>
+    </li>
+    <li><a href="#seo-for-html">SEO for html</a>
+      <ul>
+        <li><a href="#html-meta-tags">HTML Meta tags</a></li>
+        <li><a href="#microdata">Microdata</a></li>
+        <li><a href="#seo-best-practice">SEO best practice</a></li>
       </ul>
     </li>
   </ul>
@@ -1164,7 +1179,191 @@ Example:</li>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div><h2 id="12-aria-labels">12. ARIA Labels</h2>
+<p>Enhancing Accessibility in web development</p>
+<h3 id="understanding-aria-labels">Understanding ARIA Labels</h3>
+<p>ARIA labels are used to provide additional infomation to assistive technolory, such as screen readers, enabling a better user experiance for individuals with disabilities.<br>
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Delete item&#34;</span><span class="p">&gt;</span>X<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="understanding-aria-roles-and-properties">Understanding ARIA roles and properties</h3>
+<p>ARIA roles define the purpose or type of an element, while ARIA properties provide additional properties or characteristics to describe the element further.<br>
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">aria-selected</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tab1&#34;</span><span class="p">&gt;</span>Tab 1<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">aria-selected</span><span class="o">=</span><span class="s">&#34;false&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;tab1&#34;</span><span class="p">&gt;</span>Tab 2<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;tab1&#34;</span><span class="p">&gt;</span>Tab 1 content...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;tab2&#34;</span> <span class="na">hidden</span><span class="p">&gt;</span>Tab 2 content...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="common-use-cases-for-aria-labels">Common use cases for ARIA Labels</h3>
+<ul>
+<li>Describing complex or interactive elements:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-haspopup</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;open menu&#34;</span><span class="p">&gt;</span>Menu<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Enhancing link texts:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/profile&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;view sumit&#39;s profile&#34;</span><span class="p">&gt;</span>sumit kr<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Describing images and Non-text content:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;settings&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;settings-icon.png&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;desc of image&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="implementing-aria-labels">Implementing ARIA Labels</h3>
+<ul>
+<li>Use the aria-label attribute.</li>
+<li>Leverage ARIA roles and properties.</li>
+<li>Keep labels concise and descriptive.</li>
+<li>Test with assistive technologies.</li>
+</ul>
+<h2 id="seo-for-html">SEO for html</h2>
+<h3 id="html-meta-tags">HTML Meta tags</h3>
+<p>Meta tags in HTML are typically used within the <code>&lt;head&gt;</code> section of an HTML document to define metadata about the page.</p>
+<p>The following are key meta elements:</p>
+<ul>
+<li>
+<meta charset="UTF-8">
+</li>
+<li>
+<meta name="description" content="Free Web tutorials">
+</li>
+<li>
+<meta name="keywords" content="HTML,CSS,JavaScript">
+</li>
+<li>
+<meta name="author" content="Sumit Kr">
+</li>
+<li>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</li>
+<li>
+<meta http-equiv="refresh" content="30">
+</li>
+<li>
+<meta name="robots" content="noindex,nofollow">\
+</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;description&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;this is a tutorial about HTML&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;keywords&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;Home, relevent, page, content, keywords&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;author&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;Sumit Kumar&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome to my website<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>this is a paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="microdata">Microdata</h3>
+<p>Microdata is a specific type of syntax that can be added to HTML to create machine readable data from the contents of a webpage.</p>
+<p>Microdata uses a set of new HTML arrribute to embed structured data within existing HTML content. The attribute are:</p>
+<ul>
+<li><strong>itemscope</strong> : This attribute is a boolean attribute that declares a new item.</li>
+<li><strong>itemtype</strong> : This attribute declares what kind of item is being defined. It works in conjunction with <strong>itemscope</strong>.</li>
+<li><strong>itemprop</strong> : This attribute is used to add properties to an item.</li>
+<li><strong>itemid</strong> : This attribute assign a unique identifier to an item, providing a globally unique ID foe the item being marked up.<br>
+Example:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">itemscope</span> <span class="na">itemtype</span><span class="o">=</span><span class="s">&#34;http://schema.org/Movie&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&#34;name&#34;</span><span class="p">&gt;</span>Avenger: Endgame<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Directors:
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&#34;director&#34;</span><span class="p">&gt;</span>Anthony Russo<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&#34;director&#34;</span><span class="p">&gt;</span>Joe Russo<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&#34;genre&#34;</span><span class="p">&gt;</span>Action, Adventure, Drama<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../movies/avengers-endgame.html&#34;</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&#34;url&#34;</span><span class="p">&gt;</span>More details<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="seo-best-practice">SEO best practice</h3>
+<p>By implementing SEO best practice while writing HTML, You can improve the visibility of your web pages in search engine results.</p>
+<ol>
+<li>Use Semantic HTML Elements</li>
+<li>Incorporate ARIA Labels</li>
+<li>Optimize Meta Tags</li>
+<li>Optimize these meta tags by including relevant keywords</li>
+<li>Structure Content with Headings</li>
+<li>Optimize Image Alt Text</li>
+</ol></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

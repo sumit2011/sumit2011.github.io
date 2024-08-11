@@ -550,4 +550,108 @@ h1 {
 }
 ```
 
+## 12. ARIA Labels
+Enhancing Accessibility in web development
+### Understanding ARIA Labels
+ARIA labels are used to provide additional infomation to assistive technolory, such as screen readers, enabling a better user experiance for individuals with disabilities.\
+Example:
+```html
+<button aria-label="Delete item">X</button> 
+```
+
+### Understanding ARIA roles and properties
+ARIA roles define the purpose or type of an element, while ARIA properties provide additional properties or characteristics to describe the element further.\
+Example:
+```html
+<div role="tablist">
+    <button role="tab" aria-selected="true" id="tab1">Tab 1</button>
+    <button role="tab" aria-selected="false" id="tab1">Tab 2</button>
+</div>
+<div role="tabpanel" aria-labelledby="tab1">Tab 1 content...</div>
+<div role="tabpanel" aria-labelledby="tab2" hidden>Tab 2 content...</div>
+```
+
+### Common use cases for ARIA Labels
+* Describing complex or interactive elements:
+```html
+<div role="button" aria-haspopup="true" aria-label="open menu">Menu</div>
+```
+* Enhancing link texts:
+```html
+<a href="/profile" aria-label="view sumit's profile">sumit kr</a>
+```
+* Describing images and Non-text content:
+```html
+<button aria-label="settings">
+    <img src="settings-icon.png" alt="desc of image">
+</button>
+```
+
+### Implementing ARIA Labels
+* Use the aria-label attribute.
+* Leverage ARIA roles and properties.
+* Keep labels concise and descriptive.
+* Test with assistive technologies.
+
+## SEO for html
+### HTML Meta tags
+Meta tags in HTML are typically used within the `<head>` section of an HTML document to define metadata about the page.
+
+The following are key meta elements:
+* <meta charset="UTF-8">
+* <meta name="description" content="Free Web tutorials">
+* <meta name="keywords" content="HTML,CSS,JavaScript">
+* <meta name="author" content="Sumit Kr">
+* <meta name="viewport" content="width=device-width, initial-scale=1.0">
+* <meta http-equiv="refresh" content="30">
+* <meta name="robots" content="noindex,nofollow">\
+Example:
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="this is a tutorial about HTML" />
+        <meta name="keywords" content="Home, relevent, page, content, keywords" />
+        <meta name="author" content="Sumit Kumar" />
+    </head>
+    <body>
+        <h1>Welcome to my website</h1>
+        <p>this is a paragraph.</p>
+    </body>
+</html>
+```
+
+### Microdata
+Microdata is a specific type of syntax that can be added to HTML to create machine readable data from the contents of a webpage.
+
+Microdata uses a set of new HTML arrribute to embed structured data within existing HTML content. The attribute are:
+* **itemscope** : This attribute is a boolean attribute that declares a new item.
+* **itemtype** : This attribute declares what kind of item is being defined. It works in conjunction with **itemscope**.
+* **itemprop** : This attribute is used to add properties to an item.
+* **itemid** : This attribute assign a unique identifier to an item, providing a globally unique ID foe the item being marked up.\
+Example:
+```html
+<div itemscope itemtype="http://schema.org/Movie">
+    <h1 itemprop="name">Avenger: Endgame</h1>
+    <span>Directors:
+        <span itemprop="director">Anthony Russo</span>
+        <span itemprop="director">Joe Russo</span>
+    </span>
+    <span itemprop="genre">Action, Adventure, Drama</span>
+    <a href="../movies/avengers-endgame.html" itemprop="url">More details</a>
+</div>
+
+```
+
+### SEO best practice
+By implementing SEO best practice while writing HTML, You can improve the visibility of your web pages in search engine results.
+
+1. Use Semantic HTML Elements
+2. Incorporate ARIA Labels
+3. Optimize Meta Tags
+4. Optimize these meta tags by including relevant keywords
+5. Structure Content with Headings
+6. Optimize Image Alt Text
 
