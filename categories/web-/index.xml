@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Web  - Category - Sumit&#39;s Blog</title>
+        <link>http://localhost:1313/categories/web-/</link>
+        <description>Web  - Category - Sumit&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
+            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Sat, 25 May 2024 11:54:28 &#43;0530</lastBuildDate><atom:link href="http://localhost:1313/categories/web-/" rel="self" type="application/rss+xml" /><item>
+    <title>HTML Basics</title>
+    <link>http://localhost:1313/html/</link>
+    <pubDate>Sat, 25 May 2024 11:54:28 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>http://localhost:1313/html/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/home.png" referrerpolicy="no-referrer">
+            </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
+</item>
+</channel>
+</rss>

@@ -5,9 +5,17 @@
         <description>Categories - Category - Sumit&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
             <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Sat, 25 May 2024 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Web Dev</title>
+    <link>https://sumit2011.github.io/categories/web-dev/</link>
+    <pubDate>Sat, 25 May 2024 11:54:28 &#43;0530</pubDate>
+    <author>sumit</author>
+    <guid>https://sumit2011.github.io/categories/web-dev/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>DSA</title>
     <link>https://sumit2011.github.io/categories/dsa/</link>
-    <pubDate>Sat, 25 May 2024 11:54:28 &#43;0530</pubDate>
+    <pubDate>Sat, 10 Feb 2024 11:54:28 &#43;0530</pubDate>
     <author>sumit</author>
     <guid>https://sumit2011.github.io/categories/dsa/</guid>
     <description><![CDATA[]]></description>
