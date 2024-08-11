@@ -72,99 +72,137 @@ Example:
     Download pdf
 </a>
 ```
-### Example
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>04_HTML_Links</title>
-</head>
-<body>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="contact.html">contact</a>
-        <a href="about.html">about</a>
-        <a href="news/news.html">news</a>
-    </div>
-    <div>
-        <h1>HTML Links</h1>
-        <hr/>
-
-        <h2>this is an external link</h2>
-        <a href="https://www.google.com" title="visit google">visit google.com</a>
-        <hr/>
-
-        <h2>this is an external link which opens in the new tab</h2>
-        <a href="https://www.google.com" title="visit google" target="_blank">visit google.com</a>
-        <hr/>
-
-        <h2>this is an image link</h2>
-        <a href="https://sumit2011.github.io" title="visit sumit's site" target="_blank">
-            <img src="bg.jpeg" height="230px" width="230px"/>
-        </a>
-        <hr/>
-
-        <h2>this is a download link</h2>
-        <a href="./resume.pdf" download >Download pdf</a>
-        <br/><hr/>
-
-        <a href="#section 1">section 1</a>
-        <a href="#section 2">section 2</a>
-        <hr/>
-
-        <div id="section 1">
-            <h2>text section 1</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a ty
-                pe specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                 Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
-                 of Lorem Ipsum.
-                Why do we use it?
-                
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking
-                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-                opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing 
-                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
-                will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
-                accident, sometimes on purpose (injected humour and the like).
-            </p>
-        </div>
-
-        <div id="section 2">
-            <h2>text section 2</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a ty
-                pe specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                 Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
-                 of Lorem Ipsum.
-                Why do we use it?
-                
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking
-                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-                opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing 
-                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
-                will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
-                accident, sometimes on purpose (injected humour and the like).
-            </p>
-        </div>
-
-        <a href="#">back to top</a> 
-
-    </div>
-</body>
-</html>
-```
 
 ## 5. HTML Lists
+### Unordered lists
+Unordered lists `<ul>` are used to present items without a specific order or sequence. Each item in the list is defined using `<li>` (list item) tag.
+```html
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
+```
+### Ordered lists
+Ordered lists`<ol>` are used for items that have specific order or sequence. Like unordered lists, each item is defined using `<li>` tag.
+```html
+<ol>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ol>
+```
+### Nested lists
+HTML allows you to nest lists within lists to create hierarchical structures. This is achieved by placing a complete list structure inside an individual list item `<li>`. this technique is useful for creating subcategories or multi-level lists.
+```html
+<h2>Nested Lists</h2>
+<ul>
+    <li>list item 1
+        <ul>
+            <li>list item 1.1</li>
+            <li>list item 1.2</li>
+            <li>list item 1.3</li>
+        </ul>
+    </li>
+    <li>list item 2</li>
+    <li>list item 3</li>
+</ul>
+```
+### Styling lists
+HTML lists can be customized and styled using css styles, you can change the apperance of list markers, adjust spacing, and create unique visual representations.
+```css
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
 
-## 6. HTML Forms
+ol {
+    list-style-type: upper-roman;
+    margin-left: 30px;
+}
+```
 
-## 7. HTML Media Elements
+## 6. HTML Tables
+### Basic table structure
+Tables in HTML are created using the `<table>` element. Inside the `<table>` element, we have rows defined by the `<tr>` (table row) element. Within each row we define table headers using the `<th>` (table header) element or table cells using the `<td>` (table data) element.
+```html
+<h2>Basic Table Structure</h2>
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+        </tr>
+        <tr>
+            <td>Cell 3</td>
+            <td>Cell 4</td>
+        </tr>
+    </table>
+```
+### Table headers
+Table headers `<th>` are used to define the headings of each column in a table. By default, table headers are bold and centered. They help provide context and improve the readability of the table.
+```html
+<h2>Table headers</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    <!-- more rows -->
+</table>
+```
+### Table cells
+Table cells `<td>` hold the actual data within a table. Each cell corresponds to a specific row and column intersection. Table cells provide the content for each column in the table.
+```html
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    <tr>
+        <td>sumit</td>
+        <td>sumit2011kmr@gmail.com</td>
+        <td>6202757997</td>
+    </tr>
+    <tr>
+        <td>sumit</td>
+        <td>sumit2011kmr@gmail.com</td>
+        <td>6202757997</td>
+    </tr>
+</table>
 
-## 8. HTML Semantics
+```
+### Styling tables
+You can customize the apperance of tables using css. by applying css styles to the `<table>`, `<th>`, and `<td>` elements, you can change the table's layout, font, color, spacing and more.
+```CSS
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 
-## 9. HTML Styles
+td, th {
+    padding: 8px;
+    border: 1px solid black;
+}
+
+th {
+    background-color: lightgray;
+}
+
+td {
+    text-align: center;
+}
+```
+
+## 7. HTML Forms
+
+## 8. HTML Media Elements
+
+## 9. HTML Semantics
+
+## 10. HTML Styles
