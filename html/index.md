@@ -201,17 +201,114 @@ td {
 
 ## 7. HTML Forms
 ### Form structure
+Forms are created using the `<form>` element. Inside the `<form>` element, we define form controls such as input fields, checkboxes, radio buttons, dropdowns, and buttons.
+Example:
+```html
+<form action="/submit" method="POST">
+    <!-- Form controls go here -->
+</form>
+```
+Methods for submitting form data: GET and POST
 ### Labels
+Label elements provide a descriptive text label for form controls, such as input fields, checkboxes, and radio buttons.
+Associating labels with form controls improves usability by providing visual and interactive cues.
+```html
+<form action="/submit" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username"/>
+</form>
+```
 ### Input fields
+Input fields `<input/>` allow users to enter data. They can be used for various types of user input, such as text, numbers, dates, emails, and more.
+```html
+<input type="text" name="username" placeholder="Enter your username"/>
+```
+Variations of the textbox input field:
+* **text** - Renders a simple textbox
+* **email** - Renders a textbox for inputting emails
+* **password** - Renders a textbox for inputting passwords
+* **number** - Renders a textbox for inputting numbers
+* **date** - Renders a textbox for inputting dates
+* **time** - Renders a textbox for inputting time
+
 ### Input fiels attributes
+Attributes for all textbox variation elements:
+* **value** - default value
+* **placeholder** - placeholder text
+* **maxlength** - maximum character length
+* **disabled** - disables the input, values will not be submitted
+* **readonly** - disables the input, values will be submitted
+* **size** - visible width of an input element
+* **required** - specifies a required field which the user must fill
+Attributes for number, date and time:
+* **min** - Defines the minimum value
+* **max** - Defines the maximum value
+The step attribute is specific to the number and time fields and specifies a stepping interval.
+
 ### Checkbox and radio buttons
+Checkboxes (`<input type="checkbox" />`) and radio buttons (`<input type="radio" />`) allow users to select multiple options (checkboxes) or choose a single option from a group (radio buttons). To specify default selection, you can use the checked attribute.
+```html
+<input type="checkbox" name="option1" value="Option 1" checked /> Option 1
+<input type="checkbox" name="option2" value="Option 2"/> Option 2
+<input type="radio" name="choice" value="Choice 1" checked /> Choice 1
+<input type="radio" name="choice" value="Choice 2"/> Choice 2
+```
 ### Select dropdowns
+Select dropdowns `<select>` provide users with a list of options from which they can choose. Supports multiple selection with the multiple attribute. To define default option, use selected attribute on `<option>` element
+```html
+<select name="country"> <option value="usa" selected>USA</option>
+    <option value="canada">Canada</option>
+    <option value="uk">UK</option>
+</select>
+```
 ### Textarea
+The `<textarea>` element is used in HTML to create a multi-line text input field that the user can type into.
+```html
+<textarea name="message" rows="3" cols="50">Default message</textarea>
+```
 ### File upload
+The `<input type="file"/>` element renders a control for selecting and uploading files.
+```html
+<input type="file" name="FileUpload"/>
+```
+Specific attributes:
+* **accept** - Specifies the types of files that the server accepts (image/png, image/jpeg).
+* **multiple** - Enables the uploading of multiple files at once
+```html
+<input type="file" name="FileUpload" accept="image/png, image/jpeg" multiple />
+```
+
 ### Buttons
+Buttons `<button>` allow users to perform actions within the form, such as submitting the form or resetting input fields.
+```html
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+```
 ### GET request
+* GET requests are primarily used to retrieve data from a server. When a client sends a GET request, it asks the server to provide a representation of a specific resource.
+* Data in a GET request is appended to the URL as query parameters.
+
+* GET requests are visible in the browser's address bar, making them less secure for sensitive data transmission.
+
 ### POST request
+* POST requests are used to send data to the server to create or modify resources. When a client sends a POST request, it includes the data in the request body.
+* POST requests are not visible in the browser's address bar, providing better security for sensitive data transmission.
+* Data in a POST request is included in the request body.
 ### Difference and usecases
+The main differences between POST and GET requests can be summarized as follows:
+* GET requests are used for data retrieval, while POST requests are used for data submission or modification.
+* GET requests append data to the URL as query parameters, while POST requests include data in the request body.
+* GET requests are visible in the browser's address bar, while POST requests are not.
+
+Use GET requests when:
+* Retrieving data from the server.
+* Accessing public information that does not require sensitive data.
+* Sending lightweight data or parameters.
+
+Use POST requests when:
+* Submitting form data or user input.
+* Modifying data on the server.
+* Sending sensitive data that should not be visible in the URL or browser history.
 
 ## 8. HTML Media Elements
 ### Images

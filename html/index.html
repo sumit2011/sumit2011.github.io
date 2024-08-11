@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/html\/"
-        },"genre": "posts","keywords": "html","wordcount":  1538 ,
+        },"genre": "posts","keywords": "html","wordcount":  2257 ,
         "url": "https:\/\/sumit2011.github.io\/html\/","datePublished": "2024-05-25T11:54:28+05:30","dateModified": "2024-05-25T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -107,8 +107,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">HTML Basics</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/web-dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Web Dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1538 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2257 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;11 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -552,17 +552,186 @@ Example:</p>
 </div>
 </div><h2 id="7-html-forms">7. HTML Forms</h2>
 <h3 id="form-structure">Form structure</h3>
+<p>Forms are created using the <code>&lt;form&gt;</code> element. Inside the <code>&lt;form&gt;</code> element, we define form controls such as input fields, checkboxes, radio buttons, dropdowns, and buttons.
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/submit&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;POST&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Form controls go here --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Methods for submitting form data: GET and POST</p>
 <h3 id="labels">Labels</h3>
-<h3 id="input-fields">Input fields</h3>
+<p>Label elements provide a descriptive text label for form controls, such as input fields, checkboxes, and radio buttons.
+Associating labels with form controls improves usability by providing visual and interactive cues.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/submit&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;POST&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;username&#34;</span><span class="p">&gt;</span>Username:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;username&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="input-fields">Input fields</h3>
+<p>Input fields <code>&lt;input/&gt;</code> allow users to enter data. They can be used for various types of user input, such as text, numbers, dates, emails, and more.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;username&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Enter your username&#34;</span><span class="p">/&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Variations of the textbox input field:</p>
+<ul>
+<li><strong>text</strong> - Renders a simple textbox</li>
+<li><strong>email</strong> - Renders a textbox for inputting emails</li>
+<li><strong>password</strong> - Renders a textbox for inputting passwords</li>
+<li><strong>number</strong> - Renders a textbox for inputting numbers</li>
+<li><strong>date</strong> - Renders a textbox for inputting dates</li>
+<li><strong>time</strong> - Renders a textbox for inputting time</li>
+</ul>
 <h3 id="input-fiels-attributes">Input fiels attributes</h3>
+<p>Attributes for all textbox variation elements:</p>
+<ul>
+<li><strong>value</strong> - default value</li>
+<li><strong>placeholder</strong> - placeholder text</li>
+<li><strong>maxlength</strong> - maximum character length</li>
+<li><strong>disabled</strong> - disables the input, values will not be submitted</li>
+<li><strong>readonly</strong> - disables the input, values will be submitted</li>
+<li><strong>size</strong> - visible width of an input element</li>
+<li><strong>required</strong> - specifies a required field which the user must fill
+Attributes for number, date and time:</li>
+<li><strong>min</strong> - Defines the minimum value</li>
+<li><strong>max</strong> - Defines the maximum value
+The step attribute is specific to the number and time fields and specifies a stepping interval.</li>
+</ul>
 <h3 id="checkbox-and-radio-buttons">Checkbox and radio buttons</h3>
-<h3 id="select-dropdowns">Select dropdowns</h3>
-<h3 id="textarea">Textarea</h3>
-<h3 id="file-upload">File upload</h3>
-<h3 id="buttons">Buttons</h3>
-<h3 id="get-request">GET request</h3>
+<p>Checkboxes (<code>&lt;input type=&quot;checkbox&quot; /&gt;</code>) and radio buttons (<code>&lt;input type=&quot;radio&quot; /&gt;</code>) allow users to select multiple options (checkboxes) or choose a single option from a group (radio buttons). To specify default selection, you can use the checked attribute.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;option1&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Option 1&#34;</span> <span class="na">checked</span> <span class="p">/&gt;</span> Option 1
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;option2&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Option 2&#34;</span><span class="p">/&gt;</span> Option 2
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;choice&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Choice 1&#34;</span> <span class="na">checked</span> <span class="p">/&gt;</span> Choice 1
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;choice&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Choice 2&#34;</span><span class="p">/&gt;</span> Choice 2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="select-dropdowns">Select dropdowns</h3>
+<p>Select dropdowns <code>&lt;select&gt;</code> provide users with a list of options from which they can choose. Supports multiple selection with the multiple attribute. To define default option, use selected attribute on <code>&lt;option&gt;</code> element</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;country&#34;</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;usa&#34;</span> <span class="na">selected</span><span class="p">&gt;</span>USA<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;canada&#34;</span><span class="p">&gt;</span>Canada<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;uk&#34;</span><span class="p">&gt;</span>UK<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="textarea">Textarea</h3>
+<p>The <code>&lt;textarea&gt;</code> element is used in HTML to create a multi-line text input field that the user can type into.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;message&#34;</span> <span class="na">rows</span><span class="o">=</span><span class="s">&#34;3&#34;</span> <span class="na">cols</span><span class="o">=</span><span class="s">&#34;50&#34;</span><span class="p">&gt;</span>Default message<span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="file-upload">File upload</h3>
+<p>The <code>&lt;input type=&quot;file&quot;/&gt;</code> element renders a control for selecting and uploading files.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;file&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;FileUpload&#34;</span><span class="p">/&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Specific attributes:</p>
+<ul>
+<li><strong>accept</strong> - Specifies the types of files that the server accepts (image/png, image/jpeg).</li>
+<li><strong>multiple</strong> - Enables the uploading of multiple files at once</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;file&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;FileUpload&#34;</span> <span class="na">accept</span><span class="o">=</span><span class="s">&#34;image/png, image/jpeg&#34;</span> <span class="na">multiple</span> <span class="p">/&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="buttons">Buttons</h3>
+<p>Buttons <code>&lt;button&gt;</code> allow users to perform actions within the form, such as submitting the form or resetting input fields.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span><span class="p">&gt;</span>Submit<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;reset&#34;</span><span class="p">&gt;</span>Reset<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="get-request">GET request</h3>
+<ul>
+<li>
+<p>GET requests are primarily used to retrieve data from a server. When a client sends a GET request, it asks the server to provide a representation of a specific resource.</p>
+</li>
+<li>
+<p>Data in a GET request is appended to the URL as query parameters.</p>
+</li>
+<li>
+<p>GET requests are visible in the browser&rsquo;s address bar, making them less secure for sensitive data transmission.</p>
+</li>
+</ul>
 <h3 id="post-request">POST request</h3>
+<ul>
+<li>POST requests are used to send data to the server to create or modify resources. When a client sends a POST request, it includes the data in the request body.</li>
+<li>POST requests are not visible in the browser&rsquo;s address bar, providing better security for sensitive data transmission.</li>
+<li>Data in a POST request is included in the request body.</li>
+</ul>
 <h3 id="difference-and-usecases">Difference and usecases</h3>
+<p>The main differences between POST and GET requests can be summarized as follows:</p>
+<ul>
+<li>GET requests are used for data retrieval, while POST requests are used for data submission or modification.</li>
+<li>GET requests append data to the URL as query parameters, while POST requests include data in the request body.</li>
+<li>GET requests are visible in the browser&rsquo;s address bar, while POST requests are not.</li>
+</ul>
+<p>Use GET requests when:</p>
+<ul>
+<li>Retrieving data from the server.</li>
+<li>Accessing public information that does not require sensitive data.</li>
+<li>Sending lightweight data or parameters.</li>
+</ul>
+<p>Use POST requests when:</p>
+<ul>
+<li>Submitting form data or user input.</li>
+<li>Modifying data on the server.</li>
+<li>Sending sensitive data that should not be visible in the URL or browser history.</li>
+</ul>
 <h2 id="8-html-media-elements">8. HTML Media Elements</h2>
 <h3 id="images">Images</h3>
 <p>As already mentioned, images are displayed using the <code>&lt;img&gt;</code> element. They enhance the visual appeal and convey information on your webpages.
