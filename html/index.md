@@ -10,7 +10,7 @@ _Use the table of contents to navigate to the portion that you are interested in
 
 ## 4. HTML Links
 ### Text links
-text links are created using `<a>` anchor tag. The text within the anchor tags become clickable, directing users to the specified URL. To create a text link, use the following format:
+Text links are created using `<a>` anchor tag. The text within the anchor tags become clickable, directing users to the specified URL. To create a text link, use the following format:
 ```html
 <a href="destination_url"> Link Text </a>
 
@@ -25,12 +25,12 @@ We can also create link using images. To make an image clickable, place the `<im
 ```
 
 ### Absolute URL
-an absolute URL specifies the complete web address, including the protoclol (https://).
+An absolute URL specifies the complete web address, including the protoclol (https://).
 ```html
 <a href="https://www.google.com" title="visit google">visit google.com</a>
 ```
 
-### Relative URl
+### Relative URL
 A Relative URL specifies the path to the file or location relative to the current webpage.
 example: "about.html" or "../contact.html"
 ```html
@@ -446,3 +446,108 @@ THe `<footer>` element represents the footer or the bottom section of a webpage.
 </footer>
 ```
 ## 10. HTML Styles
+### CSS Syntax
+CSS consists of rulesets that define how HTML elements should be styled. A ruleset consists of a selector and one or more property-value pairs.
+Examole:
+```css
+selector {
+    property: value;
+    property: value;
+    /* more properties */
+}
+```
+### Applying styles-Selectors
+To apply styles to HTML elements you can use different type of selectors.
+
+* **Tag selector**
+A tag selector slects elements based on their HTML tag name.
+* **Class selector**
+A class selector selects elements based on the presence of a specific class attribute value.
+* **Id selector**
+An Id selector selects a specific elements based on the unique ID attribute value.
+```css
+p {
+    color: blue;
+}
+
+.my-class {
+    font-weight: bold;
+}
+
+#my-id {
+    background-color: yellow;
+}
+```
+
+### Applying styles-Types
+To apply styles to HTML you can use different CSS types
+* **Inline CSS**
+Inline css is used to apply a unique style to a singl HTML element. It uses the style attribute of an HTML element. This method of insertion applies the CSS rules directly into the HTML file.
+```html
+<p style="color: blue;"> this is a paragraph with inline css.</p>
+```
+
+* **Internal CSS**
+Internal css also known as embedded css. it is used to a whole HTML page. The CSS rules are put in a `<style>` block in the `<head>` section of the HTML file.\
+Example:
+```html
+<style>
+    p {
+        color: red;
+    }
+</style>
+```
+
+* **External CSS**
+External css involves creating a separate .css file and linking it to your HTML document. This method of insertion adds in minimizing code redundancy and promotes reusability.\
+Example:
+1. First create an external css file inside your project folder.(styles.css)
+```css
+p{
+    color: green;
+}
+```
+2. Then, link this css file to your HTML document.
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <p>This is a paragraph with external css.</p>
+    </body>
+</html>
+```
+
+### Cascading and specificity
+CSS follows a cascading and specificity model. which means that multiple styles can be applied to an element, and the most specific style takes precedence.
+**Inline Styles :** Inline styles are applied directly to individual HTML elements using the style attribute.\
+Example:
+```html
+<p style="color: red;">this is a red paragraph.</p>
+```
+
+**Specificity :** The specificity of a selector determines its priority when conflicting styles are applied. inline styles have the highest specificity, followed by ID selectors, class selectors and tag selectors.
+
+### Common CSS properties
+* **CSS** provides a wide range of properties to control the appearance of HTML elements.
+* **color** : Specifies the text color.
+* **background-color** : Sets the background color.
+* **font-family** : Defines the font family to use for text.
+* **font-size** : Specifies the font size.
+* **margin** : Controls the outer spacing of an element.
+* **padding** : Sets the inner spacing of an elemet.
+* **border** : Defines the border style,width and color.\
+Example:
+```css
+h1 {
+    color: blue;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid black;
+}
+```
+
+

@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/html\/"
-        },"genre": "posts","keywords": "html","wordcount":  2257 ,
+        },"genre": "posts","keywords": "html","wordcount":  2757 ,
         "url": "https:\/\/sumit2011.github.io\/html\/","datePublished": "2024-05-25T11:54:28+05:30","dateModified": "2024-05-25T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -107,8 +107,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">HTML Basics</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/web-dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Web Dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2257 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;11 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2757 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;13 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -129,7 +129,7 @@
         <li><a href="#text-links">Text links</a></li>
         <li><a href="#image-links">Image links</a></li>
         <li><a href="#absolute-url">Absolute URL</a></li>
-        <li><a href="#relative-url">Relative URl</a></li>
+        <li><a href="#relative-url">Relative URL</a></li>
         <li><a href="#linking-to-a-specific-page-section">Linking to a specific page section</a></li>
         <li><a href="#linking-to-a-specific-page-section-on-another-page">Linking to a specific page section on another page</a></li>
         <li><a href="#additional-link-attribute">Additional Link Attribute</a></li>
@@ -188,7 +188,15 @@
         <li><a href="#footer">Footer</a></li>
       </ul>
     </li>
-    <li><a href="#10-html-styles">10. HTML Styles</a></li>
+    <li><a href="#10-html-styles">10. HTML Styles</a>
+      <ul>
+        <li><a href="#css-syntax">CSS Syntax</a></li>
+        <li><a href="#applying-styles-selectors">Applying styles-Selectors</a></li>
+        <li><a href="#applying-styles-types">Applying styles-Types</a></li>
+        <li><a href="#cascading-and-specificity">Cascading and specificity</a></li>
+        <li><a href="#common-css-properties">Common CSS properties</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>
@@ -203,7 +211,7 @@
 <h2 id="1-introduction">1. Introduction:</h2>
 <h2 id="4-html-links">4. HTML Links</h2>
 <h3 id="text-links">Text links</h3>
-<p>text links are created using <code>&lt;a&gt;</code> anchor tag. The text within the anchor tags become clickable, directing users to the specified URL. To create a text link, use the following format:</p>
+<p>Text links are created using <code>&lt;a&gt;</code> anchor tag. The text within the anchor tags become clickable, directing users to the specified URL. To create a text link, use the following format:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -227,7 +235,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="absolute-url">Absolute URL</h3>
-<p>an absolute URL specifies the complete web address, including the protoclol (https://).</p>
+<p>An absolute URL specifies the complete web address, including the protoclol (https://).</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -236,7 +244,7 @@
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://www.google.com&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;visit google&#34;</span><span class="p">&gt;</span>visit google.com<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="relative-url">Relative URl</h3>
+</div><h3 id="relative-url">Relative URL</h3>
 <p>A Relative URL specifies the path to the file or location relative to the current webpage.
 example: &ldquo;about.html&rdquo; or &ldquo;../contact.html&rdquo;</p>
 <div class="highlight"><div class="chroma">
@@ -971,7 +979,192 @@ Example:</p>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="10-html-styles">10. HTML Styles</h2></div><div class="post-footer" id="post-footer">
+</div><h2 id="10-html-styles">10. HTML Styles</h2>
+<h3 id="css-syntax">CSS Syntax</h3>
+<p>CSS consists of rulesets that define how HTML elements should be styled. A ruleset consists of a selector and one or more property-value pairs.
+Examole:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">selector</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">property</span><span class="p">:</span> <span class="n">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">property</span><span class="p">:</span> <span class="n">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* more properties */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="applying-styles-selectors">Applying styles-Selectors</h3>
+<p>To apply styles to HTML elements you can use different type of selectors.</p>
+<ul>
+<li><strong>Tag selector</strong>
+A tag selector slects elements based on their HTML tag name.</li>
+<li><strong>Class selector</strong>
+A class selector selects elements based on the presence of a specific class attribute value.</li>
+<li><strong>Id selector</strong>
+An Id selector selects a specific elements based on the unique ID attribute value.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">my-class</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">my-id</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="applying-styles-types">Applying styles-Types</h3>
+<p>To apply styles to HTML you can use different CSS types</p>
+<ul>
+<li><strong>Inline CSS</strong>
+Inline css is used to apply a unique style to a singl HTML element. It uses the style attribute of an HTML element. This method of insertion applies the CSS rules directly into the HTML file.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color: blue;&#34;</span><span class="p">&gt;</span> this is a paragraph with inline css.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>Internal CSS</strong>
+Internal css also known as embedded css. it is used to a whole HTML page. The CSS rules are put in a <code>&lt;style&gt;</code> block in the <code>&lt;head&gt;</code> section of the HTML file.<br>
+Example:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>External CSS</strong>
+External css involves creating a separate .css file and linking it to your HTML document. This method of insertion adds in minimizing code redundancy and promotes reusability.<br>
+Example:</li>
+</ul>
+<ol>
+<li>First create an external css file inside your project folder.(styles.css)</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">p</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>Then, link this css file to your HTML document.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;style.css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is a paragraph with external css.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="cascading-and-specificity">Cascading and specificity</h3>
+<p>CSS follows a cascading and specificity model. which means that multiple styles can be applied to an element, and the most specific style takes precedence.
+<strong>Inline Styles :</strong> Inline styles are applied directly to individual HTML elements using the style attribute.<br>
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color: red;&#34;</span><span class="p">&gt;</span>this is a red paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Specificity :</strong> The specificity of a selector determines its priority when conflicting styles are applied. inline styles have the highest specificity, followed by ID selectors, class selectors and tag selectors.</p>
+<h3 id="common-css-properties">Common CSS properties</h3>
+<ul>
+<li><strong>CSS</strong> provides a wide range of properties to control the appearance of HTML elements.</li>
+<li><strong>color</strong> : Specifies the text color.</li>
+<li><strong>background-color</strong> : Sets the background color.</li>
+<li><strong>font-family</strong> : Defines the font family to use for text.</li>
+<li><strong>font-size</strong> : Specifies the font size.</li>
+<li><strong>margin</strong> : Controls the outer spacing of an element.</li>
+<li><strong>padding</strong> : Sets the inner spacing of an elemet.</li>
+<li><strong>border</strong> : Defines the border style,width and color.<br>
+Example:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">h1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-family</span><span class="p">:</span> <span class="n">Arial</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">black</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
