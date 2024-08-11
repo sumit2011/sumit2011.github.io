@@ -218,3 +218,13 @@ int main() {
 
 }
 ```
+
+## Imp functions to solve dsa problems 
+### converting BT into the inarr
+
+### finding a node
+finding a node in the given binary tree
+
+finding the distance of a node from the root
+
+

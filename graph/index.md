@@ -538,6 +538,7 @@ vector<int> toposort(int v, vector<int> adj[])
 ## 3. Dijkstra Algo
 shortesrt path algorythm
 it is used for finding the shortest path from one node to another node in the given graph
+edge weights should be non negative.
 it can be implemented by three methods
 1. using queue(bad)
 2. using priority queue(good)
@@ -628,7 +629,7 @@ vector<int> dijkstra(int v , vector<vector<int>> adj[] , int s){
 ```
 
 
-### Shortes path in undirected weighted graph
+### Shortest path in undirected weighted graph
 using dijkstras algo
 ```c
 vector<int> shortestPath(int n, int m, vector<vector<int>> &edges)
@@ -643,14 +644,14 @@ vector<int> shortestPath(int n, int m, vector<vector<int>> &edges)
     // defining the priority queue a min heap concept
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
     //creating a distance array and a parent aray to track the path
-    // parent array will tell us the node is come from where
+    // parent array will tell us where the node is come from 
     vector<int> dist(n + 1, 1e9), parent(n + 1);
     for (int i = 1; i <= n; i++)
     {
         parent[i] = i;
     }
 
-    dist[1] = 0;
+    dist[1] = 0;   
     pq.push({0, 1});
     while (!pq.empty())
     {
@@ -658,7 +659,7 @@ vector<int> shortestPath(int n, int m, vector<vector<int>> &edges)
         int node = it.second;
         int dis = it.first;
         pq.pop();
-
+        // traversing the adjacent nodes of the given node in given graph
         for (auto it : adj[node])
         {
             int adjnode = it.first;
@@ -687,5 +688,4 @@ vector<int> shortestPath(int n, int m, vector<vector<int>> &edges)
 
     return path;
 }
-
 ```
