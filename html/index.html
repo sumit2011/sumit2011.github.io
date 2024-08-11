@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/html\/"
-        },"genre": "posts","keywords": "html","wordcount":  840 ,
+        },"genre": "posts","keywords": "html","wordcount":  1538 ,
         "url": "https:\/\/sumit2011.github.io\/html\/","datePublished": "2024-05-25T11:54:28+05:30","dateModified": "2024-05-25T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -107,8 +107,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">HTML Basics</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/web-dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Web Dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;840 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1538 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -151,9 +151,43 @@
         <li><a href="#styling-tables">Styling tables</a></li>
       </ul>
     </li>
-    <li><a href="#7-html-forms">7. HTML Forms</a></li>
-    <li><a href="#8-html-media-elements">8. HTML Media Elements</a></li>
-    <li><a href="#9-html-semantics">9. HTML Semantics</a></li>
+    <li><a href="#7-html-forms">7. HTML Forms</a>
+      <ul>
+        <li><a href="#form-structure">Form structure</a></li>
+        <li><a href="#labels">Labels</a></li>
+        <li><a href="#input-fields">Input fields</a></li>
+        <li><a href="#input-fiels-attributes">Input fiels attributes</a></li>
+        <li><a href="#checkbox-and-radio-buttons">Checkbox and radio buttons</a></li>
+        <li><a href="#select-dropdowns">Select dropdowns</a></li>
+        <li><a href="#textarea">Textarea</a></li>
+        <li><a href="#file-upload">File upload</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#get-request">GET request</a></li>
+        <li><a href="#post-request">POST request</a></li>
+        <li><a href="#difference-and-usecases">Difference and usecases</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-html-media-elements">8. HTML Media Elements</a>
+      <ul>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#audio">Audio</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#svg">Svg</a></li>
+        <li><a href="#iframes">Iframes</a></li>
+        <li><a href="#enhancing-accessibility">Enhancing accessibility</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-html-semantics">9. HTML Semantics</a>
+      <ul>
+        <li><a href="#header">Header</a></li>
+        <li><a href="#navigation">Navigation</a></li>
+        <li><a href="#main">Main</a></li>
+        <li><a href="#article">Article</a></li>
+        <li><a href="#section">Section</a></li>
+        <li><a href="#aside">Aside</a></li>
+        <li><a href="#footer">Footer</a></li>
+      </ul>
+    </li>
     <li><a href="#10-html-styles">10. HTML Styles</a></li>
   </ul>
 </nav></div>
@@ -517,9 +551,258 @@ Example:</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="7-html-forms">7. HTML Forms</h2>
+<h3 id="form-structure">Form structure</h3>
+<h3 id="labels">Labels</h3>
+<h3 id="input-fields">Input fields</h3>
+<h3 id="input-fiels-attributes">Input fiels attributes</h3>
+<h3 id="checkbox-and-radio-buttons">Checkbox and radio buttons</h3>
+<h3 id="select-dropdowns">Select dropdowns</h3>
+<h3 id="textarea">Textarea</h3>
+<h3 id="file-upload">File upload</h3>
+<h3 id="buttons">Buttons</h3>
+<h3 id="get-request">GET request</h3>
+<h3 id="post-request">POST request</h3>
+<h3 id="difference-and-usecases">Difference and usecases</h3>
 <h2 id="8-html-media-elements">8. HTML Media Elements</h2>
-<h2 id="9-html-semantics">9. HTML Semantics</h2>
-<h2 id="10-html-styles">10. HTML Styles</h2></div><div class="post-footer" id="post-footer">
+<h3 id="images">Images</h3>
+<p>As already mentioned, images are displayed using the <code>&lt;img&gt;</code> element. They enhance the visual appeal and convey information on your webpages.
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;image.jpg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Description of the image&#34;</span><span class="p">/&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Here are some commonly used image formats:</p>
+<ul>
+<li>JPEG: It&rsquo;s best for photographs or images with lots of colors. JPEGs can be compressed considerably, which can result in a faster load time.</li>
+<li>PNG: It&rsquo;s ideal for images that require transparency and higher quality. PNGs are usually larger than JPEGs and should be used sparingly.</li>
+<li>SVG: Ideal for vector graphics as they are resolution-independent and typically smaller in file size.</li>
+<li>WebP: A modern image format that provides superior lossless and lossy compression for images on the web.</li>
+</ul>
+<h3 id="audio">Audio</h3>
+<p>Audio content can be embedded using the <code>&lt;audio&gt;</code> element. It allows you to provide audio files playable directly on your webpages.
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">audio</span> <span class="na">controls</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;audio.mp3&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;audio/mpeg&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    Your browser does not support the audio element.
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="video">Video</h3>
+<p>Video content can be embedded using the <code>&lt;video&gt;</code> element. It allows you to provide video files playable directly on your webpages.
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">video</span> <span class="na">controls</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;video.mp4&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;video/mp4&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    Your browser does not support the video element.
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="svg">Svg</h3>
+<p>SVGs, or Scalable Vector Graphics, are used to include vector-based images in your HTML document. They are resolution-independent and can scale without loss of quality, which makes them ideal for graphics like logos or icons.
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;50&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;50&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">circle</span> <span class="na">cx</span><span class="o">=</span><span class="s">&#34;25&#34;</span> <span class="na">cy</span><span class="o">=</span><span class="s">&#34;25&#34;</span> <span class="na">r</span><span class="o">=</span><span class="s">&#34;20&#34;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&#34;black&#34;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&#34;3&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;red&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="iframes">Iframes</h3>
+<p>An iframe is used to embed another HTML document within the current one. You can use this to include content from another website, like a YouTube video or a map from Google Maps.
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.youtube.com/embed/ScMzIvxBSi4&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">title</span><span class="o">=</span><span class="s">&#34;YouTube video&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">width</span><span class="o">=</span><span class="s">&#34;600&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">height</span><span class="o">=</span><span class="s">&#34;400&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="enhancing-accessibility">Enhancing accessibility</h3>
+<p>Provide meaningful alternative text (alt) for images to describe their content to users who rely on screen readers or when the image cannot be displayed. For video and audio content, include captions, transcripts, or audio descriptions to make them accessible to users with hearing impairments.
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://placehold.co/600x400&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Description of the image&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">title</span><span class="o">=</span><span class="s">&#34;Additional information about the image&#34;</span> <span class="p">/&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="9-html-semantics">9. HTML Semantics</h2>
+<h3 id="header">Header</h3>
+<p>The <code>&lt;header&gt;</code> element represents the introductory or navigational content at the top of a webpage or a specific section within a webpage.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome to my website<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/&#34;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/about&#34;</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/contact&#34;</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="navigation">Navigation</h3>
+<p>The <code>&lt;nav&gt;</code> element represents a section of a webpage that contains navigation links allowing users to navigate through different areas or pages of a website.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/&#34;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/about&#34;</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/contact&#34;</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="main">Main</h3>
+<p>The <code>&lt;main&gt;</code> element represents the main content of a webpage. It should contains unique content that is directly related to the purpose or central topic of the webpage.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>About us<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Welcome to our website<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="article">Article</h3>
+<p>The <code>&lt;article&gt;</code> element represents a self contained composition that can be independently distributed or reused. it can represent blog posts, news article, forum, posts and more.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>10 Tips to become successful web developer.<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Here are 10 essential tips.....<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="section">Section</h3>
+<p>The <code>&lt;section&gt;</code> element represents a standlone section within a document or a thematic grouping of content. It helps to organize and structure the content of a webpage.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Our Services<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>We offer a wide range of services...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="aside">Aside</h3>
+<p>The <code>&lt;aside&gt;</code> element represents content that is related to the main content of a webpage. It can contain sidebars, pull quotes, advertisements or other supporting information.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Related Articles<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/article1&#34;</span><span class="p">&gt;</span>Article 1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/article2&#34;</span><span class="p">&gt;</span>Article 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/article3&#34;</span><span class="p">&gt;</span>Article 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="footer">Footer</h3>
+<p>THe <code>&lt;footer&gt;</code> element represents the footer or the bottom section of a webpage. It typically contains the copywrite information, links to legal documents and contact details.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="ni">&amp;copy;</span> 2023 sumit. All rights reserved.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/privacy&#34;</span><span class="p">&gt;</span>Privacy Policy<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/terms&#34;</span><span class="p">&gt;</span>Terms and Services<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="10-html-styles">10. HTML Styles</h2></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

@@ -200,9 +200,152 @@ td {
 ```
 
 ## 7. HTML Forms
+### Form structure
+### Labels
+### Input fields
+### Input fiels attributes
+### Checkbox and radio buttons
+### Select dropdowns
+### Textarea
+### File upload
+### Buttons
+### GET request
+### POST request
+### Difference and usecases
 
 ## 8. HTML Media Elements
+### Images
+As already mentioned, images are displayed using the `<img>` element. They enhance the visual appeal and convey information on your webpages.
+Example:
+```html
+<img src="image.jpg" alt="Description of the image"/>
+```
+Here are some commonly used image formats:
+* JPEG: It's best for photographs or images with lots of colors. JPEGs can be compressed considerably, which can result in a faster load time.
+* PNG: It's ideal for images that require transparency and higher quality. PNGs are usually larger than JPEGs and should be used sparingly.
+* SVG: Ideal for vector graphics as they are resolution-independent and typically smaller in file size.
+* WebP: A modern image format that provides superior lossless and lossy compression for images on the web.
 
+### Audio
+Audio content can be embedded using the `<audio>` element. It allows you to provide audio files playable directly on your webpages.
+Example:
+```html
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+```
+
+### Video
+Video content can be embedded using the `<video>` element. It allows you to provide video files playable directly on your webpages.
+Example:
+```html
+<video controls>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video element.
+</video>
+```
+
+### Svg
+SVGs, or Scalable Vector Graphics, are used to include vector-based images in your HTML document. They are resolution-independent and can scale without loss of quality, which makes them ideal for graphics like logos or icons.
+Example:
+```html
+<svg width="50" height="50">
+    <circle cx="25" cy="25" r="20" stroke="black" stroke-width="3" fill="red" />
+</svg>
+```
+### Iframes
+An iframe is used to embed another HTML document within the current one. You can use this to include content from another website, like a YouTube video or a map from Google Maps.
+Example:
+```html
+<iframe src="https://www.youtube.com/embed/ScMzIvxBSi4"
+    title="YouTube video"
+    width="600"
+    height="400">
+</iframe>
+```
+### Enhancing accessibility
+Provide meaningful alternative text (alt) for images to describe their content to users who rely on screen readers or when the image cannot be displayed. For video and audio content, include captions, transcripts, or audio descriptions to make them accessible to users with hearing impairments.
+Example:
+```html
+<img src="https://placehold.co/600x400"
+    alt="Description of the image"
+    title="Additional information about the image" />
+```
 ## 9. HTML Semantics
 
+### Header
+The `<header>` element represents the introductory or navigational content at the top of a webpage or a specific section within a webpage.
+```html
+<header>
+    <h1>Welcome to my website</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+```
+
+### Navigation
+The `<nav>` element represents a section of a webpage that contains navigation links allowing users to navigate through different areas or pages of a website.
+```html
+<nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+</nav>
+```
+
+### Main
+The `<main>` element represents the main content of a webpage. It should contains unique content that is directly related to the purpose or central topic of the webpage.
+```html
+<main>
+    <h1>About us</h1>
+    <p>Welcome to our website</p>
+</main>
+```
+
+### Article
+The `<article>` element represents a self contained composition that can be independently distributed or reused. it can represent blog posts, news article, forum, posts and more.
+```html
+<article>
+    <h2>10 Tips to become successful web developer.</h2>
+    <p>Here are 10 essential tips.....</p>
+</article>
+```
+
+### Section
+The `<section>` element represents a standlone section within a document or a thematic grouping of content. It helps to organize and structure the content of a webpage.
+```html
+<section>
+    <h2>Our Services</h2>
+    <p>We offer a wide range of services...</p>
+</section>
+```
+
+### Aside
+The `<aside>` element represents content that is related to the main content of a webpage. It can contain sidebars, pull quotes, advertisements or other supporting information.
+```html
+<aside>
+    <h3>Related Articles</h3>
+    <ul>
+        <li><a href="/article1">Article 1</a></li>
+        <li><a href="/article2">Article 2</a></li>
+        <li><a href="/article3">Article 3</a></li>
+    </ul>
+</aside>
+```
+
+### Footer
+THe `<footer>` element represents the footer or the bottom section of a webpage. It typically contains the copywrite information, links to legal documents and contact details.
+```html
+<footer>
+    <p>&copy; 2023 sumit. All rights reserved.</p>
+    <nav>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms and Services</a>
+    </nav>
+</footer>
+```
 ## 10. HTML Styles
