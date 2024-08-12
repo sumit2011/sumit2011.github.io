@@ -7,6 +7,71 @@
 _Use the table of contents to navigate to the portion that you are interested in._
 {{< /admonition >}}
 ## 1. Introduction:
+### What is HTML?
+### What is a website?
+### Basic HTML structure
+### Basic HTML syntax
+
+## 2. HTML elements
+
+### Heading and paragraphs
+### lists
+### Tables
+### Divs
+### Span
+
+### Comments
+### Block and inline elements
+
+## 3. HTML Attributes
+### Attribute basics
+* All HTML elements can have attribute, but some attributes can be applied to all elements and some are specific to particular elements.
+* Attributes provide additional information about elements.
+* Attributes are always specified in the start tag.
+* Attributes usually come in name/value pairs like: `name="value"`.
+* Attributes values ate case sensitive, which means that `class="some-name"` is not the same as `class="some-Name"`.
+
+### Class attribute
+The **class** attribute is used to assign a specific class to an element. It is primarily used for styling purposes.
+```html
+<h1 class="main-heading">This is a h1 heading.</h1>
+```
+### ID attribute
+The **id** attribute provides a unique identifier for an element on a webpage. It allows to target and manipulate specific elements using JavaScript and CSS.
+```html
+<h1 id="main-heading">This is a h1 heading</h1>
+```
+Each **id** must be unique within the HTML document.
+
+### Src attribute
+The **src** attribute is used with `<img>` tag to specify the source URL of an image. It enables you to display images on your webpage.
+```html
+<img src="images/image1.jpg" />
+```
+### Alt attribute
+The **alt** attribute is used with the `<img>` tag to provide alternative text for an image. It is displayed if the image fails to load or for accessibility purpose, enabling screen readers to describe the image to visually impaired users.
+```html
+<img src="images/image1.jpg" alt="my image" />
+```
+### Href attribute
+The **href** attribute is used with `<a>` tag to specify the destination URL or location of a hyperlink. It allows you to create clickable links that navigate to other web pages or sections within the same page.
+```html
+<a href="https://www.example.com/about.html" >About</p>
+```
+### Title attribute
+The **title** attribute specifies extra information about the element.
+The information is most often shown as a tooltip text when the mouse moves over the element.
+```html
+<a href="https://www.example.com/about.html" title="This is an about page">About</p>
+```
+
+### Style attribute
+The **style** attribute specifies an inline style for an element. It will override any style set globally, eg. styles specified in the `<style>` tag or in an external style sheet.
+The **style** attribute can also be used in any HTML element.
+```html
+<h1 style="color:blue; text-align:center; ">this is a header.</h1>
+<p style="color:green;">This is a paragraph.</p>
+```
 
 ## 4. HTML Links
 ### Text links
@@ -83,6 +148,16 @@ Unordered lists `<ul>` are used to present items without a specific order or seq
     <li>item 3</li>
 </ul>
 ```
+
+
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
+{{< /admonition >}}
+
 ### Ordered lists
 Ordered lists`<ol>` are used for items that have specific order or sequence. Like unordered lists, each item is defined using `<li>` tag.
 ```html
@@ -92,6 +167,14 @@ Ordered lists`<ol>` are used for items that have specific order or sequence. Lik
     <li>Item 3</li>
 </ol>
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<ol>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ol>
+{{< /admonition >}}
+
 ### Nested lists
 HTML allows you to nest lists within lists to create hierarchical structures. This is achieved by placing a complete list structure inside an individual list item `<li>`. this technique is useful for creating subcategories or multi-level lists.
 ```html
@@ -108,6 +191,22 @@ HTML allows you to nest lists within lists to create hierarchical structures. Th
     <li>list item 3</li>
 </ul>
 ```
+
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<h2>Nested Lists</h2>
+<ul>
+    <li>list item 1
+        <ul>
+            <li>list item 1.1</li>
+            <li>list item 1.2</li>
+            <li>list item 1.3</li>
+        </ul>
+    </li>
+    <li>list item 2</li>
+    <li>list item 3</li>
+</ul>
+{{< /admonition >}}
+
 ### Styling lists
 HTML lists can be customized and styled using css styles, you can change the apperance of list markers, adjust spacing, and create unique visual representations.
 ```css
@@ -142,6 +241,24 @@ Tables in HTML are created using the `<table>` element. Inside the `<table>` ele
         </tr>
     </table>
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<h2>Basic Table Structure</h2>
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+        </tr>
+        <tr>
+            <td>Cell 3</td>
+            <td>Cell 4</td>
+        </tr>
+    </table>
+{{< /admonition >}}
+
 ### Table headers
 Table headers `<th>` are used to define the headings of each column in a table. By default, table headers are bold and centered. They help provide context and improve the readability of the table.
 ```html
@@ -177,6 +294,26 @@ Table cells `<td>` hold the actual data within a table. Each cell corresponds to
 </table>
 
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    <tr>
+        <td>sumit</td>
+        <td>sumit2011kmr@gmail.com</td>
+        <td>6202757997</td>
+    </tr>
+    <tr>
+        <td>sumit</td>
+        <td>sumit2011kmr@gmail.com</td>
+        <td>6202757997</td>
+    </tr>
+</table>
+{{< /admonition >}}
+
 ### Styling tables
 You can customize the apperance of tables using css. by applying css styles to the `<table>`, `<th>`, and `<td>` elements, you can change the table's layout, font, color, spacing and more.
 ```CSS
@@ -208,6 +345,8 @@ Example:
     <!-- Form controls go here -->
 </form>
 ```
+
+
 Methods for submitting form data: GET and POST
 ### Labels
 Label elements provide a descriptive text label for form controls, such as input fields, checkboxes, and radio buttons.
@@ -218,6 +357,13 @@ Associating labels with form controls improves usability by providing visual and
     <input type="text" id="username"/>
 </form>
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<form action="/submit" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Enter your username"/>
+</form>
+{{< /admonition >}}
+
 ### Input fields
 Input fields `<input/>` allow users to enter data. They can be used for various types of user input, such as text, numbers, dates, emails, and more.
 ```html
@@ -253,6 +399,13 @@ Checkboxes (`<input type="checkbox" />`) and radio buttons (`<input type="radio"
 <input type="radio" name="choice" value="Choice 1" checked /> Choice 1
 <input type="radio" name="choice" value="Choice 2"/> Choice 2
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<input type="checkbox" name="option1" value="Option 1" checked /> Option 1
+<input type="checkbox" name="option2" value="Option 2"/> Option 2
+<input type="radio" name="choice" value="Choice 1" checked /> Choice 1
+<input type="radio" name="choice" value="Choice 2"/> Choice 2
+{{< /admonition >}}
+
 ### Select dropdowns
 Select dropdowns `<select>` provide users with a list of options from which they can choose. Supports multiple selection with the multiple attribute. To define default option, use selected attribute on `<option>` element
 ```html
@@ -261,22 +414,40 @@ Select dropdowns `<select>` provide users with a list of options from which they
     <option value="uk">UK</option>
 </select>
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<select name="country"> <option value="usa" selected>USA</option>
+    <option value="canada">Canada</option>
+    <option value="uk">UK</option>
+</select>
+{{< /admonition >}}
+
 ### Textarea
 The `<textarea>` element is used in HTML to create a multi-line text input field that the user can type into.
 ```html
 <textarea name="message" rows="3" cols="50">Default message</textarea>
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<textarea name="message" rows="3" cols="50">Default message</textarea>
+{{< /admonition >}}
+
 ### File upload
 The `<input type="file"/>` element renders a control for selecting and uploading files.
 ```html
 <input type="file" name="FileUpload"/>
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<input type="file" name="FileUpload"/>
+{{< /admonition >}}
+
 Specific attributes:
 * **accept** - Specifies the types of files that the server accepts (image/png, image/jpeg).
 * **multiple** - Enables the uploading of multiple files at once
 ```html
 <input type="file" name="FileUpload" accept="image/png, image/jpeg" multiple />
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<input type="file" name="FileUpload" accept="image/png, image/jpeg" multiple />
+{{< /admonition >}}
 
 ### Buttons
 Buttons `<button>` allow users to perform actions within the form, such as submitting the form or resetting input fields.
@@ -284,6 +455,11 @@ Buttons `<button>` allow users to perform actions within the form, such as submi
 <button type="submit">Submit</button>
 <button type="reset">Reset</button>
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+{{< /admonition >}}
+
 ### GET request
 * GET requests are primarily used to retrieve data from a server. When a client sends a GET request, it asks the server to provide a representation of a specific resource.
 * Data in a GET request is appended to the URL as query parameters.
@@ -317,6 +493,10 @@ Example:
 ```html
 <img src="image.jpg" alt="Description of the image"/>
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<img src="image.jpg" alt="Description of the image"/>
+{{< /admonition >}}
+
 Here are some commonly used image formats:
 * JPEG: It's best for photographs or images with lots of colors. JPEGs can be compressed considerably, which can result in a faster load time.
 * PNG: It's ideal for images that require transparency and higher quality. PNGs are usually larger than JPEGs and should be used sparingly.
@@ -332,6 +512,12 @@ Example:
     Your browser does not support the audio element.
 </audio>
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+{{< /admonition >}}
 
 ### Video
 Video content can be embedded using the `<video>` element. It allows you to provide video files playable directly on your webpages.
@@ -342,6 +528,12 @@ Example:
     Your browser does not support the video element.
 </video>
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<video controls>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video element.
+</video>
+{{< /admonition >}}
 
 ### Svg
 SVGs, or Scalable Vector Graphics, are used to include vector-based images in your HTML document. They are resolution-independent and can scale without loss of quality, which makes them ideal for graphics like logos or icons.
@@ -351,6 +543,12 @@ Example:
     <circle cx="25" cy="25" r="20" stroke="black" stroke-width="3" fill="red" />
 </svg>
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<svg width="50" height="50">
+    <circle cx="25" cy="25" r="20" stroke="black" stroke-width="3" fill="red" />
+</svg>
+{{< /admonition >}}
+
 ### Iframes
 An iframe is used to embed another HTML document within the current one. You can use this to include content from another website, like a YouTube video or a map from Google Maps.
 Example:
@@ -361,6 +559,14 @@ Example:
     height="400">
 </iframe>
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<iframe src="https://www.youtube.com/embed/ScMzIvxBSi4"
+    title="YouTube video"
+    width="600"
+    height="400">
+</iframe>
+{{< /admonition >}}
+
 ### Enhancing accessibility
 Provide meaningful alternative text (alt) for images to describe their content to users who rely on screen readers or when the image cannot be displayed. For video and audio content, include captions, transcripts, or audio descriptions to make them accessible to users with hearing impairments.
 Example:
@@ -369,6 +575,12 @@ Example:
     alt="Description of the image"
     title="Additional information about the image" />
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<img src="https://placehold.co/600x400"
+    alt="Description of the image"
+    title="Additional information about the image" />
+{{< /admonition >}}
+
 ## 9. HTML Semantics
 
 ### Header
@@ -593,7 +805,7 @@ Example:
 * Keep labels concise and descriptive.
 * Test with assistive technologies.
 
-## SEO for html
+## 13. SEO for html
 ### HTML Meta tags
 Meta tags in HTML are typically used within the `<head>` section of an HTML document to define metadata about the page.
 
