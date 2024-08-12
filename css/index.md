@@ -1,4 +1,4 @@
-# CSS Basics Part 1
+# CSS Part 1
 
 ***Navigation system works on the concept of linked list.***
 <!--more-->
@@ -12,7 +12,7 @@ _Use the table of contents to navigate to the portion that you are interested in
 Cascading Style Sheet, often abbreviated as CSS is a stylesheet language used to describe the look and formatting of a document written in HTML.
 
 ### Why use CSS?
-* CSS allows you to apply different styles to different elements in your HTMML document.
+* **CSS** allows you to apply different styles to different elements in your HTMML document.
 * It gives you control over the visual presentation of your site and helps to separate the design from the content.
 * Improves site maintenance, ensure consistency, and allows for site-wide changes with minimal effort.
 
@@ -269,19 +269,185 @@ button {
 ## 6. CSS Box Model
 
 ### The Box Model
+In CSS, each HTML element is considered as a box that consists of margins, borders, padding, and the actual content. This is known as the "box model".
+* **Content**
+* **Padding**
+* **Border**
+* **Margin**
+
+<img src="images.png" alt="test image">
+
 ### Controlling Box Model Properties
+It's important to note that by default, the total width and height of an element is calculated as:
+>* Total width = width + left padding + right padding + left border + right border + left margin + right margin
+>* Total height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+
 ### Box Sizing
+CSS offers a property called **box-sizing** which can change this calculation. If you set `box-sizing: border-box;`, any padding or border specified in CSS will be included in the width or height of the element.
+```html
+<div class="box1">Hello, world!</div>
+<div class="box2">Hello, world!</div>
+<style>
+.box1 {
+    width: 200px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 20px;
+}
+.box2 {
+    box-sizing: border-box;
+    width: 200px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 20px;
+}
+</style>
+```
+{{< admonition type=success title="output of above HTML code" open=true >}}
+<div class="box1">Box 1</div>
+<div class="box2">Box 2</div>
+<style>
+.box1 {
+    width: 200px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 20px;
+}
+.box2 {
+    box-sizing: border-box;
+    width: 200px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 20px;
+}
+</style>
+{{< /admonition >}}
+
+
 ### Width and Height
+The width and height properties set the width and height of an element.\
+Example:
+```css
+div {
+    width: 500px;
+    height: 200px;
+}
+```
 ### Min/Max Variations
+The max-width and min-width properties set the maximum and minimum widths of an element, while the max-height and min-height set the maximum and minimum heights.\
+Example:
+```css
+div {
+    width: 100%;
+    min-width: 300px;
+    max-width: 600px;
+    min-height: 150px;
+    max-height: 300px;
+}
+```
 ### CSS Margins
+Margins are used in CSS to create space around elements, outside of any defined borders. With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).\
+Example:
+```css
+p {
+    margin-top: 50px;
+    margin-right: 150px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+}
+/* Shorthands: */
+p {
+    margin: 50px 150px 100px 200px; /* top right bottom left */
+}
+p {
+    margin: 50px 150px; /* vertical horizontal */
+}
+```
 ### CSS Borders
+**Borders** in CSS can be applied to most elements within HTML. They can be used to define a boundary around an element, for visual appeal, or to separate different sections of a webpage.\
+Example:
+```css
+p {
+    border-style: solid; /* style of the border */
+    border-width: 1px; /* width of the border */
+    border-color: red; /* color of the border */
+}
+/* Shorthand: */
+p {
+    border: 1px solid red;
+}
+```
+{{< admonition type=success title="output of above HTML code" open=true >}}
+<p class="box3">this is a paragraph of text. </p>
+<style>
+.box3 {
+    border-style: solid; /* style of the border */
+    border-width: 1px; /* width of the border */
+    border-color: red; /* color of the border */
+}
+/* Shorthand: */
+.box3 {
+    border: 1px solid red;
+}
+</style>
+{{< /admonition >}}
+
 ### CSS Padding
-
-
+**Padding** is the space that's inside the element between the element and the border. Padding goes around all four sides of the content and you can target and change the padding for each side with CSS (just like the margin).\
+Example:
+```css
+p {
+    padding-top: 50px;
+    padding-right: 150px;
+    padding-bottom: 100px;
+    padding-left: 200px;
+}
+    
+/* Shorthand: */
+p {
+    padding: 50px 150px 100px 200px;
+}
+```
 
 ## 7. CSS Floats
 
 ### Floating
+The CSS float property is used to push an element to the left or right, allowing other elements to wrap around it.
+Floating elements are taken out of the normal flow of a document and shifted to the left or right as far as they can go.
+
 ### Using the float property
+The **float** property can have one of the following values:
+* left
+* right
+* none
+```html
+<div style="width: 400px">
+    <img src="home.png" style="float:left; padding-right:10px;" alt="test image" width="200" />
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis odio reiciendis, libero tempora saepe, quae maiores officia expedita temporibus, doloribus dolor eveniet asperiores. Quos molestiae recusandae eos est nulla. Unde.
+    </p>
+</div>
+```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<div style="width: 400px">
+    <img src="home.png" style="float:left; padding-right:10px;" alt="test image" width="200" />
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis odio reiciendis, libero tempora saepe, quae maiores officia expedita temporibus, doloribus dolor eveniet asperiores. Quos molestiae recusandae eos est nulla. Unde.
+    </p>
+</div>
+{{< /admonition >}}
+
 ### Clearing Floats
+When you use the **float** property, you may encounter issues where elements overlap or layout is broken. To prevent these issues, You can use the **clear** property.
+* none
+* left
+* right
+* both
+
 ### using css overflow to clear floats
+The **overflow** property with the value hidden can also be used to clear floats, if you apply it to the parent element of a floated element like in the example below.
+
+```css
+.container {
+    overflow: hidden;
+}
+```
+
