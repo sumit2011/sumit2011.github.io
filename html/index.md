@@ -918,7 +918,7 @@ h1 {
 ### Use proper indentation and formatting
 Proper indentation and formatting make your HTML code more readable and easier to understand. Indent nested elements to clearly represent their hierarchy and use consistent spacing and line breaks.\
 Example:
-```
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -1043,13 +1043,15 @@ Example:
 Meta tags in HTML are typically used within the `<head>` section of an HTML document to define metadata about the page.
 
 The following are key meta elements:
-* <meta charset="UTF-8">
-* <meta name="description" content="Free Web tutorials">
-* <meta name="keywords" content="HTML,CSS,JavaScript">
-* <meta name="author" content="Sumit Kr">
-* <meta name="viewport" content="width=device-width, initial-scale=1.0">
-* <meta http-equiv="refresh" content="30">
-* <meta name="robots" content="noindex,nofollow">\
+```html
+<meta charset="UTF-8">
+<meta name="description" content="Free Web tutorials">
+<meta name="keywords" content="HTML,CSS,JavaScript">
+<meta name="author" content="Sumit Kr">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="30">
+<meta name="robots" content="noindex,nofollow">
+```
 Example:
 ```html
 <!DOCTYPE html>
