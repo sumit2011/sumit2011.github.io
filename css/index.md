@@ -33,6 +33,9 @@ Inline CSS is used to apply a unique style to a single HTML element. It uses the
 ```html
 <p style="color:blue;">This is a paragraph with inline css.</p>
 ```
+{{< admonition type=success title="output of above HTML code" open=true >}}
+<p style="color:blue;">This is a paragraph with inline css.</p>
+{{< /admonition >}}
 
 ### Internal CSS
 Internak CSS, also known as embedded CSS, is used to apply CSS to a whole HTML page. The CSS rules are put in a `<style>` block in the `<head>` section of the HTML file.
@@ -84,10 +87,84 @@ p{
 
 ## 2. CSS Selectors
 ### CSS selectors
+Selectors are the means by which CSS identifies which HTML elements to style. Here are some basic types of selectors:
+* **Tag selectors** : Selects HTML elements based on the element (tag) name.
+* **ID selectors** : Selects a specific element based on its unique ID.
+* **Class selectors** : Selects elements based on their class attribute.
+* **Attribute selectors** : Selects elements based on an attribute or attribute value.
+* **Pseudo-class selectors** : Selects elements based on a certain state.
+* **Pseudo-elements selectors** : Select elements based on their position in the document.
+
+
 ### CSS properties and values
+Once you've selected an element, you can apply styles to it using properties and values. Properties are what you want to style, and values are the styles that you apply to those properties.\
+Here's how you can use the different types of selectors in CSS:
+* Tag Selector
+* Class Selector
+```css
+/* Tag Selector */
+p {
+    color: blue;
+}
+/* Class Selector */
+.my-class {
+    font-size: 20px;
+}
+```
 ### CSS selectors
+* ID Selector
+* Universal Selector
+* Attribute selector
+* Pseudo-class selectors
+```css
+/* ID Selector */
+#myID {
+    background-color: yellow;
+}
+/* Universal Selector */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Attribute selector */
+[type="text"] {
+    border: 1px solid
+    green;
+}
+/* Pseudo-class selectors */
+p:hover {
+    color: blue;
+}
+```
 ### CSS combinators
-In CSS, combinators are used to explain the relationship between two selectors. There are four different combinators in CSS.
+In CSS, combinators are used to explain the relationship between two selectors. There are four different combinators in CSS:
+* descendant selector (space)
+* child selector (>)
+* adjacent sibling selector (+)
+* general sibling selector (~)
+```css
+/* descendant selector (space) */
+
+div p {
+    background-color: yellow;
+}
+
+/* child selector (>) */
+div > p {
+    background-color: blue;
+}
+
+/* adjacent sibling selector (+) */
+div + p {
+    background-color: red;
+}
+
+/* general sibling selector (~) */
+div~p {
+    background-color: green;
+}
+```
 
 ## 3. CSS Specificity
 
@@ -99,76 +176,28 @@ In CSS, combinators are used to explain the relationship between two selectors. 
 ### Named colors
 CSS has a predefined set of named colors.
 
-{{< admonition type=note title="Note" open=false >}}
-<html>
-    <head>
-        <!-- <title>Relative and Absolute Units</title> -->
-        <!-- <link rel="stylesheet" href="./css/styles.css"/> -->
-        <style>
-            .box {
-    width: 300px;
-    height: 200px;
-    background-color: #3498db;
-    margin-bottom: 20px;
+### HEX Values
+```css
+body {
+    background-color: #FF5733;
 }
-.box-percentages {
-    width: 80%;
-    height: 200px;
-    background-color: #3498db;
-    margin-bottom: 20px;
-}
-.parent {
-    width: 600px;
-    border: 1px dashed black;
-    margin-bottom: 20px;
-}
-.child {
-    width: 50%;
-    height: 200px;
-    background-color: #2ecc71;
-}
-.box-vw-vh {
-    width: 50vw;
-    height: 10vh;
-    background-color: #9b59b6;
-}
-html {
-    font-size: 20px;
-}
-.box-rem {
-    font-size: 2rem; /* 2 rem is equal to 2 times the root element's font-size */
-}
-.box-em {
-    font-size: 10px;
-    margin-bottom: 20px;
-}
-.box-em p {
-    font-size: 2em; /*2em is equal to 2 times the font-size of the parent element*/ 
+```
+
+{{< admonition type=success title="output of above CSS code" open=true >}}
+<!-- <html> -->
+
+<style>
+    button {
+    background-color: #FF5733;
+    height: 30px;
+    width: 100px;
+
 }
 </style>
-    </head>
-    <body>
-        <div class="box">This box is using pixel units</div>
-        <div class="box-percentages">This box is using pecentages</div>
-        <div class="parent">
-            <div class="child">
-                This box is using percentage units relative to it's parent
-            </div>
-        </div>
-        <div class="box-vw-vh">
-            This box is using viewport width and viewport height units
-        </div>
-        <div class="box-rem">
-            This box is using 'rem' units for font-size
-        </div>
-        <div class="box-em">
-            <p>
-                This box is using 'em' units for font-size
-            </p>
-        </div>
-    </body>
-</html>
-
+<div>
+<button >button</button>
+</div>
 {{< /admonition >}}
+
 
 

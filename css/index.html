@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/css\/"
-        },"genre": "posts","keywords": "html","wordcount":  579 ,
+        },"genre": "posts","keywords": "html","wordcount":  869 ,
         "url": "https:\/\/sumit2011.github.io\/css\/","datePublished": "2024-05-25T11:54:28+05:30","dateModified": "2024-05-25T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -107,8 +107,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CSS Basics</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/web-dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Web Dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;579 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;869 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -148,6 +148,7 @@
     <li><a href="#5-css-colors">5. CSS Colors</a>
       <ul>
         <li><a href="#named-colors">Named colors</a></li>
+        <li><a href="#hex-values">HEX Values</a></li>
       </ul>
     </li>
   </ul>
@@ -200,7 +201,16 @@
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color:blue;&#34;</span><span class="p">&gt;</span>This is a paragraph with inline css.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="internal-css">Internal CSS</h3>
+</div><div class="details admonition success open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-check-circle fa-fw" aria-hidden="true"></i>output of above HTML code<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p style="color:blue;">This is a paragraph with inline css.</p>
+</div>
+        </div>
+    </div>
+<h3 id="internal-css">Internal CSS</h3>
 <p>Internak CSS, also known as embedded CSS, is used to apply CSS to a whole HTML page. The CSS rules are put in a <code>&lt;style&gt;</code> block in the <code>&lt;head&gt;</code> section of the HTML file.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -297,88 +307,185 @@ Example:</p>
 </div>
 </div><h2 id="2-css-selectors">2. CSS Selectors</h2>
 <h3 id="css-selectors">CSS selectors</h3>
+<p>Selectors are the means by which CSS identifies which HTML elements to style. Here are some basic types of selectors:</p>
+<ul>
+<li><strong>Tag selectors</strong> : Selects HTML elements based on the element (tag) name.</li>
+<li><strong>ID selectors</strong> : Selects a specific element based on its unique ID.</li>
+<li><strong>Class selectors</strong> : Selects elements based on their class attribute.</li>
+<li><strong>Attribute selectors</strong> : Selects elements based on an attribute or attribute value.</li>
+<li><strong>Pseudo-class selectors</strong> : Selects elements based on a certain state.</li>
+<li><strong>Pseudo-elements selectors</strong> : Select elements based on their position in the document.</li>
+</ul>
 <h3 id="css-properties-and-values">CSS properties and values</h3>
-<h3 id="css-selectors-1">CSS selectors</h3>
-<h3 id="css-combinators">CSS combinators</h3>
-<p>In CSS, combinators are used to explain the relationship between two selectors. There are four different combinators in CSS.</p>
-<h2 id="3-css-specificity">3. CSS Specificity</h2>
+<p>Once you&rsquo;ve selected an element, you can apply styles to it using properties and values. Properties are what you want to style, and values are the styles that you apply to those properties.<br>
+Here&rsquo;s how you can use the different types of selectors in CSS:</p>
+<ul>
+<li>Tag Selector</li>
+<li>Class Selector</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* Tag Selector */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">/* Class Selector */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">my-class</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-size</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="css-selectors-1">CSS selectors</h3>
+<ul>
+<li>ID Selector</li>
+<li>Universal Selector</li>
+<li>Attribute selector</li>
+<li>Pseudo-class selectors</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* ID Selector */</span>
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">myID</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">/* Universal Selector */</span>
+</span></span><span class="line"><span class="cl"><span class="o">*</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* Attribute selector */</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&#34;text&#34;</span><span class="o">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span>
+</span></span><span class="line"><span class="cl">    <span class="kc">green</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">/* Pseudo-class selectors */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">p</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="css-combinators">CSS combinators</h3>
+<p>In CSS, combinators are used to explain the relationship between two selectors. There are four different combinators in CSS:</p>
+<ul>
+<li>descendant selector (space)</li>
+<li>child selector (&gt;)</li>
+<li>adjacent sibling selector (+)</li>
+<li>general sibling selector (~)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* descendant selector (space) */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">div</span> <span class="nt">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* child selector (&gt;) */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">div</span> <span class="o">&gt;</span> <span class="nt">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* adjacent sibling selector (+) */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">div</span> <span class="o">+</span> <span class="nt">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* general sibling selector (~) */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">div</span><span class="o">~</span><span class="nt">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="3-css-specificity">3. CSS Specificity</h2>
 <h2 id="4-absolute-and-relative-units">4. Absolute and Relative Units</h2>
 <h2 id="5-css-colors">5. CSS Colors</h2>
 <h3 id="named-colors">Named colors</h3>
 <p>CSS has a predefined set of named colors.</p>
-<div class="details admonition note">
+<h3 id="hex-values">HEX Values</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#FF5733</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition success open">
         <div class="details-summary admonition-title">
-            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+            <i class="icon fas fa-check-circle fa-fw" aria-hidden="true"></i>output of above CSS code<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content"><html>
-    <head>
-        <!-- <title>Relative and Absolute Units</title> -->
-        <!-- <link rel="stylesheet" href="./css/styles.css"/> -->
-        <style>
-            .box {
-    width: 300px;
-    height: 200px;
-    background-color: #3498db;
-    margin-bottom: 20px;
-}
-.box-percentages {
-    width: 80%;
-    height: 200px;
-    background-color: #3498db;
-    margin-bottom: 20px;
-}
-.parent {
-    width: 600px;
-    border: 1px dashed black;
-    margin-bottom: 20px;
-}
-.child {
-    width: 50%;
-    height: 200px;
-    background-color: #2ecc71;
-}
-.box-vw-vh {
-    width: 50vw;
-    height: 10vh;
-    background-color: #9b59b6;
-}
-html {
-    font-size: 20px;
-}
-.box-rem {
-    font-size: 2rem; /* 2 rem is equal to 2 times the root element's font-size */
-}
-.box-em {
-    font-size: 10px;
-    margin-bottom: 20px;
-}
-.box-em p {
-    font-size: 2em; /*2em is equal to 2 times the font-size of the parent element*/ 
+            <div class="admonition-content"><!-- <html> -->
+<style>
+    button {
+    background-color: #FF5733;
+    height: 30px;
+    width: 100px;
+
 }
 </style>
-    </head>
-    <body>
-        <div class="box">This box is using pixel units</div>
-        <div class="box-percentages">This box is using pecentages</div>
-        <div class="parent">
-            <div class="child">
-                This box is using percentage units relative to it's parent
-            </div>
-        </div>
-        <div class="box-vw-vh">
-            This box is using viewport width and viewport height units
-        </div>
-        <div class="box-rem">
-            This box is using 'rem' units for font-size
-        </div>
-        <div class="box-em">
-            <p>
-                This box is using 'em' units for font-size
-            </p>
-        </div>
-    </body>
-</html></div>
+<div>
+<button >button</button>
+</div>
+</div>
         </div>
     </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
