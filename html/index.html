@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/html\/"
-        },"genre": "posts","keywords": "html","wordcount":  4516 ,
+        },"genre": "posts","keywords": "html","wordcount":  5059 ,
         "url": "https:\/\/sumit2011.github.io\/html\/","datePublished": "2024-05-25T11:54:28+05:30","dateModified": "2024-05-25T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -107,8 +107,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">HTML Basics</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/web-dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Web Dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;4516 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;22 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;5059 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;24 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -225,6 +225,17 @@
         <li><a href="#applying-styles-types">Applying styles-Types</a></li>
         <li><a href="#cascading-and-specificity">Cascading and specificity</a></li>
         <li><a href="#common-css-properties">Common CSS properties</a></li>
+      </ul>
+    </li>
+    <li><a href="#11-html-best-practices">11. HTML Best Practices</a>
+      <ul>
+        <li><a href="#use-proper-indentation-and-formatting">Use proper indentation and formatting</a></li>
+        <li><a href="#use-semantic-html-elements">Use semantic HTML elements</a></li>
+        <li><a href="#provide-descriptive-and-accessible-text-alternatives">Provide descriptive and accessible text alternatives</a></li>
+        <li><a href="#separate-structure-and-presentation">Separate structure and presentation</a></li>
+        <li><a href="#optimize-performance">Optimize performance</a></li>
+        <li><a href="#validate-your-html">Validate your HTML</a></li>
+        <li><a href="#optimize-images">Optimize images</a></li>
       </ul>
     </li>
     <li><a href="#12-aria-labels">12. ARIA Labels</a>
@@ -1800,7 +1811,151 @@ Example:</li>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="12-aria-labels">12. ARIA Labels</h2>
+</div><h2 id="11-html-best-practices">11. HTML Best Practices</h2>
+<h3 id="use-proper-indentation-and-formatting">Use proper indentation and formatting</h3>
+<p>Proper indentation and formatting make your HTML code more readable and easier to understand. Indent nested elements to clearly represent their hierarchy and use consistent spacing and line breaks.<br>
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;!DOCTYPE html&gt;
+</span></span><span class="line"><span class="cl">&lt;html&gt;
+</span></span><span class="line"><span class="cl">    &lt;head&gt;
+</span></span><span class="line"><span class="cl">        &lt;title&gt;My Web Page&lt;/title&gt;
+</span></span><span class="line"><span class="cl">    &lt;/head&gt;
+</span></span><span class="line"><span class="cl">    &lt;body&gt;
+</span></span><span class="line"><span class="cl">        &lt;header&gt;
+</span></span><span class="line"><span class="cl">            &lt;h1&gt;Welcome&lt;/h1&gt;
+</span></span><span class="line"><span class="cl">        &lt;/header&gt;
+</span></span><span class="line"><span class="cl">        &lt;main&gt;
+</span></span><span class="line"><span class="cl">            &lt;p&gt;This is the main content.&lt;/p&gt;
+</span></span><span class="line"><span class="cl">        &lt;/main&gt;
+</span></span><span class="line"><span class="cl">        &lt;footer&gt;
+</span></span><span class="line"><span class="cl">            &lt;p&gt;&amp;copy; 2023 My Webpage&lt;/p&gt;
+</span></span><span class="line"><span class="cl">        &lt;/footer&gt;
+</span></span><span class="line"><span class="cl">    &lt;/body&gt;
+</span></span><span class="line"><span class="cl">&lt;/html&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="use-semantic-html-elements">Use semantic HTML elements</h3>
+<p>Utilize semantic HTML elements to provide meaning and structure to your content. Semantic elements like <code>&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;footer&gt;</code> convey the purpose and role of each section, enhancing accessibility and search engine optimization.<br>
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>About Us<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>We are a company dedicated to...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="ni">&amp;copy;</span> 2023 My Webpage<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="provide-descriptive-and-accessible-text-alternatives">Provide descriptive and accessible text alternatives</h3>
+<p>For images, videos, and other non-text content, always include descriptive alternative text (alt attribute) to provide information about the content for users who cannot see it. Use concise and meaningful descriptions that convey the purpose or context of the content.<br>
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;image.jpg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Description of the image&#34;</span> <span class="p">/&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="separate-structure-and-presentation">Separate structure and presentation</h3>
+<p>Separate the structure (HTML) from the presentation (CSS) and behavior (JavaScript) of your webpages. Keep your HTML code focused on defining the content and structure, while styling and interactivity are handled through external CSS and JavaScript files.<br>
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;styles.css&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;script.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="optimize-performance">Optimize performance</h3>
+<p>To improve website performance, minimize the use of unnecessary elements, attributes, and external resources. Use efficient techniques like compressing images, combining and minifying CSS and JavaScript files, and leveraging browser caching.<br>
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;styles.css&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;script.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="validate-your-html">Validate your HTML</h3>
+<p>Regularly validate your HTML code using online validation tools or browser developer tools. Validating ensures that your code adheres to the HTML specifications and helps identify any errors or potential compatibility issues.
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- HTML code goes here --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="optimize-images">Optimize images</h3>
+<p>The first step in optimizing images is choosing the correct file format.</p>
+<ul>
+<li><strong>JPEG</strong>: It&rsquo;s best for photographs or images with lots of colors. JPEGs can be compressed considerably, which can result in a faster load time.</li>
+<li><strong>PNG</strong>: It&rsquo;s ideal for images that require transparency and higher quality. PNGs are usually larger than JPEGs and should be used sparingly.</li>
+<li><strong>SVG</strong>: Ideal for vector graphics as they are resolution-independent and typically smaller in file size.</li>
+<li><strong>WebP</strong>: A modern image format that provides superior lossless and lossy compression for images on the web.</li>
+<li><strong>Resize Images</strong>: Images should be resized to fit the layout of your website.</li>
+<li><strong>Image Compression</strong>: Compression reduces the file size without noticeably degrading the quality of the image below an acceptable level.</li>
+<li><strong>Use CSS Sprites</strong>: CSS sprites combine multiple images into one single image, which can significantly reduce HTTP requests and improve load times.</li>
+<li><strong>Lazy Loading</strong>: Lazy loading is a technique that delays the loading of non-critical or non-visible content until the point of need.</li>
+<li><strong>Use a CDN</strong>: Content Delivery Networks (CDNs) can cache your images across a network of servers worldwide, making your site faster for users around the globe.</li>
+</ul>
+<h2 id="12-aria-labels">12. ARIA Labels</h2>
 <p>Enhancing Accessibility in web development</p>
 <h3 id="understanding-aria-labels">Understanding ARIA Labels</h3>
 <p>ARIA labels are used to provide additional infomation to assistive technolory, such as screen readers, enabling a better user experiance for individuals with disabilities.<br>
