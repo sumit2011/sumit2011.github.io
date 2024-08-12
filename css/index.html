@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/css\/"
-        },"genre": "posts","keywords": "html","wordcount":  869 ,
+        },"genre": "posts","keywords": "html","wordcount":  1321 ,
         "url": "https:\/\/sumit2011.github.io\/css\/","datePublished": "2024-05-25T11:54:28+05:30","dateModified": "2024-05-25T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -107,8 +107,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CSS Basics</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/web-dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Web Dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;869 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1321 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -143,12 +143,25 @@
         <li><a href="#css-combinators">CSS combinators</a></li>
       </ul>
     </li>
-    <li><a href="#3-css-specificity">3. CSS Specificity</a></li>
-    <li><a href="#4-absolute-and-relative-units">4. Absolute and Relative Units</a></li>
+    <li><a href="#3-css-specificity">3. CSS Specificity</a>
+      <ul>
+        <li><a href="#calculate-specificity">Calculate specificity</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-absolute-and-relative-units">4. Absolute and Relative Units</a>
+      <ul>
+        <li><a href="#absolute-units">Absolute units</a></li>
+        <li><a href="#relative-units">Relative units</a></li>
+      </ul>
+    </li>
     <li><a href="#5-css-colors">5. CSS Colors</a>
       <ul>
         <li><a href="#named-colors">Named colors</a></li>
         <li><a href="#hex-values">HEX Values</a></li>
+        <li><a href="#rgb-values">RGB Values</a></li>
+        <li><a href="#rgba-values">RGBA Values</a></li>
+        <li><a href="#hsl-values">HSL Values</a></li>
+        <li><a href="#hsla-values">HSLA Values</a></li>
       </ul>
     </li>
   </ul>
@@ -451,11 +464,99 @@ Here&rsquo;s how you can use the different types of selectors in CSS:</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="3-css-specificity">3. CSS Specificity</h2>
-<h2 id="4-absolute-and-relative-units">4. Absolute and Relative Units</h2>
+<h3 id="calculate-specificity">Calculate specificity</h3>
+<ol>
+<li>Inline styles: An inline style attribute present on an element will override any styles in external stylesheets and will have the highest level of specificity.</li>
+<li>IDs: Each unique ID will add to the specificity.</li>
+<li>Classes, pseudo-classes, and attributes: Each unique class, pseudo-class, or attribute will add to the specificity.</li>
+<li>Elements and pseudo-elements: Each unique element or pseudo-element will add to the specificity</li>
+</ol>
+<p>The specificity is calculated as follows:</p>
+<ul>
+<li>1000 for inline styling</li>
+<li>100 for each ID value</li>
+<li>10 for each class value (or pseudo-class or attribute selector)</li>
+<li>1 for each element selector or pseudo-element</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">#</span><span class="nn">content</span> <span class="p">.</span><span class="nc">data</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Equal specificity: the latest rule wins - If the same rule is written twice into the external style sheet, then the latest rule wins:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">h1</span> <span class="p">{</span><span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">h1</span> <span class="p">{</span><span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="4-absolute-and-relative-units">4. Absolute and Relative Units</h2>
+<h3 id="absolute-units">Absolute units</h3>
+<p>Absolute units are fixed-length units. They represent a physical measurement and don&rsquo;t scale based on any other factors like the size of the viewport or parent element.<br>
+The absolute units in CSS are:</p>
+<ul>
+<li>Pixels (px)</li>
+<li>Points (pt)</li>
+<li>Inches (in)</li>
+<li>Centimeters (cm) and Millimeters (mm)</li>
+<li>Picas (pc)</li>
+</ul>
+<h3 id="relative-units">Relative units</h3>
+<p>Relative units are scaled quantities. They are relative to another length value, like the size of the viewport or the size of the parent element.\ Relative units in CSS are:</p>
+<ul>
+<li>Percentages (%)</li>
+<li>Viewport Width (vw)</li>
+<li>Viewport Height (vh)</li>
+<li>em</li>
+<li>rem</li>
+<li>Viewport Minimum (vmin)</li>
+<li>Viewport Maximum (vmax)</li>
+</ul>
 <h2 id="5-css-colors">5. CSS Colors</h2>
 <h3 id="named-colors">Named colors</h3>
 <p>CSS has a predefined set of named colors.</p>
-<h3 id="hex-values">HEX Values</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">color</span><span class="o">:</span> <span class="nt">red</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">color</span><span class="o">:</span> <span class="nt">orange</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">color</span><span class="o">:</span> <span class="nt">tan</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">color</span><span class="o">:</span> <span class="nt">rebeccapurple</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">color</span><span class="o">:</span> <span class="nt">transparent</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* Example usage: */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="hex-values">HEX Values</h3>
+<p>Hexadecimal (HEX) color values are based on the combination of red, green, and blue (RGB) values in a base-16 format. A HEX color code starts with a hash # followed by 6 characters - two for red, two for green, and two for blue.<br>
+Example usage:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -464,30 +565,71 @@ Here&rsquo;s how you can use the different types of selectors in CSS:</p>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#FF5733</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#FF5733</span><span class="p">;</span> <span class="c">/* A shade of orange */</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="details admonition success open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-check-circle fa-fw" aria-hidden="true"></i>output of above CSS code<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content"><!-- <html> -->
-<style>
-    button {
-    background-color: #FF5733;
-    height: 30px;
-    width: 100px;
-
-}
-</style>
-<div>
-<button >button</button>
+</div><h3 id="rgb-values">RGB Values</h3>
+<p>Colors can be defined using the rgb function, where values for red, green, and blue are provided in the range of 0-255.<br>
+Example usage:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">div</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span> <span class="err">*</span> <span class="err">This</span> <span class="err">is</span> <span class="err">black</span> <span class="err">*</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
+</div><h3 id="rgba-values">RGBA Values</h3>
+<p>RGBA is similar to RGB but has an additional value for alpha (A) representing opacity. The alpha value is between 0 (completely transparent) and 1 (fully opaque).<br>
+Example usage:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">div</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span> <span class="c">/* Semi-transparent black */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
-        </div>
-    </div></div><div class="post-footer" id="post-footer">
+</div><h3 id="hsl-values">HSL Values</h3>
+<p>HSL stands for Hue, Saturation, and Lightness. It offers a more intuitive way to pick colors.<br>
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">button</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="n">hsl</span> <span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">100</span><span class="kt">%</span><span class="p">,</span> <span class="mi">50</span><span class="kt">%</span><span class="p">);</span> <span class="c">/* Pure green */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="hsla-values">HSLA Values</h3>
+<p>Like RGBA, HSLA includes an alpha value for opacity.<br>
+Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">button</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="nb">hsla</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">100</span><span class="kt">%</span><span class="p">,</span> <span class="mi">50</span><span class="kt">%</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
