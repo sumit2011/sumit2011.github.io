@@ -91,13 +91,84 @@ In CSS, combinators are used to explain the relationship between two selectors. 
 
 ## 3. CSS Specificity
 
+
 ## 4. Absolute and Relative Units
+
 
 ## 5. CSS Colors
 ### Named colors
 CSS has a predefined set of named colors.
 
-{{< admonition type=note title="Note" open=true >}}
+{{< admonition type=note title="Note" open=false >}}
+<html>
+    <head>
+        <!-- <title>Relative and Absolute Units</title> -->
+        <!-- <link rel="stylesheet" href="./css/styles.css"/> -->
+        <style>
+            .box {
+    width: 300px;
+    height: 200px;
+    background-color: #3498db;
+    margin-bottom: 20px;
+}
+.box-percentages {
+    width: 80%;
+    height: 200px;
+    background-color: #3498db;
+    margin-bottom: 20px;
+}
+.parent {
+    width: 600px;
+    border: 1px dashed black;
+    margin-bottom: 20px;
+}
+.child {
+    width: 50%;
+    height: 200px;
+    background-color: #2ecc71;
+}
+.box-vw-vh {
+    width: 50vw;
+    height: 10vh;
+    background-color: #9b59b6;
+}
+html {
+    font-size: 20px;
+}
+.box-rem {
+    font-size: 2rem; /* 2 rem is equal to 2 times the root element's font-size */
+}
+.box-em {
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+.box-em p {
+    font-size: 2em; /*2em is equal to 2 times the font-size of the parent element*/ 
+}
+</style>
+    </head>
+    <body>
+        <div class="box">This box is using pixel units</div>
+        <div class="box-percentages">This box is using pecentages</div>
+        <div class="parent">
+            <div class="child">
+                This box is using percentage units relative to it's parent
+            </div>
+        </div>
+        <div class="box-vw-vh">
+            This box is using viewport width and viewport height units
+        </div>
+        <div class="box-rem">
+            This box is using 'rem' units for font-size
+        </div>
+        <div class="box-em">
+            <p>
+                This box is using 'em' units for font-size
+            </p>
+        </div>
+    </body>
+</html>
+
 {{< /admonition >}}
 
 
