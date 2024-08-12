@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>CSS Basics - Sumit&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://sumit2011.github.io/css/">
+        <title>CSS Basics Part 1 - Sumit&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://sumit2011.github.io/css/">
   <meta property="og:site_name" content="Sumit&#39;s Blog">
-  <meta property="og:title" content="CSS Basics">
+  <meta property="og:title" content="CSS Basics Part 1">
   <meta property="og:description" content="Navigation system works on the concept of linked list.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -14,11 +14,12 @@
     <meta property="article:published_time" content="2024-05-25T11:54:28+05:30">
     <meta property="article:modified_time" content="2024-05-25T11:54:28+05:30">
     <meta property="article:tag" content="Html">
+    <meta property="article:tag" content="Css">
     <meta property="og:image" content="https://sumit2011.github.io/images/logo.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://sumit2011.github.io/images/logo.png">
-  <meta name="twitter:title" content="CSS Basics">
+  <meta name="twitter:title" content="CSS Basics Part 1">
   <meta name="twitter:description" content="Navigation system works on the concept of linked list.">
       <meta name="twitter:site" content="@_su__mit___">
 <meta name="application-name" content="Sumit&#39;s Blog">
@@ -26,12 +27,12 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "CSS Basics",
+        "headline": "CSS Basics Part 1",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/css\/"
-        },"genre": "posts","keywords": "html","wordcount":  1321 ,
+        },"genre": "posts","keywords": "html, css","wordcount":  1360 ,
         "url": "https:\/\/sumit2011.github.io\/css\/","datePublished": "2024-05-25T11:54:28+05:30","dateModified": "2024-05-25T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -104,10 +105,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CSS Basics</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CSS Basics Part 1</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/web-dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Web Dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1321 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1360 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -123,7 +124,7 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#1-css-basics">1. CSS Basics</a>
+    <li><a href="#1-introduction">1. Introduction</a>
       <ul>
         <li><a href="#what-is-css">What is CSS?</a></li>
         <li><a href="#why-use-css">Why use CSS?</a></li>
@@ -164,6 +165,26 @@
         <li><a href="#hsla-values">HSLA Values</a></li>
       </ul>
     </li>
+    <li><a href="#6-css-box-model">6. CSS Box Model</a>
+      <ul>
+        <li><a href="#the-box-model">The Box Model</a></li>
+        <li><a href="#controlling-box-model-properties">Controlling Box Model Properties</a></li>
+        <li><a href="#box-sizing">Box Sizing</a></li>
+        <li><a href="#width-and-height">Width and Height</a></li>
+        <li><a href="#minmax-variations">Min/Max Variations</a></li>
+        <li><a href="#css-margins">CSS Margins</a></li>
+        <li><a href="#css-borders">CSS Borders</a></li>
+        <li><a href="#css-padding">CSS Padding</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-css-floats">7. CSS Floats</a>
+      <ul>
+        <li><a href="#floating">Floating</a></li>
+        <li><a href="#using-the-float-property">Using the float property</a></li>
+        <li><a href="#clearing-floats">Clearing Floats</a></li>
+        <li><a href="#using-css-overflow-to-clear-floats">using css overflow to clear floats</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>
@@ -175,7 +196,7 @@
             <div class="admonition-content"><em>Use the table of contents to navigate to the portion that you are interested in.</em></div>
         </div>
     </div>
-<h2 id="1-css-basics">1. CSS Basics</h2>
+<h2 id="1-introduction">1. Introduction</h2>
 <h3 id="what-is-css">What is CSS?</h3>
 <p>Cascading Style Sheet, often abbreviated as CSS is a stylesheet language used to describe the look and formatting of a document written in HTML.</p>
 <h3 id="why-use-css">Why use CSS?</h3>
@@ -629,7 +650,20 @@ Example:</p>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div><h2 id="6-css-box-model">6. CSS Box Model</h2>
+<h3 id="the-box-model">The Box Model</h3>
+<h3 id="controlling-box-model-properties">Controlling Box Model Properties</h3>
+<h3 id="box-sizing">Box Sizing</h3>
+<h3 id="width-and-height">Width and Height</h3>
+<h3 id="minmax-variations">Min/Max Variations</h3>
+<h3 id="css-margins">CSS Margins</h3>
+<h3 id="css-borders">CSS Borders</h3>
+<h3 id="css-padding">CSS Padding</h3>
+<h2 id="7-css-floats">7. CSS Floats</h2>
+<h3 id="floating">Floating</h3>
+<h3 id="using-the-float-property">Using the float property</h3>
+<h3 id="clearing-floats">Clearing Floats</h3>
+<h3 id="using-css-overflow-to-clear-floats">using css overflow to clear floats</h3></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -638,13 +672,13 @@ Example:</p>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://sumit2011.github.io/css/" data-title="CSS Basics" data-via="_su__mit___" data-hashtags="html"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://sumit2011.github.io/css/" data-hashtag="html"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://sumit2011.github.io/css/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://sumit2011.github.io/css/" data-title="CSS Basics" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://sumit2011.github.io/css/" data-title="CSS Basics Part 1" data-via="_su__mit___" data-hashtags="html,css"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://sumit2011.github.io/css/" data-hashtag="html"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://sumit2011.github.io/css/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://sumit2011.github.io/css/" data-title="CSS Basics Part 1" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/html/">Html</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/html/">Html</a>,&nbsp;<a href="/tags/css/">Css</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>

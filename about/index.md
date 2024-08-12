@@ -92,20 +92,37 @@ Platform: `codechef`, `coding ninja`.
 
 
 ### Projects
-> [**Deadly Snake**](https://sn4k3.netlify.app/)
-
-> [**T1C-T4K-T0E**](https://tict4ctoe.netlify.app/)
 
 > [**Binary Calc**][def]
 
 > [**Sec-Blogs**](https://secblogs.netlify.app/)
 
 
+### Web Development
+My web development skill is quite good. I know all the basics of development and i also have created many projects.
 
+{{< admonition type=info title="Languages" open=false >}}
+<img src="tools/html-icon.svg"  height="60" width="70" /></a>
+<img src="tools/javascript-programming-language-icon.svg"  height="60" width="70" /></a>
+<img src="tools/markdown-icon.svg"  height="60" width="70" /></a>
+{{< /admonition >}}
 
+> [**Deadly Snake**](https://sn4k3.netlify.app/)
 
+> [**T1C-T4K-T0E**](https://tict4ctoe.netlify.app/)
 
+> [**Portfolio**](https://sumit2011.netlify.app)
 
+> [**Online Store**](https://unojistore.netlify.app)
+
+### Blog Writer
+I am also a blog writer. I usually write bolgs in my free time usually based on DSA topics.
+Also on the development and security.
+I have my own working 2 blog channels.
+
+> [**DSA Blogs**](https://sumit2011.github.io)
+
+> [**Sec-Blogs**](https://secblogs.netlify.app/)
 
 
 

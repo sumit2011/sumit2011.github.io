@@ -1,4 +1,4 @@
-# CSS Basics
+# CSS Basics Part 1
 
 ***Navigation system works on the concept of linked list.***
 <!--more-->
@@ -7,7 +7,7 @@
 _Use the table of contents to navigate to the portion that you are interested in._
 {{< /admonition >}}
 
-## 1. CSS Basics
+## 1. Introduction
 ### What is CSS?
 Cascading Style Sheet, often abbreviated as CSS is a stylesheet language used to describe the look and formatting of a document written in HTML.
 
@@ -265,3 +265,23 @@ button {
     background-color: hsla(120, 100%, 50%, 0.5);
 }
 ```
+
+## 6. CSS Box Model
+
+### The Box Model
+### Controlling Box Model Properties
+### Box Sizing
+### Width and Height
+### Min/Max Variations
+### CSS Margins
+### CSS Borders
+### CSS Padding
+
+
+
+## 7. CSS Floats
+
+### Floating
+### Using the float property
+### Clearing Floats
+### using css overflow to clear floats
