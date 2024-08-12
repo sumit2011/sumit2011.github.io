@@ -8,20 +8,159 @@ _Use the table of contents to navigate to the portion that you are interested in
 {{< /admonition >}}
 ## 1. Introduction:
 ### What is HTML?
-### What is a website?
-### Basic HTML structure
-### Basic HTML syntax
+* **HTML**, which stands for Hypertext Markup Language. It is the standard markup language used in creating web pages. It is the backbone of any website and is used to format the content on the web page.
+* Web pages created with HTML can include text, images, links, forms, audio, video and more.
+* HTML is not a programming language, meaning it does not have logic like if...else statements or loops. It is a markup language and is used to structure content on the web.
 
+### What is a website?
+A website is essentially a folder which contains HTML, CSS and javascript documents as well as images, videos, audios, texts and more...
+### Basic HTML structure
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My first webpage</title>
+    </head>
+    <body>
+        <h1>welcome to my site!</h1>
+        <p>this is the content of the webpage.</p>
+    </body>
+</html>
+```
+### Basic HTML syntax
+* standard HTML Elements
+* Self closing HTML Elements
+```html
+<h1>Some text</h1>
+
+
+<img src="path-to-image.jpg" />
+```
 ## 2. HTML elements
 
 ### Heading and paragraphs
-### lists
-### Tables
-### Divs
-### Span
+**HTML** provides six levels of headings, from `<h1>` to `<h6>`. These tags are used to create headings of different sizes and provide a visual hierarchy to your content.
 
-### Comments
+The `<p>` tag is used to define paragraphs of text. It separates blocks of text and helps maintain readability and organization.
+```html
+<h1>This is a h1 heading</h1>
+<h2>This is a h2 heading</h2>
+<h3>This is a h3 heading</h3>
+<h4>This is a h4 heading</h4>
+<h5>This is a h5 heading</h5>
+<h6>This is a h6 heading</h6>
+<p>This is a paragraph of text.</p>
+```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<h1>This is a h1 heading</h1>
+<h2>This is a h2 heading</h2>
+<h3>This is a h3 heading</h3>
+<h4>This is a h4 heading</h4>
+<h5>This is a h5 heading</h5>
+<h6>This is a h6 heading</h6>
+<p>This is a paragraph of text.</p>
+{{< /admonition >}}
+
+### Lists
+HTML offers two types of lists: ordered lists `<ol>` and unordered lists `<ul>`. Ordered lists are used for items with a specific order or sequence, while unordered lists are used for items without a particular order. Each list item is defined using the `<li>` tag.
+```html
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+{{< /admonition >}}
+
+### Tables
+Tables `<table>` are used to organize tabular data. They consist of rows `<tr>` and cells `<td>`. Tables help present data in a structured format.
+```html
+<table>
+    <tr>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+    </tr>
+    <tr>
+        <td>Cell 3</td>
+        <td>Cell 4</td>
+    </tr>
+</table>
+```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<table>
+    <tr>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+    </tr>
+    <tr>
+        <td>Cell 3</td>
+        <td>Cell 4</td>
+    </tr>
+</table>
+{{< /admonition >}}
+
+### Divs
+The `<div>` element is a versatile container that allows you to group and style sections of your webpage. It provides flexibility in organizing and styling content. It is primarily used for creating sections and grouping elements.
+```html
+<div>
+    <h2>Section Title</h2>
+    <p>This is another paragraph inside a div.</p>
+</div>
+```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<div>
+    <h2>Section Title</h2>
+    <p>This is another paragraph inside a div.</p>
+</div>
+{{< /admonition >}}
+
+### Span
+The `<span>` element is a versatile inline container that allows you to group and style specific sections of text or inline elements. It is primarily used for targeting and styling specific sections of text or inline elements within your HTML content.
+```html
+<p>
+    HTML is <span style="color:red;">awesome</span>!
+    <span style="color:red;">Span elements</span>can be used for inline styling.
+</p>
+```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<p>
+    HTML is <span style="color:red;">awesome</span>!
+    <span style="color:red;">Span elements</span>can be used for inline styling.
+</p>
+{{< /admonition >}}
+
+
+### Comments in HTML
+**Comments** in HTML allow you to leave notes in yout code that are ignored by the browser.
+```html
+<!-- this comment explains what the following code does.-->
+<p>this paragraph contains some text.</p>
+```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<!-- this comment explains what the following code does.-->
+<p>this paragraph contains some text.</p>
+{{< /admonition >}}
+
 ### Block and inline elements
+Block-Level Elements:
+* Block-level elements start on a new line and occupy the full width available by default.
+* Examples of block-level elements include `<div>, <p>, <h1> to <h6>, <ul>, <li>, and <section>`.
+* Block-level elements create a visual block or box-like structure.
+* Block-level elements can contain other block-level and inline-level elements.
+* They are commonly used for structuring and grouping content, creating sections, and adding vertical spacing.
+
+Inline-Level Elements:
+* Inline-level elements do not start on a new line and only occupy the necessary width to render their content.
+* Examples of inline-level elements include `<span>, <a>, <strong>, <em>, <img>, and <input>`.
+* Inline-level elements flow within the surrounding text and do not create line breaks.
+* Inline-level elements cannot contain block-level elements but can contain other inline-level elements.
+* They are commonly used for styling or adding emphasis within a line of text or to create inline links or images.
 
 ## 3. HTML Attributes
 ### Attribute basics
@@ -272,6 +411,18 @@ Table headers `<th>` are used to define the headings of each column in a table. 
     <!-- more rows -->
 </table>
 ```
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<h2>Table headers</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    <!-- more rows -->
+</table>
+{{< /admonition >}}
+
 ### Table cells
 Table cells `<td>` hold the actual data within a table. Each cell corresponds to a specific row and column intersection. Table cells provide the content for each column in the table.
 ```html
