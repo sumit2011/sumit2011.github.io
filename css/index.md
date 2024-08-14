@@ -451,3 +451,85 @@ The **overflow** property with the value hidden can also be used to clear floats
 }
 ```
 
+### 08 CSS Positioning
+CSS offers the position property, which helps to define how an element is positioned on a page. It can have one of the following values:
+
+* static : This is the default value.
+* Relative : The element is positioned relative to its normal position.
+* Fixed : The element is positioned relative to the browser window. It will not move even if the page is scrolled.
+* Absolute : The element is positioned relative to the nearest positioned ancestor.
+* Sticky : The element is positioned based on the user's scroll position.
+
+## 09 CSS Centering Elements
+### Centering Elements Horizontally
+```css
+.center-block{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; /* or any specific width */
+}
+```
+### Centering Elements Vertically
+```html
+<div class="relative-parent">
+    <div>
+        relative parent
+    </div>
+    <div class="absolute-child">
+        absolute child
+    </div>
+</div>
+```
+```css
+.relative-parent {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    height: 160px;
+    border: 3px dashed powderblue;
+}
+.absolute-child {
+    width: 160px;
+    height: 100px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: crimson;
+}
+```
+
+
+{{< admonition type=success title="output of above HTML code" open=false >}}
+<style>
+    .relative-parent {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    height: 160px;
+    border: 3px dashed powderblue;
+}
+.absolute-child {
+    width: 160px;
+    height: 100px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: crimson;
+}
+</style>
+<div class="relative-parent">
+    <div>
+        relative parent
+    </div>
+    <div class="absolute-child">
+        absolute child
+    </div>
+</div>
+{{< /admonition >}}
