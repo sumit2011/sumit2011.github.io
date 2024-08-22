@@ -212,7 +212,7 @@ The **style** attribute can also be used in any HTML element.
 <p style="color:green;">This is a paragraph.</p>
 ```
 
-## 4. HTML Links
+## 4. HTML Links🔗
 ### Text links
 Text links are created using `<a>` anchor tag. The text within the anchor tags become clickable, directing users to the specified URL. To create a text link, use the following format:
 ```html
@@ -277,7 +277,7 @@ Example:
 </a>
 ```
 
-## 5. HTML Lists
+## 5. HTML Lists📝
 ### Unordered lists
 Unordered lists `<ul>` are used to present items without a specific order or sequence. Each item in the list is defined using `<li>` (list item) tag.
 ```html
@@ -360,7 +360,7 @@ ol {
 }
 ```
 
-## 6. HTML Tables
+## 6. HTML Tables🗓️
 ### Basic table structure
 Tables in HTML are created using the `<table>` element. Inside the `<table>` element, we have rows defined by the `<tr>` (table row) element. Within each row we define table headers using the `<th>` (table header) element or table cells using the `<td>` (table data) element.
 ```html
@@ -487,7 +487,7 @@ td {
 }
 ```
 
-## 7. HTML Forms
+## 7. HTML Forms📝
 ### Form structure
 Forms are created using the `<form>` element. Inside the `<form>` element, we define form controls such as input fields, checkboxes, radio buttons, dropdowns, and buttons.
 Example:
