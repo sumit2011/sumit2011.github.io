@@ -32,7 +32,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/oops\/"
-        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  155 ,
+        },"genre": "posts","keywords": "C, C\u002b\u002b","wordcount":  504 ,
         "url": "https:\/\/sumit2011.github.io\/oops\/","datePublished": "2023-02-15T11:54:28+05:30","dateModified": "2023-10-03T18:37:31+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -46,7 +46,7 @@
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="Sumit&#39;s Blog"><span class="header-title-pre">👀</span>DSA Blogs</a>
+            <a href="/" title="Sumit&#39;s Blog"><span class="header-title-pre">👀</span>Sumit&#39;s Blogs</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About me </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
@@ -70,7 +70,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="Sumit&#39;s Blog"><span class="header-title-pre">👀</span>DSA Blogs</a>
+                <a href="/" title="Sumit&#39;s Blog"><span class="header-title-pre">👀</span>Sumit&#39;s Blogs</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -108,8 +108,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Oops(object oriented programming)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/dsa/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DSA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="15-02-2023">15-02-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;155 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="15-02-2023">15-02-2023</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;504 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -131,6 +131,42 @@
     </li>
     <li><a href="#object">object</a></li>
     <li><a href="#inheritance">Inheritance</a></li>
+    <li><a href="#types-of-inheritance">Types of Inheritance</a>
+      <ul>
+        <li><a href="#single-inheritance">Single Inheritance</a></li>
+        <li><a href="#multiple-inheritance">Multiple inheritance</a></li>
+      </ul>
+    </li>
+    <li><a href="#encapsulation">Encapsulation</a></li>
+    <li><a href="#abstraction">Abstraction</a></li>
+    <li><a href="#polymorphism">Polymorphism</a>
+      <ul>
+        <li><a href="#compiletime-polymorphism">Compiletime Polymorphism</a></li>
+        <li><a href="#runtime-polymorphism">Runtime polymorphism</a></li>
+      </ul>
+    </li>
+    <li><a href="#constructor">Constructor</a>
+      <ul>
+        <li><a href="#default">Default</a></li>
+        <li><a href="#parameterized">Parameterized</a></li>
+        <li><a href="#copy">Copy</a></li>
+      </ul>
+    </li>
+    <li><a href="#destructor">Destructor</a></li>
+    <li><a href="#access-specifiers-imp-">Access Specifiers IMP :</a>
+      <ul>
+        <li><a href="#1-private">1. Private:</a></li>
+        <li><a href="#2-public">2. Public:</a></li>
+        <li><a href="#3-protected">3. Protected:</a></li>
+        <li><a href="#delete">Delete</a></li>
+        <li><a href="#delete-1">Delete[]</a></li>
+        <li><a href="#virtual-inheritance">Virtual Inheritance</a></li>
+        <li><a href="#overloading">Overloading</a></li>
+        <li><a href="#function-overloading">Function overloading</a></li>
+        <li><a href="#operator-overloading">Operator overloading</a></li>
+        <li><a href="#overriding">Overriding</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><div class="details admonition note open">
@@ -176,6 +212,7 @@ class can be created as follows:</p>
 <code>class test{    };</code></p>
 </blockquote>
 <h2 id="inheritance">Inheritance</h2>
+<p>Inheritance is a process through which derived class acquires all the properties and behaviours of its parent class automatically.</p>
 <ul>
 <li>create new class from existing class.</li>
 <li>new class inherits the features of base or parent class and have additional features of its own.</li>
@@ -195,7 +232,62 @@ class can be created as follows:</p>
 
 <figure><img src="/posts/DSA/oops/Start.png">
 </figure>
-</p></div><div class="post-footer" id="post-footer">
+</p>
+<h2 id="types-of-inheritance">Types of Inheritance</h2>
+<p>There are mainly 5 type of inheritance:</p>
+<ol>
+<li>single inheritance</li>
+<li>multiple inheritance</li>
+<li>multilevel inheritance</li>
+<li>hierarchical inheritance</li>
+<li>hybrid inheritance</li>
+</ol>
+<h3 id="single-inheritance">Single Inheritance</h3>
+<p>When one class inherits another class</p>
+<h3 id="multiple-inheritance">Multiple inheritance</h3>
+<p>Multiple inheritance is the process of deriving a new class that inherits the attributes from two or more classes</p>
+<h2 id="encapsulation">Encapsulation</h2>
+<p>Wrapping of data members and methods into a single unit is called Encapsulation.</p>
+<h2 id="abstraction">Abstraction</h2>
+<h2 id="polymorphism">Polymorphism</h2>
+<h3 id="compiletime-polymorphism">Compiletime Polymorphism</h3>
+<h3 id="runtime-polymorphism">Runtime polymorphism</h3>
+<h2 id="constructor">Constructor</h2>
+<h3 id="default">Default</h3>
+<h3 id="parameterized">Parameterized</h3>
+<h3 id="copy">Copy</h3>
+<h2 id="destructor">Destructor</h2>
+<h2 id="access-specifiers-imp-">Access Specifiers IMP :</h2>
+<p>The access specifiers are used to define how functions
+and variables can be accessed outside the class. There are three types of
+access specifiers:</p>
+<h3 id="1-private">1. Private:</h3>
+<p>Functions and variables declared as private can be accessed only
+within the same class, and they cannot be accessed outside the class they
+are declared.</p>
+<h3 id="2-public">2. Public:</h3>
+<p>Functions and variables declared under public can be accessed from
+anywhere.</p>
+<h3 id="3-protected">3. Protected:</h3>
+<p>Functions and variables declared as protected cannot be
+accessed outside the class except a child class. This specifier is generally
+used in inheritance.</p>
+<h3 id="delete">Delete</h3>
+<p>It is used to release a unit of memory.</p>
+<h3 id="delete-1">Delete[]</h3>
+<p>It is used to release an array.</p>
+<h3 id="virtual-inheritance">Virtual Inheritance</h3>
+<p>It facilitates you to create only one copy of each object even if the object appears more than one in the hierarchy.</p>
+<h3 id="overloading">Overloading</h3>
+<p>Overloading is a static binding whereas overriding is dynamic binding, overloading is nothing but the same method with different arguments, and it may or may not return the same value in the same class itself.</p>
+<h3 id="function-overloading">Function overloading</h3>
+<p>Function Overloading is defined as we can have more than one version of the same function. The versions of a function will have different signatures meaning that they have different set of parameters.</p>
+<h3 id="operator-overloading">Operator overloading</h3>
+<p>Operator overloading is defined as the standard
+operator can be redefined so that it has a different meaning when applied to
+the instances of a class.</p>
+<h3 id="overriding">Overriding</h3>
+<p>Overriding is the same method name with the same arguments and return types associated with the class and its child class.</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
