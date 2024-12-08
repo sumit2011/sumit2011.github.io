@@ -10,7 +10,10 @@ I have the following qualities:
 {{< image src= "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/79731568097599.5b50bca477735.jpg" >}}
 
 {{< admonition type=success title="Resume" open=false >}}
-<a target="blank"><img src=" "  title="resume" /></a>
+<iframe src="Resume.pdf" width="100%" height="600px"></iframe>
+
+
+<!-- <a target="blank"><img src=" "  title="resume" /></a> -->
 {{< /admonition >}}
 
 ## Skills
@@ -105,6 +108,12 @@ My web development skill is quite good. I know all the basics of development and
 <img src="tools/html-icon.svg"  height="60" width="70" /></a>
 <img src="tools/javascript-programming-language-icon.svg"  height="60" width="70" /></a>
 <img src="tools/markdown-icon.svg"  height="60" width="70" /></a>
+{{< /admonition >}}
+
+{{< admonition type=success title="Certificates" open=false >}}
+<img src="certificates/TP-HKANJICO.jpg" />
+<img src="certificates/TP-MUY3B0OH.jpg" />
+
 {{< /admonition >}}
 
 > [**Deadly Snake**](https://sn4k3.netlify.app/)
