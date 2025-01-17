@@ -72,7 +72,6 @@ p{
 Comments in CSS are used to explain your code and can help you and others understand the purpose of the code. All CSS comments start with `/*` and end with `*/`, and anything between these will be ignored by the browser.
 ```css
 /* this is a single line comment */
-
     /* 
     this is a 
    multi-line comment 
