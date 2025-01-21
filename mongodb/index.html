@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>HTML Basics - Sumit&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://sumit2011.github.io/mongodb/">
+        <title>MongoDb Basics - Sumit&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://sumit2011.github.io/mongodb/">
   <meta property="og:site_name" content="Sumit&#39;s Blog">
-  <meta property="og:title" content="HTML Basics">
+  <meta property="og:title" content="MongoDb Basics">
   <meta property="og:description" content="Navigation system works on the concept of linked list.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -18,7 +18,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://sumit2011.github.io/images/logo.png">
-  <meta name="twitter:title" content="HTML Basics">
+  <meta name="twitter:title" content="MongoDb Basics">
   <meta name="twitter:description" content="Navigation system works on the concept of linked list.">
       <meta name="twitter:site" content="@_su__mit___">
 <meta name="application-name" content="Sumit&#39;s Blog">
@@ -26,12 +26,12 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "HTML Basics",
+        "headline": "MongoDb Basics",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/mongodb\/"
-        },"genre": "posts","keywords": "html","wordcount":  59 ,
+        },"genre": "posts","keywords": "html","wordcount":  535 ,
         "url": "https:\/\/sumit2011.github.io\/mongodb\/","datePublished": "2024-05-25T11:54:28+05:30","dateModified": "2024-05-25T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -104,11 +104,11 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">HTML Basics</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">MongoDb Basics</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/web-dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Web Dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;59 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="25-05-2024">25-05-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;535 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -123,7 +123,22 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#1-introduction">1. Introduction:</a></li>
+    <li><a href="#1-introduction">1. Introduction:</a>
+      <ul>
+        <li><a href="#database-catagories">Database Catagories</a></li>
+        <li><a href="#what-is-nosql">what is Nosql?</a></li>
+        <li><a href="#difference-between-rdbms-and-nosql">difference between rdbms and nosql</a></li>
+        <li><a href="#when-to-use-rdbms-and-to-use-nosql-db">when to use rdbms and to use nosql db?</a></li>
+        <li><a href="#what-are-document-and-collection-in-nosql">what are document and collection in nosql?</a></li>
+        <li><a href="#what-are-crud-in-mongodb">what are crud in mongodb</a></li>
+        <li><a href="#how-to-connect-to-mongodb-server-from-node-js-app">how to connect to mongodb server from node js app</a></li>
+        <li><a href="#what-are-query-operator-in-mongodb">what are query operator in mongodb?</a></li>
+        <li><a href="#what-is-projection-in-mongodb-how-to-implement-it">what is projection in mongodb? How to implement it?</a></li>
+        <li><a href="#what-are-indexes-in-mongodb-how-indexing-make-data-retrieval-faster">what are indexes in mongodb? How indexing make data retrieval faster?</a></li>
+        <li><a href="#what-is-mongoose-what-are-the-advantages-of-using-it">what is mongoose? what are the advantages of using it?</a></li>
+        <li><a href="#what-is-the-role-of-schema-in-mongoose-how-to-define-it">what is the role of schema in Mongoose? how to define it?</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>
@@ -136,7 +151,52 @@
         </div>
     </div>
 <h2 id="1-introduction">1. Introduction:</h2>
-<p>mongo db is kind of database it is a nosql database it stores data in the form of files. the data is not structured which is a main advantage of this database.</p></div><div class="post-footer" id="post-footer">
+<p>mongo db is kind of database it is a nosql database it stores data in the form of files. the data is not structured which is a main advantage of this database.</p>
+<h3 id="database-catagories">Database Catagories</h3>
+<ol>
+<li>RDBMS: Mysql, oracle, Sql server (handle only structured data)</li>
+<li>NoSQL: mongodb, redis</li>
+</ol>
+<p>mongo db is a popular open source Nosql database management system</p>
+<h3 id="what-is-nosql">what is Nosql?</h3>
+<p>Not only sql(nosql) databases is designed to handle structured semi structured and unstructured data.</p>
+<h3 id="difference-between-rdbms-and-nosql">difference between rdbms and nosql</h3>
+<p>rdbms: store data in the form of table
+it is designed to handle structured data
+note: structured data means predefined and fixed schema
+it use the relational model where data is stored in the tables with rows and columns.</p>
+<p>nosql: store data in the form of document
+bunch of documents called collection
+designed to handle structured semi structured and unstructured data.
+it use a variety of flexible data models such as document, columnar and graph.</p>
+<h3 id="when-to-use-rdbms-and-to-use-nosql-db">when to use rdbms and to use nosql db?</h3>
+<p>rdbms: critical finance and banking and ecommerce, it is suitable for application that require complex trancasaction and data intigrity.</p>
+<p>nosql: social media , gaming, large database, it is designed to handle large volume of data with high speed read and write operations such as social media,IOT and gaming.</p>
+<h3 id="what-are-document-and-collection-in-nosql">what are document and collection in nosql?</h3>
+<p>a document is a semi structured data structure(XML, Json format) that stores information in a nosql database it is similar to a row in a table in rdbms.</p>
+<p>a collections is group of documents that are stored together in a Nosql database. it is similar to a table in a rdbms.</p>
+<h3 id="what-are-crud-in-mongodb">what are crud in mongodb</h3>
+<p>c: create: inserting new document into the mondodb collection
+r: read: retriving data from a mongodb collection
+u: update: modifying existing document
+D: delete: removing document form the collection</p>
+<h3 id="how-to-connect-to-mongodb-server-from-node-js-app">how to connect to mongodb server from node js app</h3>
+<h3 id="what-are-query-operator-in-mongodb">what are query operator in mongodb?</h3>
+<p>query operators are special keywords or symbls to perform operations like comparison, logical operations in queries.</p>
+<h3 id="what-is-projection-in-mongodb-how-to-implement-it">what is projection in mongodb? How to implement it?</h3>
+<p>projection is way of specifying which fields should be returned in the query results.
+projection can be implemented by using the project method.</p>
+<h3 id="what-are-indexes-in-mongodb-how-indexing-make-data-retrieval-faster">what are indexes in mongodb? How indexing make data retrieval faster?</h3>
+<p>indexes are data structure that improve the speed of data retrival operations on the collections
+By default index is automatically created on _id field.</p>
+<p>mongodb automatically updates the index tree as document are inserted, updated or deleted ensuring the index remains accurate.</p>
+<p>when querying with indexed fields, mongodb uses the index to efficiently locate matching documents avoiding a full collection scan.</p>
+<h3 id="what-is-mongoose-what-are-the-advantages-of-using-it">what is mongoose? what are the advantages of using it?</h3>
+<p>mongoose is an object data modeling (ODM) library for mongodb and node js
+mongoose provides schema-based solution to model application data</p>
+<h3 id="what-is-the-role-of-schema-in-mongoose-how-to-define-it">what is the role of schema in Mongoose? how to define it?</h3>
+<p>A schema in mongoose defines the structure, validation rules, and behaviour of mongodb documents, ensuring data consistancy and intigrity.
+it is defined using the mongoose.schema() function.</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -145,7 +205,7 @@
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://sumit2011.github.io/mongodb/" data-title="HTML Basics" data-via="_su__mit___" data-hashtags="html"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://sumit2011.github.io/mongodb/" data-hashtag="html"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://sumit2011.github.io/mongodb/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://sumit2011.github.io/mongodb/" data-title="HTML Basics" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://sumit2011.github.io/mongodb/" data-title="MongoDb Basics" data-via="_su__mit___" data-hashtags="html"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://sumit2011.github.io/mongodb/" data-hashtag="html"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://sumit2011.github.io/mongodb/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://sumit2011.github.io/mongodb/" data-title="MongoDb Basics" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
