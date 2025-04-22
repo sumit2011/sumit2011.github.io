@@ -59,7 +59,8 @@ projection is way of specifying which fields should be returned in the query res
 projection can be implemented by using the project method.
 
 ### what are indexes in mongodb? How indexing make data retrieval faster?
-indexes are data structure that improve the speed of data retrival operations on the collections
+indexes are data structure that improve the speed of data retrival operations on the coll
+ections
 By default index is automatically created on _id field.
 
 mongodb automatically updates the index tree as document are inserted, updated or deleted ensuring the index remains accurate.
