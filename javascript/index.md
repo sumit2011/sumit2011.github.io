@@ -1,6 +1,6 @@
-# Java Script
+# Java Script Part 1
 
-***Navigation system works on the concept of linked list.***
+***Js is powerful, flexible and fast programming lang. it is used in web development. It provides the dynamic behavior to the website.***
 <!--more-->
 
 {{< admonition type=note title="Note" open=true >}}
@@ -8,12 +8,10 @@ _Use the table of contents to navigate to the portion that you are interested in
 {{< /admonition >}}
 
 ## 1. Introduction:
-Js is powerful, flexible and fast programming lang. it is used in web development. It
-provide the dynamic behavior to the website.
+
 
 ## Fundamental of Js 
-Js is powerful, flexible and fast programming lang. it is used in web development. It
-provide the dynamic behavior to the website.
+Js is powerful, flexible and fast programming lang. it is used in web development. It provide the dynamic behavior to the website.
 
 ### Console
 It is a keyword refer to an object. There are methods built into `console` object one of them is `.log()` method. When we write `console.log()` it will print the wriiten information in paranthesis to the console.
@@ -43,25 +41,27 @@ ignore as our program runs. These comments exist just for human readers.
 
 ### Data types
 In js there are 8 fundamental data types
-1. **Number :** any numerical value including decimal numbers.
+1. **Number :** Any numerical value including decimal numbers.\
+    Ex: `4`,`8`,`80`,`60.65`
+2. **Bigint:** Any number, greater than 2^53 -1 or less than -(2^53 -1), with n appended to the number.\
+    Ex: `1234567890123456n`.
+3. **String:** a group of characters (letters, numbers,spaces,symbols etc) surrounded by single quotes `'...'` or double quotes `"..."`.\
+    Ex: `hello`, `world`
+4. **Boolean:** It has only two possible value `true` and `false` without quotes.
+5. **Null:** It represent the absence of a value and it is represented by `null` keyword.
 
-    Ex: 4,8,80,60.65
-2. **Bigint:** Any number, greater than 2 53 -1 or less than -(2 53 -1), with n appended to
-the number: 1234567890123456n.
-3. **String:** a group of characters (letters, numbers,spaces,symbols etc) surrounded
-by single quotes or double quotes.
-4. **Boolean:** It has only two possible value true and false without quotes.
-5. **Null:** it represent the absence of a value and it is represented by null keyword.
+6. **Undefined:** It is denoted by keyword `undefined` without quotes.it means that a given value does not exist.
+7. **Symbol:** Symbols are unique identifiers, useful in more complex coding.
+8. **Object:** Objects are collection of related data.
 
-6. **Undefined:** it is denoted by keyword ‘undefined’ without quotes.it means that a
-given value does not exist.
-7. **Symbol:** symbols are unique identifiers, useful in more complex coding.
-8. **Object:** collection of related data.
-The first 7 datatype are consider as primitive data types.
+{{< admonition type=note title="Note" open=true >}}
+The first 7 datatype are consider as primitive data types and objects are non-primitive datatype. Primitive types are simple, fixed values, while non-primitive types are more flexible and store collections or structured data.
+{{< /admonition >}}
+
+
 
 ### Arithmatic Operators
-It performs a task in our code. Js has several built-in arithmetic operators that allow us
-to perform mathematical calculations on numbers.
+It performs a task in our code. Js has several built-in arithmetic operators that allow us to perform mathematical calculations on numbers.
 1. Add: +
 2. Subtract: -
 3. Multiply: *
@@ -80,24 +80,24 @@ console.log(12 % 3); // Prints 0
 ### string concatenation
 the process of appending one string to the another is called concatenation. When a `+` operator is used on two strings, it appends the right string to the left string:
 ```javascript
-console.log(&#39;hi&#39; + &#39;ya&#39;); // Prints &#39;hiya&#39;
-console.log(&#39;wo&#39; + &#39;ah&#39;); // Prints &#39;woah&#39;
-console.log(&#39;I love to &#39; + &#39;code.&#39;)
-// Prints &#39;I love to code.&#39;
+console.log("hi" + "ya"); // Prints "hiya"
+console.log("wo" + "ah"); // Prints "woah"
+console.log("I love to " + "code.")
+// Prints "I love to code."
 ```
 
 ### Properties
 
 All datatypes have access to specific properties that are passed down to each instance. which are created in the js code. Ex: .length
 ```javascript
-console.log(&#39;Hello&#39;.length); // Prints 5
+console.log("Hello".length); // Prints 5
 ```
 
 ### methods
 methods are actions we can perform. Datatypes have access to specific methods that allow us to handle instance of that data type.
 ```javascript
-console.log(&#39;hello&#39;.toUpperCase()); // Prints &#39;HELLO&#39;
-console.log(&#39;Hey&#39;.startsWith(&#39;H&#39;)); // Prints true
+console.log("hello".toUpperCase()); // Prints "HELLO"
+console.log("Hey".startsWith("H")); // Prints true
 ```
 
 ### Built in objects
@@ -106,21 +106,25 @@ Ex: Math is a built in object that performs more complex mathematical operations
 arithmetic.
 ```javascript
 console.log(Math.random()); // Prints a random number between 0 and 1
-console.log(Math.floor(Math.random() * 50)); // Prints a random whole number between
-0 and 50
+console.log(Math.floor(Math.random() * 50)); // Prints a random whole number between 0 and 50
 ```
 
-To see all of the properties and methods on the Math object, take a look at the
-documentation here.
 
 ## Javascript variables
 A variable is a container for a value. Informations are stored in variables. It provide a way of labeling data with a descriptive name.
+
+|          | Redeclare | Reassign |
+|:--------:|:---------:|:--------:|
+|   var    |    ✅     |    ✅    |
+|   let    |    ❌     |    ✅    |
+|  const   |    ❌     |    ❌    |
+
 
 ### Create a variable using var
 Before es6 version of js we could only use var keyword to declare variables. Var is short
 for variable. In given example Arya is stored in a variable labeled as myName.
 ```javascript
-var myName = &#39;Arya&#39;;
+var myName = "Arya";
 console.log(myName);
 // Output: Arya
 ```
@@ -132,9 +136,9 @@ Rules for creating a variable:
 Let and const are introduced in es6. Let keyword signals that the variable can be
 reassigned a diff value later on.
 ```javascript
-let meal = &#39;Enchiladas&#39;;
+let meal = "Enchiladas";
 console.log(meal); // Output: Enchiladas
-meal = &#39;Burrito&#39;;
+meal = "Burrito";
 console.log(meal); // Output: Burrito
 ```
 {{< admonition type=note title="Note" open=true >}}
@@ -144,15 +148,14 @@ If we don’t assign a value to a variable declared using the `let` keyword it a
 
 
 ### Create a variable using const
-The const keyword was also introduced in ES6, and is short for the word constant.
-However, a const variable cannot be reassigned because it is constant. If we try to
-reassign a const variable, we’ll get a TypeError. Constant variables must be assigned a
-value when declared. If we try to declare a const variable without a value, we’ll get
-a SyntaxError.
+The const keyword was also introduced in ES6, and is short for the word constant. However, a const variable cannot be reassigned because it is constant. 
 ```javascript
-const myName = &#39;Gilberto&#39;;
+const myName = "Gilberto";
 console.log(myName); // Output: Gilberto
 ```
+{{< admonition type=warning title="Warning" open=true >}}
+If we try to reassign a const variable, we’ll get a TypeError. Constant variables must be assigned a value when declared. If we try to declare a const variable without a value, we’ll get a SyntaxError.
+{{< /admonition >}}
 ### mathematical assignment operator
 ```javascript
 let w = 4;
@@ -186,16 +189,16 @@ console.log(b); // Output: 19
 ```
 ### string concatenation with variable
 ```javascript
-let myPet = &#39;armadillo&#39;;
-console.log(&#39;I own a pet &#39; + myPet + &#39;.&#39;);
-// Output: &#39;I own a pet armadillo.&#39;
+let myPet = "armadillo";
+console.log("I own a pet " + myPet + ".");
+// Output: "I own a pet armadillo."
 ```
 ### String interpolation
 In the ES6 version of JavaScript, we can insert, or interpolate, variables into strings
 using template literals. A template literal is wrapped by backticks `. it inc the redability of
 the code.
 ```javascript
-const myPet = &#39;armadillo&#39;;
+const myPet = "armadillo";
 console.log(`I own a pet ${myPet}.`);
 // Output: I own a pet armadillo.
 ```
@@ -204,7 +207,7 @@ If we need to check the data type of a variable’s value, we can use the typeo
 The typeof operator checks the value to its right and returns, or passes back, a string of
 the data type.
 ```javascript
-const unknown1 = &#39;foo&#39;;
+const unknown1 = "foo";
 console.log(typeof unknown1); // Output: string
 
 const unknown2 = 10;
@@ -221,7 +224,7 @@ condition(s).
 In programming, we can also perform a task based on a condition using an if statement:
 ```javascript
 if (true) {
-console.log(&#39;This message will print!&#39;);
+console.log("This message will print!");
 }
 // Prints: This message will print!
 ```
@@ -232,9 +235,9 @@ An else statement must be paired with an if statement, and together they are
 as an if...else statement.
 ```javascript
 if (false) {
-console.log(&#39;The code in this block will not run.&#39;);
+console.log("The code in this block will not run.");
 } else {
-console.log(&#39;But the code in this block will!&#39;);
+console.log("But the code in this block will!");
 }
 ```
 // Prints: But the code in this block will!
@@ -254,20 +257,20 @@ Working with conditionals means that we will be using booleans, true or false
 JavaScript, there are operators that work with boolean values known as logical
 operators
 There are three logical operators:
-* the and operator (&amp;&amp;)
+* the and operator (&&)
 * the or operator (||)
 * the not operator, otherwise known as the bang operator (!)
 ```javascript
-if (stopLight === &#39;green&#39; &amp;&amp; pedestrians === 0) {
-console.log(&#39;Go!&#39;);
+if (stopLight === "green" && pedestrians === 0) {
+console.log("Go!");
 
 } else {
-console.log(&#39;Stop&#39;);
+console.log("Stop");
 }
-if (day === &#39;Saturday&#39; || day === &#39;Sunday&#39;) {
-console.log(&#39;Enjoy the weekend!&#39;);
+if (day === "Saturday" || day === "Sunday") {
+console.log("Enjoy the weekend!");
 } else {
-console.log(&#39;Do some work.&#39;);
+console.log("Do some work.");
 }
 let excited = true;
 console.log(!excited); // Prints false
@@ -278,21 +281,21 @@ console.log(!sleepy); // Prints true
 ### Truthy and Falsy
 The list of falsy values includes:
 * 0
-* Empty strings like &quot;&quot; or &#39;&#39;
+* Empty strings like &quot;&quot; or ""
 * null, which represents when there is no value at all
 * undefined, which represents when a declared variable lacks a value
 * NaN, or Not a Number
 
 ### Truthy and Falsy Assignment
 ```javascript
-let username = &#39;&#39;;
+let username = "";
 let defaultName;
 
 if (username) {
 defaultName = username;
 } else {
 
-defaultName = &#39;Stranger&#39;;
+defaultName = "Stranger";
 }
 
 console.log(defaultName); // Prints: Stranger
@@ -304,14 +307,14 @@ Take a look at the if...else statement example:
 ```javascript
 let isNightTime = true;
 if (isNightTime) {
-  console.log(&#39;Turn on the lights!&#39;);
+  console.log("Turn on the lights!");
 } else {
-  console.log(&#39;Turn off the lights!&#39;);
+  console.log("Turn off the lights!");
 }
 ```
 We can use a ternary operator to perform the same functionality:
 ```javascript
-isNightTime ? console.log(&#39;Turn on the lights!&#39;) : console.log(&#39;Turn off the lights!&#39;);
+isNightTime ? console.log("Turn on the lights!") : console.log("Turn off the lights!");
 ```
 
 * The condition, isNightTime, is provided before the ?.
@@ -320,41 +323,39 @@ isNightTime ? console.log(&#39;Turn on the lights!&#39;) : console.log(&#39;Tu
 * If the condition evaluates to false, the second expression executes.
 
 ### Else if statement
-We can add more conditions to our if...else with an else if statement. The else
+We can add more conditions to our `if...else` with an `else if` statement. The `else if` statement allows for more than two possible outcomes. You can add as many `else if` statements as you’d like, to make more complex conditionals!
 ```javascript
-if statement allows for more than two possible outcomes. You can add as many else
-if statements as you’d like, to make more complex conditionals!
-let stopLight = &#39;yellow&#39;;
+let stopLight = "yellow";
 
-if (stopLight === &#39;red&#39;) {
-console.log(&#39;Stop!&#39;);
-} else if (stopLight === &#39;yellow&#39;) {
+if (stopLight === "red") {
+console.log("Stop!");
+} else if (stopLight === "yellow") {
 
-console.log(&#39;Slow down.&#39;);
-} else if (stopLight === &#39;green&#39;) {
-console.log(&#39;Go!&#39;);
+console.log("Slow down.");
+} else if (stopLight === "green") {
+console.log("Go!");
 } else {
-console.log(&#39;Caution, unknown!&#39;);
+console.log("Caution, unknown!");
 }
 ```
 ### The switch keyword
-A switch statement provides an alternative syntax that is easier to read and write.
+A `switch` statement provides an alternative syntax that is easier to read and write.
 A switch statement looks like this:
 ```javascript 
-let groceryItem = &#39;papaya&#39;;
+let groceryItem = "papaya";
 switch (groceryItem) {
-  case &#39;tomato&#39;:
-    console.log(&#39;Tomatoes are $0.49&#39;);
+  case "tomato":
+    console.log("Tomatoes are $0.49");
     break;
-  case &#39;lime&#39;:
-    console.log(&#39;Limes are $1.49&#39;);
+  case "lime":
+    console.log("Limes are $1.49");
     break;
-  case &#39;papaya&#39;:
-    console.log(&#39;Papayas are $1.29&#39;);
+  case "papaya":
+    console.log("Papayas are $1.29");
     break;
   default:
-    console.log(&#39;Invalid item&#39;);
+    console.log("Invalid item");
     break;
 }
-// Prints &#39;Papayas are $1.29&#39;
+// Prints "Papayas are $1.29"
 ```
