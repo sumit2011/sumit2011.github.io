@@ -119,7 +119,17 @@ Advanced Operators allintext:, allintilte:, allinurl:, cache:, define:, filetype
             </div>]]></description>
 </item>
 <item>
-    <title>Node js</title>
+    <title>Java Script</title>
+    <link>https://sumit2011.github.io/javascript/</link>
+    <pubDate>Thu, 17 Jul 2025 11:54:28 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/javascript/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/home.png" referrerpolicy="no-referrer">
+            </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
+</item>
+<item>
+    <title>Node Js</title>
     <link>https://sumit2011.github.io/nodejs/</link>
     <pubDate>Thu, 17 Jul 2025 11:54:28 &#43;0530</pubDate>
     <author>Sumit</author>
@@ -144,16 +154,6 @@ Advanced Operators allintext:, allintilte:, allinurl:, cache:, define:, filetype
     <pubDate>Sat, 25 May 2024 11:54:28 &#43;0530</pubDate>
     <author>Sumit</author>
     <guid>https://sumit2011.github.io/html/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/home.png" referrerpolicy="no-referrer">
-            </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
-</item>
-<item>
-    <title>MongoDb Basics</title>
-    <link>https://sumit2011.github.io/mongodb/</link>
-    <pubDate>Sat, 25 May 2024 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/mongodb/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/home.png" referrerpolicy="no-referrer">
             </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
