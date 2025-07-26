@@ -1,8 +1,8 @@
 {
 	"author": "Sumit",
-	"name": "Sumit's Blog",
-	"short_name": "Sumit's Blog",
-	"description": "Sumit's Blog",
+	"name": "Smoking Bits",
+	"short_name": "Smoking Bits",
+	"description": "The Smoking Bits",
 	"orientation": "portrait",
 	"start_url": "/",
 	"scope": "/",
@@ -12,7 +12,7 @@
 	"theme_color": "#238ee0",
 	"icons": [
 		{
-			"src": "/logo.png",
+			"src": "/logo1.png",
 			"sizes": "48x48 72x72 96x96 128x128 192x192 256x256 512x512",
 			"type": "image/png"
 		}
