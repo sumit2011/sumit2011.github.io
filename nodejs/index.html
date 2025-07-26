@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Node js - Sumit&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://sumit2011.github.io/nodejs/">
+  <meta property="og:site_name" content="Sumit&#39;s Blog">
+  <meta property="og:title" content="Node js">
+  <meta property="og:description" content="Navigation system works on the concept of linked list.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-17T11:54:28+05:30">
+    <meta property="article:modified_time" content="2025-07-17T11:54:28+05:30">
+    <meta property="article:tag" content="Html">
+    <meta property="og:image" content="https://sumit2011.github.io/images/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sumit2011.github.io/images/logo.png">
+  <meta name="twitter:title" content="Node js">
+  <meta name="twitter:description" content="Navigation system works on the concept of linked list.">
+      <meta name="twitter:site" content="@_su__mit___">
+<meta name="application-name" content="Sumit&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Sumit&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/logo.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://sumit2011.github.io/nodejs/" /><link rel="prev" href="https://sumit2011.github.io/css/" /><link rel="next" href="https://sumit2011.github.io/oops/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Node js",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/sumit2011.github.io\/nodejs\/"
+        },"genre": "posts","keywords": "html","wordcount":  334 ,
+        "url": "https:\/\/sumit2011.github.io\/nodejs\/","datePublished": "2025-07-17T11:54:28+05:30","dateModified": "2025-07-17T11:54:28+05:30","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Sumit"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Sumit&#39;s Blog"><span class="header-title-pre">👀</span>Sumit&#39;s Blogs</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About me </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Sumit&#39;s Blog"><span class="header-title-pre">👀</span>Sumit&#39;s Blogs</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About me</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Node js</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/web-dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Web Dev</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="17-07-2025">17-07-2025</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;334 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="home.png"
+        data-srcset="home.png, home.png 1.5x, home.png 2x"
+        data-sizes="auto"
+        alt="home.png"
+        title="home.png" /></div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-introduction">1. Introduction:</a></li>
+    <li><a href="#installation-and-setup">Installation and Setup</a></li>
+    <li><a href="#npm">npm</a></li>
+    <li><a href="#1st-node-js-program-hello-world">1st node js program: hello world</a>
+      <ul>
+        <li><a href="#npm-init">npm init</a></li>
+      </ul>
+    </li>
+    <li><a href="#modules-in-node-js">Modules in node js</a>
+      <ul>
+        <li><a href="#how-to-include-pakage">how to include pakage</a></li>
+      </ul>
+    </li>
+    <li><a href="#file-handling-in-nodejs">File handling in nodejs</a></li>
+    <li><a href="#node-js-architecture">Node js architecture</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><em>Use the table of contents to navigate to the portion that you are interested in.</em></div>
+        </div>
+    </div>
+<h2 id="1-introduction">1. Introduction:</h2>
+<p>Node js is a runtime environment for java script. we can run js code outside the browser by using nodejs.
+Ryan Dahl embedd the v8 chromium engine with c++. Which allows to run js. we can create webservers in js language. Node js is not a framwork nor a library.
+It is open-source cross platform.</p>
+<h2 id="installation-and-setup">Installation and Setup</h2>
+<p>go to nodejs.org. There are two option LTS(long term support or stable) and current(beta version).
+even versionaing for the stable release and odd versioning for testing or beta release.</p>
+<p>to check version
+<code>node --version</code></p>
+<h2 id="npm">npm</h2>
+<p>Node package manager, when we install node js it automatically installed npm. it manages the packages which can be installed and maintained and update.</p>
+<h2 id="1st-node-js-program-hello-world">1st node js program: hello world</h2>
+<p>how to run js file
+<code>node hello.js</code></p>
+<h3 id="npm-init">npm init</h3>
+<p>it initialise the project with proper configuration. it creates the package.json file which contains all the package with version and meta data.</p>
+<h2 id="modules-in-node-js">Modules in node js</h2>
+<p>every js file is a module. In production there are several funcions we have to create several files to maintain the code effectively.There will be so many such js files.</p>
+<h3 id="how-to-include-pakage">how to include pakage</h3>
+<p>using require function we can include external pakages or modules.
+<code>const math = require(&quot;math&quot;);</code>
+it will find pakage in built-in package or module.</p>
+<p><code>const math = require(&quot;./math&quot;);</code>
+it will find pakage in the current directory.</p>
+<h2 id="file-handling-in-nodejs">File handling in nodejs</h2>
+<p>it simply means creating a file and read the file. There is a built-in function to handle the file is <code>fs</code></p>
+<p>ex</p>
+<p>const fs = require(&ldquo;fs&rdquo;);</p>
+<p>// sync
+fs.writeFileSync(&quot;./test.txt&quot;,&ldquo;hey there&rdquo;); // it will create a file with name test.txt with content hey there.</p>
+<p>//async only diff is it contain callback function
+fs.writeFile(&quot;./test.txt&quot;, &ldquo;hello world&rdquo;, (arr)=&gt;{})</p>
+<p>const result = fs.readFileSync(&quot;./contacts.txt&quot;,&ldquo;utf-8&rdquo;);</p>
+<p>//async
+fs.readFile(&quot;./contact.txt&quot;, &ldquo;utf-8&rdquo;, (err,result)=&gt;{
+if(err){
+console.log(&ldquo;error&rdquo;,err);
+}
+else{
+console.log(result);
+}
+})</p>
+<p>fs.appendFileSync(&quot;./test.txt&quot;, <code>hey there</code>);</p>
+<h2 id="node-js-architecture">Node js architecture</h2></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 17-07-2025</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://sumit2011.github.io/nodejs/" data-title="Node js" data-via="_su__mit___" data-hashtags="html"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://sumit2011.github.io/nodejs/" data-hashtag="html"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://sumit2011.github.io/nodejs/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://sumit2011.github.io/nodejs/" data-title="Node js" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/html/">Html</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/css/" class="prev" rel="prev" title="CSS Part 1"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>CSS Part 1</a>
+            <a href="/oops/" class="next" rel="next" title="Oops(object oriented programming)">Oops(object oriented programming)<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">sumit</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -4,7 +4,7 @@
         <link>https://sumit2011.github.io/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
-            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Sat, 25 May 2024 11:54:28 &#43;0530</lastBuildDate>
+            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Thu, 17 Jul 2025 11:54:28 &#43;0530</lastBuildDate>
             <atom:link href="https://sumit2011.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Single Linked List</title>
@@ -119,6 +119,16 @@ Advanced Operators allintext:, allintilte:, allinurl:, cache:, define:, filetype
             </div>]]></description>
 </item>
 <item>
+    <title>Node js</title>
+    <link>https://sumit2011.github.io/nodejs/</link>
+    <pubDate>Thu, 17 Jul 2025 11:54:28 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/nodejs/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/home.png" referrerpolicy="no-referrer">
+            </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
+</item>
+<item>
     <title>CSS Part 1</title>
     <link>https://sumit2011.github.io/css/</link>
     <pubDate>Sat, 25 May 2024 11:54:28 &#43;0530</pubDate>
@@ -147,16 +157,6 @@ Advanced Operators allintext:, allintilte:, allinurl:, cache:, define:, filetype
     <description><![CDATA[<div class="featured-image">
                 <img src="/home.png" referrerpolicy="no-referrer">
             </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
-</item>
-<item>
-    <title>git commands</title>
-    <link>https://sumit2011.github.io/git-commands/</link>
-    <pubDate>Thu, 29 Feb 2024 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/git-commands/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/git.png" referrerpolicy="no-referrer">
-            </div><p>Most useful git commands.</p>]]></description>
 </item>
 </channel>
 </rss>

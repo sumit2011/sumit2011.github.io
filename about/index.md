@@ -78,36 +78,34 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 
 > [**Sec-Blogs**](https://secblogs.netlify.app/)
 
-### Programming
+### Competitive Programming
 
 I’m also learning Data Structure and Algorithm, C++, C, Python.
 
-Platform: `codechef`, `coding ninja`.
+Platform: `codechef`, `coding ninja`,`geeks for geeks`,`leetcode`.
 
 {{< admonition type=info title="Languages" open=false >}}
 <img src="tools/c-program-icon.svg"  height="60" width="70" /></a>
 <img src="tools/c-plus-plus-programming-language-icon.svg"  height="60" width="70" /></a>
-<img src="tools/html-icon.svg"  height="60" width="70" /></a>
-<img src="tools/javascript-programming-language-icon.svg"  height="60" width="70" /></a>
-<img src="tools/markdown-icon.svg"  height="60" width="70" /></a>
 <img src="tools/python-programming-language-icon.svg"  height="60" width="70" /></a>
 {{< /admonition >}}
 
-
-### Projects
-
-> [**Binary Calc**][def]
-
-> [**Sec-Blogs**](https://secblogs.netlify.app/)
 
 
 ### Web Development
 My web development skill is quite good. I know all the basics of development and i also have created many projects.
 
-{{< admonition type=info title="Languages" open=false >}}
+{{< admonition type=info title="Tools & Languages" open=false >}}
 <img src="tools/html-icon.svg"  height="60" width="70" /></a>
+<img src="tools/css-official.svg"  height="60" width="70" /></a>
 <img src="tools/javascript-programming-language-icon.svg"  height="60" width="70" /></a>
+<img src="tools/reactjs-icon.svg"  height="60" width="70" /></a>
+<img src="tools/nodejs-icon.svg"  height="60" width="70" /></a>
+<img src="tools/expressjs-icon.svg"  height="60" width="70" /></a>
+<img src="tools/mongodb-icon.svg"  height="60" width="70" /></a>
 <img src="tools/markdown-icon.svg"  height="60" width="70" /></a>
+<img src="tools/github-tile.svg"  height="60" width="70" /></a>
+<img src="tools/git-scm-icon.svg"  height="60" width="70" /></a>
 {{< /admonition >}}
 
 {{< admonition type=success title="Certificates" open=false >}}
@@ -116,6 +114,8 @@ My web development skill is quite good. I know all the basics of development and
 
 {{< /admonition >}}
 
+## Projects
+### Webd project
 > [**Deadly Snake**](https://sn4k3.netlify.app/)
 
 > [**T1C-T4K-T0E**](https://tict4ctoe.netlify.app/)
