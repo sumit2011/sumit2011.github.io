@@ -60,13 +60,13 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 {{< /admonition >}}
 
 <!-- hackerx certificates -->
-{{< admonition type=success title="Other Certificates" open=false >}}
+<!-- {{< admonition type=success title="Other Certificates" open=false >}}
 <img src="certificates/gathering_information.jpg" />
 <img src="certificates/hack_the_mac.jpg" />
 <img src="certificates/hiding_messages.jpg" />
 <img src="certificates/know_the_os.jpg" />
 <img src="certificates/surfing_anonymously.jpg" />
-{{< /admonition >}}
+{{< /admonition >}} -->
 
 {{< admonition type=tip title="Tools" open=false >}}
 <a href="https://www.kali.org/tools/burpsuite"><img src="tools/burpsuite-logo.svg"  height="70" width="80" /></a>
@@ -76,7 +76,7 @@ Platform: [`THM`](https://tryhackme.com), [`HTB`](https://app.hackthebox.com), `
 <a href="https://www.kali.org/tools/nikto/"><img src="https://www.kali.org/tools/nikto/images/nikto-logo.svg"  height="70" width="80" /></a>
 {{< /admonition >}}
 
-> [**Sec-Blogs**](https://secblogs.netlify.app/)
+<!-- > [**Sec-Blogs**](https://secblogs.netlify.app/) -->
 
 ### Competitive Programming
 
@@ -99,6 +99,8 @@ My web development skill is quite good. I know all the basics of development and
 <img src="tools/html-icon.svg"  height="60" width="70" /></a>
 <img src="tools/css-official.svg"  height="60" width="70" /></a>
 <img src="tools/javascript-programming-language-icon.svg"  height="60" width="70" /></a>
+<img src="tools/Bootstrap_logo.svg"  height="60" width="70" /></a>
+<img src="tools/Tailwind_CSS_Logo.svg"  height="60" width="70" /></a>
 <img src="tools/reactjs-icon.svg"  height="60" width="70" /></a>
 <img src="tools/nodejs-icon.svg"  height="60" width="70" /></a>
 <img src="tools/expressjs-icon.svg"  height="60" width="70" /></a>
@@ -106,12 +108,15 @@ My web development skill is quite good. I know all the basics of development and
 <img src="tools/markdown-icon.svg"  height="60" width="70" /></a>
 <img src="tools/github-tile.svg"  height="60" width="70" /></a>
 <img src="tools/git-scm-icon.svg"  height="60" width="70" /></a>
+<img src="tools/vscode.svg"  height="60" width="70" /></a>
+<img src="tools/Npm-logo.svg"  height="60" width="70" /></a>
+
 {{< /admonition >}}
 
 {{< admonition type=success title="Certificates" open=false >}}
 <img src="certificates/TP-HKANJICO.jpg" />
 <img src="certificates/TP-MUY3B0OH.jpg" />
-
+<img src="certificates/TP-2YZ2HQ4V.jpg" />
 {{< /admonition >}}
 
 ## Projects
@@ -122,9 +127,9 @@ My web development skill is quite good. I know all the basics of development and
 
 > [**Portfolio**](https://sumit2011.netlify.app)
 
-> [**Online Store**](https://unojistore.netlify.app)
+<!-- > [**Online Store**](https://unojistore.netlify.app) -->
 
-> [**Community Page**](https://ece2021.netlify.app)
+> [**Community Page**](https://ece2021nitsgr.netlify.app)
 
 
 ### Blog Writer
