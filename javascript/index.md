@@ -17,8 +17,7 @@ Js is powerful, flexible and fast programming lang. it is used in web developmen
 It is a keyword refer to an object. There are methods built into `console` object one of them is `.log()` method. When we write `console.log()` it will print the wriiten information in paranthesis to the console.
 
 ### Comment
-As we write JavaScript, we can write comments in our code that the computer will
-ignore as our program runs. These comments exist just for human readers.
+As we write JavaScript, we can write comments in our code that the computer will ignore as our program runs. These comments exist just for human readers.
 1. **Single line comment:**
     A single-line comment will comment out a single line and is denoted with
     two forward slashes `//` preceding it.
@@ -339,8 +338,7 @@ console.log("Caution, unknown!");
 }
 ```
 ### The switch keyword
-A `switch` statement provides an alternative syntax that is easier to read and write.
-A switch statement looks like this:
+A `switch` statement provides an alternative syntax that is easier to read and write. A switch statement looks like this:
 ```javascript 
 let groceryItem = "papaya";
 switch (groceryItem) {

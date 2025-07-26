@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Sumit&#39;s Blog</title>
+        <title>The Smoking Bits</title>
         <link>https://sumit2011.github.io/</link>
-        <description>This is my cool site</description>
+        <description>Welcome to The Smoking Bits, a blog dedicated to exploring the world of Data Structures and Algorithms. Here, you&#39;ll find a wealth of resources, tutorials, and insights to help you master the art of problem-solving and coding efficiency. Whether you&#39;re a beginner or an experienced programmer, The Smoking Bits is your go-to destination for all things DSA.</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
             <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Thu, 17 Jul 2025 11:54:28 &#43;0530</lastBuildDate>
             <atom:link href="https://sumit2011.github.io/index.xml" rel="self" type="application/rss+xml" />

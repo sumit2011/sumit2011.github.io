@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Js - Tag - Sumit&#39;s Blog</title>
+        <title>Js - Tag - The Smoking Bits</title>
         <link>https://sumit2011.github.io/tags/js/</link>
-        <description>Js - Tag - Sumit&#39;s Blog</description>
+        <description>Js - Tag - The Smoking Bits</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
             <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Thu, 17 Jul 2025 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/tags/js/" rel="self" type="application/rss+xml" /><item>
     <title>Java Script Part 1</title>
