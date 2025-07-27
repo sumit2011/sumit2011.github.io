@@ -1,4 +1,4 @@
-# Java Script Part 1
+# Java Script: Part-1
 
 ***Js is powerful, flexible and fast programming language. it is used in web development. It provides the dynamic behavior to the website.***
 <!--more-->
@@ -9,8 +9,7 @@ _Use the table of contents to navigate to the portion that you are interested in
 
 
 
-## Fundamental of Js 
-Js is powerful, flexible and fast programming language. it is used in web development. It provide the dynamic behavior to the website.
+## Fundamental of Js
 
 ### Console
 It is a keyword refer to an object. There are methods built into `console` object one of them is `.log()` method. When we write `console.log()` it will print the wriiten information in paranthesis to the console.
@@ -38,6 +37,7 @@ As we write JavaScript, we can write comments in our code that the computer wi
     ```
 
 ### Data types
+A data type in programming refers to the classification of data that tells the compiler or interpreter what kind of value a variable holds and what operations can be performed on it.
 In js there are 8 fundamental data types
 1. **Number :** Any numerical value including decimal numbers.\
     Ex: `4`,`8`,`80`,`60.65`
@@ -75,7 +75,7 @@ console.log(11 % 3); // Prints 2
 console.log(12 % 3); // Prints 0
 ```
 
-### string concatenation
+### String concatenation
 the process of appending one string to the another is called concatenation. When a `+` operator is used on two strings, it appends the right string to the left string:
 ```javascript
 console.log("hi" + "ya"); // Prints "hiya"
@@ -91,7 +91,7 @@ All datatypes have access to specific properties that are passed down to each in
 console.log("Hello".length); // Prints 5
 ```
 
-### methods
+### Methods
 methods are actions we can perform. Datatypes have access to specific methods that allow us to handle instance of that data type.
 ```javascript
 console.log("hello".toUpperCase()); // Prints "HELLO"
@@ -154,7 +154,7 @@ console.log(myName); // Output: Gilberto
 {{< admonition type=warning title="Warning" open=true >}}
 If we try to reassign a const variable, we’ll get a TypeError. Constant variables must be assigned a value when declared. If we try to declare a const variable without a value, we’ll get a SyntaxError.
 {{< /admonition >}}
-### mathematical assignment operator
+### Mathematical assignment operator
 ```javascript
 let w = 4;
 w += 1;
@@ -171,7 +171,7 @@ let z = 8;
 z /= 2; // Can be written as z = z / 2
 console.log(z); // Output: 4
 ```
-### the increment and decrement operator
+### Increment and Decrement operator
 Other mathematical assignment operators include the increment operator (++)
 and decrement operator (--).The increment operator will increase the value of the
 variable by 1. The decrement operator will decrease the value of the variable by 1. For
@@ -185,7 +185,7 @@ let b = 20;
 b--;
 console.log(b); // Output: 19
 ```
-### string concatenation with variable
+### String concatenation with variable
 ```javascript
 let myPet = "armadillo";
 console.log("I own a pet " + myPet + ".");
@@ -239,7 +239,7 @@ console.log("But the code in this block will!");
 }
 ```
 // Prints: But the code in this block will!
-### Comparison operaor
+### Comparison operators
 sometimes we need to use different types of operators to compare values. These
 operators are called comparison operators. Comparison operators compare the value
 on the left with the value on the right.
@@ -297,9 +297,8 @@ defaultName = "Stranger";
 
 console.log(defaultName); // Prints: Stranger
 ```
-### ternary operator
-In the spirit of using short-hand syntax, we can use a ternary operator to simplify
-an if...else statement.
+### Ternary operator
+In the spirit of using short-hand syntax, we can use a ternary operator to simplify an if..else statement.
 Take a look at the if...else statement example:
 ```javascript
 let isNightTime = true;
@@ -336,7 +335,8 @@ console.log("Caution, unknown!");
 }
 ```
 ### The switch keyword
-A `switch` statement provides an alternative syntax that is easier to read and write. A switch statement looks like this:
+The `switch` statement is used to perform different actions based on different conditions, as an alternative to multiple `if...else` statements.
+
 ```javascript 
 let groceryItem = "papaya";
 switch (groceryItem) {
@@ -374,27 +374,30 @@ console.log("Hello, World!");
 A function declaration consists of:
 * The function keyword.
 * The name of the function, or its identifier, followed by parentheses.
-* A function body, or the block of statements required to perform a specific task, enclosed in the function’s curly brackets, { }.
+* A function body, or the block of statements required to perform a specific task, enclosed in the function’s curly brackets, `{ }`.
 
 ### Calling a function
 The code inside the function body will only be run when it is called. To call a function type the function name followed by parentheses.
+```javascript
+functionName(" ");  // functioncall
+```
 
 ### Parameters and arguments
-**Parameters** allows function to accept inputs and perform task. We use parameters as placeholders for information that will be passed to the function when it is called.
-The values that are passed to the function when it is called are called **arguments**.
-**Arguments** can be passed to the function as values or variables.
+* **Parameters** allows function to accept inputs and perform task. We use parameters as placeholders for information that will be passed to the function when it is called.
+* **Arguments** are the values that are passed to the function when it is called.**Arguments** can be passed to the function as values or variables.
 ```javascript
+// name is parameter
 function sayThanks( name) {
   console.log("Thank you for your purchase, "+ name + "! We appreciate your business."
 );
 }
 
-sayThanks("Cole");
+sayThanks("Cole"); //cole is argument
 ```
 
 ### Default parameter
 
-One of the features added in **ES6** is the ability to use default parameters. Default parameters allow parameters to have a predetermined value in case no argument is passed into the function or if the argument is undefined when called.
+Default parameters allow parameters to have a predetermined value in case no argument is passed into the function or if the argument is undefined when called.
 ```javascript
 function greeting (name = "stranger") {
 console.log(`Hello, ${name}!`)
@@ -404,7 +407,7 @@ greeting("Nick") // Output: Hello, Nick!
 greeting() // Output: Hello, stranger!
 ```
 ### Return
-When a function is called, the computer will run through the function’s code and evaluate the result. By default, the resulting value is undefined.
+When a function is called, the computer will run through the function’s code and evaluate the result and return the result. By default, the resulting value is undefined.
 ```javascript
 function rectangleArea(width, height) {
 let area = width * height;
@@ -412,7 +415,7 @@ let area = width * height;
 console.log(rectangleArea(5, 7)) // Prints undefined
 ```
 ### Helper function
-We can also use the return value of a function inside another function. These functions being called within another function are often referred to as helper functions.
+We can also use the return value of a function inside another function. These functions being called within another function are often referred to as **helper functions**.
 ```javascript
 function multiplyByNineFifths(number) {
 return number * (9/5);
@@ -425,7 +428,7 @@ return multiplyByNineFifths(celsius) + 32;
 getFahrenheit(15); // Returns 59
 ```
 ### function expression
-Another way to define a function is to use a function expression. To define a function inside an expression, we can use the function keyword. In a function expression, the function name is usually omitted. A function with no name is called an anonymous function. A function expression is often stored in a variable in order to refer to it.
+Another way to define a function is to use a function expression. Here we  use the function keyword. In a function expression, the function name is usually omitted. A function with no name is called an **anonymous function**. A function expression is often stored in a variable in order to refer to it.
 ```javascript
 const plantNeedsWater = function(day){
   if(day === "Wednesday"){
@@ -438,38 +441,36 @@ const plantNeedsWater = function(day){
 console.log(plantNeedsWater("Tuesday"))
 ```
 ### arrow functions
-ES6 introduced arrow function syntax, a shorter way to write functions by using the special `“fat arrow” () =&gt;` notation.
-Arrow function remove the need to type out the keyword function every time we create a function. Instead, we first include the parameters inside the ( ) and then add an arrow =&gt; that points to the function body surrounded in { } like this:
+**ES6** introduced arrow function syntax, a shorter way to write functions by using the special `“fat arrow” () =&gt;` notation.
+Arrow function remove the need to type out the keyword function every time we create a function. Instead, we first include the parameters inside the `( )` and then add an arrow `=&gt;` that points to the function body surrounded in `{ }` like this:
 ```javascript
-const rectangleArea = (width, height) =&gt; {
+const rectangleArea = (width, height) => {
 let area = width * height;
 return area;
 };
 ```
 ### Concise body arrow function
 
-JavaScript also provides several ways to refactor arrow function syntax. The most
-condensed form of the function is known as concise body. We’ll explore a few of these
-techniques below:
-1. Functions that take only a single parameter do not need that parameter to be
-enclosed in parentheses. However, if a function takes zero or multiple
-parameters, parentheses are required.
-2. A function body composed of a single-line block does not need curly
-braces. Without the curly braces, whatever that line evaluates will be
-automatically returned. The contents of the block should immediately
-follow the arrow =&gt;, and the return keyword can be removed. This is
-referred to as implicit return.
+JavaScript also provides several ways to refactor arrow function syntax. The most condensed form of the function is known as concise body. 
+
+1. Functions that take only a single parameter do not need that parameter to be enclosed in parentheses. 
+{{< admonition type=note title="Note" open=true >}}
+However, if a function takes zero or multiple parameters, parentheses are required.
+{{< /admonition >}}
+
+
+2. A function body which has single-line block does not need curly braces. Without the curly braces, whatever that line evaluates will be automatically returned without `return` keyword. This is referred to as implicit return.
 ```javascript
-const squareNum = (num) =&gt; {
+const squareNum = (num) => {
 return num * num;
 };
 
-const squareNum = num =&gt; num * num;
+const squareNum = num => num * num;
 ```
 ## javascript scope
-An important idea in programming is scope. Scope defines where variables can be accessed or referenced. Scope is the context in which our variables are declared. 
+Scope defines where variables can be accessed or referenced. Scope is the context in which our variables are declared. 
 ### Global scope
-In global scope, variables are declared outside of blocks. These variables are called global variables. Because global variables are not bound inside a block, they can be accessed by any code in the program, including code in blocks.
+In **global scope**, variables are declared outside of blocks. These variables are called ***global variables***. Because global variables are not bound inside a block, they can be accessed by any code in the program, including code in blocks.
 ```javascript
 const color = "blue";
 const returnSkyColor = () =&gt; {
@@ -481,11 +482,7 @@ console.log(returnSkyColor()); // blue
 
 ### block scope
 
-The next context we’ll cover is block scope. When a variable is defined inside a block, it
-is only accessible to the code within the curly braces {}. We say that a variable
-has block scope because it is only accessible to the lines of code within that block.
-Variables declared with block scope are known as local variables because they are only
-available to the code that is part of the same block.
+When a variable is defined inside a **block**, it is only accessible to the code within the curly braces `{}`. We say that a variable has block scope. These are also known as ***local variables*** because they are only available to the code that is part of the same block.
 ```javascript
 const logSkyColor = () =&gt; {
 let color = "blue";
@@ -496,7 +493,7 @@ logSkyColor(); // Prints &quot;blue&quot;
 console.log(color); // throws a ReferenceError
 ```
 ### scope pollution
-Scope pollution occurs when we have too many variables in the global namespace, or when we reuse variables across different scopes. Scope pollution makes it difficult to keep track of our different variables and sets us up for potential accidents. 
+**Scope pollution** occurs when we have too many variables in the global namespace, or when we reuse variables across different scopes.  
 ```javascript
 let num = 50;
 const logNum = () =&gt; {
