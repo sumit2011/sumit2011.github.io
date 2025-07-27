@@ -33,7 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/javascript\/"
-        },"genre": "posts","keywords": "js","wordcount":  1876 ,
+        },"genre": "posts","keywords": "js","wordcount":  2881 ,
         "url": "https:\/\/sumit2011.github.io\/javascript\/","datePublished": "2025-07-17T11:54:28+05:30","dateModified": "2025-07-17T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -123,8 +123,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Java Script Part 1</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/web-dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Web Dev</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="17-07-2025">17-07-2025</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1876 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;9 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="17-07-2025">17-07-2025</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2881 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;14 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -168,12 +168,32 @@
         <li><a href="#if-statement">If statement</a></li>
         <li><a href="#ifelse-statements">If…Else statements</a></li>
         <li><a href="#comparison-operaor">Comparison operaor</a></li>
-        <li><a href="#logical-operaors">Logical operaors</a></li>
+        <li><a href="#logical-operators">Logical operators</a></li>
         <li><a href="#truthy-and-falsy">Truthy and Falsy</a></li>
         <li><a href="#truthy-and-falsy-assignment">Truthy and Falsy Assignment</a></li>
         <li><a href="#ternary-operator">ternary operator</a></li>
         <li><a href="#else-if-statement">Else if statement</a></li>
         <li><a href="#the-switch-keyword">The switch keyword</a></li>
+      </ul>
+    </li>
+    <li><a href="#functions">Functions</a>
+      <ul>
+        <li><a href="#function-declaration">Function Declaration</a></li>
+        <li><a href="#calling-a-function">Calling a function</a></li>
+        <li><a href="#parameters-and-arguments">Parameters and arguments</a></li>
+        <li><a href="#default-parameter">Default parameter</a></li>
+        <li><a href="#return">Return</a></li>
+        <li><a href="#helper-function">Helper function</a></li>
+        <li><a href="#function-expression">function expression</a></li>
+        <li><a href="#arrow-functions">arrow functions</a></li>
+        <li><a href="#concise-body-arrow-function">Concise body arrow function</a></li>
+      </ul>
+    </li>
+    <li><a href="#javascript-scope">javascript scope</a>
+      <ul>
+        <li><a href="#global-scope">Global scope</a></li>
+        <li><a href="#block-scope">block scope</a></li>
+        <li><a href="#scope-pollution">scope pollution</a></li>
       </ul>
     </li>
   </ul>
@@ -614,9 +634,8 @@ Here is a list of some handy comparison operators and their syntax:</p>
 <li>Is equal to: ===</li>
 <li>Is not equal to: !==</li>
 </ul>
-<h3 id="logical-operaors">Logical operaors</h3>
-<p>Working with conditionals means that we will be using booleans, true or false values. In
-JavaScript, there are operators that work with boolean values known as logical
+<h3 id="logical-operators">Logical operators</h3>
+<p>Working with conditionals means that we will be using boolean true or false values. In JavaScript, there are operators that work with boolean values known as logical
 operators
 There are three logical operators:</p>
 <ul>
@@ -809,7 +828,264 @@ Take a look at the if&hellip;else statement example:</p>
 </span></span><span class="line"><span class="cl"><span class="c1">// Prints &#34;Papayas are $1.29&#34;
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div><h2 id="functions">Functions</h2>
+<p>A function is a reusable block of code that groups together a sequence of statements to perform a specific task.</p>
+<h3 id="function-declaration">Function Declaration</h3>
+<p>In js there are many way to create a function one of them is function declaration. Just like how a variable declaration binds a value to a variable name, a function declaration binds a function to a name, or an identifier. Take a look at the anatomy of a function declaration below:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">greetWorld</span><span class="p">();</span> <span class="c1">// Output: Hello, World!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">greetWorld</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Hello, World!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>A function declaration consists of:</p>
+<ul>
+<li>The function keyword.</li>
+<li>The name of the function, or its identifier, followed by parentheses.</li>
+<li>A function body, or the block of statements required to perform a specific task, enclosed in the function’s curly brackets, { }.</li>
+</ul>
+<h3 id="calling-a-function">Calling a function</h3>
+<p>The code inside the function body will only be run when it is called. To call a function type the function name followed by parentheses.</p>
+<h3 id="parameters-and-arguments">Parameters and arguments</h3>
+<p><strong>Parameters</strong> allows function to accept inputs and perform task. We use parameters as placeholders for information that will be passed to the function when it is called.
+The values that are passed to the function when it is called are called <strong>arguments</strong>.
+<strong>Arguments</strong> can be passed to the function as values or variables.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">sayThanks</span><span class="p">(</span> <span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Thank you for your purchase, &#34;</span><span class="o">+</span> <span class="nx">name</span> <span class="o">+</span> <span class="s2">&#34;! We appreciate your business.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">sayThanks</span><span class="p">(</span><span class="s2">&#34;Cole&#34;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="default-parameter">Default parameter</h3>
+<p>One of the features added in <strong>ES6</strong> is the ability to use default parameters. Default parameters allow parameters to have a predetermined value in case no argument is passed into the function or if the argument is undefined when called.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">greeting</span> <span class="p">(</span><span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;stranger&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hello, </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">!`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">greeting</span><span class="p">(</span><span class="s2">&#34;Nick&#34;</span><span class="p">)</span> <span class="c1">// Output: Hello, Nick!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">greeting</span><span class="p">()</span> <span class="c1">// Output: Hello, stranger!
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="return">Return</h3>
+<p>When a function is called, the computer will run through the function’s code and evaluate the result. By default, the resulting value is undefined.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">rectangleArea</span><span class="p">(</span><span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">area</span> <span class="o">=</span> <span class="nx">width</span> <span class="o">*</span> <span class="nx">height</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rectangleArea</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span> <span class="c1">// Prints undefined
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="helper-function">Helper function</h3>
+<p>We can also use the return value of a function inside another function. These functions being called within another function are often referred to as helper functions.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">multiplyByNineFifths</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="nx">number</span> <span class="o">*</span> <span class="p">(</span><span class="mi">9</span><span class="o">/</span><span class="mi">5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">getFahrenheit</span><span class="p">(</span><span class="nx">celsius</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="nx">multiplyByNineFifths</span><span class="p">(</span><span class="nx">celsius</span><span class="p">)</span> <span class="o">+</span> <span class="mi">32</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">getFahrenheit</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span> <span class="c1">// Returns 59
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="function-expression">function expression</h3>
+<p>Another way to define a function is to use a function expression. To define a function inside an expression, we can use the function keyword. In a function expression, the function name is usually omitted. A function with no name is called an anonymous function. A function expression is often stored in a variable in order to refer to it.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">plantNeedsWater</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">day</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span><span class="p">(</span><span class="nx">day</span> <span class="o">===</span> <span class="s2">&#34;Wednesday&#34;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">plantNeedsWater</span><span class="p">(</span><span class="s2">&#34;Tuesday&#34;</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="arrow-functions">arrow functions</h3>
+<p>ES6 introduced arrow function syntax, a shorter way to write functions by using the special <code>“fat arrow” () =&amp;gt;</code> notation.
+Arrow function remove the need to type out the keyword function every time we create a function. Instead, we first include the parameters inside the ( ) and then add an arrow =&gt; that points to the function body surrounded in { } like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">rectangleArea</span> <span class="o">=</span> <span class="p">(</span><span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">)</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">area</span> <span class="o">=</span> <span class="nx">width</span> <span class="o">*</span> <span class="nx">height</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="nx">area</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="concise-body-arrow-function">Concise body arrow function</h3>
+<p>JavaScript also provides several ways to refactor arrow function syntax. The most
+condensed form of the function is known as concise body. We’ll explore a few of these
+techniques below:</p>
+<ol>
+<li>Functions that take only a single parameter do not need that parameter to be
+enclosed in parentheses. However, if a function takes zero or multiple
+parameters, parentheses are required.</li>
+<li>A function body composed of a single-line block does not need curly
+braces. Without the curly braces, whatever that line evaluates will be
+automatically returned. The contents of the block should immediately
+follow the arrow =&gt;, and the return keyword can be removed. This is
+referred to as implicit return.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">squareNum</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="nx">num</span> <span class="o">*</span> <span class="nx">num</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">squareNum</span> <span class="o">=</span> <span class="nx">num</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="nx">num</span> <span class="o">*</span> <span class="nx">num</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="javascript-scope">javascript scope</h2>
+<p>An important idea in programming is scope. Scope defines where variables can be accessed or referenced. Scope is the context in which our variables are declared. </p>
+<h3 id="global-scope">Global scope</h3>
+<p>In global scope, variables are declared outside of blocks. These variables are called global variables. Because global variables are not bound inside a block, they can be accessed by any code in the program, including code in blocks.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">color</span> <span class="o">=</span> <span class="s2">&#34;blue&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">returnSkyColor</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="nx">color</span><span class="p">;</span> <span class="c1">// blue
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">returnSkyColor</span><span class="p">());</span> <span class="c1">// blue
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="block-scope">block scope</h3>
+<p>The next context we’ll cover is block scope. When a variable is defined inside a block, it
+is only accessible to the code within the curly braces {}. We say that a variable
+has block scope because it is only accessible to the lines of code within that block.
+Variables declared with block scope are known as local variables because they are only
+available to the code that is part of the same block.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">logSkyColor</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">color</span> <span class="o">=</span> <span class="s2">&#34;blue&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">color</span><span class="p">);</span> <span class="c1">// Prints &amp;quot;blue&amp;quot;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">logSkyColor</span><span class="p">();</span> <span class="c1">// Prints &amp;quot;blue&amp;quot;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">color</span><span class="p">);</span> <span class="c1">// throws a ReferenceError
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="scope-pollution">scope pollution</h3>
+<p>Scope pollution occurs when we have too many variables in the global namespace, or when we reuse variables across different scopes. Scope pollution makes it difficult to keep track of our different variables and sets us up for potential accidents. </p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">logNum</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nx">num</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span> <span class="c1">// Take note of this line of code
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">logNum</span><span class="p">();</span> <span class="c1">// Prints 100
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span> <span class="c1">// Prints 100
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>practice good scoping</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
