@@ -1,17 +1,16 @@
 # Java Script Part 1
 
-***Js is powerful, flexible and fast programming lang. it is used in web development. It provides the dynamic behavior to the website.***
+***Js is powerful, flexible and fast programming language. it is used in web development. It provides the dynamic behavior to the website.***
 <!--more-->
 
 {{< admonition type=note title="Note" open=true >}}
 _Use the table of contents to navigate to the portion that you are interested in._
 {{< /admonition >}}
 
-## 1. Introduction:
 
 
 ## Fundamental of Js 
-Js is powerful, flexible and fast programming lang. it is used in web development. It provide the dynamic behavior to the website.
+Js is powerful, flexible and fast programming language. it is used in web development. It provide the dynamic behavior to the website.
 
 ### Console
 It is a keyword refer to an object. There are methods built into `console` object one of them is `.log()` method. When we write `console.log()` it will print the wriiten information in paranthesis to the console.
