@@ -142,7 +142,10 @@ docker ps -a
 
 ### 4.1 Step-by-Step: Docker Workflow
 ***Step 1.*** Search for Images on Docker Hub
+
 `docker search <image_name>`
+
+
 
 ***Step 2.*** Pull an image from Docker Hub 
 `docker pull <image_name>`
@@ -178,64 +181,138 @@ docker ps -a
 `docker ps -a`
 
 
+### Running First Container
+
+This document provides a list of basic Docker CLI commands used in the lecture.
+
+Check Docker Version
+
+```bash
+docker --version
+```
+
+Run a Test Container:
+Run a test container using the hello-world image to verify Docker installation.
+
+```bash
+docker run hello-world
+```
+
+Pull a Docker Image:
+Pull the hello-world image from Docker Hub.
+
+```bash
+docker pull hello-world
+```
+
+Check running containers:
+To show all currently running containers.
+
+```bash
+docker ps
+```
+
+Check all containers:
+Show all containers, both running and stopped.
+
+```bash
+docker ps -a
+```
+
+List available images:
+List all Docker images downloaded and available locally.
+
+```bash
+docker images
+```
+
+
+### Packaging the Spring Boot Web App
+This document provides a list of basic Docker CLI commands used in the lecture.
+
+***Step 1:*** Package the Project Using Maven
+
+```bash
+mvn package
+```
+
+***Step 2:*** Run the JAR File
+```bash
+java -jar target/rest-demo.jar
+```
 
 ## Running SpringBoot App on Docker
 
 
-{{< copybox title="1. Check Running Containers" >}}
+***Step 1:*** Check Running Containers
+```bash
 docker ps
-{{< /copybox >}}
+```
 
-{{<copybox title="2. List All Files in the Container (JDK Environment)">}}
+***Step 2.*** List All Files in the Container (JDK Environment)
+```bash
 docker exec container_name ls -a
-# Lists all folders and files in the container's root directory.
-{{</copybox>}}
+```
+Lists all folders and files in the container's root directory.
 
 
-{{< copybox title="3. Check Contents of /tmp Directory" >}}
+***Step 3.*** Check Contents of /tmp Directory" 
+```bash
 docker exec container_name ls /tmp 
-# It will contain only one file in /tmp at the initial stage.
-{{< /copybox >}}
+```
+It will contain only one file in /tmp at the initial stage.
 
-{{< copybox title="4. Copy the Spring Boot JAR File into the Container" >}}
+
+***Step 4.*** Copy the Spring Boot JAR File into the Container
+```bash
 docker cp target/rest-demo.jar container_name:/tmp 
-# This copies the rest-demo.jar into the container’s /tmp directory.
-{{< /copybox >}}
+```
+This copies the rest-demo.jar into the container’s /tmp directory.
 
-{{< copybox title="5. Verify the JAR File is Present" >}}
+***Step 5.*** Verify the JAR File is Present
+```bash
 docker exec container_name ls /tmp 
-# The rest-demo.jar file will be available in addition to the existing content.
-{{< /copybox >}}
+```
+The rest-demo.jar file will be available in addition to the existing content.
 
-{{< copybox title="6. Commit the Container to Create a New Docker Image" >}}
+
+***Step 6.*** Commit the Container to Create a New Docker Image
+```bash
 docker commit container_name telusko/rest-demo:v1
-# Creates a new Docker image named telusko/rest-demo with tag v1 from the current container state.
-{{< /copybox >}}
+```
+Creates a new Docker image named telusko/rest-demo with tag v1 from the current container state.
 
-{{< copybox title="7. List Docker Images" >}}
+
+***Step 7.*** List Docker Images
+```bash
 docker images 
-# Verifies that telusko/rest-demo:v1 image has been created successfully.
-{{< /copybox >}}
+```
+Verifies that telusko/rest-demo:v1 image has been created successfully.
 
-{{< copybox title="8. Default Behavior: JShell" >}}
+***Step 8.*** Default Behavior: JShell
+```bash
 docker run telusko/rest-demo:v1 
-# When running telusko/rest-demo:v1, the container defaults to JShell.
-{{< /copybox >}}
+```
+When running telusko/rest-demo:v1, the container defaults to JShell.
 
-{{< copybox title="9. Set Default Command to Run JAR Using --change" >}}
+***Step 9.*** Set Default Command to Run JAR Using --change
+```bash
 docker commit --change='CMD ["java", "-jar", "/tmp/rest-demo.jar"]' container_name telusko/rest-demo:v2 
-# This sets the default command to run the JAR directly when the image is run.
-{{< /copybox >}}
+```
+This sets the default command to run the JAR directly when the image is run.
 
-{{< copybox title="10. Run the Updated Image (v2)" >}}
+***Step 10.*** Run the Updated Image (v2)
+```bash
 docker run telusko/rest-demo:v2 
-# This will now run the Spring Boot application from the JAR instead of entering JShell.
-{{< /copybox >}}
+```
+This will now run the Spring Boot application from the JAR instead of entering JShell.
 
-{{< copybox title="11. Map Ports While Running the Container" >}}
-docker run -p 8081:8081 telusko/rest-demo:v2 
-# Maps port 8081 of the container to 8081 on the host machine.
-{{< /copybox >}}
+
+***Step 11.*** Map Ports While Running the Container" 
+```bash
+docker run -p 8081:8081 telusko/rest-demo:v2
+```
+Maps port 8081 of the container to 8081 on the host machine.
 
 
 
@@ -250,16 +327,141 @@ docker run -p 8081:8081 telusko/rest-demo:v2
  Thanks for reading! 
 
 
-<div style="position: relative; background: #f2f2f2; color: #333; padding: 16px; border-radius: 6px; font-family: monospace; border: 1px solid #ccc;">
+## Running JDK Docker Container
 
-  docker run -p 8081:8081 telusko/rest-demo:v2
-</div>
+This document provides a list of basic Docker CLI commands used in the lecture.
+
+### JShell
+- JShell is a **REPL (Read-Eval-Print Loop)** for Java introduced in Java 9.
+- It allows running Java code interactively, without needing to compile and run entire class files.
 
 
+### Pull OpenJDK Docker Image
+**1. Search for the OpenJDK image on Docker Hub**
 
-{{< copybox title="Run Spring Boot Container" >}}
-docker run -p 8081:8081 telusko/rest-demo:v2
-{{< /copybox >}}
+```bash
+docker search openjdk
+```
 
+**2. Pull a specific OpenJDK Image**
+
+```bash
+docker pull openjdk:22-jdk
+```
+
+**3.Check Available Images**
+
+```bash
+docker images
+```
+
+**4. Run the OpenJDK image**
+
+```bash
+docker run openjdk:22-jdk
+```
+
+**5. Run OpenJDK image in interactive mode**
+
+```bash
+docker search openjdk
+```
+> The `-it` flag starts the container in **interactive terminal mode**.
+
+**6. Check Running Containers**
+
+```bash
+docker ps
+```
+
+
+### Enter JShell inside the Container
+```bash
+jshell
+int num = 8;
+System.out.println("Hello World");
+/exit  #to exit from JShell
+```
+> Make sure the openjdk image version you pull supports jshell
+
+
+## Docker File for Docker Images
+Build the Docker Image, Navigate to the directory that contains your `Dockerfile` and run:
+
+```bash
+docker build -t telusko/rest-demo:v3 .
+# This builds a Docker image named telusko/rest-demo with tag v3 using the current directory (.) as the build context.
+```
+
+
+List Available Docker Images
+```bash
+docker images
+```
+
+
+Run the Docker Image with Port Mapping
+```bash
+docker run -p 8081:8081 telusko/rest-demo:v3
+# This runs the container from the newly built image and maps port 8081 of the host to port 8081 of the container.
+```
+
+### Docker Compose
+
+This document provides a list of basic Docker CLI commands used in the lecture.
+
+Clean and Package the Application:
+Use Maven to clean and create a JAR package of the Spring Boot project:
+```bash
+mvn clean package
+```
+
+
+Build and Start Docker Containers:
+Use Docker Compose to build the images and start the containers:
+```bash
+docker-compose up --build
+```
+> This will use the docker-compose.yml file to build the application.
+
+
+List Docker Images
+```bash
+docker images
+```
+
+### Running Multiple Containers
+
+This document provides a list of basic Docker CLI commands used in the lecture.
+
+Stop and Remove All Running Containers
+```bash
+docker-compose down
+```
+
+
+Clean and Package the Spring Boot App
+```bash
+mvn clean package -DskipTests
+```
+
+
+Build and Start Containers:
+```bash
+docker-compose up --build
+```
+
+
+Check Running Containers:
+```bash
+docker ps
+```
+
+
+View Docker Networks:
+To list all Docker networks on your system:
+```bash
+docker network ls
+```
 
 

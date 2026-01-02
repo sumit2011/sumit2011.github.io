@@ -37,7 +37,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/docker\/"
-        },"genre": "posts","keywords": "docker, containers, devops","wordcount":  890 ,
+        },"genre": "posts","keywords": "docker, containers, devops","wordcount":  1393 ,
         "url": "https:\/\/sumit2011.github.io\/docker\/","datePublished": "2025-12-31T10:00:00+05:30","dateModified": "2025-12-31T10:00:00+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -125,8 +125,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Docker — Containers Simplified</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a></span>&nbsp;<span class="post-category">included in <a href="/categories/web-dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Web Dev</a>&nbsp;<a href="/categories/devops/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DevOps</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="31-12-2025">31-12-2025</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;890 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="31-12-2025">31-12-2025</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1393 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -154,9 +154,24 @@
     <li><a href="#4-container--image-lifecycle-commands">4. Container &amp; Image Lifecycle Commands</a>
       <ul>
         <li><a href="#41-step-by-step-docker-workflow">4.1 Step-by-Step: Docker Workflow</a></li>
+        <li><a href="#running-first-container">Running First Container</a></li>
+        <li><a href="#packaging-the-spring-boot-web-app">Packaging the Spring Boot Web App</a></li>
       </ul>
     </li>
     <li><a href="#running-springboot-app-on-docker">Running SpringBoot App on Docker</a></li>
+    <li><a href="#running-jdk-docker-container">Running JDK Docker Container</a>
+      <ul>
+        <li><a href="#jshell">JShell</a></li>
+        <li><a href="#pull-openjdk-docker-image">Pull OpenJDK Docker Image</a></li>
+        <li><a href="#enter-jshell-inside-the-container">Enter JShell inside the Container</a></li>
+      </ul>
+    </li>
+    <li><a href="#docker-file-for-docker-images">Docker File for Docker Images</a>
+      <ul>
+        <li><a href="#docker-compose">Docker Compose</a></li>
+        <li><a href="#running-multiple-containers">Running Multiple Containers</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p><em><strong>Docker packages applications and their dependencies into portable containers so they run consistently across environments.</strong></em></p>
@@ -289,8 +304,8 @@ It has several features like:</p>
         </div>
     </div>
 <h3 id="41-step-by-step-docker-workflow">4.1 Step-by-Step: Docker Workflow</h3>
-<p><em><strong>Step 1.</strong></em> Search for Images on Docker Hub
-<code>docker search &lt;image_name&gt;</code></p>
+<p><em><strong>Step 1.</strong></em> Search for Images on Docker Hub</p>
+<p><code>docker search &lt;image_name&gt;</code></p>
 <p><em><strong>Step 2.</strong></em> Pull an image from Docker Hub
 <code>docker pull &lt;image_name&gt;</code></p>
 <p><em><strong>Step 3.</strong></em> Check Containers (None Created Yet)
@@ -311,952 +326,197 @@ It has several features like:</p>
 <code>docker rm &lt;container_id&gt;</code></p>
 <p><em><strong>Step 11.</strong></em> Verify Container is Removed
 <code>docker ps -a</code></p>
-<h2 id="running-springboot-app-on-docker">Running SpringBoot App on Docker</h2>
-<style>
- 
-.copybox {
-  border: 1px solid var(--color-border, #ccc);
-  border-radius: 6px;
-  background: var(--color-code-bg, #f2f2f2);
-  font-family: sans-serif;
-  margin: 16px 0;
-}
-
- 
-.copybox-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  
-  padding: 8px 14px;
-  background: var(--color-code-header-bg, #e0e0e0);
-  border-bottom: 1px solid var(--color-border, #ccc);
-  font-weight: bold;
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-header button {
-  border: none;
-  background: var(--color-btn-bg, #d1d1d1);
-  border-radius: 4px;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--color-fg, #000);
-  transition: background 0.2s;
-}
-
-.copybox-header button:hover {
-  background: var(--color-btn-hover-bg, #c1c1c1);
-}
-
- 
-.copybox-content {
-  overflow-x: auto;   
-  margin: 0;
-  padding: 0;         
-}
-
- 
-.copybox-content pre {
-  margin: 0;               
-  padding: 12px 16px;      
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 1.5;        
-  white-space: pre;        
-  border-radius: 4px;
-  background: var(--color-code-bg, #f9f9f9);
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-content::-webkit-scrollbar {
-  height: 6px;
-}
-.copybox-content::-webkit-scrollbar-thumb {
-  background-color: var(--color-border, #ccc);
-  border-radius: 3px;
-}
-</style>
-
-<div class="copybox">
-  <div class="copybox-header">
-    <span>1. Check Running Containers</span>
-    <button onclick="
-      navigator.clipboard.writeText('\ndocker ps\n');
-      this.innerHTML='✔ Copied';
-      this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
-    ">Copy</button>
-  </div>
-  <div class="copybox-content">
-    <pre>
-docker ps
-</pre>
-  </div>
+<h3 id="running-first-container">Running First Container</h3>
+<p>This document provides a list of basic Docker CLI commands used in the lecture.</p>
+<p>Check Docker Version</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker --version
+</span></span></code></pre></td></tr></table>
 </div>
-
-<style>
- 
-.copybox {
-  border: 1px solid var(--color-border, #ccc);
-  border-radius: 6px;
-  background: var(--color-code-bg, #f2f2f2);
-  font-family: sans-serif;
-  margin: 16px 0;
-}
-
- 
-.copybox-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  
-  padding: 8px 14px;
-  background: var(--color-code-header-bg, #e0e0e0);
-  border-bottom: 1px solid var(--color-border, #ccc);
-  font-weight: bold;
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-header button {
-  border: none;
-  background: var(--color-btn-bg, #d1d1d1);
-  border-radius: 4px;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--color-fg, #000);
-  transition: background 0.2s;
-}
-
-.copybox-header button:hover {
-  background: var(--color-btn-hover-bg, #c1c1c1);
-}
-
- 
-.copybox-content {
-  overflow-x: auto;   
-  margin: 0;
-  padding: 0;         
-}
-
- 
-.copybox-content pre {
-  margin: 0;               
-  padding: 12px 16px;      
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 1.5;        
-  white-space: pre;        
-  border-radius: 4px;
-  background: var(--color-code-bg, #f9f9f9);
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-content::-webkit-scrollbar {
-  height: 6px;
-}
-.copybox-content::-webkit-scrollbar-thumb {
-  background-color: var(--color-border, #ccc);
-  border-radius: 3px;
-}
-</style>
-
-<div class="copybox">
-  <div class="copybox-header">
-    <span>2. List All Files in the Container (JDK Environment)</span>
-    <button onclick="
-      navigator.clipboard.writeText('\ndocker exec container_name ls -a\n# Lists all folders and files in the container\u0027s root directory.\n');
-      this.innerHTML='✔ Copied';
-      this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
-    ">Copy</button>
-  </div>
-  <div class="copybox-content">
-    <pre>
-docker exec container_name ls -a
-# Lists all folders and files in the container's root directory.
-</pre>
-  </div>
+</div><p>Run a Test Container:
+Run a test container using the hello-world image to verify Docker installation.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run hello-world
+</span></span></code></pre></td></tr></table>
 </div>
-
-<style>
- 
-.copybox {
-  border: 1px solid var(--color-border, #ccc);
-  border-radius: 6px;
-  background: var(--color-code-bg, #f2f2f2);
-  font-family: sans-serif;
-  margin: 16px 0;
-}
-
- 
-.copybox-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  
-  padding: 8px 14px;
-  background: var(--color-code-header-bg, #e0e0e0);
-  border-bottom: 1px solid var(--color-border, #ccc);
-  font-weight: bold;
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-header button {
-  border: none;
-  background: var(--color-btn-bg, #d1d1d1);
-  border-radius: 4px;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--color-fg, #000);
-  transition: background 0.2s;
-}
-
-.copybox-header button:hover {
-  background: var(--color-btn-hover-bg, #c1c1c1);
-}
-
- 
-.copybox-content {
-  overflow-x: auto;   
-  margin: 0;
-  padding: 0;         
-}
-
- 
-.copybox-content pre {
-  margin: 0;               
-  padding: 12px 16px;      
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 1.5;        
-  white-space: pre;        
-  border-radius: 4px;
-  background: var(--color-code-bg, #f9f9f9);
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-content::-webkit-scrollbar {
-  height: 6px;
-}
-.copybox-content::-webkit-scrollbar-thumb {
-  background-color: var(--color-border, #ccc);
-  border-radius: 3px;
-}
-</style>
-
-<div class="copybox">
-  <div class="copybox-header">
-    <span>3. Check Contents of /tmp Directory</span>
-    <button onclick="
-      navigator.clipboard.writeText('\ndocker exec container_name ls \/tmp \n# It will contain only one file in \/tmp at the initial stage.\n');
-      this.innerHTML='✔ Copied';
-      this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
-    ">Copy</button>
-  </div>
-  <div class="copybox-content">
-    <pre>
-docker exec container_name ls /tmp 
-# It will contain only one file in /tmp at the initial stage.
-</pre>
-  </div>
+</div><p>Pull a Docker Image:
+Pull the hello-world image from Docker Hub.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker pull hello-world
+</span></span></code></pre></td></tr></table>
 </div>
-
-<style>
- 
-.copybox {
-  border: 1px solid var(--color-border, #ccc);
-  border-radius: 6px;
-  background: var(--color-code-bg, #f2f2f2);
-  font-family: sans-serif;
-  margin: 16px 0;
-}
-
- 
-.copybox-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  
-  padding: 8px 14px;
-  background: var(--color-code-header-bg, #e0e0e0);
-  border-bottom: 1px solid var(--color-border, #ccc);
-  font-weight: bold;
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-header button {
-  border: none;
-  background: var(--color-btn-bg, #d1d1d1);
-  border-radius: 4px;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--color-fg, #000);
-  transition: background 0.2s;
-}
-
-.copybox-header button:hover {
-  background: var(--color-btn-hover-bg, #c1c1c1);
-}
-
- 
-.copybox-content {
-  overflow-x: auto;   
-  margin: 0;
-  padding: 0;         
-}
-
- 
-.copybox-content pre {
-  margin: 0;               
-  padding: 12px 16px;      
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 1.5;        
-  white-space: pre;        
-  border-radius: 4px;
-  background: var(--color-code-bg, #f9f9f9);
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-content::-webkit-scrollbar {
-  height: 6px;
-}
-.copybox-content::-webkit-scrollbar-thumb {
-  background-color: var(--color-border, #ccc);
-  border-radius: 3px;
-}
-</style>
-
-<div class="copybox">
-  <div class="copybox-header">
-    <span>4. Copy the Spring Boot JAR File into the Container</span>
-    <button onclick="
-      navigator.clipboard.writeText('\ndocker cp target\/rest-demo.jar container_name:\/tmp \n# This copies the rest-demo.jar into the container’s \/tmp directory.\n');
-      this.innerHTML='✔ Copied';
-      this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
-    ">Copy</button>
-  </div>
-  <div class="copybox-content">
-    <pre>
-docker cp target/rest-demo.jar container_name:/tmp 
-# This copies the rest-demo.jar into the container’s /tmp directory.
-</pre>
-  </div>
+</div><p>Check running containers:
+To show all currently running containers.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker ps
+</span></span></code></pre></td></tr></table>
 </div>
-
-<style>
- 
-.copybox {
-  border: 1px solid var(--color-border, #ccc);
-  border-radius: 6px;
-  background: var(--color-code-bg, #f2f2f2);
-  font-family: sans-serif;
-  margin: 16px 0;
-}
-
- 
-.copybox-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  
-  padding: 8px 14px;
-  background: var(--color-code-header-bg, #e0e0e0);
-  border-bottom: 1px solid var(--color-border, #ccc);
-  font-weight: bold;
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-header button {
-  border: none;
-  background: var(--color-btn-bg, #d1d1d1);
-  border-radius: 4px;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--color-fg, #000);
-  transition: background 0.2s;
-}
-
-.copybox-header button:hover {
-  background: var(--color-btn-hover-bg, #c1c1c1);
-}
-
- 
-.copybox-content {
-  overflow-x: auto;   
-  margin: 0;
-  padding: 0;         
-}
-
- 
-.copybox-content pre {
-  margin: 0;               
-  padding: 12px 16px;      
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 1.5;        
-  white-space: pre;        
-  border-radius: 4px;
-  background: var(--color-code-bg, #f9f9f9);
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-content::-webkit-scrollbar {
-  height: 6px;
-}
-.copybox-content::-webkit-scrollbar-thumb {
-  background-color: var(--color-border, #ccc);
-  border-radius: 3px;
-}
-</style>
-
-<div class="copybox">
-  <div class="copybox-header">
-    <span>5. Verify the JAR File is Present</span>
-    <button onclick="
-      navigator.clipboard.writeText('\ndocker exec container_name ls \/tmp \n# The rest-demo.jar file will be available in addition to the existing content.\n');
-      this.innerHTML='✔ Copied';
-      this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
-    ">Copy</button>
-  </div>
-  <div class="copybox-content">
-    <pre>
-docker exec container_name ls /tmp 
-# The rest-demo.jar file will be available in addition to the existing content.
-</pre>
-  </div>
+</div><p>Check all containers:
+Show all containers, both running and stopped.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker ps -a
+</span></span></code></pre></td></tr></table>
 </div>
-
-<style>
- 
-.copybox {
-  border: 1px solid var(--color-border, #ccc);
-  border-radius: 6px;
-  background: var(--color-code-bg, #f2f2f2);
-  font-family: sans-serif;
-  margin: 16px 0;
-}
-
- 
-.copybox-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  
-  padding: 8px 14px;
-  background: var(--color-code-header-bg, #e0e0e0);
-  border-bottom: 1px solid var(--color-border, #ccc);
-  font-weight: bold;
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-header button {
-  border: none;
-  background: var(--color-btn-bg, #d1d1d1);
-  border-radius: 4px;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--color-fg, #000);
-  transition: background 0.2s;
-}
-
-.copybox-header button:hover {
-  background: var(--color-btn-hover-bg, #c1c1c1);
-}
-
- 
-.copybox-content {
-  overflow-x: auto;   
-  margin: 0;
-  padding: 0;         
-}
-
- 
-.copybox-content pre {
-  margin: 0;               
-  padding: 12px 16px;      
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 1.5;        
-  white-space: pre;        
-  border-radius: 4px;
-  background: var(--color-code-bg, #f9f9f9);
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-content::-webkit-scrollbar {
-  height: 6px;
-}
-.copybox-content::-webkit-scrollbar-thumb {
-  background-color: var(--color-border, #ccc);
-  border-radius: 3px;
-}
-</style>
-
-<div class="copybox">
-  <div class="copybox-header">
-    <span>6. Commit the Container to Create a New Docker Image</span>
-    <button onclick="
-      navigator.clipboard.writeText('\ndocker commit container_name telusko\/rest-demo:v1\n# Creates a new Docker image named telusko\/rest-demo with tag v1 from the current container state.\n');
-      this.innerHTML='✔ Copied';
-      this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
-    ">Copy</button>
-  </div>
-  <div class="copybox-content">
-    <pre>
-docker commit container_name telusko/rest-demo:v1
-# Creates a new Docker image named telusko/rest-demo with tag v1 from the current container state.
-</pre>
-  </div>
+</div><p>List available images:
+List all Docker images downloaded and available locally.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker images
+</span></span></code></pre></td></tr></table>
 </div>
-
-<style>
- 
-.copybox {
-  border: 1px solid var(--color-border, #ccc);
-  border-radius: 6px;
-  background: var(--color-code-bg, #f2f2f2);
-  font-family: sans-serif;
-  margin: 16px 0;
-}
-
- 
-.copybox-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  
-  padding: 8px 14px;
-  background: var(--color-code-header-bg, #e0e0e0);
-  border-bottom: 1px solid var(--color-border, #ccc);
-  font-weight: bold;
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-header button {
-  border: none;
-  background: var(--color-btn-bg, #d1d1d1);
-  border-radius: 4px;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--color-fg, #000);
-  transition: background 0.2s;
-}
-
-.copybox-header button:hover {
-  background: var(--color-btn-hover-bg, #c1c1c1);
-}
-
- 
-.copybox-content {
-  overflow-x: auto;   
-  margin: 0;
-  padding: 0;         
-}
-
- 
-.copybox-content pre {
-  margin: 0;               
-  padding: 12px 16px;      
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 1.5;        
-  white-space: pre;        
-  border-radius: 4px;
-  background: var(--color-code-bg, #f9f9f9);
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-content::-webkit-scrollbar {
-  height: 6px;
-}
-.copybox-content::-webkit-scrollbar-thumb {
-  background-color: var(--color-border, #ccc);
-  border-radius: 3px;
-}
-</style>
-
-<div class="copybox">
-  <div class="copybox-header">
-    <span>7. List Docker Images</span>
-    <button onclick="
-      navigator.clipboard.writeText('\ndocker images \n# Verifies that telusko\/rest-demo:v1 image has been created successfully.\n');
-      this.innerHTML='✔ Copied';
-      this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
-    ">Copy</button>
-  </div>
-  <div class="copybox-content">
-    <pre>
-docker images 
-# Verifies that telusko/rest-demo:v1 image has been created successfully.
-</pre>
-  </div>
+</div><h3 id="packaging-the-spring-boot-web-app">Packaging the Spring Boot Web App</h3>
+<p>This document provides a list of basic Docker CLI commands used in the lecture.</p>
+<p><em><strong>Step 1:</strong></em> Package the Project Using Maven</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mvn package
+</span></span></code></pre></td></tr></table>
 </div>
-
-<style>
- 
-.copybox {
-  border: 1px solid var(--color-border, #ccc);
-  border-radius: 6px;
-  background: var(--color-code-bg, #f2f2f2);
-  font-family: sans-serif;
-  margin: 16px 0;
-}
-
- 
-.copybox-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  
-  padding: 8px 14px;
-  background: var(--color-code-header-bg, #e0e0e0);
-  border-bottom: 1px solid var(--color-border, #ccc);
-  font-weight: bold;
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-header button {
-  border: none;
-  background: var(--color-btn-bg, #d1d1d1);
-  border-radius: 4px;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--color-fg, #000);
-  transition: background 0.2s;
-}
-
-.copybox-header button:hover {
-  background: var(--color-btn-hover-bg, #c1c1c1);
-}
-
- 
-.copybox-content {
-  overflow-x: auto;   
-  margin: 0;
-  padding: 0;         
-}
-
- 
-.copybox-content pre {
-  margin: 0;               
-  padding: 12px 16px;      
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 1.5;        
-  white-space: pre;        
-  border-radius: 4px;
-  background: var(--color-code-bg, #f9f9f9);
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-content::-webkit-scrollbar {
-  height: 6px;
-}
-.copybox-content::-webkit-scrollbar-thumb {
-  background-color: var(--color-border, #ccc);
-  border-radius: 3px;
-}
-</style>
-
-<div class="copybox">
-  <div class="copybox-header">
-    <span>8. Default Behavior: JShell</span>
-    <button onclick="
-      navigator.clipboard.writeText('\ndocker run telusko\/rest-demo:v1 \n# When running telusko\/rest-demo:v1, the container defaults to JShell.\n');
-      this.innerHTML='✔ Copied';
-      this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
-    ">Copy</button>
-  </div>
-  <div class="copybox-content">
-    <pre>
-docker run telusko/rest-demo:v1 
-# When running telusko/rest-demo:v1, the container defaults to JShell.
-</pre>
-  </div>
+</div><p><em><strong>Step 2:</strong></em> Run the JAR File</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java -jar target/rest-demo.jar
+</span></span></code></pre></td></tr></table>
 </div>
-
-<style>
- 
-.copybox {
-  border: 1px solid var(--color-border, #ccc);
-  border-radius: 6px;
-  background: var(--color-code-bg, #f2f2f2);
-  font-family: sans-serif;
-  margin: 16px 0;
-}
-
- 
-.copybox-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  
-  padding: 8px 14px;
-  background: var(--color-code-header-bg, #e0e0e0);
-  border-bottom: 1px solid var(--color-border, #ccc);
-  font-weight: bold;
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-header button {
-  border: none;
-  background: var(--color-btn-bg, #d1d1d1);
-  border-radius: 4px;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--color-fg, #000);
-  transition: background 0.2s;
-}
-
-.copybox-header button:hover {
-  background: var(--color-btn-hover-bg, #c1c1c1);
-}
-
- 
-.copybox-content {
-  overflow-x: auto;   
-  margin: 0;
-  padding: 0;         
-}
-
- 
-.copybox-content pre {
-  margin: 0;               
-  padding: 12px 16px;      
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 1.5;        
-  white-space: pre;        
-  border-radius: 4px;
-  background: var(--color-code-bg, #f9f9f9);
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-content::-webkit-scrollbar {
-  height: 6px;
-}
-.copybox-content::-webkit-scrollbar-thumb {
-  background-color: var(--color-border, #ccc);
-  border-radius: 3px;
-}
-</style>
-
-<div class="copybox">
-  <div class="copybox-header">
-    <span>9. Set Default Command to Run JAR Using --change</span>
-    <button onclick="
-      navigator.clipboard.writeText('\ndocker commit --change=\u0027CMD [\u0022java\u0022, \u0022-jar\u0022, \u0022\/tmp\/rest-demo.jar\u0022]\u0027 container_name telusko\/rest-demo:v2 \n# This sets the default command to run the JAR directly when the image is run.\n');
-      this.innerHTML='✔ Copied';
-      this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
-    ">Copy</button>
-  </div>
-  <div class="copybox-content">
-    <pre>
-docker commit --change='CMD ["java", "-jar", "/tmp/rest-demo.jar"]' container_name telusko/rest-demo:v2 
-# This sets the default command to run the JAR directly when the image is run.
-</pre>
-  </div>
+</div><h2 id="running-springboot-app-on-docker">Running SpringBoot App on Docker</h2>
+<p><em><strong>Step 1:</strong></em> Check Running Containers</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker ps
+</span></span></code></pre></td></tr></table>
 </div>
-
-<style>
- 
-.copybox {
-  border: 1px solid var(--color-border, #ccc);
-  border-radius: 6px;
-  background: var(--color-code-bg, #f2f2f2);
-  font-family: sans-serif;
-  margin: 16px 0;
-}
-
- 
-.copybox-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  
-  padding: 8px 14px;
-  background: var(--color-code-header-bg, #e0e0e0);
-  border-bottom: 1px solid var(--color-border, #ccc);
-  font-weight: bold;
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-header button {
-  border: none;
-  background: var(--color-btn-bg, #d1d1d1);
-  border-radius: 4px;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--color-fg, #000);
-  transition: background 0.2s;
-}
-
-.copybox-header button:hover {
-  background: var(--color-btn-hover-bg, #c1c1c1);
-}
-
- 
-.copybox-content {
-  overflow-x: auto;   
-  margin: 0;
-  padding: 0;         
-}
-
- 
-.copybox-content pre {
-  margin: 0;               
-  padding: 12px 16px;      
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 1.5;        
-  white-space: pre;        
-  border-radius: 4px;
-  background: var(--color-code-bg, #f9f9f9);
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-content::-webkit-scrollbar {
-  height: 6px;
-}
-.copybox-content::-webkit-scrollbar-thumb {
-  background-color: var(--color-border, #ccc);
-  border-radius: 3px;
-}
-</style>
-
-<div class="copybox">
-  <div class="copybox-header">
-    <span>10. Run the Updated Image (v2)</span>
-    <button onclick="
-      navigator.clipboard.writeText('\ndocker run telusko\/rest-demo:v2 \n# This will now run the Spring Boot application from the JAR instead of entering JShell.\n');
-      this.innerHTML='✔ Copied';
-      this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
-    ">Copy</button>
-  </div>
-  <div class="copybox-content">
-    <pre>
-docker run telusko/rest-demo:v2 
-# This will now run the Spring Boot application from the JAR instead of entering JShell.
-</pre>
-  </div>
+</div><p><em><strong>Step 2.</strong></em> List All Files in the Container (JDK Environment)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker <span class="nb">exec</span> container_name ls -a
+</span></span></code></pre></td></tr></table>
 </div>
-
-<style>
- 
-.copybox {
-  border: 1px solid var(--color-border, #ccc);
-  border-radius: 6px;
-  background: var(--color-code-bg, #f2f2f2);
-  font-family: sans-serif;
-  margin: 16px 0;
-}
-
- 
-.copybox-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  
-  padding: 8px 14px;
-  background: var(--color-code-header-bg, #e0e0e0);
-  border-bottom: 1px solid var(--color-border, #ccc);
-  font-weight: bold;
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-header button {
-  border: none;
-  background: var(--color-btn-bg, #d1d1d1);
-  border-radius: 4px;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--color-fg, #000);
-  transition: background 0.2s;
-}
-
-.copybox-header button:hover {
-  background: var(--color-btn-hover-bg, #c1c1c1);
-}
-
- 
-.copybox-content {
-  overflow-x: auto;   
-  margin: 0;
-  padding: 0;         
-}
-
- 
-.copybox-content pre {
-  margin: 0;               
-  padding: 12px 16px;      
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 1.5;        
-  white-space: pre;        
-  border-radius: 4px;
-  background: var(--color-code-bg, #f9f9f9);
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-content::-webkit-scrollbar {
-  height: 6px;
-}
-.copybox-content::-webkit-scrollbar-thumb {
-  background-color: var(--color-border, #ccc);
-  border-radius: 3px;
-}
-</style>
-
-<div class="copybox">
-  <div class="copybox-header">
-    <span>11. Map Ports While Running the Container</span>
-    <button onclick="
-      navigator.clipboard.writeText('\ndocker run -p 8081:8081 telusko\/rest-demo:v2 \n# Maps port 8081 of the container to 8081 on the host machine.\n');
-      this.innerHTML='✔ Copied';
-      this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
-    ">Copy</button>
-  </div>
-  <div class="copybox-content">
-    <pre>
-docker run -p 8081:8081 telusko/rest-demo:v2 
-# Maps port 8081 of the container to 8081 on the host machine.
-</pre>
-  </div>
+</div><p>Lists all folders and files in the container&rsquo;s root directory.</p>
+<p><em><strong>Step 3.</strong></em> Check Contents of /tmp Directory&quot;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker <span class="nb">exec</span> container_name ls /tmp 
+</span></span></code></pre></td></tr></table>
 </div>
-
+</div><p>It will contain only one file in /tmp at the initial stage.</p>
+<p><em><strong>Step 4.</strong></em> Copy the Spring Boot JAR File into the Container</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker cp target/rest-demo.jar container_name:/tmp 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This copies the rest-demo.jar into the container’s /tmp directory.</p>
+<p><em><strong>Step 5.</strong></em> Verify the JAR File is Present</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker <span class="nb">exec</span> container_name ls /tmp 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The rest-demo.jar file will be available in addition to the existing content.</p>
+<p><em><strong>Step 6.</strong></em> Commit the Container to Create a New Docker Image</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker commit container_name telusko/rest-demo:v1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Creates a new Docker image named telusko/rest-demo with tag v1 from the current container state.</p>
+<p><em><strong>Step 7.</strong></em> List Docker Images</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker images 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Verifies that telusko/rest-demo:v1 image has been created successfully.</p>
+<p><em><strong>Step 8.</strong></em> Default Behavior: JShell</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run telusko/rest-demo:v1 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>When running telusko/rest-demo:v1, the container defaults to JShell.</p>
+<p><em><strong>Step 9.</strong></em> Set Default Command to Run JAR Using &ndash;change</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker commit --change<span class="o">=</span><span class="s1">&#39;CMD [&#34;java&#34;, &#34;-jar&#34;, &#34;/tmp/rest-demo.jar&#34;]&#39;</span> container_name telusko/rest-demo:v2 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This sets the default command to run the JAR directly when the image is run.</p>
+<p><em><strong>Step 10.</strong></em> Run the Updated Image (v2)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run telusko/rest-demo:v2 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This will now run the Spring Boot application from the JAR instead of entering JShell.</p>
+<p><em><strong>Step 11.</strong></em> Map Ports While Running the Container&quot;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -p 8081:8081 telusko/rest-demo:v2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Maps port 8081 of the container to 8081 on the host machine.</p>
 <div class="details admonition abstract open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>Resources<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
@@ -1272,92 +532,203 @@ docker run -p 8081:8081 telusko/rest-demo:v2
         </div>
     </div>
 <p>Thanks for reading!</p>
-<div style="position: relative; background: #f2f2f2; color: #333; padding: 16px; border-radius: 6px; font-family: monospace; border: 1px solid #ccc;">
-<p>docker run -p 8081:8081 telusko/rest-demo:v2</p>
+<h2 id="running-jdk-docker-container">Running JDK Docker Container</h2>
+<p>This document provides a list of basic Docker CLI commands used in the lecture.</p>
+<h3 id="jshell">JShell</h3>
+<ul>
+<li>JShell is a <strong>REPL (Read-Eval-Print Loop)</strong> for Java introduced in Java 9.</li>
+<li>It allows running Java code interactively, without needing to compile and run entire class files.</li>
+</ul>
+<h3 id="pull-openjdk-docker-image">Pull OpenJDK Docker Image</h3>
+<p><strong>1. Search for the OpenJDK image on Docker Hub</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker search openjdk
+</span></span></code></pre></td></tr></table>
 </div>
-<style>
- 
-.copybox {
-  border: 1px solid var(--color-border, #ccc);
-  border-radius: 6px;
-  background: var(--color-code-bg, #f2f2f2);
-  font-family: sans-serif;
-  margin: 16px 0;
-}
-
- 
-.copybox-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  
-  padding: 8px 14px;
-  background: var(--color-code-header-bg, #e0e0e0);
-  border-bottom: 1px solid var(--color-border, #ccc);
-  font-weight: bold;
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-header button {
-  border: none;
-  background: var(--color-btn-bg, #d1d1d1);
-  border-radius: 4px;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--color-fg, #000);
-  transition: background 0.2s;
-}
-
-.copybox-header button:hover {
-  background: var(--color-btn-hover-bg, #c1c1c1);
-}
-
- 
-.copybox-content {
-  overflow-x: auto;   
-  margin: 0;
-  padding: 0;         
-}
-
- 
-.copybox-content pre {
-  margin: 0;               
-  padding: 12px 16px;      
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 1.5;        
-  white-space: pre;        
-  border-radius: 4px;
-  background: var(--color-code-bg, #f9f9f9);
-  color: var(--color-fg, #000);
-}
-
- 
-.copybox-content::-webkit-scrollbar {
-  height: 6px;
-}
-.copybox-content::-webkit-scrollbar-thumb {
-  background-color: var(--color-border, #ccc);
-  border-radius: 3px;
-}
-</style>
-
-<div class="copybox">
-  <div class="copybox-header">
-    <span>Run Spring Boot Container</span>
-    <button onclick="
-      navigator.clipboard.writeText('\ndocker run -p 8081:8081 telusko\/rest-demo:v2\n');
-      this.innerHTML='✔ Copied';
-      this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
-    ">Copy</button>
-  </div>
-  <div class="copybox-content">
-    <pre>
-docker run -p 8081:8081 telusko/rest-demo:v2
-</pre>
-  </div>
+</div><p><strong>2. Pull a specific OpenJDK Image</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker pull openjdk:22-jdk
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>3.Check Available Images</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker images
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>4. Run the OpenJDK image</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run openjdk:22-jdk
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>5. Run OpenJDK image in interactive mode</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker search openjdk
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>The <code>-it</code> flag starts the container in <strong>interactive terminal mode</strong>.</p>
+</blockquote>
+<p><strong>6. Check Running Containers</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker ps
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="enter-jshell-inside-the-container">Enter JShell inside the Container</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">jshell
+</span></span><span class="line"><span class="cl">int <span class="nv">num</span> <span class="o">=</span> 8<span class="p">;</span>
+</span></span><span class="line"><span class="cl">System.out.println<span class="o">(</span><span class="s2">&#34;Hello World&#34;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">/exit  <span class="c1">#to exit from JShell</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Make sure the openjdk image version you pull supports jshell</p>
+</blockquote>
+<h2 id="docker-file-for-docker-images">Docker File for Docker Images</h2>
+<p>Build the Docker Image, Navigate to the directory that contains your <code>Dockerfile</code> and run:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker build -t telusko/rest-demo:v3 .
+</span></span><span class="line"><span class="cl"><span class="c1"># This builds a Docker image named telusko/rest-demo with tag v3 using the current directory (.) as the build context.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>List Available Docker Images</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker images
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Run the Docker Image with Port Mapping</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -p 8081:8081 telusko/rest-demo:v3
+</span></span><span class="line"><span class="cl"><span class="c1"># This runs the container from the newly built image and maps port 8081 of the host to port 8081 of the container.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="docker-compose">Docker Compose</h3>
+<p>This document provides a list of basic Docker CLI commands used in the lecture.</p>
+<p>Clean and Package the Application:
+Use Maven to clean and create a JAR package of the Spring Boot project:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mvn clean package
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Build and Start Docker Containers:
+Use Docker Compose to build the images and start the containers:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker-compose up --build
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>This will use the docker-compose.yml file to build the application.</p>
+</blockquote>
+<p>List Docker Images</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker images
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="running-multiple-containers">Running Multiple Containers</h3>
+<p>This document provides a list of basic Docker CLI commands used in the lecture.</p>
+<p>Stop and Remove All Running Containers</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker-compose down
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Clean and Package the Spring Boot App</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mvn clean package -DskipTests
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Build and Start Containers:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker-compose up --build
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Check Running Containers:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker ps
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>View Docker Networks:
+To list all Docker networks on your system:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker network ls
+</span></span></code></pre></td></tr></table>
+</div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
