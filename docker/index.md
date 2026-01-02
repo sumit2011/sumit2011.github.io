@@ -17,7 +17,24 @@ It has several features like:
 - **Efficiency:** Containers are lightweight compared to full VMs.
 - **Speed:** Faster startup and simplified CI/CD.
 
+## 2.  Architecture
+Docker uses a client-server architecture where the Docker client communicates with the Docker daemon, which builds, runs, and manages containers using images and Linux kernel features like namespaces and cgroups.
 
+
+{{< mermaid >}}
+
+graph LR;
+
+    A[Docker Client ] -->|Rest Api| B(Docker Daemon/Dockerd)
+
+
+    B --> C[Images]
+
+    B --> D[Containers]
+
+    C --> E[Docker Registry]
+
+{{< /mermaid >}}
 
 ## 2. Key concepts
 ### 2.1 Virtualization
@@ -160,34 +177,86 @@ docker ps -a
 ***Step 11.*** Verify Container is Removed
 `docker ps -a`
 
-## Docker Architecture
-Docker uses a client-server architecture where the Docker client communicates with the Docker daemon, which builds, runs, and manages containers using images and Linux kernel features like namespaces and cgroups.
+
+## Running SpringBoot App on Docker
 
 
-{{< mermaid >}}
+{{< copybox title="1. Check Running Containers" >}}
+docker ps
+{{< /copybox >}}
 
-graph LR;
-
-    A[Docker Client ] -->|Rest Api| B(Docker Daemon/Dockerd)
-
-
-    B --> C[Images]
-
-    B --> D[Containers]
-
-    C --> E[Docker Registry]
-
-{{< /mermaid >}}
+{{<copybox title="2. List All Files in the Container (JDK Environment)">}}
+docker exec container_name ls -a<br>
+# Lists all folders and files in the container's root directory.
+{{</copybox>}}
 
 
+{{< copybox title="3. Check Contents of /tmp Directory" >}}
+docker exec container_name ls /tmp <br>
+# It will contain only one file in /tmp at the initial stage.
+{{< /copybox >}}
 
-## Resources & further reading
+{{< copybox title="4. Copy the Spring Boot JAR File into the Container" >}}
+docker cp target/rest-demo.jar container_name:/tmp <br>
+# This copies the rest-demo.jar into the container’s /tmp directory.
+{{< /copybox >}}
+
+{{< copybox title="5. Verify the JAR File is Present" >}}
+docker exec container_name ls /tmp <br>
+# The rest-demo.jar file will be available in addition to the existing content.
+{{< /copybox >}}
+
+{{< copybox title="6. Commit the Container to Create a New Docker Image" >}}
+docker commit container_name telusko/rest-demo:v1 <br>
+# Creates a new Docker image named telusko/rest-demo with tag v1 from the current container state.
+{{< /copybox >}}
+
+{{< copybox title="7. List Docker Images" >}}
+docker images <br>
+# Verifies that telusko/rest-demo:v1 image has been created successfully.
+{{< /copybox >}}
+
+{{< copybox title="8. Default Behavior: JShell" >}}
+docker run telusko/rest-demo:v1 <br>
+# When running telusko/rest-demo:v1, the container defaults to JShell.
+{{< /copybox >}}
+
+{{< copybox title="9. Set Default Command to Run JAR Using --change" >}}
+docker commit --change='CMD ["java", "-jar", "/tmp/rest-demo.jar"]' container_name telusko/rest-demo:v2 <br>
+# This sets the default command to run the JAR directly when the image is run.
+{{< /copybox >}}
+
+{{< copybox title="10. Run the Updated Image (v2)" >}}
+docker run telusko/rest-demo:v2 <br>
+# This will now run the Spring Boot application from the JAR instead of entering JShell.
+{{< /copybox >}}
+
+{{< copybox title="11. Map Ports While Running the Container" >}}
+docker run -p 8081:8081 telusko/rest-demo:v2 <br>
+# Maps port 8081 of the container to 8081 on the host machine.
+{{< /copybox >}}
+
+
+
+{{< admonition type=abstract title="Resources" open=true >}}
 - Official docs: https://docs.docker.com
 - Dockerfile reference: https://docs.docker.com/engine/reference/builder/
 - Docker Compose: https://docs.docker.com/compose/
 - Image scanning: https://github.com/aquasecurity/trivy
-
-
+{{< /admonition >}}
 
 
  Thanks for reading! 
+
+
+<div style="position: relative; background: #f2f2f2; color: #333; padding: 16px; border-radius: 6px; font-family: monospace; border: 1px solid #ccc;">
+
+  docker run -p 8081:8081 telusko/rest-demo:v2
+</div>
+
+
+
+{{< copybox title="Run Spring Boot Container" >}}
+docker run -p 8081:8081 telusko/rest-demo:v2
+{{< /copybox >}}
+
