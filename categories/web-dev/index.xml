@@ -25,13 +25,6 @@
       <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Js is powerful, flexible and fast programming language. it is used in web development. It provides the dynamic behavior to the website.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Node Js</title>
-      <link>https://sumit2011.github.io/nodejs/</link>
-      <pubDate>Thu, 17 Jul 2025 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
-      <guid>https://sumit2011.github.io/nodejs/</guid>
-      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Navigation system works on the concept of linked list.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>CSS Part 1</title>
       <link>https://sumit2011.github.io/css/</link>
       <pubDate>Sat, 25 May 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
@@ -46,25 +39,11 @@
       <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Navigation system works on the concept of linked list.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>MongoDb Basics</title>
-      <link>https://sumit2011.github.io/mongodb/</link>
-      <pubDate>Sat, 25 May 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
-      <guid>https://sumit2011.github.io/mongodb/</guid>
-      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Navigation system works on the concept of linked list.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>git commands</title>
       <link>https://sumit2011.github.io/git-commands/</link>
       <pubDate>Thu, 29 Feb 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
       <guid>https://sumit2011.github.io/git-commands/</guid>
       <description>&lt;p&gt;Most useful git commands.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>SQL</title>
-      <link>https://sumit2011.github.io/sql/</link>
-      <pubDate>Thu, 29 Feb 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
-      <guid>https://sumit2011.github.io/sql/</guid>
-      <description>&lt;p&gt;Most useful sql commands.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

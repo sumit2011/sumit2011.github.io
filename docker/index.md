@@ -40,8 +40,6 @@ graph LR;
 ### 2.1 Virtualization
 it is technique that allows the computer to act like multiple independent computers by creating virtual versions of hardware and software. somehow docker uses OS-level virtualization which is called containerization.
 
-Architecture:
-
 {{< mermaid >}}
 
 graph LR;
@@ -60,8 +58,6 @@ graph LR;
 It is a lightweight form of virtualization where apps run in isolated environments called continers.Containers share the host kernel and isolation is provided by namespaces (PID, mount, network, user, etc.) and cgroups for resource limits.\
 **Benefits:** Fast, secure, portable, scalable, lightweight.
 
-Architecture:
-
 {{< mermaid >}}
 
 graph LR;
@@ -76,19 +72,26 @@ graph LR;
 
 {{< /mermaid >}}
 
-### 2.3 Components
+## 3. Main Components
 
 **Docker Engine:** The runtime that builds, runs, and manages containers (via the Docker CLI and API).
 
-**Image:** An immutable, layered artifact built from a `Dockerfile`. Images are versioned and pushed to registries.
 
-**Container:** A running instance of an image (an isolated process namespace).
+**Container:** Containers are isolated processes for each of the app's components. all the components like frontend react, backend python, postgres database run in the completely isolated environment.Containers are self-contained, isolated, independent and portable.
 
-**Registry:** Storage for images (Docker Hub, GitHub Container Registry, private registries).
+**Image:** To share the container we need image. A Container image is a standerized package that includes all of the files, binaries and configuration to run the container.
+THere are two imp principle of images
+1. Images are immutable: once an image is created it cant be modifie. you can only make new image or add changes on top of it.
 
-**Volume:** Persistent storage mounted into containers.
+2. Container images are composed of layers. Each layer represents a set of file system changes that add, remove, or modify files.
 
-**Network:** Bridge, host, or overlay networks for service connectivity.
+**Docker Hub** Docker hub is the default global marketplace for storing and distributing images. it has more than 1 lac images created by the devs. we can dwnld and run the images.
+
+**Registry:** An image registry is a centralized location for storing and sharing the container images. It can be either public or private.(Docker Hub, GitHub Container Registry, private registries).
+
+**Volume:** Persistent storage mounted into containers.It is separate from a container's lifecycle. It is used to store data so it doesn't get lost when a container stops, restart or deleted.
+
+**Network:** Network means a virtual communication layer that allows containers to talk to each other and to the outside world. It connects containers securely.
 
 **Dockerfile:** A text file with instructions (`FROM`, `COPY`, `RUN`, `CMD`) used to build an image.
 
@@ -96,7 +99,7 @@ graph LR;
 
 
 ## 3. Common Docker commands
-
+Most Commonly used docker commands
 
 | Command             | Description                                       |
 |---------------------|---------------------------------------------------|
@@ -142,10 +145,7 @@ docker ps -a
 
 ### 4.1 Step-by-Step: Docker Workflow
 ***Step 1.*** Search for Images on Docker Hub
-
 `docker search <image_name>`
-
-
 
 ***Step 2.*** Pull an image from Docker Hub 
 `docker pull <image_name>`
@@ -181,53 +181,51 @@ docker ps -a
 `docker ps -a`
 
 
-### Running First Container
+### Running First Container (Hello World)
 
-This document provides a list of basic Docker CLI commands used in the lecture.
-
-Check Docker Version
-
+***Step 1.*** Check Docker Version
 ```bash
 docker --version
 ```
 
-Run a Test Container:
-Run a test container using the hello-world image to verify Docker installation.
-
+***Step 2.*** Run a test container using the hello-world image to verify Docker installation.
 ```bash
 docker run hello-world
 ```
 
-Pull a Docker Image:
-Pull the hello-world image from Docker Hub.
-
+***Step 3.*** Pull the hello-world image from Docker Hub.
 ```bash
 docker pull hello-world
 ```
 
-Check running containers:
-To show all currently running containers.
+***Step 4.*** Check all currently runnings containers.
 
 ```bash
 docker ps
 ```
 
-Check all containers:
-Show all containers, both running and stopped.
+{{< admonition type=tip title="Output" open=true >}}
+
+ CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS                      NAMES
+ a1f7a4bb3a27   docker/welcome-to-docker   "/docker-entrypoint.â¦"   11 seconds ago   Up 11 seconds   0.0.0.0:8080->80/tcp       gracious_keldysh
+{{< /admonition >}}
+
+
+***Step 5.*** Show all containers, both running and stopped.
 
 ```bash
 docker ps -a
 ```
 
-List available images:
-List all Docker images downloaded and available locally.
+***Step 6.*** ist all Docker images downloaded and available locally.
 
 ```bash
 docker images
 ```
 
-
-### Packaging the Spring Boot Web App
+## Running SpringBoot App on Docker
+To run the spring boot web app on the docker we need the jar file. so 1st create the jar file then upload the jar file to the container.
+### Package the Web App
 This document provides a list of basic Docker CLI commands used in the lecture.
 
 ***Step 1:*** Package the Project Using Maven
@@ -241,7 +239,7 @@ mvn package
 java -jar target/rest-demo.jar
 ```
 
-## Running SpringBoot App on Docker
+### Run the App on Docker
 
 
 ***Step 1:*** Check Running Containers
@@ -314,17 +312,6 @@ docker run -p 8081:8081 telusko/rest-demo:v2
 ```
 Maps port 8081 of the container to 8081 on the host machine.
 
-
-
-{{< admonition type=abstract title="Resources" open=true >}}
-- Official docs: https://docs.docker.com
-- Dockerfile reference: https://docs.docker.com/engine/reference/builder/
-- Docker Compose: https://docs.docker.com/compose/
-- Image scanning: https://github.com/aquasecurity/trivy
-{{< /admonition >}}
-
-
- Thanks for reading! 
 
 
 ## Running JDK Docker Container
@@ -408,8 +395,6 @@ docker run -p 8081:8081 telusko/rest-demo:v3
 
 ### Docker Compose
 
-This document provides a list of basic Docker CLI commands used in the lecture.
-
 Clean and Package the Application:
 Use Maven to clean and create a JAR package of the Spring Boot project:
 ```bash
@@ -465,3 +450,13 @@ docker network ls
 ```
 
 
+
+{{< admonition type=abstract title="Resources" open=true >}}
+- Official docs: https://docs.docker.com
+- Dockerfile reference: https://docs.docker.com/engine/reference/builder/
+- Docker Compose: https://docs.docker.com/compose/
+- Image scanning: https://github.com/aquasecurity/trivy
+{{< /admonition >}}
+
+
+ Thanks for reading! 

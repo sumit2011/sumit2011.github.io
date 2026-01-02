@@ -27,6 +27,76 @@
             </div>]]></description>
 </item>
 <item>
+    <title>Docker — Containers Simplified</title>
+    <link>https://sumit2011.github.io/docker/</link>
+    <pubDate>Wed, 31 Dec 2025 10:00:00 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/docker/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/docker.png" referrerpolicy="no-referrer">
+            </div><p><em><strong>Docker packages applications and their dependencies into portable containers so they run consistently across environments.</strong></em></p>]]></description>
+</item>
+<item>
+    <title>Java Script: Part-1</title>
+    <link>https://sumit2011.github.io/javascript/</link>
+    <pubDate>Thu, 17 Jul 2025 11:54:28 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/javascript/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/home.png" referrerpolicy="no-referrer">
+            </div><p><em><strong>Js is powerful, flexible and fast programming language. it is used in web development. It provides the dynamic behavior to the website.</strong></em></p>]]></description>
+</item>
+<item>
+    <title>CSS Part 1</title>
+    <link>https://sumit2011.github.io/css/</link>
+    <pubDate>Sat, 25 May 2024 11:54:28 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/css/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/home.png" referrerpolicy="no-referrer">
+            </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
+</item>
+<item>
+    <title>HTML Basics</title>
+    <link>https://sumit2011.github.io/html/</link>
+    <pubDate>Sat, 25 May 2024 11:54:28 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/html/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/home.png" referrerpolicy="no-referrer">
+            </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
+</item>
+<item>
+    <title>git commands</title>
+    <link>https://sumit2011.github.io/git-commands/</link>
+    <pubDate>Thu, 29 Feb 2024 11:54:28 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/git-commands/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/git.png" referrerpolicy="no-referrer">
+            </div><p>Most useful git commands.</p>]]></description>
+</item>
+<item>
+    <title>Sorting Algos</title>
+    <link>https://sumit2011.github.io/sorting/</link>
+    <pubDate>Sat, 10 Feb 2024 11:54:28 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/sorting/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/sorting.png" referrerpolicy="no-referrer">
+            </div><p><em><strong>Python is used in automation of taskes.</strong></em></p>]]></description>
+</item>
+<item>
+    <title>Python Basic Syntax</title>
+    <link>https://sumit2011.github.io/python/</link>
+    <pubDate>Thu, 25 Jan 2024 11:54:28 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/python/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/python.jpg" referrerpolicy="no-referrer">
+            </div><p><em><strong>Python is used in automation of taskes.</strong></em></p>]]></description>
+</item>
+<item>
     <title>Graph</title>
     <link>https://sumit2011.github.io/graph/</link>
     <pubDate>Thu, 30 Nov 2023 11:54:28 &#43;0530</pubDate>
@@ -34,26 +104,6 @@
     <guid>https://sumit2011.github.io/graph/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/photo.jpeg" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
-    <title>Stack (array implementation)</title>
-    <link>https://sumit2011.github.io/stack/</link>
-    <pubDate>Sun, 15 Jan 2023 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/stack/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210409185210/HowtoImplementStackinJavaUsingArrayandGenerics.jpg" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
-    <title>Binary Tree</title>
-    <link>https://sumit2011.github.io/binary-tree/</link>
-    <pubDate>Fri, 20 Jan 2023 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/binary-tree/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/binarytree.png" referrerpolicy="no-referrer">
             </div>]]></description>
 </item>
 <item>
@@ -112,26 +162,6 @@ Use of  a search engine, such as google, to locate a security vulnerability on t
             </div><p>This is the write up for the room Upload Vulnerabilities on Tryhackme and it is part of the Web Fundamentals Path</p>]]></description>
 </item>
 <item>
-    <title>Sorting Algos</title>
-    <link>https://sumit2011.github.io/sorting/</link>
-    <pubDate>Sat, 10 Feb 2024 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/sorting/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/sorting.png" referrerpolicy="no-referrer">
-            </div><p><em><strong>Python is used in automation of taskes.</strong></em></p>]]></description>
-</item>
-<item>
-    <title>Python Basic Syntax</title>
-    <link>https://sumit2011.github.io/python/</link>
-    <pubDate>Thu, 25 Jan 2024 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/python/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/python.jpg" referrerpolicy="no-referrer">
-            </div><p><em><strong>Python is used in automation of taskes.</strong></em></p>]]></description>
-</item>
-<item>
     <title>Oops(object oriented programming)</title>
     <link>https://sumit2011.github.io/oops/</link>
     <pubDate>Wed, 15 Feb 2023 11:54:28 &#43;0530</pubDate>
@@ -142,44 +172,14 @@ Use of  a search engine, such as google, to locate a security vulnerability on t
             </div>]]></description>
 </item>
 <item>
-    <title>Docker — Containers Simplified</title>
-    <link>https://sumit2011.github.io/docker/</link>
-    <pubDate>Wed, 31 Dec 2025 10:00:00 &#43;0530</pubDate>
+    <title>Binary Tree</title>
+    <link>https://sumit2011.github.io/binary-tree/</link>
+    <pubDate>Fri, 20 Jan 2023 11:54:28 &#43;0530</pubDate>
     <author>Sumit</author>
-    <guid>https://sumit2011.github.io/docker/</guid>
+    <guid>https://sumit2011.github.io/binary-tree/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/docker.png" referrerpolicy="no-referrer">
-            </div><p><em><strong>Docker packages applications and their dependencies into portable containers so they run consistently across environments.</strong></em></p>]]></description>
-</item>
-<item>
-    <title>Java Script: Part-1</title>
-    <link>https://sumit2011.github.io/javascript/</link>
-    <pubDate>Thu, 17 Jul 2025 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/javascript/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/home.png" referrerpolicy="no-referrer">
-            </div><p><em><strong>Js is powerful, flexible and fast programming language. it is used in web development. It provides the dynamic behavior to the website.</strong></em></p>]]></description>
-</item>
-<item>
-    <title>Node Js</title>
-    <link>https://sumit2011.github.io/nodejs/</link>
-    <pubDate>Thu, 17 Jul 2025 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/nodejs/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/home.png" referrerpolicy="no-referrer">
-            </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
-</item>
-<item>
-    <title>CSS Part 1</title>
-    <link>https://sumit2011.github.io/css/</link>
-    <pubDate>Sat, 25 May 2024 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/css/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/home.png" referrerpolicy="no-referrer">
-            </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
+                <img src="/binarytree.png" referrerpolicy="no-referrer">
+            </div>]]></description>
 </item>
 </channel>
 </rss>
