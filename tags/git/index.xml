@@ -1,28 +1,28 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Git - Tag - The Smoking Bits</title>
-        <link>https://sumit2011.github.io/tags/git/</link>
-        <description>Git - Tag - The Smoking Bits</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
-            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Thu, 29 Feb 2024 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/tags/git/" rel="self" type="application/rss+xml" /><item>
-    <title>git commands</title>
-    <link>https://sumit2011.github.io/git-commands/</link>
-    <pubDate>Thu, 29 Feb 2024 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/git-commands/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/git.png" referrerpolicy="no-referrer">
-            </div><p>Most useful git commands.</p>]]></description>
-</item>
-<item>
-    <title>SQL</title>
-    <link>https://sumit2011.github.io/sql/</link>
-    <pubDate>Thu, 29 Feb 2024 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/sql/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/git.png" referrerpolicy="no-referrer">
-            </div><p>Most useful sql commands.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on The Smoking Bits</title>
+    <link>https://sumit2011.github.io/tags/git/</link>
+    <description>Recent content in Git on The Smoking Bits</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
+    <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster>
+    <lastBuildDate>Thu, 29 Feb 2024 11:54:28 +0530</lastBuildDate>
+    <atom:link href="https://sumit2011.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git commands</title>
+      <link>https://sumit2011.github.io/git-commands/</link>
+      <pubDate>Thu, 29 Feb 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/git-commands/</guid>
+      <description>&lt;p&gt;Most useful git commands.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SQL</title>
+      <link>https://sumit2011.github.io/sql/</link>
+      <pubDate>Thu, 29 Feb 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/sql/</guid>
+      <description>&lt;p&gt;Most useful sql commands.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

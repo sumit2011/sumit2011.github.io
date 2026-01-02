@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevOps on The Smoking Bits</title>
+    <link>https://sumit2011.github.io/categories/devops/</link>
+    <description>Recent content in DevOps on The Smoking Bits</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
+    <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster>
+    <lastBuildDate>Wed, 31 Dec 2025 10:00:00 +0530</lastBuildDate>
+    <atom:link href="https://sumit2011.github.io/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker — Containers Simplified</title>
+      <link>https://sumit2011.github.io/docker/</link>
+      <pubDate>Wed, 31 Dec 2025 10:00:00 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/docker/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Docker packages applications and their dependencies into portable containers so they run consistently across environments.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

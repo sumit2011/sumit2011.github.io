@@ -4,7 +4,7 @@
         <link>https://sumit2011.github.io/</link>
         <description>The Smoking Bits, a blog dedicated to the world of Data Structures and Algorithms. The Smoking Bits is your go-to destination for all things DSA.</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
-            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Thu, 17 Jul 2025 11:54:28 &#43;0530</lastBuildDate>
+            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Wed, 31 Dec 2025 10:00:00 &#43;0530</lastBuildDate>
             <atom:link href="https://sumit2011.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Single Linked List</title>
@@ -64,9 +64,32 @@
     <guid>https://sumit2011.github.io/google-dorks/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/photo.png" referrerpolicy="no-referrer">
-            </div>Google hacking Google hacking is using different google operators to refine search results. Use of a search engine, such as google, to locate a security vulnerability on the internet.
-Downloading Movie 1 Movie+name -inurl:(htm|html|php|pls|txt) intitle:index.of &#34;last modified&#34; (mp4|wma| acc|avi) View Android Camera Photos: 1 intitle:&#34;Index of&#34; &#34;DCIM&#34; Google Operators Basic Operators +, -, ., *, &quot;&quot;, |, OR
-Advanced Operators allintext:, allintilte:, allinurl:, cache:, define:, filetype:, info:, intext:, intitle:, inurl:, link:, phonebook:, related:, site:, numrange:]]></description>
+            </div><h3 id="google-hacking">Google hacking</h3>
+<p>Google hacking is using different google operators to refine search results.
+Use of  a search engine, such as google, to locate a security vulnerability on the internet.</p>
+<h3 id="downloading-movie">Downloading Movie</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">Movie+name -inurl:(htm|html|php|pls|txt) intitle:index.of &#34;last modified&#34; (mp4|wma| acc|avi)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="view-android-camera-photos">View Android Camera Photos:</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">intitle:&#34;Index of&#34; &#34;DCIM&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="google-operators">Google Operators</h2>
+<h3 id="basic-operators">Basic Operators</h3>
+<p><code>+, -, ., *, &quot;&quot;, |, OR</code></p>
+<h3 id="advanced-operators">Advanced Operators</h3>
+<p>allintext:, allintilte:, allinurl:, cache:, define:, filetype:, info:, intext:, intitle:, inurl:, link:, phonebook:, related:, site:, numrange:</p>]]></description>
 </item>
 <item>
     <title>THM Jr Penetration Tester Pathway Guide</title>
@@ -119,6 +142,16 @@ Advanced Operators allintext:, allintilte:, allinurl:, cache:, define:, filetype
             </div>]]></description>
 </item>
 <item>
+    <title>Docker — Containers Simplified</title>
+    <link>https://sumit2011.github.io/docker/</link>
+    <pubDate>Wed, 31 Dec 2025 10:00:00 &#43;0530</pubDate>
+    <author>Sumit</author>
+    <guid>https://sumit2011.github.io/docker/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/docker.png" referrerpolicy="no-referrer">
+            </div><p><em><strong>Docker packages applications and their dependencies into portable containers so they run consistently across environments.</strong></em></p>]]></description>
+</item>
+<item>
     <title>Java Script: Part-1</title>
     <link>https://sumit2011.github.io/javascript/</link>
     <pubDate>Thu, 17 Jul 2025 11:54:28 &#43;0530</pubDate>
@@ -144,16 +177,6 @@ Advanced Operators allintext:, allintilte:, allinurl:, cache:, define:, filetype
     <pubDate>Sat, 25 May 2024 11:54:28 &#43;0530</pubDate>
     <author>Sumit</author>
     <guid>https://sumit2011.github.io/css/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/home.png" referrerpolicy="no-referrer">
-            </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
-</item>
-<item>
-    <title>HTML Basics</title>
-    <link>https://sumit2011.github.io/html/</link>
-    <pubDate>Sat, 25 May 2024 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/html/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/home.png" referrerpolicy="no-referrer">
             </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>

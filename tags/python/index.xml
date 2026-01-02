@@ -1,18 +1,21 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Python - Tag - The Smoking Bits</title>
-        <link>https://sumit2011.github.io/tags/python/</link>
-        <description>Python - Tag - The Smoking Bits</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
-            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Thu, 25 Jan 2024 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
-    <title>Python Basic Syntax</title>
-    <link>https://sumit2011.github.io/python/</link>
-    <pubDate>Thu, 25 Jan 2024 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/python/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/python.jpg" referrerpolicy="no-referrer">
-            </div><p><em><strong>Python is used in automation of taskes.</strong></em></p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on The Smoking Bits</title>
+    <link>https://sumit2011.github.io/tags/python/</link>
+    <description>Recent content in Python on The Smoking Bits</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
+    <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster>
+    <lastBuildDate>Thu, 25 Jan 2024 11:54:28 +0530</lastBuildDate>
+    <atom:link href="https://sumit2011.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Basic Syntax</title>
+      <link>https://sumit2011.github.io/python/</link>
+      <pubDate>Thu, 25 Jan 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/python/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Python is used in automation of taskes.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

@@ -4,7 +4,7 @@
         <link>https://sumit2011.github.io/posts/</link>
         <description>All Posts | The Smoking Bits</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
-            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Thu, 17 Jul 2025 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Wed, 31 Dec 2025 10:00:00 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Single Linked List</title>
     <link>https://sumit2011.github.io/single_linked_list/</link>
     <pubDate>Sun, 25 Dec 2022 11:54:28 &#43;0530</pubDate>
@@ -62,9 +62,32 @@
     <guid>https://sumit2011.github.io/google-dorks/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/photo.png" referrerpolicy="no-referrer">
-            </div>Google hacking Google hacking is using different google operators to refine search results. Use of a search engine, such as google, to locate a security vulnerability on the internet.
-Downloading Movie 1 Movie+name -inurl:(htm|html|php|pls|txt) intitle:index.of &#34;last modified&#34; (mp4|wma| acc|avi) View Android Camera Photos: 1 intitle:&#34;Index of&#34; &#34;DCIM&#34; Google Operators Basic Operators +, -, ., *, &quot;&quot;, |, OR
-Advanced Operators allintext:, allintilte:, allinurl:, cache:, define:, filetype:, info:, intext:, intitle:, inurl:, link:, phonebook:, related:, site:, numrange:]]></description>
+            </div><h3 id="google-hacking">Google hacking</h3>
+<p>Google hacking is using different google operators to refine search results.
+Use of  a search engine, such as google, to locate a security vulnerability on the internet.</p>
+<h3 id="downloading-movie">Downloading Movie</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">Movie+name -inurl:(htm|html|php|pls|txt) intitle:index.of &#34;last modified&#34; (mp4|wma| acc|avi)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="view-android-camera-photos">View Android Camera Photos:</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">intitle:&#34;Index of&#34; &#34;DCIM&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="google-operators">Google Operators</h2>
+<h3 id="basic-operators">Basic Operators</h3>
+<p><code>+, -, ., *, &quot;&quot;, |, OR</code></p>
+<h3 id="advanced-operators">Advanced Operators</h3>
+<p>allintext:, allintilte:, allinurl:, cache:, define:, filetype:, info:, intext:, intitle:, inurl:, link:, phonebook:, related:, site:, numrange:</p>]]></description>
 </item>
 <item>
     <title>THM Jr Penetration Tester Pathway Guide</title>

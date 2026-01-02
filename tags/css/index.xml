@@ -1,18 +1,21 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Css - Tag - The Smoking Bits</title>
-        <link>https://sumit2011.github.io/tags/css/</link>
-        <description>Css - Tag - The Smoking Bits</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
-            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Sat, 25 May 2024 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/tags/css/" rel="self" type="application/rss+xml" /><item>
-    <title>CSS Part 1</title>
-    <link>https://sumit2011.github.io/css/</link>
-    <pubDate>Sat, 25 May 2024 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/css/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/home.png" referrerpolicy="no-referrer">
-            </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Css on The Smoking Bits</title>
+    <link>https://sumit2011.github.io/tags/css/</link>
+    <description>Recent content in Css on The Smoking Bits</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
+    <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster>
+    <lastBuildDate>Sat, 25 May 2024 11:54:28 +0530</lastBuildDate>
+    <atom:link href="https://sumit2011.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Part 1</title>
+      <link>https://sumit2011.github.io/css/</link>
+      <pubDate>Sat, 25 May 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/css/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Navigation system works on the concept of linked list.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

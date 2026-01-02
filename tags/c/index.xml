@@ -1,110 +1,84 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>C - Tag - The Smoking Bits</title>
-        <link>https://sumit2011.github.io/tags/c/</link>
-        <description>C - Tag - The Smoking Bits</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
-            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Sat, 10 Feb 2024 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/tags/c/" rel="self" type="application/rss+xml" /><item>
-    <title>Single Linked List</title>
-    <link>https://sumit2011.github.io/single_linked_list/</link>
-    <pubDate>Sun, 25 Dec 2022 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/single_linked_list/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/DSA/single-linked-list/LLdraw.png" referrerpolicy="no-referrer">
-            </div><p><em><strong>Navigation system works on the concept of linked list.</strong></em></p>]]></description>
-</item>
-<item>
-    <title>Binary Search</title>
-    <link>https://sumit2011.github.io/binary-search/</link>
-    <pubDate>Thu, 30 Nov 2023 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/binary-search/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/photo.png" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
-    <title>Graph</title>
-    <link>https://sumit2011.github.io/graph/</link>
-    <pubDate>Thu, 30 Nov 2023 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/graph/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/photo.jpeg" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
-    <title>Stack (array implementation)</title>
-    <link>https://sumit2011.github.io/stack/</link>
-    <pubDate>Sun, 15 Jan 2023 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/stack/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210409185210/HowtoImplementStackinJavaUsingArrayandGenerics.jpg" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
-    <title>Binary Tree</title>
-    <link>https://sumit2011.github.io/binary-tree/</link>
-    <pubDate>Fri, 20 Jan 2023 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/binary-tree/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/binarytree.png" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
-    <title>Google Dorks</title>
-    <link>https://sumit2011.github.io/google-dorks/</link>
-    <pubDate>Sat, 05 Aug 2023 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/google-dorks/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/photo.png" referrerpolicy="no-referrer">
-            </div>Google hacking Google hacking is using different google operators to refine search results. Use of a search engine, such as google, to locate a security vulnerability on the internet.
-Downloading Movie 1 Movie+name -inurl:(htm|html|php|pls|txt) intitle:index.of &#34;last modified&#34; (mp4|wma| acc|avi) View Android Camera Photos: 1 intitle:&#34;Index of&#34; &#34;DCIM&#34; Google Operators Basic Operators +, -, ., *, &quot;&quot;, |, OR
-Advanced Operators allintext:, allintilte:, allinurl:, cache:, define:, filetype:, info:, intext:, intitle:, inurl:, link:, phonebook:, related:, site:, numrange:]]></description>
-</item>
-<item>
-    <title>THM Jr Penetration Tester Pathway Guide</title>
-    <link>https://sumit2011.github.io/jr-penetration-tester/</link>
-    <pubDate>Sat, 05 Aug 2023 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/jr-penetration-tester/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://assets.tryhackme.com/img/paths/jrpenetrationtester.svg" referrerpolicy="no-referrer">
-            </div><p>Here i will help you in your jr penetration tester pathway on THM.</p>]]></description>
-</item>
-<item>
-    <title>Upload Vulnerabilities</title>
-    <link>https://sumit2011.github.io/upload-vulnerabilities/</link>
-    <pubDate>Sat, 08 Jul 2023 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/upload-vulnerabilities/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://i.imgur.com/wVEQ3Fe.png" referrerpolicy="no-referrer">
-            </div><p>This is the write up for the room Upload Vulnerabilities on Tryhackme and it is part of the Web Fundamentals Path</p>]]></description>
-</item>
-<item>
-    <title>Sorting Algos</title>
-    <link>https://sumit2011.github.io/sorting/</link>
-    <pubDate>Sat, 10 Feb 2024 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/sorting/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/sorting.png" referrerpolicy="no-referrer">
-            </div><p><em><strong>Python is used in automation of taskes.</strong></em></p>]]></description>
-</item>
-<item>
-    <title>Oops(object oriented programming)</title>
-    <link>https://sumit2011.github.io/oops/</link>
-    <pubDate>Wed, 15 Feb 2023 11:54:28 &#43;0530</pubDate>
-    <author>Sumit</author>
-    <guid>https://sumit2011.github.io/oops/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/DSA/oops/oops.png" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C on The Smoking Bits</title>
+    <link>https://sumit2011.github.io/tags/c/</link>
+    <description>Recent content in C on The Smoking Bits</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
+    <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster>
+    <lastBuildDate>Sat, 10 Feb 2024 11:54:28 +0530</lastBuildDate>
+    <atom:link href="https://sumit2011.github.io/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Single Linked List</title>
+      <link>https://sumit2011.github.io/single_linked_list/</link>
+      <pubDate>Sun, 25 Dec 2022 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/single_linked_list/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Navigation system works on the concept of linked list.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Binary Search</title>
+      <link>https://sumit2011.github.io/binary-search/</link>
+      <pubDate>Thu, 30 Nov 2023 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/binary-search/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Graph</title>
+      <link>https://sumit2011.github.io/graph/</link>
+      <pubDate>Thu, 30 Nov 2023 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/graph/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stack (array implementation)</title>
+      <link>https://sumit2011.github.io/stack/</link>
+      <pubDate>Sun, 15 Jan 2023 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/stack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Binary Tree</title>
+      <link>https://sumit2011.github.io/binary-tree/</link>
+      <pubDate>Fri, 20 Jan 2023 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/binary-tree/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google Dorks</title>
+      <link>https://sumit2011.github.io/google-dorks/</link>
+      <pubDate>Sat, 05 Aug 2023 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/google-dorks/</guid>
+      <description>&lt;h3 id=&#34;google-hacking&#34;&gt;Google hacking&lt;/h3&gt;&#xA;&lt;p&gt;Google hacking is using different google operators to refine search results.&#xA;Use of  a search engine, such as google, to locate a security vulnerability on the internet.&lt;/p&gt;&#xA;&lt;h3 id=&#34;downloading-movie&#34;&gt;Downloading Movie&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Movie+name -inurl:(htm|html|php|pls|txt) intitle:index.of &amp;#34;last modified&amp;#34; (mp4|wma| acc|avi)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h3 id=&#34;view-android-camera-photos&#34;&gt;View Android Camera Photos:&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;intitle:&amp;#34;Index of&amp;#34; &amp;#34;DCIM&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h2 id=&#34;google-operators&#34;&gt;Google Operators&lt;/h2&gt;&#xA;&lt;h3 id=&#34;basic-operators&#34;&gt;Basic Operators&lt;/h3&gt;&#xA;&lt;p&gt;&lt;code&gt;+, -, ., *, &amp;quot;&amp;quot;, |, OR&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;advanced-operators&#34;&gt;Advanced Operators&lt;/h3&gt;&#xA;&lt;p&gt;allintext:, allintilte:, allinurl:, cache:, define:, filetype:, info:, intext:, intitle:, inurl:, link:, phonebook:, related:, site:, numrange:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>THM Jr Penetration Tester Pathway Guide</title>
+      <link>https://sumit2011.github.io/jr-penetration-tester/</link>
+      <pubDate>Sat, 05 Aug 2023 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/jr-penetration-tester/</guid>
+      <description>&lt;p&gt;Here i will help you in your jr penetration tester pathway on THM.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Upload Vulnerabilities</title>
+      <link>https://sumit2011.github.io/upload-vulnerabilities/</link>
+      <pubDate>Sat, 08 Jul 2023 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/upload-vulnerabilities/</guid>
+      <description>&lt;p&gt;This is the write up for the room Upload Vulnerabilities on Tryhackme and it is part of the Web Fundamentals Path&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sorting Algos</title>
+      <link>https://sumit2011.github.io/sorting/</link>
+      <pubDate>Sat, 10 Feb 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/sorting/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Python is used in automation of taskes.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Oops(object oriented programming)</title>
+      <link>https://sumit2011.github.io/oops/</link>
+      <pubDate>Wed, 15 Feb 2023 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/oops/</guid>
+      <description></description>
+    </item>
+  </channel>
 </rss>

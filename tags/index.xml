@@ -1,64 +1,84 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Tags - Tag - The Smoking Bits</title>
-        <link>https://sumit2011.github.io/tags/</link>
-        <description>Tags - Tag - The Smoking Bits</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
-            <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster><lastBuildDate>Thu, 17 Jul 2025 11:54:28 &#43;0530</lastBuildDate><atom:link href="https://sumit2011.github.io/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>Js</title>
-    <link>https://sumit2011.github.io/tags/js/</link>
-    <pubDate>Thu, 17 Jul 2025 11:54:28 &#43;0530</pubDate>
-    <author>sumit</author>
-    <guid>https://sumit2011.github.io/tags/js/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Css</title>
-    <link>https://sumit2011.github.io/tags/css/</link>
-    <pubDate>Sat, 25 May 2024 11:54:28 &#43;0530</pubDate>
-    <author>sumit</author>
-    <guid>https://sumit2011.github.io/tags/css/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Html</title>
-    <link>https://sumit2011.github.io/tags/html/</link>
-    <pubDate>Sat, 25 May 2024 11:54:28 &#43;0530</pubDate>
-    <author>sumit</author>
-    <guid>https://sumit2011.github.io/tags/html/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Git</title>
-    <link>https://sumit2011.github.io/tags/git/</link>
-    <pubDate>Thu, 29 Feb 2024 11:54:28 &#43;0530</pubDate>
-    <author>sumit</author>
-    <guid>https://sumit2011.github.io/tags/git/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>C</title>
-    <link>https://sumit2011.github.io/tags/c/</link>
-    <pubDate>Sat, 10 Feb 2024 11:54:28 &#43;0530</pubDate>
-    <author>sumit</author>
-    <guid>https://sumit2011.github.io/tags/c/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>C&#43;&#43;</title>
-    <link>https://sumit2011.github.io/tags/c&#43;&#43;/</link>
-    <pubDate>Sat, 10 Feb 2024 11:54:28 &#43;0530</pubDate>
-    <author>sumit</author>
-    <guid>https://sumit2011.github.io/tags/c&#43;&#43;/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Python</title>
-    <link>https://sumit2011.github.io/tags/python/</link>
-    <pubDate>Thu, 25 Jan 2024 11:54:28 &#43;0530</pubDate>
-    <author>sumit</author>
-    <guid>https://sumit2011.github.io/tags/python/</guid>
-    <description><![CDATA[]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on The Smoking Bits</title>
+    <link>https://sumit2011.github.io/tags/</link>
+    <description>Recent content in Tags on The Smoking Bits</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>sumit2011kmr@gmail.com (sumit)</managingEditor>
+    <webMaster>sumit2011kmr@gmail.com (sumit)</webMaster>
+    <lastBuildDate>Wed, 31 Dec 2025 10:00:00 +0530</lastBuildDate>
+    <atom:link href="https://sumit2011.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Containers</title>
+      <link>https://sumit2011.github.io/tags/containers/</link>
+      <pubDate>Wed, 31 Dec 2025 10:00:00 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/tags/containers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Devops</title>
+      <link>https://sumit2011.github.io/tags/devops/</link>
+      <pubDate>Wed, 31 Dec 2025 10:00:00 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://sumit2011.github.io/tags/docker/</link>
+      <pubDate>Wed, 31 Dec 2025 10:00:00 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Js</title>
+      <link>https://sumit2011.github.io/tags/js/</link>
+      <pubDate>Thu, 17 Jul 2025 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/tags/js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Css</title>
+      <link>https://sumit2011.github.io/tags/css/</link>
+      <pubDate>Sat, 25 May 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Html</title>
+      <link>https://sumit2011.github.io/tags/html/</link>
+      <pubDate>Sat, 25 May 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://sumit2011.github.io/tags/git/</link>
+      <pubDate>Thu, 29 Feb 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C</title>
+      <link>https://sumit2011.github.io/tags/c/</link>
+      <pubDate>Sat, 10 Feb 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/tags/c/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://sumit2011.github.io/tags/c&#43;&#43;/</link>
+      <pubDate>Sat, 10 Feb 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://sumit2011.github.io/tags/python/</link>
+      <pubDate>Thu, 25 Jan 2024 11:54:28 +0530</pubDate><author>sumit2011kmr@gmail.com (sumit)</author>
+      <guid>https://sumit2011.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+  </channel>
 </rss>
