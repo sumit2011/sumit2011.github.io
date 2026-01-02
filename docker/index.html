@@ -313,595 +313,947 @@ It has several features like:</p>
 <code>docker ps -a</code></p>
 <h2 id="running-springboot-app-on-docker">Running SpringBoot App on Docker</h2>
 <style>
+ 
 .copybox {
-  border:1px solid #ccc;
-  border-radius:6px;
-  background:#f2f2f2;
-  font-family:sans-serif;
-  margin:16px 0;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 6px;
+  background: var(--color-code-bg, #f2f2f2);
+  font-family: sans-serif;
+  margin: 16px 0;
 }
-.copybox-header {
-  position:relative;
-  padding:10px 14px;
-  background:#e0e0e0;
-  border-bottom:1px solid #ccc;
-  font-weight:bold;
-     
 
+ 
+.copybox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 8px 14px;
+  background: var(--color-code-header-bg, #e0e0e0);
+  border-bottom: 1px solid var(--color-border, #ccc);
+  font-weight: bold;
+  color: var(--color-fg, #000);
 }
+
+ 
 .copybox-header button {
-  position:absolute;
-  top:8px;
-  right:8px;
-  border:none;
-  background:#d1d1d1;
-  border-radius:4px;
-  padding:3px 8px;
-  cursor:pointer;
-  font-size:13px;
+  border: none;
+  background: var(--color-btn-bg, #d1d1d1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-fg, #000);
+  transition: background 0.2s;
 }
+
+.copybox-header button:hover {
+  background: var(--color-btn-hover-bg, #c1c1c1);
+}
+
+ 
 .copybox-content {
-  padding:14px;
-  color:#333;
-  font-family:monospace;
-   
+  overflow-x: auto;   
+  margin: 0;
+  padding: 0;         
+}
+
+ 
+.copybox-content pre {
+  margin: 0;               
+  padding: 12px 16px;      
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;        
+  white-space: pre;        
+  border-radius: 4px;
+  background: var(--color-code-bg, #f9f9f9);
+  color: var(--color-fg, #000);
+}
+
+ 
+.copybox-content::-webkit-scrollbar {
+  height: 6px;
+}
+.copybox-content::-webkit-scrollbar-thumb {
+  background-color: var(--color-border, #ccc);
+  border-radius: 3px;
 }
 </style>
 
 <div class="copybox">
   <div class="copybox-header">
-    1. Check Running Containers
+    <span>1. Check Running Containers</span>
     <button onclick="
       navigator.clipboard.writeText('\ndocker ps\n');
       this.innerHTML='✔ Copied';
       this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='copy'; this.style.background='#d1d1d1'; },1500);
+      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
     ">Copy</button>
   </div>
   <div class="copybox-content">
-    
+    <pre>
 docker ps
-
+</pre>
   </div>
 </div>
 
 <style>
+ 
 .copybox {
-  border:1px solid #ccc;
-  border-radius:6px;
-  background:#f2f2f2;
-  font-family:sans-serif;
-  margin:16px 0;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 6px;
+  background: var(--color-code-bg, #f2f2f2);
+  font-family: sans-serif;
+  margin: 16px 0;
 }
-.copybox-header {
-  position:relative;
-  padding:10px 14px;
-  background:#e0e0e0;
-  border-bottom:1px solid #ccc;
-  font-weight:bold;
-     
 
+ 
+.copybox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 8px 14px;
+  background: var(--color-code-header-bg, #e0e0e0);
+  border-bottom: 1px solid var(--color-border, #ccc);
+  font-weight: bold;
+  color: var(--color-fg, #000);
 }
+
+ 
 .copybox-header button {
-  position:absolute;
-  top:8px;
-  right:8px;
-  border:none;
-  background:#d1d1d1;
-  border-radius:4px;
-  padding:3px 8px;
-  cursor:pointer;
-  font-size:13px;
+  border: none;
+  background: var(--color-btn-bg, #d1d1d1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-fg, #000);
+  transition: background 0.2s;
 }
+
+.copybox-header button:hover {
+  background: var(--color-btn-hover-bg, #c1c1c1);
+}
+
+ 
 .copybox-content {
-  padding:14px;
-  color:#333;
-  font-family:monospace;
-   
+  overflow-x: auto;   
+  margin: 0;
+  padding: 0;         
+}
+
+ 
+.copybox-content pre {
+  margin: 0;               
+  padding: 12px 16px;      
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;        
+  white-space: pre;        
+  border-radius: 4px;
+  background: var(--color-code-bg, #f9f9f9);
+  color: var(--color-fg, #000);
+}
+
+ 
+.copybox-content::-webkit-scrollbar {
+  height: 6px;
+}
+.copybox-content::-webkit-scrollbar-thumb {
+  background-color: var(--color-border, #ccc);
+  border-radius: 3px;
 }
 </style>
 
 <div class="copybox">
   <div class="copybox-header">
-    2. List All Files in the Container (JDK Environment)
+    <span>2. List All Files in the Container (JDK Environment)</span>
     <button onclick="
-      navigator.clipboard.writeText(' docker exec container_name ls -a\n# Lists all folders and files in the container\u0027s root directory. ');
+      navigator.clipboard.writeText('\ndocker exec container_name ls -a\n# Lists all folders and files in the container\u0027s root directory.\n');
       this.innerHTML='✔ Copied';
       this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='copy'; this.style.background='#d1d1d1'; },1500);
+      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
     ">Copy</button>
   </div>
   <div class="copybox-content">
-    
-docker exec container_name ls -a<br>
+    <pre>
+docker exec container_name ls -a
 # Lists all folders and files in the container's root directory.
-
+</pre>
   </div>
 </div>
 
 <style>
+ 
 .copybox {
-  border:1px solid #ccc;
-  border-radius:6px;
-  background:#f2f2f2;
-  font-family:sans-serif;
-  margin:16px 0;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 6px;
+  background: var(--color-code-bg, #f2f2f2);
+  font-family: sans-serif;
+  margin: 16px 0;
 }
-.copybox-header {
-  position:relative;
-  padding:10px 14px;
-  background:#e0e0e0;
-  border-bottom:1px solid #ccc;
-  font-weight:bold;
-     
 
+ 
+.copybox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 8px 14px;
+  background: var(--color-code-header-bg, #e0e0e0);
+  border-bottom: 1px solid var(--color-border, #ccc);
+  font-weight: bold;
+  color: var(--color-fg, #000);
 }
+
+ 
 .copybox-header button {
-  position:absolute;
-  top:8px;
-  right:8px;
-  border:none;
-  background:#d1d1d1;
-  border-radius:4px;
-  padding:3px 8px;
-  cursor:pointer;
-  font-size:13px;
+  border: none;
+  background: var(--color-btn-bg, #d1d1d1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-fg, #000);
+  transition: background 0.2s;
 }
+
+.copybox-header button:hover {
+  background: var(--color-btn-hover-bg, #c1c1c1);
+}
+
+ 
 .copybox-content {
-  padding:14px;
-  color:#333;
-  font-family:monospace;
-   
+  overflow-x: auto;   
+  margin: 0;
+  padding: 0;         
+}
+
+ 
+.copybox-content pre {
+  margin: 0;               
+  padding: 12px 16px;      
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;        
+  white-space: pre;        
+  border-radius: 4px;
+  background: var(--color-code-bg, #f9f9f9);
+  color: var(--color-fg, #000);
+}
+
+ 
+.copybox-content::-webkit-scrollbar {
+  height: 6px;
+}
+.copybox-content::-webkit-scrollbar-thumb {
+  background-color: var(--color-border, #ccc);
+  border-radius: 3px;
 }
 </style>
 
 <div class="copybox">
   <div class="copybox-header">
-    3. Check Contents of /tmp Directory
+    <span>3. Check Contents of /tmp Directory</span>
     <button onclick="
-      navigator.clipboard.writeText(' docker exec container_name ls \/tmp # It will contain only one file in \/tmp at the initial stage. ');
+      navigator.clipboard.writeText('\ndocker exec container_name ls \/tmp \n# It will contain only one file in \/tmp at the initial stage.\n');
       this.innerHTML='✔ Copied';
       this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='copy'; this.style.background='#d1d1d1'; },1500);
+      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
     ">Copy</button>
   </div>
   <div class="copybox-content">
-    
-docker exec container_name ls /tmp <br>
+    <pre>
+docker exec container_name ls /tmp 
 # It will contain only one file in /tmp at the initial stage.
-
+</pre>
   </div>
 </div>
 
 <style>
+ 
 .copybox {
-  border:1px solid #ccc;
-  border-radius:6px;
-  background:#f2f2f2;
-  font-family:sans-serif;
-  margin:16px 0;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 6px;
+  background: var(--color-code-bg, #f2f2f2);
+  font-family: sans-serif;
+  margin: 16px 0;
 }
-.copybox-header {
-  position:relative;
-  padding:10px 14px;
-  background:#e0e0e0;
-  border-bottom:1px solid #ccc;
-  font-weight:bold;
-     
 
+ 
+.copybox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 8px 14px;
+  background: var(--color-code-header-bg, #e0e0e0);
+  border-bottom: 1px solid var(--color-border, #ccc);
+  font-weight: bold;
+  color: var(--color-fg, #000);
 }
+
+ 
 .copybox-header button {
-  position:absolute;
-  top:8px;
-  right:8px;
-  border:none;
-  background:#d1d1d1;
-  border-radius:4px;
-  padding:3px 8px;
-  cursor:pointer;
-  font-size:13px;
+  border: none;
+  background: var(--color-btn-bg, #d1d1d1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-fg, #000);
+  transition: background 0.2s;
 }
+
+.copybox-header button:hover {
+  background: var(--color-btn-hover-bg, #c1c1c1);
+}
+
+ 
 .copybox-content {
-  padding:14px;
-  color:#333;
-  font-family:monospace;
-   
+  overflow-x: auto;   
+  margin: 0;
+  padding: 0;         
+}
+
+ 
+.copybox-content pre {
+  margin: 0;               
+  padding: 12px 16px;      
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;        
+  white-space: pre;        
+  border-radius: 4px;
+  background: var(--color-code-bg, #f9f9f9);
+  color: var(--color-fg, #000);
+}
+
+ 
+.copybox-content::-webkit-scrollbar {
+  height: 6px;
+}
+.copybox-content::-webkit-scrollbar-thumb {
+  background-color: var(--color-border, #ccc);
+  border-radius: 3px;
 }
 </style>
 
 <div class="copybox">
   <div class="copybox-header">
-    4. Copy the Spring Boot JAR File into the Container
+    <span>4. Copy the Spring Boot JAR File into the Container</span>
     <button onclick="
-      navigator.clipboard.writeText(' docker cp target\/rest-demo.jar container_name:\/tmp # This copies the rest-demo.jar into the container’s \/tmp directory. ');
+      navigator.clipboard.writeText('\ndocker cp target\/rest-demo.jar container_name:\/tmp \n# This copies the rest-demo.jar into the container’s \/tmp directory.\n');
       this.innerHTML='✔ Copied';
       this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='copy'; this.style.background='#d1d1d1'; },1500);
+      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
     ">Copy</button>
   </div>
   <div class="copybox-content">
-    
-docker cp target/rest-demo.jar container_name:/tmp <br>
+    <pre>
+docker cp target/rest-demo.jar container_name:/tmp 
 # This copies the rest-demo.jar into the container’s /tmp directory.
-
+</pre>
   </div>
 </div>
 
 <style>
+ 
 .copybox {
-  border:1px solid #ccc;
-  border-radius:6px;
-  background:#f2f2f2;
-  font-family:sans-serif;
-  margin:16px 0;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 6px;
+  background: var(--color-code-bg, #f2f2f2);
+  font-family: sans-serif;
+  margin: 16px 0;
 }
-.copybox-header {
-  position:relative;
-  padding:10px 14px;
-  background:#e0e0e0;
-  border-bottom:1px solid #ccc;
-  font-weight:bold;
-     
 
+ 
+.copybox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 8px 14px;
+  background: var(--color-code-header-bg, #e0e0e0);
+  border-bottom: 1px solid var(--color-border, #ccc);
+  font-weight: bold;
+  color: var(--color-fg, #000);
 }
+
+ 
 .copybox-header button {
-  position:absolute;
-  top:8px;
-  right:8px;
-  border:none;
-  background:#d1d1d1;
-  border-radius:4px;
-  padding:3px 8px;
-  cursor:pointer;
-  font-size:13px;
+  border: none;
+  background: var(--color-btn-bg, #d1d1d1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-fg, #000);
+  transition: background 0.2s;
 }
+
+.copybox-header button:hover {
+  background: var(--color-btn-hover-bg, #c1c1c1);
+}
+
+ 
 .copybox-content {
-  padding:14px;
-  color:#333;
-  font-family:monospace;
-   
+  overflow-x: auto;   
+  margin: 0;
+  padding: 0;         
+}
+
+ 
+.copybox-content pre {
+  margin: 0;               
+  padding: 12px 16px;      
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;        
+  white-space: pre;        
+  border-radius: 4px;
+  background: var(--color-code-bg, #f9f9f9);
+  color: var(--color-fg, #000);
+}
+
+ 
+.copybox-content::-webkit-scrollbar {
+  height: 6px;
+}
+.copybox-content::-webkit-scrollbar-thumb {
+  background-color: var(--color-border, #ccc);
+  border-radius: 3px;
 }
 </style>
 
 <div class="copybox">
   <div class="copybox-header">
-    5. Verify the JAR File is Present
+    <span>5. Verify the JAR File is Present</span>
     <button onclick="
-      navigator.clipboard.writeText(' docker exec container_name ls \/tmp # The rest-demo.jar file will be available in addition to the existing content. ');
+      navigator.clipboard.writeText('\ndocker exec container_name ls \/tmp \n# The rest-demo.jar file will be available in addition to the existing content.\n');
       this.innerHTML='✔ Copied';
       this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='copy'; this.style.background='#d1d1d1'; },1500);
+      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
     ">Copy</button>
   </div>
   <div class="copybox-content">
-    
-docker exec container_name ls /tmp <br>
+    <pre>
+docker exec container_name ls /tmp 
 # The rest-demo.jar file will be available in addition to the existing content.
-
+</pre>
   </div>
 </div>
 
 <style>
+ 
 .copybox {
-  border:1px solid #ccc;
-  border-radius:6px;
-  background:#f2f2f2;
-  font-family:sans-serif;
-  margin:16px 0;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 6px;
+  background: var(--color-code-bg, #f2f2f2);
+  font-family: sans-serif;
+  margin: 16px 0;
 }
-.copybox-header {
-  position:relative;
-  padding:10px 14px;
-  background:#e0e0e0;
-  border-bottom:1px solid #ccc;
-  font-weight:bold;
-     
 
+ 
+.copybox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 8px 14px;
+  background: var(--color-code-header-bg, #e0e0e0);
+  border-bottom: 1px solid var(--color-border, #ccc);
+  font-weight: bold;
+  color: var(--color-fg, #000);
 }
+
+ 
 .copybox-header button {
-  position:absolute;
-  top:8px;
-  right:8px;
-  border:none;
-  background:#d1d1d1;
-  border-radius:4px;
-  padding:3px 8px;
-  cursor:pointer;
-  font-size:13px;
+  border: none;
+  background: var(--color-btn-bg, #d1d1d1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-fg, #000);
+  transition: background 0.2s;
 }
+
+.copybox-header button:hover {
+  background: var(--color-btn-hover-bg, #c1c1c1);
+}
+
+ 
 .copybox-content {
-  padding:14px;
-  color:#333;
-  font-family:monospace;
-   
+  overflow-x: auto;   
+  margin: 0;
+  padding: 0;         
+}
+
+ 
+.copybox-content pre {
+  margin: 0;               
+  padding: 12px 16px;      
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;        
+  white-space: pre;        
+  border-radius: 4px;
+  background: var(--color-code-bg, #f9f9f9);
+  color: var(--color-fg, #000);
+}
+
+ 
+.copybox-content::-webkit-scrollbar {
+  height: 6px;
+}
+.copybox-content::-webkit-scrollbar-thumb {
+  background-color: var(--color-border, #ccc);
+  border-radius: 3px;
 }
 </style>
 
 <div class="copybox">
   <div class="copybox-header">
-    6. Commit the Container to Create a New Docker Image
+    <span>6. Commit the Container to Create a New Docker Image</span>
     <button onclick="
-      navigator.clipboard.writeText(' docker commit container_name telusko\/rest-demo:v1 # Creates a new Docker image named telusko\/rest-demo with tag v1 from the current container state. ');
+      navigator.clipboard.writeText('\ndocker commit container_name telusko\/rest-demo:v1\n# Creates a new Docker image named telusko\/rest-demo with tag v1 from the current container state.\n');
       this.innerHTML='✔ Copied';
       this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='copy'; this.style.background='#d1d1d1'; },1500);
+      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
     ">Copy</button>
   </div>
   <div class="copybox-content">
-    
-docker commit container_name telusko/rest-demo:v1 <br>
+    <pre>
+docker commit container_name telusko/rest-demo:v1
 # Creates a new Docker image named telusko/rest-demo with tag v1 from the current container state.
-
+</pre>
   </div>
 </div>
 
 <style>
+ 
 .copybox {
-  border:1px solid #ccc;
-  border-radius:6px;
-  background:#f2f2f2;
-  font-family:sans-serif;
-  margin:16px 0;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 6px;
+  background: var(--color-code-bg, #f2f2f2);
+  font-family: sans-serif;
+  margin: 16px 0;
 }
-.copybox-header {
-  position:relative;
-  padding:10px 14px;
-  background:#e0e0e0;
-  border-bottom:1px solid #ccc;
-  font-weight:bold;
-     
 
+ 
+.copybox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 8px 14px;
+  background: var(--color-code-header-bg, #e0e0e0);
+  border-bottom: 1px solid var(--color-border, #ccc);
+  font-weight: bold;
+  color: var(--color-fg, #000);
 }
+
+ 
 .copybox-header button {
-  position:absolute;
-  top:8px;
-  right:8px;
-  border:none;
-  background:#d1d1d1;
-  border-radius:4px;
-  padding:3px 8px;
-  cursor:pointer;
-  font-size:13px;
+  border: none;
+  background: var(--color-btn-bg, #d1d1d1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-fg, #000);
+  transition: background 0.2s;
 }
+
+.copybox-header button:hover {
+  background: var(--color-btn-hover-bg, #c1c1c1);
+}
+
+ 
 .copybox-content {
-  padding:14px;
-  color:#333;
-  font-family:monospace;
-   
+  overflow-x: auto;   
+  margin: 0;
+  padding: 0;         
+}
+
+ 
+.copybox-content pre {
+  margin: 0;               
+  padding: 12px 16px;      
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;        
+  white-space: pre;        
+  border-radius: 4px;
+  background: var(--color-code-bg, #f9f9f9);
+  color: var(--color-fg, #000);
+}
+
+ 
+.copybox-content::-webkit-scrollbar {
+  height: 6px;
+}
+.copybox-content::-webkit-scrollbar-thumb {
+  background-color: var(--color-border, #ccc);
+  border-radius: 3px;
 }
 </style>
 
 <div class="copybox">
   <div class="copybox-header">
-    7. List Docker Images
+    <span>7. List Docker Images</span>
     <button onclick="
-      navigator.clipboard.writeText(' docker images # Verifies that telusko\/rest-demo:v1 image has been created successfully. ');
+      navigator.clipboard.writeText('\ndocker images \n# Verifies that telusko\/rest-demo:v1 image has been created successfully.\n');
       this.innerHTML='✔ Copied';
       this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='copy'; this.style.background='#d1d1d1'; },1500);
+      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
     ">Copy</button>
   </div>
   <div class="copybox-content">
-    
-docker images <br>
+    <pre>
+docker images 
 # Verifies that telusko/rest-demo:v1 image has been created successfully.
-
+</pre>
   </div>
 </div>
 
 <style>
+ 
 .copybox {
-  border:1px solid #ccc;
-  border-radius:6px;
-  background:#f2f2f2;
-  font-family:sans-serif;
-  margin:16px 0;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 6px;
+  background: var(--color-code-bg, #f2f2f2);
+  font-family: sans-serif;
+  margin: 16px 0;
 }
-.copybox-header {
-  position:relative;
-  padding:10px 14px;
-  background:#e0e0e0;
-  border-bottom:1px solid #ccc;
-  font-weight:bold;
-     
 
+ 
+.copybox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 8px 14px;
+  background: var(--color-code-header-bg, #e0e0e0);
+  border-bottom: 1px solid var(--color-border, #ccc);
+  font-weight: bold;
+  color: var(--color-fg, #000);
 }
+
+ 
 .copybox-header button {
-  position:absolute;
-  top:8px;
-  right:8px;
-  border:none;
-  background:#d1d1d1;
-  border-radius:4px;
-  padding:3px 8px;
-  cursor:pointer;
-  font-size:13px;
+  border: none;
+  background: var(--color-btn-bg, #d1d1d1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-fg, #000);
+  transition: background 0.2s;
 }
+
+.copybox-header button:hover {
+  background: var(--color-btn-hover-bg, #c1c1c1);
+}
+
+ 
 .copybox-content {
-  padding:14px;
-  color:#333;
-  font-family:monospace;
-   
+  overflow-x: auto;   
+  margin: 0;
+  padding: 0;         
+}
+
+ 
+.copybox-content pre {
+  margin: 0;               
+  padding: 12px 16px;      
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;        
+  white-space: pre;        
+  border-radius: 4px;
+  background: var(--color-code-bg, #f9f9f9);
+  color: var(--color-fg, #000);
+}
+
+ 
+.copybox-content::-webkit-scrollbar {
+  height: 6px;
+}
+.copybox-content::-webkit-scrollbar-thumb {
+  background-color: var(--color-border, #ccc);
+  border-radius: 3px;
 }
 </style>
 
 <div class="copybox">
   <div class="copybox-header">
-    8. Default Behavior: JShell
+    <span>8. Default Behavior: JShell</span>
     <button onclick="
-      navigator.clipboard.writeText(' docker run telusko\/rest-demo:v1 # When running telusko\/rest-demo:v1, the container defaults to JShell. ');
+      navigator.clipboard.writeText('\ndocker run telusko\/rest-demo:v1 \n# When running telusko\/rest-demo:v1, the container defaults to JShell.\n');
       this.innerHTML='✔ Copied';
       this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='copy'; this.style.background='#d1d1d1'; },1500);
+      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
     ">Copy</button>
   </div>
   <div class="copybox-content">
-    
-docker run telusko/rest-demo:v1 <br>
+    <pre>
+docker run telusko/rest-demo:v1 
 # When running telusko/rest-demo:v1, the container defaults to JShell.
-
+</pre>
   </div>
 </div>
 
 <style>
+ 
 .copybox {
-  border:1px solid #ccc;
-  border-radius:6px;
-  background:#f2f2f2;
-  font-family:sans-serif;
-  margin:16px 0;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 6px;
+  background: var(--color-code-bg, #f2f2f2);
+  font-family: sans-serif;
+  margin: 16px 0;
 }
-.copybox-header {
-  position:relative;
-  padding:10px 14px;
-  background:#e0e0e0;
-  border-bottom:1px solid #ccc;
-  font-weight:bold;
-     
 
+ 
+.copybox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 8px 14px;
+  background: var(--color-code-header-bg, #e0e0e0);
+  border-bottom: 1px solid var(--color-border, #ccc);
+  font-weight: bold;
+  color: var(--color-fg, #000);
 }
+
+ 
 .copybox-header button {
-  position:absolute;
-  top:8px;
-  right:8px;
-  border:none;
-  background:#d1d1d1;
-  border-radius:4px;
-  padding:3px 8px;
-  cursor:pointer;
-  font-size:13px;
+  border: none;
+  background: var(--color-btn-bg, #d1d1d1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-fg, #000);
+  transition: background 0.2s;
 }
+
+.copybox-header button:hover {
+  background: var(--color-btn-hover-bg, #c1c1c1);
+}
+
+ 
 .copybox-content {
-  padding:14px;
-  color:#333;
-  font-family:monospace;
-   
+  overflow-x: auto;   
+  margin: 0;
+  padding: 0;         
+}
+
+ 
+.copybox-content pre {
+  margin: 0;               
+  padding: 12px 16px;      
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;        
+  white-space: pre;        
+  border-radius: 4px;
+  background: var(--color-code-bg, #f9f9f9);
+  color: var(--color-fg, #000);
+}
+
+ 
+.copybox-content::-webkit-scrollbar {
+  height: 6px;
+}
+.copybox-content::-webkit-scrollbar-thumb {
+  background-color: var(--color-border, #ccc);
+  border-radius: 3px;
 }
 </style>
 
 <div class="copybox">
   <div class="copybox-header">
-    9. Set Default Command to Run JAR Using --change
+    <span>9. Set Default Command to Run JAR Using --change</span>
     <button onclick="
-      navigator.clipboard.writeText(' docker commit --change=\u0027CMD [\u0022java\u0022, \u0022-jar\u0022, \u0022\/tmp\/rest-demo.jar\u0022]\u0027 container_name telusko\/rest-demo:v2 # This sets the default command to run the JAR directly when the image is run. ');
+      navigator.clipboard.writeText('\ndocker commit --change=\u0027CMD [\u0022java\u0022, \u0022-jar\u0022, \u0022\/tmp\/rest-demo.jar\u0022]\u0027 container_name telusko\/rest-demo:v2 \n# This sets the default command to run the JAR directly when the image is run.\n');
       this.innerHTML='✔ Copied';
       this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='copy'; this.style.background='#d1d1d1'; },1500);
+      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
     ">Copy</button>
   </div>
   <div class="copybox-content">
-    
-docker commit --change='CMD ["java", "-jar", "/tmp/rest-demo.jar"]' container_name telusko/rest-demo:v2 <br>
+    <pre>
+docker commit --change='CMD ["java", "-jar", "/tmp/rest-demo.jar"]' container_name telusko/rest-demo:v2 
 # This sets the default command to run the JAR directly when the image is run.
-
+</pre>
   </div>
 </div>
 
 <style>
+ 
 .copybox {
-  border:1px solid #ccc;
-  border-radius:6px;
-  background:#f2f2f2;
-  font-family:sans-serif;
-  margin:16px 0;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 6px;
+  background: var(--color-code-bg, #f2f2f2);
+  font-family: sans-serif;
+  margin: 16px 0;
 }
-.copybox-header {
-  position:relative;
-  padding:10px 14px;
-  background:#e0e0e0;
-  border-bottom:1px solid #ccc;
-  font-weight:bold;
-     
 
+ 
+.copybox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 8px 14px;
+  background: var(--color-code-header-bg, #e0e0e0);
+  border-bottom: 1px solid var(--color-border, #ccc);
+  font-weight: bold;
+  color: var(--color-fg, #000);
 }
+
+ 
 .copybox-header button {
-  position:absolute;
-  top:8px;
-  right:8px;
-  border:none;
-  background:#d1d1d1;
-  border-radius:4px;
-  padding:3px 8px;
-  cursor:pointer;
-  font-size:13px;
+  border: none;
+  background: var(--color-btn-bg, #d1d1d1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-fg, #000);
+  transition: background 0.2s;
 }
+
+.copybox-header button:hover {
+  background: var(--color-btn-hover-bg, #c1c1c1);
+}
+
+ 
 .copybox-content {
-  padding:14px;
-  color:#333;
-  font-family:monospace;
-   
+  overflow-x: auto;   
+  margin: 0;
+  padding: 0;         
+}
+
+ 
+.copybox-content pre {
+  margin: 0;               
+  padding: 12px 16px;      
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;        
+  white-space: pre;        
+  border-radius: 4px;
+  background: var(--color-code-bg, #f9f9f9);
+  color: var(--color-fg, #000);
+}
+
+ 
+.copybox-content::-webkit-scrollbar {
+  height: 6px;
+}
+.copybox-content::-webkit-scrollbar-thumb {
+  background-color: var(--color-border, #ccc);
+  border-radius: 3px;
 }
 </style>
 
 <div class="copybox">
   <div class="copybox-header">
-    10. Run the Updated Image (v2)
+    <span>10. Run the Updated Image (v2)</span>
     <button onclick="
-      navigator.clipboard.writeText(' docker run telusko\/rest-demo:v2 # This will now run the Spring Boot application from the JAR instead of entering JShell. ');
+      navigator.clipboard.writeText('\ndocker run telusko\/rest-demo:v2 \n# This will now run the Spring Boot application from the JAR instead of entering JShell.\n');
       this.innerHTML='✔ Copied';
       this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='copy'; this.style.background='#d1d1d1'; },1500);
+      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
     ">Copy</button>
   </div>
   <div class="copybox-content">
-    
-docker run telusko/rest-demo:v2 <br>
+    <pre>
+docker run telusko/rest-demo:v2 
 # This will now run the Spring Boot application from the JAR instead of entering JShell.
-
+</pre>
   </div>
 </div>
 
 <style>
+ 
 .copybox {
-  border:1px solid #ccc;
-  border-radius:6px;
-  background:#f2f2f2;
-  font-family:sans-serif;
-  margin:16px 0;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 6px;
+  background: var(--color-code-bg, #f2f2f2);
+  font-family: sans-serif;
+  margin: 16px 0;
 }
-.copybox-header {
-  position:relative;
-  padding:10px 14px;
-  background:#e0e0e0;
-  border-bottom:1px solid #ccc;
-  font-weight:bold;
-     
 
+ 
+.copybox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 8px 14px;
+  background: var(--color-code-header-bg, #e0e0e0);
+  border-bottom: 1px solid var(--color-border, #ccc);
+  font-weight: bold;
+  color: var(--color-fg, #000);
 }
+
+ 
 .copybox-header button {
-  position:absolute;
-  top:8px;
-  right:8px;
-  border:none;
-  background:#d1d1d1;
-  border-radius:4px;
-  padding:3px 8px;
-  cursor:pointer;
-  font-size:13px;
+  border: none;
+  background: var(--color-btn-bg, #d1d1d1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-fg, #000);
+  transition: background 0.2s;
 }
+
+.copybox-header button:hover {
+  background: var(--color-btn-hover-bg, #c1c1c1);
+}
+
+ 
 .copybox-content {
-  padding:14px;
-  color:#333;
-  font-family:monospace;
-   
+  overflow-x: auto;   
+  margin: 0;
+  padding: 0;         
+}
+
+ 
+.copybox-content pre {
+  margin: 0;               
+  padding: 12px 16px;      
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;        
+  white-space: pre;        
+  border-radius: 4px;
+  background: var(--color-code-bg, #f9f9f9);
+  color: var(--color-fg, #000);
+}
+
+ 
+.copybox-content::-webkit-scrollbar {
+  height: 6px;
+}
+.copybox-content::-webkit-scrollbar-thumb {
+  background-color: var(--color-border, #ccc);
+  border-radius: 3px;
 }
 </style>
 
 <div class="copybox">
   <div class="copybox-header">
-    11. Map Ports While Running the Container
+    <span>11. Map Ports While Running the Container</span>
     <button onclick="
-      navigator.clipboard.writeText(' docker run -p 8081:8081 telusko\/rest-demo:v2 # Maps port 8081 of the container to 8081 on the host machine. ');
+      navigator.clipboard.writeText('\ndocker run -p 8081:8081 telusko\/rest-demo:v2 \n# Maps port 8081 of the container to 8081 on the host machine.\n');
       this.innerHTML='✔ Copied';
       this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='copy'; this.style.background='#d1d1d1'; },1500);
+      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
     ">Copy</button>
   </div>
   <div class="copybox-content">
-    
-docker run -p 8081:8081 telusko/rest-demo:v2 <br>
+    <pre>
+docker run -p 8081:8081 telusko/rest-demo:v2 
 # Maps port 8081 of the container to 8081 on the host machine.
-
+</pre>
   </div>
 </div>
 
@@ -924,55 +1276,87 @@ docker run -p 8081:8081 telusko/rest-demo:v2 <br>
 <p>docker run -p 8081:8081 telusko/rest-demo:v2</p>
 </div>
 <style>
+ 
 .copybox {
-  border:1px solid #ccc;
-  border-radius:6px;
-  background:#f2f2f2;
-  font-family:sans-serif;
-  margin:16px 0;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 6px;
+  background: var(--color-code-bg, #f2f2f2);
+  font-family: sans-serif;
+  margin: 16px 0;
 }
-.copybox-header {
-  position:relative;
-  padding:10px 14px;
-  background:#e0e0e0;
-  border-bottom:1px solid #ccc;
-  font-weight:bold;
-     
 
+ 
+.copybox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 8px 14px;
+  background: var(--color-code-header-bg, #e0e0e0);
+  border-bottom: 1px solid var(--color-border, #ccc);
+  font-weight: bold;
+  color: var(--color-fg, #000);
 }
+
+ 
 .copybox-header button {
-  position:absolute;
-  top:8px;
-  right:8px;
-  border:none;
-  background:#d1d1d1;
-  border-radius:4px;
-  padding:3px 8px;
-  cursor:pointer;
-  font-size:13px;
+  border: none;
+  background: var(--color-btn-bg, #d1d1d1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-fg, #000);
+  transition: background 0.2s;
 }
+
+.copybox-header button:hover {
+  background: var(--color-btn-hover-bg, #c1c1c1);
+}
+
+ 
 .copybox-content {
-  padding:14px;
-  color:#333;
-  font-family:monospace;
-   
+  overflow-x: auto;   
+  margin: 0;
+  padding: 0;         
+}
+
+ 
+.copybox-content pre {
+  margin: 0;               
+  padding: 12px 16px;      
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;        
+  white-space: pre;        
+  border-radius: 4px;
+  background: var(--color-code-bg, #f9f9f9);
+  color: var(--color-fg, #000);
+}
+
+ 
+.copybox-content::-webkit-scrollbar {
+  height: 6px;
+}
+.copybox-content::-webkit-scrollbar-thumb {
+  background-color: var(--color-border, #ccc);
+  border-radius: 3px;
 }
 </style>
 
 <div class="copybox">
   <div class="copybox-header">
-    Run Spring Boot Container
+    <span>Run Spring Boot Container</span>
     <button onclick="
       navigator.clipboard.writeText('\ndocker run -p 8081:8081 telusko\/rest-demo:v2\n');
       this.innerHTML='✔ Copied';
       this.style.background='#b6e3b6';
-      setTimeout(()=>{ this.innerHTML='copy'; this.style.background='#d1d1d1'; },1500);
+      setTimeout(()=>{ this.innerHTML='Copy'; this.style.background=''; },1500);
     ">Copy</button>
   </div>
   <div class="copybox-content">
-    
+    <pre>
 docker run -p 8081:8081 telusko/rest-demo:v2
-
+</pre>
   </div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
