@@ -37,7 +37,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/docker\/"
-        },"genre": "posts","keywords": "docker, containers, devops","wordcount":  1592 ,
+        },"genre": "posts","keywords": "docker, containers, devops","wordcount":  1605 ,
         "url": "https:\/\/sumit2011.github.io\/docker\/","datePublished": "2025-12-31T10:00:00+05:30","dateModified": "2025-12-31T10:00:00+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -125,7 +125,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Docker — Containers Simplified</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a></span>&nbsp;<span class="post-category">included in <a href="/categories/web-dev/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Web Dev</a>&nbsp;<a href="/categories/devops/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DevOps</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="31-12-2025">31-12-2025</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1592 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="31-12-2025">31-12-2025</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1605 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -134,7 +134,7 @@
         data-srcset="/docker/docker.png, /docker/docker.png 1.5x, /docker/docker.png 2x"
         data-sizes="auto"
         alt="/docker/docker.png"
-        title="A practical guide to Docker: concepts, workflow, Dockerfile &amp; Compose examples, best practices, and troubleshooting." width="1054" height="382" /></div><div class="details toc" id="toc-static"  data-kept="true">
+        title="A practical guide to Docker: concepts, workflow, Dockerfile &amp; Compose examples, best practices, and troubleshooting." width="1054" height="382" /></div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
@@ -143,39 +143,36 @@
   <ul>
     <li><a href="#1-introduction">1. Introduction</a></li>
     <li><a href="#2--architecture">2.  Architecture</a></li>
-    <li><a href="#2-key-concepts">2. Key concepts</a>
+    <li><a href="#3-key-concepts">3. Key concepts</a>
       <ul>
-        <li><a href="#21-virtualization">2.1 Virtualization</a></li>
-        <li><a href="#22-containerization">2.2 Containerization</a></li>
+        <li><a href="#31-virtualization">3.1 Virtualization</a></li>
+        <li><a href="#32-containerization">3.2 Containerization</a></li>
       </ul>
     </li>
-    <li><a href="#3-main-components">3. Main Components</a></li>
-    <li><a href="#3-common-docker-commands">3. Common Docker commands</a></li>
-    <li><a href="#4-container--image-lifecycle-commands">4. Container &amp; Image Lifecycle Commands</a>
+    <li><a href="#4-main-components">4. Main Components</a></li>
+    <li><a href="#5-common-docker-commands">5. Common Docker commands</a></li>
+    <li><a href="#6-container--image-lifecycle-commands">6. Container &amp; Image Lifecycle Commands</a>
       <ul>
-        <li><a href="#41-step-by-step-docker-workflow">4.1 Step-by-Step: Docker Workflow</a></li>
-        <li><a href="#running-first-container-hello-world">Running First Container (Hello World)</a></li>
+        <li><a href="#61-step-by-step-docker-workflow">6.1 Step-by-Step: Docker Workflow</a></li>
+        <li><a href="#7-running-first-container-hello-world">7. Running First Container (Hello World)</a></li>
       </ul>
     </li>
-    <li><a href="#running-springboot-app-on-docker">Running SpringBoot App on Docker</a>
+    <li><a href="#8-running-springboot-app-on-docker">8. Running SpringBoot App on Docker</a>
       <ul>
-        <li><a href="#package-the-web-app">Package the Web App</a></li>
-        <li><a href="#run-the-app-on-docker">Run the App on Docker</a></li>
+        <li><a href="#81-package-the-web-app">8.1 Package the Web App</a></li>
+        <li><a href="#82-run-the-app-on-docker">8.2 Run the App on Docker</a></li>
       </ul>
     </li>
-    <li><a href="#running-jdk-docker-container">Running JDK Docker Container</a>
+    <li><a href="#9-running-jdk-docker-container">9. Running JDK Docker Container</a>
       <ul>
-        <li><a href="#jshell">JShell</a></li>
-        <li><a href="#pull-openjdk-docker-image">Pull OpenJDK Docker Image</a></li>
-        <li><a href="#enter-jshell-inside-the-container">Enter JShell inside the Container</a></li>
+        <li><a href="#91-jshell">9.1 JShell</a></li>
+        <li><a href="#92-pull-openjdk-docker-image">9.2 Pull OpenJDK Docker Image</a></li>
+        <li><a href="#93-enter-jshell-inside-the-container">9.3 Enter JShell inside the Container</a></li>
       </ul>
     </li>
-    <li><a href="#docker-file-for-docker-images">Docker File for Docker Images</a>
-      <ul>
-        <li><a href="#docker-compose">Docker Compose</a></li>
-        <li><a href="#running-multiple-containers">Running Multiple Containers</a></li>
-      </ul>
-    </li>
+    <li><a href="#10-docker-file-for-docker-images">10 Docker File for Docker Images</a></li>
+    <li><a href="#11-docker-compose">11. Docker Compose</a></li>
+    <li><a href="#12-running-multiple-containers">12. Running Multiple Containers</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p><em><strong>Docker packages applications and their dependencies into portable containers so they run consistently across environments.</strong></em></p>
@@ -200,15 +197,15 @@ It has several features like:</p>
 <h2 id="2--architecture">2.  Architecture</h2>
 <p>Docker uses a client-server architecture where the Docker client communicates with the Docker daemon, which builds, runs, and manages containers using images and Linux kernel features like namespaces and cgroups.</p>
 <div class="mermaid" id="id-1"></div>
-<h2 id="2-key-concepts">2. Key concepts</h2>
-<h3 id="21-virtualization">2.1 Virtualization</h3>
+<h2 id="3-key-concepts">3. Key concepts</h2>
+<h3 id="31-virtualization">3.1 Virtualization</h3>
 <p>it is technique that allows the computer to act like multiple independent computers by creating virtual versions of hardware and software. somehow docker uses OS-level virtualization which is called containerization.</p>
 <div class="mermaid" id="id-2"></div>
-<h3 id="22-containerization">2.2 Containerization</h3>
+<h3 id="32-containerization">3.2 Containerization</h3>
 <p>It is a lightweight form of virtualization where apps run in isolated environments called continers.Containers share the host kernel and isolation is provided by namespaces (PID, mount, network, user, etc.) and cgroups for resource limits.<br>
 <strong>Benefits:</strong> Fast, secure, portable, scalable, lightweight.</p>
 <div class="mermaid" id="id-3"></div>
-<h2 id="3-main-components">3. Main Components</h2>
+<h2 id="4-main-components">4. Main Components</h2>
 <p><strong>Docker Engine:</strong> The runtime that builds, runs, and manages containers (via the Docker CLI and API).</p>
 <p><strong>Container:</strong> Containers are isolated processes for each of the app&rsquo;s components. all the components like frontend react, backend python, postgres database run in the completely isolated environment.Containers are self-contained, isolated, independent and portable.</p>
 <p><strong>Image:</strong> To share the container we need image. A Container image is a standerized package that includes all of the files, binaries and configuration to run the container.
@@ -227,7 +224,7 @@ THere are two imp principle of images</p>
 <p><strong>Network:</strong> Network means a virtual communication layer that allows containers to talk to each other and to the outside world. It connects containers securely.</p>
 <p><strong>Dockerfile:</strong> A text file with instructions (<code>FROM</code>, <code>COPY</code>, <code>RUN</code>, <code>CMD</code>) used to build an image.</p>
 <p><strong>Docker Compose:</strong> A tool for defining and running multi-container applications with a YAML file.</p>
-<h2 id="3-common-docker-commands">3. Common Docker commands</h2>
+<h2 id="5-common-docker-commands">5. Common Docker commands</h2>
 <p>Most Commonly used docker commands</p>
 <table>
   <thead>
@@ -295,7 +292,7 @@ THere are two imp principle of images</p>
       </tr>
   </tbody>
 </table>
-<h2 id="4-container--image-lifecycle-commands">4. Container &amp; Image Lifecycle Commands</h2>
+<h2 id="6-container--image-lifecycle-commands">6. Container &amp; Image Lifecycle Commands</h2>
 <p><strong>List All Containers</strong>
 <code>docker ps -a</code></p>
 <p><strong>Delete a container</strong>
@@ -316,7 +313,7 @@ THere are two imp principle of images</p>
 </div>
         </div>
     </div>
-<h3 id="41-step-by-step-docker-workflow">4.1 Step-by-Step: Docker Workflow</h3>
+<h3 id="61-step-by-step-docker-workflow">6.1 Step-by-Step: Docker Workflow</h3>
 <p><em><strong>Step 1.</strong></em> Search for Images on Docker Hub
 <code>docker search &lt;image_name&gt;</code></p>
 <p><em><strong>Step 2.</strong></em> Pull an image from Docker Hub
@@ -339,7 +336,7 @@ THere are two imp principle of images</p>
 <code>docker rm &lt;container_id&gt;</code></p>
 <p><em><strong>Step 11.</strong></em> Verify Container is Removed
 <code>docker ps -a</code></p>
-<h3 id="running-first-container-hello-world">Running First Container (Hello World)</h3>
+<h3 id="7-running-first-container-hello-world">7. Running First Container (Hello World)</h3>
 <p><em><strong>Step 1.</strong></em> Check Docker Version</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -381,8 +378,17 @@ THere are two imp principle of images</p>
             <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Output<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content">CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS                      NAMES
-a1f7a4bb3a27   docker/welcome-to-docker   &ldquo;/docker-entrypoint.â¦&rdquo;   11 seconds ago   Up 11 seconds   0.0.0.0:8080-&gt;80/tcp       gracious_keldysh</div>
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS                      NAMES
+</span></span><span class="line"><span class="cl"> a1f7a4bb3a27   docker/welcome-to-docker   <span class="s2">&#34;/docker-entrypoint.â¦&#34;</span>   <span class="m">11</span> seconds ago   Up <span class="m">11</span> seconds   0.0.0.0:8080-&gt;80/tcp       gracious_keldysh
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
         </div>
     </div>
 <p><em><strong>Step 5.</strong></em> Show all containers, both running and stopped.</p>
@@ -403,9 +409,9 @@ a1f7a4bb3a27   docker/welcome-to-docker   &ldquo;/docker-entrypoint.â¦&rdquo
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker images
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="running-springboot-app-on-docker">Running SpringBoot App on Docker</h2>
+</div><h2 id="8-running-springboot-app-on-docker">8. Running SpringBoot App on Docker</h2>
 <p>To run the spring boot web app on the docker we need the jar file. so 1st create the jar file then upload the jar file to the container.</p>
-<h3 id="package-the-web-app">Package the Web App</h3>
+<h3 id="81-package-the-web-app">8.1 Package the Web App</h3>
 <p>This document provides a list of basic Docker CLI commands used in the lecture.</p>
 <p><em><strong>Step 1:</strong></em> Package the Project Using Maven</p>
 <div class="highlight"><div class="chroma">
@@ -425,7 +431,7 @@ a1f7a4bb3a27   docker/welcome-to-docker   &ldquo;/docker-entrypoint.â¦&rdquo
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java -jar target/rest-demo.jar
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="run-the-app-on-docker">Run the App on Docker</h3>
+</div><h3 id="82-run-the-app-on-docker">8.2 Run the App on Docker</h3>
 <p><em><strong>Step 1:</strong></em> Check Running Containers</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -481,10 +487,10 @@ a1f7a4bb3a27   docker/welcome-to-docker   &ldquo;/docker-entrypoint.â¦&rdquo
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker commit container_name telusko/rest-demo:v1
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker commit container_name n4ksum/rest-demo:v1
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Creates a new Docker image named telusko/rest-demo with tag v1 from the current container state.</p>
+</div><p>Creates a new Docker image named n4ksum/rest-demo with tag v1 from the current container state.</p>
 <p><em><strong>Step 7.</strong></em> List Docker Images</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -494,24 +500,24 @@ a1f7a4bb3a27   docker/welcome-to-docker   &ldquo;/docker-entrypoint.â¦&rdquo
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker images 
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Verifies that telusko/rest-demo:v1 image has been created successfully.</p>
+</div><p>Verifies that n4ksum/rest-demo:v1 image has been created successfully.</p>
 <p><em><strong>Step 8.</strong></em> Default Behavior: JShell</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run telusko/rest-demo:v1 
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run n4ksum/rest-demo:v1 
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>When running telusko/rest-demo:v1, the container defaults to JShell.</p>
+</div><p>When running n4ksum/rest-demo:v1, the container defaults to JShell.</p>
 <p><em><strong>Step 9.</strong></em> Set Default Command to Run JAR Using &ndash;change</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker commit --change<span class="o">=</span><span class="s1">&#39;CMD [&#34;java&#34;, &#34;-jar&#34;, &#34;/tmp/rest-demo.jar&#34;]&#39;</span> container_name telusko/rest-demo:v2 
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker commit --change<span class="o">=</span><span class="s1">&#39;CMD [&#34;java&#34;, &#34;-jar&#34;, &#34;/tmp/rest-demo.jar&#34;]&#39;</span> container_name n4ksum/rest-demo:v2 
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>This sets the default command to run the JAR directly when the image is run.</p>
@@ -521,7 +527,7 @@ a1f7a4bb3a27   docker/welcome-to-docker   &ldquo;/docker-entrypoint.â¦&rdquo
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run telusko/rest-demo:v2 
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run n4ksum/rest-demo:v2 
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>This will now run the Spring Boot application from the JAR instead of entering JShell.</p>
@@ -531,18 +537,18 @@ a1f7a4bb3a27   docker/welcome-to-docker   &ldquo;/docker-entrypoint.â¦&rdquo
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -p 8081:8081 telusko/rest-demo:v2
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -p 8081:8081 n4ksum/rest-demo:v2
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Maps port 8081 of the container to 8081 on the host machine.</p>
-<h2 id="running-jdk-docker-container">Running JDK Docker Container</h2>
+<h2 id="9-running-jdk-docker-container">9. Running JDK Docker Container</h2>
 <p>This document provides a list of basic Docker CLI commands used in the lecture.</p>
-<h3 id="jshell">JShell</h3>
+<h3 id="91-jshell">9.1 JShell</h3>
 <ul>
 <li>JShell is a <strong>REPL (Read-Eval-Print Loop)</strong> for Java introduced in Java 9.</li>
 <li>It allows running Java code interactively, without needing to compile and run entire class files.</li>
 </ul>
-<h3 id="pull-openjdk-docker-image">Pull OpenJDK Docker Image</h3>
+<h3 id="92-pull-openjdk-docker-image">9.2 Pull OpenJDK Docker Image</h3>
 <p><strong>1. Search for the OpenJDK image on Docker Hub</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -600,7 +606,7 @@ a1f7a4bb3a27   docker/welcome-to-docker   &ldquo;/docker-entrypoint.â¦&rdquo
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker ps
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="enter-jshell-inside-the-container">Enter JShell inside the Container</h3>
+</div><h3 id="93-enter-jshell-inside-the-container">9.3 Enter JShell inside the Container</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -618,7 +624,7 @@ a1f7a4bb3a27   docker/welcome-to-docker   &ldquo;/docker-entrypoint.â¦&rdquo
 </div><blockquote>
 <p>Make sure the openjdk image version you pull supports jshell</p>
 </blockquote>
-<h2 id="docker-file-for-docker-images">Docker File for Docker Images</h2>
+<h2 id="10-docker-file-for-docker-images">10 Docker File for Docker Images</h2>
 <p>Build the Docker Image, Navigate to the directory that contains your <code>Dockerfile</code> and run:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -626,8 +632,8 @@ a1f7a4bb3a27   docker/welcome-to-docker   &ldquo;/docker-entrypoint.â¦&rdquo
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker build -t telusko/rest-demo:v3 .
-</span></span><span class="line"><span class="cl"><span class="c1"># This builds a Docker image named telusko/rest-demo with tag v3 using the current directory (.) as the build context.</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker build -t n4ksum/rest-demo:v3 .
+</span></span><span class="line"><span class="cl"><span class="c1"># This builds a Docker image named n4ksum/rest-demo with tag v3 using the current directory (.) as the build context.</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>List Available Docker Images</p>
@@ -646,11 +652,11 @@ a1f7a4bb3a27   docker/welcome-to-docker   &ldquo;/docker-entrypoint.â¦&rdquo
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -p 8081:8081 telusko/rest-demo:v3
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -p 8081:8081 n4ksum/rest-demo:v3
 </span></span><span class="line"><span class="cl"><span class="c1"># This runs the container from the newly built image and maps port 8081 of the host to port 8081 of the container.</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="docker-compose">Docker Compose</h3>
+</div><h2 id="11-docker-compose">11. Docker Compose</h2>
 <p>Clean and Package the Application:
 Use Maven to clean and create a JAR package of the Spring Boot project:</p>
 <div class="highlight"><div class="chroma">
@@ -683,7 +689,7 @@ Use Docker Compose to build the images and start the containers:</p>
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker images
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="running-multiple-containers">Running Multiple Containers</h3>
+</div><h2 id="12-running-multiple-containers">12. Running Multiple Containers</h2>
 <p>This document provides a list of basic Docker CLI commands used in the lecture.</p>
 <p>Stop and Remove All Running Containers</p>
 <div class="highlight"><div class="chroma">

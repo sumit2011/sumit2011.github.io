@@ -20,9 +20,7 @@ It has several features like:
 ## 2.  Architecture
 Docker uses a client-server architecture where the Docker client communicates with the Docker daemon, which builds, runs, and manages containers using images and Linux kernel features like namespaces and cgroups.
 
-
 {{< mermaid >}}
-
 graph LR;
 
     A[Docker Client ] -->|Rest Api| B(Docker Daemon/Dockerd)
@@ -36,12 +34,11 @@ graph LR;
 
 {{< /mermaid >}}
 
-## 2. Key concepts
-### 2.1 Virtualization
+## 3. Key concepts
+### 3.1 Virtualization
 it is technique that allows the computer to act like multiple independent computers by creating virtual versions of hardware and software. somehow docker uses OS-level virtualization which is called containerization.
 
 {{< mermaid >}}
-
 graph LR;
 
     A[Hardware ] --> B(Host OS) 
@@ -54,7 +51,7 @@ graph LR;
 
 {{< /mermaid >}}
 
-### 2.2 Containerization
+### 3.2 Containerization
 It is a lightweight form of virtualization where apps run in isolated environments called continers.Containers share the host kernel and isolation is provided by namespaces (PID, mount, network, user, etc.) and cgroups for resource limits.\
 **Benefits:** Fast, secure, portable, scalable, lightweight.
 
@@ -72,7 +69,7 @@ graph LR;
 
 {{< /mermaid >}}
 
-## 3. Main Components
+## 4. Main Components
 
 **Docker Engine:** The runtime that builds, runs, and manages containers (via the Docker CLI and API).
 
@@ -98,7 +95,7 @@ THere are two imp principle of images
 **Docker Compose:** A tool for defining and running multi-container applications with a YAML file.
 
 
-## 3. Common Docker commands
+## 5. Common Docker commands
 Most Commonly used docker commands
 
 | Command             | Description                                       |
@@ -119,7 +116,7 @@ Most Commonly used docker commands
 | `docker info`       | Display system-wide Docker info                  |
 
 
-## 4. Container & Image Lifecycle Commands
+## 6. Container & Image Lifecycle Commands
 
 **List All Containers**
 `
@@ -143,7 +140,7 @@ docker ps -a
 {{< /admonition >}}
 
 
-### 4.1 Step-by-Step: Docker Workflow
+### 6.1 Step-by-Step: Docker Workflow
 ***Step 1.*** Search for Images on Docker Hub
 `docker search <image_name>`
 
@@ -181,7 +178,7 @@ docker ps -a
 `docker ps -a`
 
 
-### Running First Container (Hello World)
+### 7. Running First Container (Hello World)
 
 ***Step 1.*** Check Docker Version
 ```bash
@@ -205,9 +202,10 @@ docker ps
 ```
 
 {{< admonition type=tip title="Output" open=true >}}
-
+```bash
  CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS                      NAMES
  a1f7a4bb3a27   docker/welcome-to-docker   "/docker-entrypoint.â¦"   11 seconds ago   Up 11 seconds   0.0.0.0:8080->80/tcp       gracious_keldysh
+ ```
 {{< /admonition >}}
 
 
@@ -223,9 +221,9 @@ docker ps -a
 docker images
 ```
 
-## Running SpringBoot App on Docker
+## 8. Running SpringBoot App on Docker
 To run the spring boot web app on the docker we need the jar file. so 1st create the jar file then upload the jar file to the container.
-### Package the Web App
+### 8.1 Package the Web App
 This document provides a list of basic Docker CLI commands used in the lecture.
 
 ***Step 1:*** Package the Project Using Maven
@@ -239,7 +237,7 @@ mvn package
 java -jar target/rest-demo.jar
 ```
 
-### Run the App on Docker
+### 8.2 Run the App on Docker
 
 
 ***Step 1:*** Check Running Containers
@@ -276,54 +274,54 @@ The rest-demo.jar file will be available in addition to the existing content.
 
 ***Step 6.*** Commit the Container to Create a New Docker Image
 ```bash
-docker commit container_name telusko/rest-demo:v1
+docker commit container_name n4ksum/rest-demo:v1
 ```
-Creates a new Docker image named telusko/rest-demo with tag v1 from the current container state.
+Creates a new Docker image named n4ksum/rest-demo with tag v1 from the current container state.
 
 
 ***Step 7.*** List Docker Images
 ```bash
 docker images 
 ```
-Verifies that telusko/rest-demo:v1 image has been created successfully.
+Verifies that n4ksum/rest-demo:v1 image has been created successfully.
 
 ***Step 8.*** Default Behavior: JShell
 ```bash
-docker run telusko/rest-demo:v1 
+docker run n4ksum/rest-demo:v1 
 ```
-When running telusko/rest-demo:v1, the container defaults to JShell.
+When running n4ksum/rest-demo:v1, the container defaults to JShell.
 
 ***Step 9.*** Set Default Command to Run JAR Using --change
 ```bash
-docker commit --change='CMD ["java", "-jar", "/tmp/rest-demo.jar"]' container_name telusko/rest-demo:v2 
+docker commit --change='CMD ["java", "-jar", "/tmp/rest-demo.jar"]' container_name n4ksum/rest-demo:v2 
 ```
 This sets the default command to run the JAR directly when the image is run.
 
 ***Step 10.*** Run the Updated Image (v2)
 ```bash
-docker run telusko/rest-demo:v2 
+docker run n4ksum/rest-demo:v2 
 ```
 This will now run the Spring Boot application from the JAR instead of entering JShell.
 
 
 ***Step 11.*** Map Ports While Running the Container" 
 ```bash
-docker run -p 8081:8081 telusko/rest-demo:v2
+docker run -p 8081:8081 n4ksum/rest-demo:v2
 ```
 Maps port 8081 of the container to 8081 on the host machine.
 
 
 
-## Running JDK Docker Container
+## 9. Running JDK Docker Container
 
 This document provides a list of basic Docker CLI commands used in the lecture.
 
-### JShell
+### 9.1 JShell
 - JShell is a **REPL (Read-Eval-Print Loop)** for Java introduced in Java 9.
 - It allows running Java code interactively, without needing to compile and run entire class files.
 
 
-### Pull OpenJDK Docker Image
+### 9.2 Pull OpenJDK Docker Image
 **1. Search for the OpenJDK image on Docker Hub**
 
 ```bash
@@ -362,7 +360,7 @@ docker ps
 ```
 
 
-### Enter JShell inside the Container
+### 9.3 Enter JShell inside the Container
 ```bash
 jshell
 int num = 8;
@@ -372,12 +370,12 @@ System.out.println("Hello World");
 > Make sure the openjdk image version you pull supports jshell
 
 
-## Docker File for Docker Images
+## 10 Docker File for Docker Images
 Build the Docker Image, Navigate to the directory that contains your `Dockerfile` and run:
 
 ```bash
-docker build -t telusko/rest-demo:v3 .
-# This builds a Docker image named telusko/rest-demo with tag v3 using the current directory (.) as the build context.
+docker build -t n4ksum/rest-demo:v3 .
+# This builds a Docker image named n4ksum/rest-demo with tag v3 using the current directory (.) as the build context.
 ```
 
 
@@ -389,11 +387,11 @@ docker images
 
 Run the Docker Image with Port Mapping
 ```bash
-docker run -p 8081:8081 telusko/rest-demo:v3
+docker run -p 8081:8081 n4ksum/rest-demo:v3
 # This runs the container from the newly built image and maps port 8081 of the host to port 8081 of the container.
 ```
 
-### Docker Compose
+## 11. Docker Compose
 
 Clean and Package the Application:
 Use Maven to clean and create a JAR package of the Spring Boot project:
@@ -415,7 +413,7 @@ List Docker Images
 docker images
 ```
 
-### Running Multiple Containers
+## 12. Running Multiple Containers
 
 This document provides a list of basic Docker CLI commands used in the lecture.
 
