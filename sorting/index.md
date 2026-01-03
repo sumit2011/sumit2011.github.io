@@ -399,8 +399,9 @@ void SelectionSort(int *arr, int length)
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      height: 300px;
+      height: 220px;
       margin-top: 20px;
+      border: 2px solid #a19696ff;
     }
 
     .bar {
