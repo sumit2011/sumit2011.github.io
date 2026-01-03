@@ -111,6 +111,7 @@ def bubbleSort(arr):
 ```
 {{< /admonition >}}
 
+
 ## Insertion Sort
 **Insertion Sort** is a simple comparison based sorting algo. it builds the sorted list one element at a time. It works by taking each element and inserting it into its correct postion within the already sorted part of the array.
 
@@ -381,3 +382,258 @@ void SelectionSort(int *arr, int length)
     }
 }
 ```
+## Sorting visualizer
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      /* text-align: center; */
+    }
+
+    #container {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 300px;
+      margin-top: 20px;
+    }
+
+    .bar {
+      width: 20px;
+      margin: 0 2px;
+      background-color: steelblue;
+    }
+
+    button, select {
+      margin: 5px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- Controls -->
+<div id="controls" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;">
+  <select id="algorithm" style="padding: 6px 12px; font-size: 1rem; cursor: pointer; max-width: 250px; width: 100%;">
+    <option value="bubble">Bubble Sort</option>
+    <option value="selection">Selection Sort</option>
+    <option value="insertion">Insertion Sort</option>
+    <option value="merge">Merge Sort</option>
+    <option value="quick">Quick Sort</option>
+  </select>
+
+  <button onclick="generateArray()" style="padding: 6px 12px; font-size: 1rem; cursor: pointer; max-width: 250px; width: 100%;">Generate Array</button>
+  <button onclick="sortArray()" style="padding: 6px 12px; font-size: 1rem; cursor: pointer; max-width: 250px; width: 100%;">Sort</button>
+</div>
+
+
+<div id="container"></div>
+
+<script>
+let array = [];
+const container = document.getElementById("container");
+
+function generateArray() {
+  container.innerHTML = "";
+  array = [];
+  for (let i = 0; i < 20; i++) {
+    const value = Math.floor(Math.random() * 200) + 20;
+    array.push(value);
+
+    const bar = document.createElement("div");
+    bar.classList.add("bar");
+    bar.style.height = value + "px";
+    container.appendChild(bar);
+  }
+}
+
+async function sortArray() {
+  const algo = document.getElementById("algorithm").value;
+  if (algo === "bubble") await bubbleSort();
+  if (algo === "selection") await selectionSort();
+  if (algo === "insertion") await insertionSort();
+  if (algo === "merge") await mergeSort(array, 0, array.length - 1);
+  if (algo === "quick") await quickSort(array, 0, array.length - 1);
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Bubble Sort
+async function bubbleSort() {
+  const bars = document.getElementsByClassName("bar");
+  for (let i = 0; i < array.length - 1; i++) {
+    for (let j = 0; j < array.length - i - 1; j++) {
+      bars[j].style.backgroundColor = "red";
+      bars[j+1].style.backgroundColor = "red";
+
+      if (array[j] > array[j+1]) {
+        [array[j], array[j+1]] = [array[j+1], array[j]];
+        bars[j].style.height = array[j] + "px";
+        bars[j+1].style.height = array[j+1] + "px";
+      }
+
+      await sleep(100);
+
+      bars[j].style.backgroundColor = "steelblue";
+      bars[j+1].style.backgroundColor = "steelblue";
+    }
+  }
+}
+
+// Selection Sort
+async function selectionSort() {
+  const bars = document.getElementsByClassName("bar");
+  for (let i = 0; i < array.length - 1; i++) {
+    let minIndex = i;
+    bars[minIndex].style.backgroundColor = "red";
+
+    for (let j = i + 1; j < array.length; j++) {
+      bars[j].style.backgroundColor = "yellow";
+      await sleep(100);
+
+      if (array[j] < array[minIndex]) {
+        bars[minIndex].style.backgroundColor = "steelblue";
+        minIndex = j;
+        bars[minIndex].style.backgroundColor = "red";
+      } else {
+        bars[j].style.backgroundColor = "steelblue";
+      }
+    }
+
+    if (minIndex !== i) {
+      [array[i], array[minIndex]] = [array[minIndex], array[i]];
+      bars[i].style.height = array[i] + "px";
+      bars[minIndex].style.height = array[minIndex] + "px";
+    }
+    bars[minIndex].style.backgroundColor = "steelblue";
+  }
+}
+
+// Insertion Sort
+async function insertionSort() {
+  const bars = document.getElementsByClassName("bar");
+  for (let i = 1; i < array.length; i++) {
+    let key = array[i];
+    let j = i - 1;
+
+    bars[i].style.backgroundColor = "red";
+    await sleep(100);
+
+    while (j >= 0 && array[j] > key) {
+      bars[j].style.backgroundColor = "yellow";
+      array[j + 1] = array[j];
+      bars[j + 1].style.height = array[j + 1] + "px";
+      await sleep(100);
+      bars[j].style.backgroundColor = "steelblue";
+      j--;
+    }
+    array[j + 1] = key;
+    bars[j + 1].style.height = key + "px";
+    bars[i].style.backgroundColor = "steelblue";
+  }
+}
+
+// Merge Sort
+async function mergeSort(arr, left, right) {
+  if (left >= right) return;
+
+  const mid = Math.floor((left + right) / 2);
+  await mergeSort(arr, left, mid);
+  await mergeSort(arr, mid + 1, right);
+  await merge(arr, left, mid, right);
+}
+
+async function merge(arr, left, mid, right) {
+  const bars = document.getElementsByClassName("bar");
+  const leftArr = arr.slice(left, mid + 1);
+  const rightArr = arr.slice(mid + 1, right + 1);
+
+  let i = 0, j = 0, k = left;
+  while (i < leftArr.length && j < rightArr.length) {
+    bars[k].style.backgroundColor = "red";
+    await sleep(100);
+    if (leftArr[i] <= rightArr[j]) {
+      arr[k] = leftArr[i];
+      bars[k].style.height = arr[k] + "px";
+      i++;
+    } else {
+      arr[k] = rightArr[j];
+      bars[k].style.height = arr[k] + "px";
+      j++;
+    }
+    bars[k].style.backgroundColor = "steelblue";
+    k++;
+  }
+
+  while (i < leftArr.length) {
+    bars[k].style.backgroundColor = "red";
+    arr[k] = leftArr[i];
+    bars[k].style.height = arr[k] + "px";
+    await sleep(100);
+    bars[k].style.backgroundColor = "steelblue";
+    i++;
+    k++;
+  }
+
+  while (j < rightArr.length) {
+    bars[k].style.backgroundColor = "red";
+    arr[k] = rightArr[j];
+    bars[k].style.height = arr[k] + "px";
+    await sleep(100);
+    bars[k].style.backgroundColor = "steelblue";
+    j++;
+    k++;
+  }
+}
+
+// Quick Sort
+async function quickSort(arr, low, high) {
+  if (low < high) {
+    let pi = await partition(arr, low, high);
+    await quickSort(arr, low, pi - 1);
+    await quickSort(arr, pi + 1, high);
+  }
+}
+
+async function partition(arr, low, high) {
+  const bars = document.getElementsByClassName("bar");
+  let pivot = arr[high];
+  bars[high].style.backgroundColor = "red";
+  let i = low - 1;
+
+  for (let j = low; j < high; j++) {
+    bars[j].style.backgroundColor = "yellow";
+    await sleep(100);
+
+    if (arr[j] < pivot) {
+      i++;
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+      bars[i].style.height = arr[i] + "px";
+      bars[j].style.height = arr[j] + "px";
+    }
+    bars[j].style.backgroundColor = "steelblue";
+  }
+
+  [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
+  bars[i + 1].style.height = arr[i + 1] + "px";
+  bars[high].style.height = arr[high] + "px";
+  bars[high].style.backgroundColor = "steelblue";
+
+  return i + 1;
+}
+
+generateArray();
+</script>
+
+</body>
+</html>
+
