@@ -7,11 +7,9 @@
 _Use the table of contents to navigate to the portion that you are interested in._
 {{< /admonition >}}
 
-# Introduction
-asdfghjklsdfghj
-
-
-# Types
+## 1. Introduction
+**Sorting** is a process of arranging data in a specific order. ususally ascending or descending. It helps to find elements faster. also it organise data for better understanding.
+Diff Types of sorting algorithms:
  1. bubble sort
  2. insertion sort
  3. merge sort
@@ -20,7 +18,7 @@ asdfghjklsdfghj
  6. heap sort
  
 
-## Sorting visualizer
+## 2. Sorting visualizer
 This visualizer gives you the clear understanding of all the sorting algos. How it works internally and how the elements are being compared everything.
 <!DOCTYPE html>
 <html lang="en">
@@ -277,10 +275,10 @@ generateArray();
 </html>
 
 
-## Bubble sort
-Bubble sort is a simple comparison-based sorting algorithm. it repeatedly compares adjacent elements and swap them if they are in the wrong order. In each iteration the largest element bubbles up to the end of the list. You can visualize it in the given page.
+## 3. Bubble sort
+**Bubble sort** is a simple comparison-based sorting algorithm. it repeatedly compares adjacent elements and swap them if they are in the wrong order. In each iteration the largest element bubbles up to the end of the list. You can visualize it in the given page.
 
-### Time & Space Complexity: 
+### 3.1 Time & Space Complexity: 
 | Time Complexicity |
 | ------ | ----------- |
 |  Best Case:  | O(n) |
@@ -292,7 +290,7 @@ Bubble sort is a simple comparison-based sorting algorithm. it repeatedly compar
 | ------ | ----------- |
 |  Best Case:  | O(1) |
 
-### Code
+### 3.2 Code
 ```c
 // 1. Bubble sort
 void BubbleSort(int *arr, int length)
@@ -370,10 +368,10 @@ def bubbleSort(arr):
 {{< /admonition >}}
 
 
-## Insertion Sort
+## 4. Insertion Sort
 **Insertion Sort** is a simple comparison based sorting algo. it builds the sorted list one element at a time. It works by taking each element and inserting it into its correct postion within the already sorted part of the array.
 
-### Time & Space Complexity: 
+### 4.1 Time & Space Complexity: 
 | Time Complexicity |
 | ------ | ----------- |
 |  Best Case:  | O(n) |
@@ -386,7 +384,7 @@ def bubbleSort(arr):
 | ------ | ----------- |
 |  Best Case:  | O(1) |
 
-### Code
+### 4.2 Code
 ```c
 // 2. Insertion sort
 void InsertionSort(int *arr, int length)
@@ -472,7 +470,21 @@ def insertionSort(arr):
 {{< /admonition >}}
 
 
-## Merge Sort
+## 5. Merge Sort
+
+### 5.1 Time & Space Complexity: 
+| Time Complexicity |
+| ------ | ----------- |
+|  Best Case:  | O(n log n) |
+|  Average Case: | O(n log n) |
+|  Worst Case:  | O(n log n) |
+
+
+| Space Complexicity |
+| ------ | ----------- |
+|  Best Case:  | O(n) |
+
+### 5.2 Code
 ```c
 // 5. Merge Sort
 #include <stdio.h>
@@ -570,7 +582,23 @@ int main()
     Display(arr,n);
 }
 ```
-## Quick Sort
+## 6. Quick Sort
+
+### 6.1 Time & Space Complexity: 
+| Time Complexicity |
+| ------ | ----------- |
+|  Best Case:  | O(n log n) |
+|  Average Case: | O(n log n) |
+|  Worst Case:  | O(n²) |
+
+
+| Space Complexicity |
+| ------ | ----------- |
+|  Best Case:  | O(log n) |
+
+> take space due to recursion
+
+### 6.2 Code
 ```c
 // 4. Quick Sort with partition code
 int partition(int *arr, int low, int high)
@@ -617,7 +645,22 @@ void QuickSort(int *arr, int low, int high)
 }
 ```
 
-## Selection Sort
+## 7. Selection Sort
+
+### 7.1 Time & Space Complexity: 
+| Time Complexicity |
+| ------ | ----------- |
+|  Best Case:  | O(n²) |
+|  Average Case: | O(n²) |
+|  Worst Case:  | O(n²) |
+
+
+| Space Complexicity |
+| ------ | ----------- |
+|  Best Case:  | O(1) |
+
+### 7.2 Code
+
 ```c
 void SelectionSort(int *arr, int length)
 {
@@ -641,4 +684,85 @@ void SelectionSort(int *arr, int length)
 }
 ```
 
+
+{{< admonition type=note title="code in javascript" open=false >}}
+```js
+// javascript code
+function selectionSort(arr){
+    const n = arr.length;
+    for(let i = 0 ; i< n ; i++ ){
+        let minIndex = i;
+        for(let j = i +1 ; j< n ; j++){
+            if(arr[minIndex] > arr[j]){
+                minIndex = j;
+            }
+        }
+        if(minIndex != i){
+            // swap
+            let temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
+    return arr;
+}
+
+```
+{{< /admonition >}}
+
+{{< admonition type=success title="code in java" open=false >}}
+```java
+// java code
+public static void selectionSort(int[] arr){
+    int n = arr.length;
+    for(int i = 0 ; i< n ; i++ ){
+        int minIndex = i;
+        for(int j = i+1 ; j< n ; j++){
+            if(arr[minIndex] > arr[j]){
+                minIndex = j;
+                
+            }
+        }
+        if(minIndex != i){
+            // Swap
+            int temp = arr[j];
+            arr[j] = arr[j+1];
+            arr[j+1] = temp;
+        }
+    }
+}
+
+```
+{{< /admonition >}}
+
+{{< admonition type=warning title="code in python" open=false >}}
+```python
+# python code
+def selectionSort(arr):
+    n = len(arr)
+    
+    for i in range(n):
+        minIndex = i
+        for j in range(i+1, n):
+            if arr[minIndex] > arr[j]:
+                minIndex = j;
+
+        if minIndex != i:
+            # swap
+            arr[j] , arr[j+1] = arr[j+1] , arr[j]
+
+    return arr
+
+```
+{{< /admonition >}}
+
+
+## 8. Comparison
+| Algorithm         | Best Use Case / Pros                                               | Cons / Limitations                                         |
+|------------------|--------------------------------------------------------------------|-----------------------------------------------------------|
+| Bubble Sort       | Simple, easy to implement, works for small or nearly sorted arrays | Very slow for large arrays, O(n²) time                   |
+| Insertion Sort    | Efficient for small or nearly sorted arrays                        | O(n²) time for large arrays                                |
+| Selection Sort    | Simple, small datasets, in-place                                   | Always O(n²), inefficient for large arrays, unstable     |
+| Merge Sort        | Large datasets, stable sort, predictable O(n log n) time           | Uses extra memory O(n)                                     |
+| Quick Sort        | Very fast on average, in-place O(log n) space, good cache performance | Worst case O(n²), unstable, pivot choice matters          |
 

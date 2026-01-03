@@ -36,7 +36,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/sumit2011.github.io\/sorting\/"
-        },"genre": "posts","keywords": "c, c\u002b\u002b","wordcount":  1362 ,
+        },"genre": "posts","keywords": "c, c\u002b\u002b","wordcount":  1808 ,
         "url": "https:\/\/sumit2011.github.io\/sorting\/","datePublished": "2024-02-10T11:54:28+05:30","dateModified": "2024-02-10T11:54:28+05:30","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -124,8 +124,8 @@
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Sorting Algos</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Sumit</a></span>&nbsp;<span class="post-category">included in <a href="/categories/dsa/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DSA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="10-02-2024">10-02-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1362 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="10-02-2024">10-02-2024</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1808 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;9 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -140,22 +140,39 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#sorting-visualizer">Sorting visualizer</a></li>
-    <li><a href="#bubble-sort">Bubble sort</a>
+    <li><a href="#1-introduction">1. Introduction</a></li>
+    <li><a href="#2-sorting-visualizer">2. Sorting visualizer</a></li>
+    <li><a href="#3-bubble-sort">3. Bubble sort</a>
       <ul>
-        <li><a href="#time--space-complexity">Time &amp; Space Complexity:</a></li>
-        <li><a href="#code">Code</a></li>
+        <li><a href="#31-time--space-complexity">3.1 Time &amp; Space Complexity:</a></li>
+        <li><a href="#32-code">3.2 Code</a></li>
       </ul>
     </li>
-    <li><a href="#insertion-sort">Insertion Sort</a>
+    <li><a href="#4-insertion-sort">4. Insertion Sort</a>
       <ul>
-        <li><a href="#time--space-complexity-1">Time &amp; Space Complexity:</a></li>
-        <li><a href="#code-1">Code</a></li>
+        <li><a href="#41-time--space-complexity">4.1 Time &amp; Space Complexity:</a></li>
+        <li><a href="#42-code">4.2 Code</a></li>
       </ul>
     </li>
-    <li><a href="#merge-sort">Merge Sort</a></li>
-    <li><a href="#quick-sort">Quick Sort</a></li>
-    <li><a href="#selection-sort">Selection Sort</a></li>
+    <li><a href="#5-merge-sort">5. Merge Sort</a>
+      <ul>
+        <li><a href="#51-time--space-complexity">5.1 Time &amp; Space Complexity:</a></li>
+        <li><a href="#52-code">5.2 Code</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-quick-sort">6. Quick Sort</a>
+      <ul>
+        <li><a href="#61-time--space-complexity">6.1 Time &amp; Space Complexity:</a></li>
+        <li><a href="#62-code">6.2 Code</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-selection-sort">7. Selection Sort</a>
+      <ul>
+        <li><a href="#71-time--space-complexity">7.1 Time &amp; Space Complexity:</a></li>
+        <li><a href="#72-code">7.2 Code</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-comparison">8. Comparison</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p><em><strong>Python is used in automation of taskes.</strong></em></p>
@@ -167,9 +184,9 @@
             <div class="admonition-content"><em>Use the table of contents to navigate to the portion that you are interested in.</em></div>
         </div>
     </div>
-<h1 id="introduction">Introduction</h1>
-<p>asdfghjklsdfghj</p>
-<h1 id="types">Types</h1>
+<h2 id="1-introduction">1. Introduction</h2>
+<p><strong>Sorting</strong> is a process of arranging data in a specific order. ususally ascending or descending. It helps to find elements faster. also it organise data for better understanding.
+Diff Types of sorting algorithms:</p>
 <ol>
 <li>bubble sort</li>
 <li>insertion sort</li>
@@ -178,7 +195,7 @@
 <li>selection sort</li>
 <li>heap sort</li>
 </ol>
-<h2 id="sorting-visualizer">Sorting visualizer</h2>
+<h2 id="2-sorting-visualizer">2. Sorting visualizer</h2>
 <p>This visualizer gives you the clear understanding of all the sorting algos. How it works internally and how the elements are being compared everything.</p>
 <!DOCTYPE html>
 <html lang="en">
@@ -425,9 +442,9 @@ generateArray();
 </script>
 </body>
 </html>
-<h2 id="bubble-sort">Bubble sort</h2>
-<p>Bubble sort is a simple comparison-based sorting algorithm. it repeatedly compares adjacent elements and swap them if they are in the wrong order. In each iteration the largest element bubbles up to the end of the list. You can visualize it in the given page.</p>
-<h3 id="time--space-complexity">Time &amp; Space Complexity:</h3>
+<h2 id="3-bubble-sort">3. Bubble sort</h2>
+<p><strong>Bubble sort</strong> is a simple comparison-based sorting algorithm. it repeatedly compares adjacent elements and swap them if they are in the wrong order. In each iteration the largest element bubbles up to the end of the list. You can visualize it in the given page.</p>
+<h3 id="31-time--space-complexity">3.1 Time &amp; Space Complexity:</h3>
 <table>
   <thead>
       <tr>
@@ -464,7 +481,7 @@ generateArray();
       </tr>
   </tbody>
 </table>
-<h3 id="code">Code</h3>
+<h3 id="32-code">3.2 Code</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -621,9 +638,9 @@ generateArray();
 </div></div>
         </div>
     </div>
-<h2 id="insertion-sort">Insertion Sort</h2>
+<h2 id="4-insertion-sort">4. Insertion Sort</h2>
 <p><strong>Insertion Sort</strong> is a simple comparison based sorting algo. it builds the sorted list one element at a time. It works by taking each element and inserting it into its correct postion within the already sorted part of the array.</p>
-<h3 id="time--space-complexity-1">Time &amp; Space Complexity:</h3>
+<h3 id="41-time--space-complexity">4.1 Time &amp; Space Complexity:</h3>
 <table>
   <thead>
       <tr>
@@ -663,7 +680,7 @@ generateArray();
       </tr>
   </tbody>
 </table>
-<h3 id="code-1">Code</h3>
+<h3 id="42-code">4.2 Code</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -834,7 +851,45 @@ generateArray();
 </div></div>
         </div>
     </div>
-<h2 id="merge-sort">Merge Sort</h2>
+<h2 id="5-merge-sort">5. Merge Sort</h2>
+<h3 id="51-time--space-complexity">5.1 Time &amp; Space Complexity:</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Time Complexicity</th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Best Case:</td>
+          <td>O(n log n)</td>
+      </tr>
+      <tr>
+          <td>Average Case:</td>
+          <td>O(n log n)</td>
+      </tr>
+      <tr>
+          <td>Worst Case:</td>
+          <td>O(n log n)</td>
+      </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th>Space Complexicity</th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Best Case:</td>
+          <td>O(n)</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="52-code">5.2 Code</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1031,7 +1086,48 @@ generateArray();
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="quick-sort">Quick Sort</h2>
+</div><h2 id="6-quick-sort">6. Quick Sort</h2>
+<h3 id="61-time--space-complexity">6.1 Time &amp; Space Complexity:</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Time Complexicity</th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Best Case:</td>
+          <td>O(n log n)</td>
+      </tr>
+      <tr>
+          <td>Average Case:</td>
+          <td>O(n log n)</td>
+      </tr>
+      <tr>
+          <td>Worst Case:</td>
+          <td>O(n²)</td>
+      </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th>Space Complexicity</th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Best Case:</td>
+          <td>O(log n)</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>take space due to recursion</p>
+</blockquote>
+<h3 id="62-code">6.2 Code</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1124,7 +1220,45 @@ generateArray();
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="selection-sort">Selection Sort</h2>
+</div><h2 id="7-selection-sort">7. Selection Sort</h2>
+<h3 id="71-time--space-complexity">7.1 Time &amp; Space Complexity:</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Time Complexicity</th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Best Case:</td>
+          <td>O(n²)</td>
+      </tr>
+      <tr>
+          <td>Average Case:</td>
+          <td>O(n²)</td>
+      </tr>
+      <tr>
+          <td>Worst Case:</td>
+          <td>O(n²)</td>
+      </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th>Space Complexicity</th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Best Case:</td>
+          <td>O(1)</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="72-code">7.2 Code</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1171,7 +1305,191 @@ generateArray();
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div><div class="details admonition note">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>code in javascript<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// javascript code
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">selectionSort</span><span class="p">(</span><span class="nx">arr</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span> <span class="nx">n</span> <span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">minIndex</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">+</span><span class="mi">1</span> <span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span> <span class="nx">n</span> <span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">minIndex</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">minIndex</span> <span class="o">=</span> <span class="nx">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="nx">minIndex</span> <span class="o">!=</span> <span class="nx">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// swap
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kd">let</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">minIndex</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">arr</span><span class="p">[</span><span class="nx">minIndex</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">arr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<div class="details admonition success">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-check-circle fa-fw" aria-hidden="true"></i>code in java<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// java code</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">selectionSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">minIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="n">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">minIndex</span><span class="o">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">minIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">minIndex</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">i</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// Swap</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="n">1</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="n">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<div class="details admonition warning">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i>code in python<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># python code</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">selectionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">minIndex</span> <span class="o">=</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">minIndex</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">minIndex</span> <span class="o">!=</span> <span class="n">i</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># swap</span>
+</span></span><span class="line"><span class="cl">            <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">arr</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<h2 id="8-comparison">8. Comparison</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Algorithm</th>
+          <th>Best Use Case / Pros</th>
+          <th>Cons / Limitations</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Bubble Sort</td>
+          <td>Simple, easy to implement, works for small or nearly sorted arrays</td>
+          <td>Very slow for large arrays, O(n²) time</td>
+      </tr>
+      <tr>
+          <td>Insertion Sort</td>
+          <td>Efficient for small or nearly sorted arrays</td>
+          <td>O(n²) time for large arrays</td>
+      </tr>
+      <tr>
+          <td>Selection Sort</td>
+          <td>Simple, small datasets, in-place</td>
+          <td>Always O(n²), inefficient for large arrays, unstable</td>
+      </tr>
+      <tr>
+          <td>Merge Sort</td>
+          <td>Large datasets, stable sort, predictable O(n log n) time</td>
+          <td>Uses extra memory O(n)</td>
+      </tr>
+      <tr>
+          <td>Quick Sort</td>
+          <td>Very fast on average, in-place O(log n) space, good cache performance</td>
+          <td>Worst case O(n²), unstable, pivot choice matters</td>
+      </tr>
+  </tbody>
+</table></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
