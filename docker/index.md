@@ -1,4 +1,4 @@
-# Docker — Containers Simplified
+# Docker - Containers Simplified
 
 ***Docker packages applications and their dependencies into portable containers so they run consistently across environments.***
 <!--more-->
@@ -20,54 +20,47 @@ It has several features like:
 ## 2.  Architecture
 Docker uses a client-server architecture where the Docker client communicates with the Docker daemon, which builds, runs, and manages containers using images and Linux kernel features like namespaces and cgroups.
 
-{{< mermaid >}}
+{{<mermaid>}}
+
 graph LR;
 
-    A[Docker Client ] -->|Rest Api| B(Docker Daemon/Dockerd)
+  A["Docker Client"] -->|"Rest Api"| B("Docker Daemon/Dockerd")
 
+  B --> C["Images"]
+  
+  B --> D["Containers"]
+  
+  C --> E["Docker Registry"]
 
-    B --> C[Images]
-
-    B --> D[Containers]
-
-    C --> E[Docker Registry]
-
-{{< /mermaid >}}
+{{</mermaid>}}
 
 ## 3. Key concepts
 ### 3.1 Virtualization
 it is technique that allows the computer to act like multiple independent computers by creating virtual versions of hardware and software. somehow docker uses OS-level virtualization which is called containerization.
 
-{{< mermaid >}}
+{{<mermaid>}}
+
 graph LR;
 
     A[Hardware ] --> B(Host OS) 
-
     B --> C[Hypervisor]
-
     C --> D[Guest OS 1] --> E[App1]
-
     C --> F[Guest OS 2] --> G[App2]
 
-{{< /mermaid >}}
+{{</mermaid>}}
+
 
 ### 3.2 Containerization
 It is a lightweight form of virtualization where apps run in isolated environments called continers.Containers share the host kernel and isolation is provided by namespaces (PID, mount, network, user, etc.) and cgroups for resource limits.\
 **Benefits:** Fast, secure, portable, scalable, lightweight.
 
-{{< mermaid >}}
-
+{{<mermaid>}}
 graph LR;
-
     A[Hardware ] --> B(Host OS) 
-
     B --> C[Docker Engine]
-
     C --> D[Container 1] --> E[App1]
-
     C --> F[Container 2] --> G[App2]
-
-{{< /mermaid >}}
+{{</mermaid>}}
 
 ## 4. Main Components
 
@@ -455,6 +448,7 @@ docker network ls
 - Docker Compose: https://docs.docker.com/compose/
 - Image scanning: https://github.com/aquasecurity/trivy
 {{< /admonition >}}
+
 
 
  Thanks for reading! 
