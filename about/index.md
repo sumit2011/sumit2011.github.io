@@ -89,6 +89,9 @@ Platform: `codechef`, `coding ninja`,`geeks for geeks`,`leetcode`.
 <img src="tools/c-program-icon.svg"  height="60" width="70" /></a>
 <img src="tools/c-plus-plus-programming-language-icon.svg"  height="60" width="70" /></a>
 <img src="tools/python-programming-language-icon.svg"  height="60" width="70" /></a>
+<img src="tools/javascript-programming-language-icon.svg"  height="60" width="70" /></a>
+<img src="tools/java-vertical.svg"  height="60" width="70" /></a>
+
 {{< /admonition >}}
 
 
@@ -96,7 +99,7 @@ Platform: `codechef`, `coding ninja`,`geeks for geeks`,`leetcode`.
 ### Web Development
 My web development skill is quite good. I know all the basics of development and i also have created many projects.
 
-{{< admonition type=info title="Tools & Languages" open=false >}}
+{{< admonition type=info title="Tools & Languages" open=true >}}
 <img src="tools/html-icon.svg"  height="60" width="70" /></a>
 <img src="tools/css-official.svg"  height="60" width="70" /></a>
 <img src="tools/javascript-programming-language-icon.svg"  height="60" width="70" /></a>
@@ -111,6 +114,10 @@ My web development skill is quite good. I know all the basics of development and
 <img src="tools/git-scm-icon.svg"  height="60" width="70" /></a>
 <img src="tools/vscode.svg"  height="60" width="70" /></a>
 <img src="tools/Npm-logo.svg"  height="60" width="70" /></a>
+<img src="tools/docker-icon.svg"  height="60" width="70" /></a>
+<img src="tools/springio-icon.svg"  height="60" width="70" /></a>
+
+
 
 {{< /admonition >}}
 
@@ -132,6 +139,14 @@ My web development skill is quite good. I know all the basics of development and
 
 > [**Community Page**](https://ece2021nitsgr.netlify.app)
 
+> [**Todo.Ai**](https://upgradedtodo.netlify.app)
+
+<!-- {{< admonition type=success title="Ai Powered todo app" open=true >}}
+<img src="tools/springio-icon.svg"  height="60" width="70" /></a>
+### this is my project build using the folowing tech
+***Tech:*** react as frontend, spring as backend.
+
+{{< /admonition >}} -->
 
 ### Blog Writer
 I am also a blog writer. I usually write bolgs in my free time usually based on DSA topics.

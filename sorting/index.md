@@ -17,9 +17,24 @@ asdfghjklsdfghj
  3. merge sort
  4. quick sort
  5. selection sort
-
+ 6. heap sort
  
 ## Bubble sort
+Bubble sort is a simple comparison-based sorting algorithm. it repeatedly compares adjacent elements and swap them if they are in the wrong order. In each iteration the largest element bubbles up to the end of the list. You can visualize it in the given page.
+
+### Time & Space Complexity: 
+| Time Complexicity |
+| ------ | ----------- |
+|  Best Case:  | O(n) |
+|  Average Case: | O(n²) |
+|  Worst Case:  | O(n²) |
+
+
+| Space Complexicity |
+| ------ | ----------- |
+|  Best Case:  | O(1) |
+
+### Code
 ```c
 // 1. Bubble sort
 void BubbleSort(int *arr, int length)
@@ -39,7 +54,80 @@ void BubbleSort(int *arr, int length)
 }
 
 ```
+
+{{< admonition type=note title="code in javascript" open=false >}}
+```js
+// javascript code
+function bubbleSort(arr){
+    const n = arr.length;
+    for(let i = 0 ; i< n-1 ; i++ ){
+        for(let j = 0 ; j< n-i-1 ; j++){
+            if(arr[j] > arr[j+1]){
+                let temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
+```
+{{< /admonition >}}
+
+{{< admonition type=success title="code in java" open=false >}}
+```java
+// java code
+public static void bubbleSort(int[] arr){
+    int n = arr.length;
+    for(int i = 0 ; i< n-1 ; i++ ){
+        for(int j = 0 ; j< n-i-1 ; j++){
+            if(arr[j] > arr[j+1]){
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+
+```
+{{< /admonition >}}
+
+{{< admonition type=warning title="code in python" open=false >}}
+```python
+# python code
+def bubbleSort(arr):
+    n = len(arr)
+    
+    for i in range(n-1):
+        for j in range(n-i-1):
+            if arr[j] > arr[j+1]:
+                # swap
+                arr[j] , arr[j+1] = arr[j+1] , arr[j]
+
+    return arr
+
+```
+{{< /admonition >}}
+
 ## Insertion Sort
+**Insertion Sort** is a simple comparison based sorting algo. it builds the sorted list one element at a time. It works by taking each element and inserting it into its correct postion within the already sorted part of the array.
+
+### Time & Space Complexity: 
+| Time Complexicity |
+| ------ | ----------- |
+|  Best Case:  | O(n) |
+|  Average Case: | O(n²) |
+|  Worst Case:  | O(n²) |
+
+> best case: O(n) -> when array is already sorted.
+
+| Space Complexicity |
+| ------ | ----------- |
+|  Best Case:  | O(1) |
+
+### Code
 ```c
 // 2. Insertion sort
 void InsertionSort(int *arr, int length)
@@ -58,6 +146,72 @@ void InsertionSort(int *arr, int length)
     }
 }
 ```
+
+{{< admonition type=success title="code in java" open=false >}}
+```java
+// java code
+public static void insertionSort(int[] arr){
+    int n = arr.length;
+    for(int i = 1 ; i< n ; i++ ){
+        int value = arr[i];
+        int j = i-1;
+
+        while( j>= 0 && arr[j] > value){
+            arr[j+1] = arr[j];
+            j--;
+        }
+        arr[j+1] = value;
+    }
+}
+
+```
+{{< /admonition >}}
+
+{{< admonition type=note title="code in javascript" open=false >}}
+```js
+// javascript code
+function insertionSort(arr){
+    const n = arr.length;
+
+    for(let i = 1 ; i< n ; i++ ){
+        let value = arr[i];
+        let j = i-1;
+
+        while(j >= 0 && arr[j] > value){
+            arr[j+1] = arr[j];
+            j--;
+        }
+        arr[j+1] = value;
+    }
+    return arr;
+}
+
+```
+{{< /admonition >}}
+
+
+
+{{< admonition type=warning title="code in python" open=false >}}
+```python
+# python code
+def insertionSort(arr):
+    n = len(arr)
+    
+    for i in range(1, n):
+        value = arr[i]
+        j = i-1
+
+        while j>= 0 and arr[j] > value:
+            arr[j+1] = arr[j]
+            j -= 1
+        
+        arr[j+1] = value
+
+    return arr
+
+```
+{{< /admonition >}}
+
 
 ## Merge Sort
 ```c
