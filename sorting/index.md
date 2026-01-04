@@ -471,6 +471,7 @@ def insertionSort(arr):
 
 
 ## 5. Merge Sort
+**Merge Sort** is a ***divide-and-conquer*** algorithm it sorts an array by spliting it into two halves, sorting each half recursively and then merging the sorted halves. it is stable also it is efficient for large datasets. also it recquires extra memory for merging.
 
 ### 5.1 Time & Space Complexity: 
 | Time Complexicity |
@@ -582,7 +583,75 @@ int main()
     Display(arr,n);
 }
 ```
+
+{{< admonition type=success title="code in java" open=false >}}
+```java
+// java code
+public static void insertionSort(int[] arr){
+    int n = arr.length;
+    for(int i = 1 ; i< n ; i++ ){
+        int value = arr[i];
+        int j = i-1;
+
+        while( j>= 0 && arr[j] > value){
+            arr[j+1] = arr[j];
+            j--;
+        }
+        arr[j+1] = value;
+    }
+}
+
+```
+{{< /admonition >}}
+
+{{< admonition type=note title="code in javascript" open=false >}}
+```js
+// javascript code
+function insertionSort(arr){
+    const n = arr.length;
+
+    for(let i = 1 ; i< n ; i++ ){
+        let value = arr[i];
+        let j = i-1;
+
+        while(j >= 0 && arr[j] > value){
+            arr[j+1] = arr[j];
+            j--;
+        }
+        arr[j+1] = value;
+    }
+    return arr;
+}
+
+```
+{{< /admonition >}}
+
+
+
+{{< admonition type=warning title="code in python" open=false >}}
+```python
+# python code
+def insertionSort(arr):
+    n = len(arr)
+    
+    for i in range(1, n):
+        value = arr[i]
+        j = i-1
+
+        while j>= 0 and arr[j] > value:
+            arr[j+1] = arr[j]
+            j -= 1
+        
+        arr[j+1] = value
+
+    return arr
+
+```
+{{< /admonition >}}
+
+
 ## 6. Quick Sort
+**Quick Sort** is a*** divide-and-conquer*** sorting algorithm that picks a pivot element, partitions the array into elements less than and greater than the pivot and then recursively sorts the partitions. Generally it is unstable.
 
 ### 6.1 Time & Space Complexity: 
 | Time Complexicity |
@@ -645,7 +714,217 @@ void QuickSort(int *arr, int low, int high)
 }
 ```
 
+```c++
+#include <iostream>
+using namespace std;
+
+int partition(int arr[], int low, int high) {
+    int pivot = arr[low];
+    int i = low + 1;
+    int j = high;
+
+    while (true) {
+        while (i <= high && arr[i] <= pivot) {
+            i++;
+        }
+
+        while (arr[j] > pivot) {
+            j--;
+        }
+
+        if (i < j) {
+            swap(arr[i], arr[j]);
+        } else {
+            break;
+        }
+    }
+
+    swap(arr[low], arr[j]);
+    return j;
+}
+
+void quickSort(int arr[], int low, int high) {
+    if (low < high) {
+        int p = partition(arr, low, high);
+        quickSort(arr, low, p - 1);
+        quickSort(arr, p + 1, high);
+    }
+}
+
+// example use
+int main() {
+    int arr[] = {10, 7, 8, 9, 1, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    quickSort(arr, 0, n - 1);
+
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}
+
+```
+
+{{< admonition type=success title="code in java" open=false >}}
+```java
+// java code
+public class QuickSort {
+
+    public static int partition(int[] arr, int low, int high) {
+        int pivot = arr[low];
+        int i = low + 1;
+        int j = high;
+
+        while (true) {
+            while (i <= high && arr[i] <= pivot) {
+                i++;
+            }
+
+            while (arr[j] > pivot) {
+                j--;
+            }
+
+            if (i < j) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            } else {
+                break;
+            }
+        }
+
+        int temp = arr[low];
+        arr[low] = arr[j];
+        arr[j] = temp;
+
+        return j;
+    }
+
+    public static void quickSort(int[] arr, int low, int high) {
+        if (low < high) {
+            int p = partition(arr, low, high);
+            quickSort(arr, low, p - 1);
+            quickSort(arr, p + 1, high);
+        }
+    }
+}
+
+// example use
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {10, 7, 8, 9, 1, 5};
+
+        QuickSort.quickSort(arr, 0, arr.length - 1);
+
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+
+```
+{{< /admonition >}}
+
+{{< admonition type=note title="code in javascript" open=false >}}
+```js
+// javascript code
+function partition(arr , low , high){
+    let pivot = arr[low];
+    let i = low + 1;
+    let j = high;
+
+    while (true) {
+        while (i <= high && arr[i] <= pivot) {
+            i++;
+        }
+
+        while (arr[j] > pivot) {
+            j--;
+        }
+
+        if (i < j) {
+            let temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        } else {
+            break;
+        }
+    }
+
+    let temp = arr[low];
+    arr[low] = arr[j];
+    arr[j] = temp;
+
+    return j;
+}
+
+function quickSort(arr , low , high){
+    if(low < high){
+        let partitionIndex = partition(arr , low, high);
+        quickSort(arr , low , partitionIndex - 1);
+        quickSort(arr , partitionIndex + 1 , high);
+    }
+}
+
+// example use
+let arr = [10, 7, 8, 9, 1, 5];
+
+quickSort(arr, 0, arr.length - 1);
+
+console.log(arr);
+
+
+```
+{{< /admonition >}}
+
+
+
+{{< admonition type=warning title="code in python" open=false >}}
+```python
+# python code
+def partition(arr, low, high):
+    pivot = arr[low]
+    i = low + 1
+    j = high
+
+    while True:
+        while i <= high and arr[i] <= pivot:
+            i += 1
+
+        while arr[j] > pivot:
+            j -= 1
+
+        if i < j:
+            arr[i], arr[j] = arr[j], arr[i]
+        else:
+            break
+
+    arr[low], arr[j] = arr[j], arr[low]
+    return j
+
+
+def quickSort(arr, low, high):
+    if low < high:
+        p = partition(arr, low, high)
+        quick_sort(arr, low, p - 1)
+        quick_sort(arr, p + 1, high)
+
+
+# Example use
+arr = [10, 7, 8, 9, 1, 5]
+quickSort(arr, 0, len(arr) - 1)
+print(arr)
+
+```
+{{< /admonition >}}
+
+
+
 ## 7. Selection Sort
+**Selection Sort** is a simple ***comparison-based*** sorting algorithm it works by repeatedly selecting the smallest (or largest) element from the unsorted part of the array and placing it at the correct position.It maintains two subarrays. a sorted part and an unsorted part. It is easy to understand and implement. Generally it is unstable.
 
 ### 7.1 Time & Space Complexity: 
 | Time Complexicity |
