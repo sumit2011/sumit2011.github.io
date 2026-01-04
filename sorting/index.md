@@ -1,6 +1,6 @@
 # Sorting Algos
 
-***Sorting is used to organize data, enable faster searches, generate reports, manage databases, process large datasets, and optimize graphics or gaming applications.***
+***Sorting is used to organize data, enable faster searches, generate reports, manage databases, process large datasets.***
 <!--more-->
 
 {{< admonition type=note title="Note" open=true >}}
@@ -17,6 +17,17 @@ Diff Types of sorting algorithms:
  4. [Quick Sort](#6-quick-sort)
  5. [Merge Sort](#7-merge-sort)
  6. Heap Sort
+
+### 1.1 Classification
+Sorting algorithms can be broadly classified as:
+
+***1. Based on Technique:***
+* Comparison Based Sorting.
+* NonComparison Based (Devide and Conquer) Sorting.
+
+***2. Based on Behavior:***
+* In-place vs Not In-place.
+* Stable vs Unstable.
  
 
 ## 2. Sorting visualizer
@@ -277,7 +288,7 @@ generateArray();
 
 
 ## 3. Bubble sort
-**Bubble sort** is a simple ***comparison-based*** sorting algorithm. it repeatedly compares adjacent elements and swap them if they are in the wrong order. In each iteration the largest element bubbles up to the end of the list. You can visualize it above in the visualizer section.
+**Bubble sort** is a simple ***comparison-based*** sorting algorithm. it repeatedly compares adjacent elements and swap them if they are in the wrong order. In each iteration the largest element bubbles up to the end of the list. You can visualize it above in the [visualizer](#2-sorting-visualizer).
 
 ### 3.1 Time & Space Complexity: 
 | Time Complexicity |
@@ -290,6 +301,11 @@ generateArray();
 | Space Complexicity |
 | ------ | ----------- |
 |  Best Case:  | O(1) |
+
+> ***Pros & Cons:***
+> * Simple to understand.
+> * Inefficient for large datasets.
+> * Very slow for large array.
 
 ### 3.2 Code
 ```c
@@ -440,11 +456,17 @@ print(arr)
 |  Average Case: | O(n²) |
 |  Worst Case:  | O(n²) |
 
-> best case: O(n) -> when array is already sorted.
 
 | Space Complexicity |
 | ------ | ----------- |
 |  Best Case:  | O(1) |
+
+> ***Pros & Cons:***
+> * Very efficieant for small datasets.
+> * Works well for nearly sorted array.
+> * O(n²) for large arrays.
+> * O(n) when array is already sorted.
+
 
 ### 4.2 Code
 ```c
@@ -594,7 +616,7 @@ print(arr)
 
 
 ## 5. Selection Sort
-**Selection Sort** is a simple ***comparison-based*** sorting algorithm it works by repeatedly selecting the smallest (or largest) element from the unsorted part of the array and placing it at the correct position.It maintains two subarrays. a sorted part and an unsorted part. It is easy to understand and implement. Generally it is unstable.
+**Selection Sort** is a simple ***comparison-based*** sorting algorithm it works by repeatedly selecting the smallest (or largest) element from the unsorted part of the array and placing it at the correct position.It maintains two subarrays. a sorted part and an unsorted part. It is easy to understand and implement.
 
 ### 5.1 Time & Space Complexity: 
 | Time Complexicity |
@@ -607,6 +629,11 @@ print(arr)
 | Space Complexicity |
 | ------ | ----------- |
 |  Best Case:  | O(1) |
+
+> ***Pros & Cons:***
+> * Easy to understand and implement.
+> * Unstable in behavior.
+> * Inefficient for large datasets.
 
 ### 5.2 Code
 
@@ -789,7 +816,11 @@ print(arr)
 | ------ | ----------- |
 |  Best Case:  | O(log n) |
 
-> take space due to recursion
+> ***Pros & Cons:***
+> * Take space due to recursion.
+> * Unstable in behavior.
+> * Very fast.
+> * Cache friendly.
 
 ### 6.2 Code
 ```c
@@ -1066,6 +1097,10 @@ print(arr)
 | ------ | ----------- |
 |  Best Case:  | O(n) |
 
+> ***Pros & Cons:***
+> * Stable and efficient
+> * Requires extra memory
+
 ### 7.2 Code
 ```c
 // 5. Merge Sort
@@ -1164,68 +1199,261 @@ int main()
     Display(arr,n);
 }
 ```
+{{< admonition type=tip title="Merge Sort in C++" open=false >}}
+```cpp
+// cpp code
+#include <bits/stdc++.h>
+using namespace std;
 
-{{< admonition type=success title="code in java" open=false >}}
+void merge(int arr[], int s, int e) {
+    int mid = s + (e - s) / 2;
+
+    int len1 = mid - s + 1;
+    int len2 = e - mid;
+
+    int* first = new int[len1];
+    int* second = new int[len2];
+
+    // Copy left part
+    int mainArrayIndex = s;
+    for (int i = 0; i < len1; i++) {
+        first[i] = arr[mainArrayIndex++];
+    }
+
+    // Copy right part
+    mainArrayIndex = mid + 1;
+    for (int i = 0; i < len2; i++) {
+        second[i] = arr[mainArrayIndex++];
+    }
+
+    // Merge two sorted arrays
+    int index1 = 0, index2 = 0;
+    mainArrayIndex = s;
+
+    while (index1 < len1 && index2 < len2) {
+        if (first[index1] < second[index2]) {
+            arr[mainArrayIndex++] = first[index1++];
+        } else {
+            arr[mainArrayIndex++] = second[index2++];
+        }
+    }
+
+    while (index1 < len1) {
+        arr[mainArrayIndex++] = first[index1++];
+    }
+
+    while (index2 < len2) {
+        arr[mainArrayIndex++] = second[index2++];
+    }
+
+    // Free memory
+    delete[] first;
+    delete[] second;
+}
+
+void mergeSort(int arr[], int s, int e) {
+    if (s >= e) {
+        return;
+    }
+
+    int mid = s + (e - s) / 2;
+    mergeSort(arr, s, mid);
+    mergeSort(arr, mid + 1, e);
+    merge(arr, s, e);
+}
+
+int main() {
+    int arr[] = {12, 6, 47, 65, 38, 24, 98, 75, 82, 13, 44, 37};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    mergeSort(arr, 0, n - 1);
+
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}
+
+
+```
+{{< /admonition >}}
+
+{{< admonition type=success title="Merge Sort in java" open=false >}}
 ```java
 // java code
-public static void insertionSort(int[] arr){
-    int n = arr.length;
-    for(int i = 1 ; i< n ; i++ ){
-        int value = arr[i];
-        int j = i-1;
+public class MergeSort {
 
-        while( j>= 0 && arr[j] > value){
-            arr[j+1] = arr[j];
-            j--;
+    public static void merge(int[] arr, int s, int e) {
+        int mid = s + (e - s) / 2;
+
+        int len1 = mid - s + 1;
+        int len2 = e - mid;
+
+        int[] first = new int[len1];
+        int[] second = new int[len2];
+
+        // Copy left part
+        int mainArrayIndex = s;
+        for (int i = 0; i < len1; i++) {
+            first[i] = arr[mainArrayIndex++];
         }
-        arr[j+1] = value;
+
+        // Copy right part
+        mainArrayIndex = mid + 1;
+        for (int i = 0; i < len2; i++) {
+            second[i] = arr[mainArrayIndex++];
+        }
+
+        // Merge two sorted arrays
+        int index1 = 0;
+        int index2 = 0;
+        mainArrayIndex = s;
+
+        while (index1 < len1 && index2 < len2) {
+            if (first[index1] < second[index2]) {
+                arr[mainArrayIndex++] = first[index1++];
+            } else {
+                arr[mainArrayIndex++] = second[index2++];
+            }
+        }
+
+        while (index1 < len1) {
+            arr[mainArrayIndex++] = first[index1++];
+        }
+
+        while (index2 < len2) {
+            arr[mainArrayIndex++] = second[index2++];
+        }
+    }
+
+    public static void mergeSort(int[] arr, int s, int e) {
+        if (s >= e) {
+            return;
+        }
+
+        int mid = s + (e - s) / 2;
+        mergeSort(arr, s, mid);
+        mergeSort(arr, mid + 1, e);
+        merge(arr, s, e);
+    }
+
+    // Example use
+    public static void main(String[] args) {
+        int[] arr = {12, 6, 47, 65, 38, 24, 98, 75, 82, 13, 44, 37};
+        mergeSort(arr, 0, arr.length - 1);
+
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
     }
 }
+
 
 ```
 {{< /admonition >}}
 
-{{< admonition type=note title="code in javascript" open=false >}}
+{{< admonition type=note title="Merge Sort in Js" open=false >}}
 ```js
 // javascript code
-function insertionSort(arr){
-    const n = arr.length;
+function merge(arr, s, e) {
+    const mid = Math.floor(s + (e - s) / 2);
 
-    for(let i = 1 ; i< n ; i++ ){
-        let value = arr[i];
-        let j = i-1;
+    const left = arr.slice(s, mid + 1);
+    const right = arr.slice(mid + 1, e + 1);
 
-        while(j >= 0 && arr[j] > value){
-            arr[j+1] = arr[j];
-            j--;
+    let i = 0, j = 0, k = s;
+
+    // Merge the two sorted arrays
+    while (i < left.length && j < right.length) {
+        if (left[i] < right[j]) {
+            arr[k++] = left[i++];
+        } else {
+            arr[k++] = right[j++];
         }
-        arr[j+1] = value;
     }
-    return arr;
+
+    // Copy remaining elements
+    while (i < left.length) {
+        arr[k++] = left[i++];
+    }
+
+    while (j < right.length) {
+        arr[k++] = right[j++];
+    }
 }
+
+function mergeSort(arr, s, e) {
+    if (s >= e) return;
+
+    const mid = Math.floor(s + (e - s) / 2);
+    mergeSort(arr, s, mid);
+    mergeSort(arr, mid + 1, e);
+    merge(arr, s, e);
+}
+
+// Example usage
+let arr = [12, 6, 47, 65, 38, 24, 98, 75, 82, 13, 44, 37];
+mergeSort(arr, 0, arr.length - 1);
+
+console.log(arr);
+
 
 ```
 {{< /admonition >}}
 
 
 
-{{< admonition type=warning title="code in python" open=false >}}
+{{< admonition type=warning title="Merge Sort in python" open=false >}}
 ```python
 # python code
-def insertionSort(arr):
-    n = len(arr)
-    
-    for i in range(1, n):
-        value = arr[i]
-        j = i-1
+def merge(arr, s, e):
+    mid = s + (e - s) // 2
 
-        while j>= 0 and arr[j] > value:
-            arr[j+1] = arr[j]
-            j -= 1
-        
-        arr[j+1] = value
+    # Left and right subarrays
+    left = arr[s:mid + 1]
+    right = arr[mid + 1:e + 1]
 
-    return arr
+    i = j = 0
+    k = s
+
+    # Merge the two sorted halves
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            arr[k] = left[i]
+            i += 1
+        else:
+            arr[k] = right[j]
+            j += 1
+        k += 1
+
+    # Copy remaining elements
+    while i < len(left):
+        arr[k] = left[i]
+        i += 1
+        k += 1
+
+    while j < len(right):
+        arr[k] = right[j]
+        j += 1
+        k += 1
+
+
+def merge_sort(arr, s, e):
+    if s >= e:
+        return
+
+    mid = s + (e - s) // 2
+    merge_sort(arr, s, mid)
+    merge_sort(arr, mid + 1, e)
+    merge(arr, s, e)
+
+
+# Example usage
+arr = [12, 6, 47, 65, 38, 24, 98, 75, 82, 13, 44, 37]
+merge_sort(arr, 0, len(arr) - 1)
+
+print(arr)
 
 ```
 {{< /admonition >}}
@@ -1242,5 +1470,12 @@ def insertionSort(arr):
 | Selection Sort    | Simple, small datasets, in-place                                   | Always O(n²), inefficient for large arrays, unstable     |
 | Merge Sort        | Large datasets, stable sort, predictable O(n log n) time           | Uses extra memory O(n)                                     |
 | Quick Sort        | Very fast on average, in-place O(log n) space, good cache performance | Worst case O(n²), unstable, pivot choice matters          |
+
+> ***Which Sorting algo should we use:***
+>* Small and nearly sorted data: Insertion sort
+>* Large datasets: Merge Sort/ Quick sort
+>* Memory COnstraints: Heap Sort
+>* Integer Data with small range: Counting Sort
+>* General Purpose: Quick Sort
 
 Thanks for reading...Don't forget to leave a comment. 👇
