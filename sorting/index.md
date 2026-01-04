@@ -311,7 +311,40 @@ void BubbleSort(int *arr, int length)
 
 ```
 
-{{< admonition type=note title="code in javascript" open=false >}}
+{{< admonition type=tip title="Bubble Sort in C++" open=false >}}
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
+}
+
+int main() {
+    int arr[] = {10, 7, 8, 9, 1, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    bubbleSort(arr, n);
+
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}
+
+
+```
+{{</admonition>}}
+
+{{< admonition type=note title="Bubble Sort in Js" open=false >}}
 ```js
 // javascript code
 function bubbleSort(arr){
@@ -328,10 +361,18 @@ function bubbleSort(arr){
     return arr;
 }
 
+// example use
+let arr = [10, 7, 8, 9, 1, 5];
+
+bubbleSort(arr);
+
+console.log(arr);
+
+
 ```
 {{< /admonition >}}
 
-{{< admonition type=success title="code in java" open=false >}}
+{{< admonition type=success title="Bubble Sort in Java" open=false >}}
 ```java
 // java code
 public static void bubbleSort(int[] arr){
@@ -347,10 +388,23 @@ public static void bubbleSort(int[] arr){
     }
 }
 
+// example use
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {10, 7, 8, 9, 1, 5};
+
+        bubbleSort(arr);
+
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
 ```
 {{< /admonition >}}
 
-{{< admonition type=warning title="code in python" open=false >}}
+{{< admonition type=warning title="Bubble Sort in Python" open=false >}}
 ```python
 # python code
 def bubbleSort(arr):
@@ -363,6 +417,12 @@ def bubbleSort(arr):
                 arr[j] , arr[j+1] = arr[j+1] , arr[j]
 
     return arr
+
+# Example use
+arr = [10, 7, 8, 9, 1, 5]
+bubbleSort(arr)
+print(arr)
+
 
 ```
 {{< /admonition >}}
@@ -404,7 +464,42 @@ void InsertionSort(int *arr, int length)
 }
 ```
 
-{{< admonition type=success title="code in java" open=false >}}
+{{< admonition type=success title="Insertion Sort in C++" open=false >}}
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void insertionSort(int arr[], int n) {
+    for (int i = 1; i < n; i++) {
+        int value = arr[i];
+        int j = i - 1;
+
+        while (j >= 0 && arr[j] > value) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = value;
+    }
+}
+
+// Example use
+int main() {
+    int arr[] = {10, 7, 8, 9, 1, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    insertionSort(arr, n);
+
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}
+```
+{{</admonition>}}
+
+{{< admonition type=success title="Insertion Sort in Java" open=false >}}
 ```java
 // java code
 public static void insertionSort(int[] arr){
@@ -421,10 +516,23 @@ public static void insertionSort(int[] arr){
     }
 }
 
+// example use
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {10, 7, 8, 9, 1, 5};
+
+        insertionSort(arr);
+
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
 ```
 {{< /admonition >}}
 
-{{< admonition type=note title="code in javascript" open=false >}}
+{{< admonition type=note title="Insertion Sort in Js" open=false >}}
 ```js
 // javascript code
 function insertionSort(arr){
@@ -443,12 +551,19 @@ function insertionSort(arr){
     return arr;
 }
 
+// example use
+let arr = [10, 7, 8, 9, 1, 5];
+
+insertionSort(arr);
+
+console.log(arr);
+
 ```
 {{< /admonition >}}
 
 
 
-{{< admonition type=warning title="code in python" open=false >}}
+{{< admonition type=warning title="Insertion Sort in Python" open=false >}}
 ```python
 # python code
 def insertionSort(arr):
@@ -465,6 +580,12 @@ def insertionSort(arr):
         arr[j+1] = value
 
     return arr
+
+# Example use
+arr = [10, 7, 8, 9, 1, 5]
+insertionSort(arr)
+print(arr)
+
 
 ```
 {{< /admonition >}}
@@ -651,7 +772,7 @@ def insertionSort(arr):
 
 
 ## 6. Quick Sort
-**Quick Sort** is a*** divide-and-conquer*** sorting algorithm that picks a pivot element, partitions the array into elements less than and greater than the pivot and then recursively sorts the partitions. Generally it is unstable.
+**Quick Sort** is a ***divide-and-conquer*** sorting algorithm that picks a pivot element, partitions the array into elements less than and greater than the pivot and then recursively sorts the partitions. Generally it is unstable.
 
 ### 6.1 Time & Space Complexity: 
 | Time Complexicity |
@@ -714,7 +835,8 @@ void QuickSort(int *arr, int low, int high)
 }
 ```
 
-```c++
+{{< admonition type=tip title="code in c++" open=false >}}
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -766,6 +888,8 @@ int main() {
 }
 
 ```
+{{< /admonition >}}
+
 
 {{< admonition type=success title="code in java" open=false >}}
 ```java
@@ -1045,3 +1169,4 @@ def selectionSort(arr):
 | Merge Sort        | Large datasets, stable sort, predictable O(n log n) time           | Uses extra memory O(n)                                     |
 | Quick Sort        | Very fast on average, in-place O(log n) space, good cache performance | Worst case O(n²), unstable, pivot choice matters          |
 
+Thanks for reading...Don't forget to leave a comment. 👇
